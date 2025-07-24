@@ -249,3 +249,10 @@ right: 0;
   font-size: 14px;
   text-align: center;
 }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 60px; /* Aumenta este valor para bajarlos más */
+}
+
