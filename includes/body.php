@@ -102,7 +102,6 @@
     <img src="linkedin.png" alt="LinkedIn">
   </div>
   
-  <p class="footer-copy">© <?php echo date('Y'); ?> Loto. Todos los derechos reservados.</p>
 </div>
 
  
