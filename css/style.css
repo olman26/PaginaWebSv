@@ -213,12 +213,12 @@ right: 0;
   margin-bottom: 10px;
   position: relative;
   left: 0; /* Pegado a la izquierda */
-  padding-left: 20px; /* Ajusta si quieres un poco de margen */
+  padding-left: 0; /* Ajusta si quieres un poco de margen */
 }
 
 /* Logo */
 .footer-logo {
-  width: 200px; /* Ajusta según el tamaño que desees */
+  width: 120px; /* Ajusta según el tamaño que desees */
   height: auto; /* Mantiene la proporción */
   margin-bottom: 10px;
   position: relative;
