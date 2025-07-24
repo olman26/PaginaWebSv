@@ -232,8 +232,8 @@ right: 0;
   font-weight: bold;
   margin: 0;
   position: absolute;
-  top: 60px;             /* Ajusta la posición debajo del logo */
-  left: 20px; 
+  top: 20px;             /* Ajusta la posición debajo del logo */
+  left: -30px; 
 }
 
 /* Redes sociales */
