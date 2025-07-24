@@ -223,14 +223,17 @@ right: 0;
   margin-bottom: 10px;
   position: relative;
   top: -70px; /* Sube un poco el logo */
-  left: 0px; 
+  left:-30px; 
 }
 
 /* Texto LOTO */
 .footer-title {
-  font-size: 24px; /* más grande */
+  font-size: 36px; /* más grande */
   font-weight: bold;
   margin: 0;
+  position: absolute;
+  top: 60px;             /* Ajusta la posición debajo del logo */
+  left: 20px; 
 }
 
 /* Redes sociales */
