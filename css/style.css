@@ -1,0 +1,205 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* Encabezado azul superior */
+header {
+  background: #003399;
+  color: white;
+  padding: 0;
+  position: relative;
+  height: 100px;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+  width: 90%; /* más ancho */
+  margin: 0 auto;
+}
+
+.top-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.top-menu a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Cuadro naranja con logo y navegación */
+.main-header {
+background-color: #f7931e;
+border-radius: 15px;
+height: 100px;
+display: flex;
+align-items: center;
+padding: 0 20px;
+justify-content: space-between;
+
+width: 60%;                 /* más angosto que el azul */
+margin: 10px auto 20px;    /* sube 40px (la mitad) para que quede mitad en azul, mitad afuera */
+position: relative;
+z-index: 2;
+}
+.orange-header {
+background-color: orange;
+padding: 20px;
+text-align: center;
+font-weight: bold;
+font-size: 24px;
+width: 60%;
+margin: -40px auto 0 auto; /* Esto lo sube hacia arriba a la mitad */
+z-index: 2;
+position: relative;
+border-radius: 10px;
+}
+
+
+/* Tamaño del logo*/
+.main-header .logo img {
+  height: 120px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  flex-grow: 1;
+  margin-left: 40px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.play-button a {
+  background-color: #0072bc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero principal naranja body */
+.hero {
+background: linear-gradient(to bottom, #ff6700, #ff9c00);
+color: white;
+padding: 60px 5%;
+text-align: left;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+min-height: 320px; /* Más alto */
+}
+
+.hero h1 {
+font-size: 40px; /* Letras más grandes */
+font-weight: bold;
+line-height: 1.4;
+max-width: 600px;
+}
+
+.hero .horarios {
+color: #003399; /* Azul */
+font-size: 32px;
+font-weight: bold;
+margin: 10px 0;
+}
+
+.hero .boton {
+background-color: #fff200;
+color: #003399;
+padding: 14px 28px;
+border: none;
+border-radius: 12px; /* Cuadrado redondeado */
+font-weight: bold;
+font-size: 16px;
+cursor: pointer;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+margin-top: 20px;
+display: inline-block;
+transition: transform 0.2s ease;
+}
+
+.hero .boton:hover {
+transform: scale(1.05);
+background-color: #ffe600;
+}
+
+.hero img {
+max-height: 280px;
+position: relative;
+right: 0;
+}
+
+.resultados, .youtube, .promo, .noticias, .footer, .rse {
+  padding: 20px;
+  text-align: center;
+}
+
+.resultados {
+  background: #f2f2f2;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+.youtube {
+  background: #0047b2;
+  color: white;
+}
+
+.promo {
+  background: #b40000;
+  color: white;
+}
+
+.noticias {
+  background: #ffffff;
+}
+
+.noticias .tarjeta {
+  width: 250px;
+}
+
+.rse {
+  background: #7d1ca3;
+  color: white;
+}
+
+.footer {
+  background: #003399;
+  color: white;
+  font-size: 14px;
+}
+
+.social-icons img {
+  width: 24px;
+  margin: 0 5px;
+}
