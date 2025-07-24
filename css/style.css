@@ -296,6 +296,11 @@ right: 0;
   max-width: 900px; /* Evita que se vayan muy a la derecha */
   margin: 0 auto;   /* Las centra dentro del footer */
 }
+.espacio-blanco {
+  background: #ffffff;  /* Color blanco */
+  height: 2cm;          /* Altura exacta */
+  width: 100%;          /* Ocupa todo el ancho */
+}
 
 }
 

@@ -87,5 +87,6 @@
     <p>Personas beneficiadas con nuestros programas de RSE</p>
     <button class="boton">Conocer más</button>
   </div>
- 
+  
+ <div class="espacio-blanco"></div>
   
