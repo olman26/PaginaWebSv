@@ -89,15 +89,21 @@
   </div>
  
   <div class="footer">
-    <p>LOTO - ¡Te cambia la vida!</p>
-    <div class="social-icons">
-      <img src="tik-tok.png" alt="TikTok">
-      <img src="facebook.png" alt="Facebook">
-      <img src="instagram.png" alt="Instagram">
-      <img src="youtube.png" alt="YouTube">
-      <img src="linkedin.png" alt="LinkedIn">
-    </div>
-    <p>© <?php echo date('Y'); ?> Loto. Todos los derechos reservados.</p>
+  <div class="footer-left">
+    <img src="Abrazo BI Color.svg" alt="Logo" class="footer-logo">
+    <p class="footer-title">LOTO - ¡Te cambia la vida!</p>
   </div>
+  
+  <div class="social-icons">
+    <img src="tiktok.png" alt="TikTok">
+    <img src="facebook.png" alt="Facebook">
+    <img src="instagram.png" alt="Instagram">
+    <img src="youtube.png" alt="YouTube">
+    <img src="linkedin.png" alt="LinkedIn">
+  </div>
+  
+  <p class="footer-copy">© <?php echo date('Y'); ?> Loto. Todos los derechos reservados.</p>
+</div>
+
  
 </body>
