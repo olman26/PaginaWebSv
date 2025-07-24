@@ -221,9 +221,9 @@ right: 0;
   width: 140px; /* Ajusta según el tamaño que desees */
   height: auto; /* Mantiene la proporción */
   margin-bottom: 10px;
-  position: absolute;
-  top: -40px; /* Sube un poco el logo */
-  left: 10px; 
+  position: relative;
+  top: -70px; /* Sube un poco el logo */
+  left: 0px; 
 }
 
 /* Texto LOTO */
