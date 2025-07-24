@@ -1,6 +1,5 @@
 <?php 
 include 'includes/header.php';
-//include 'includes/nav.php';
 
 $pag = "";
 if(isset($_GET['pag'])){
@@ -15,5 +14,6 @@ switch ($pag) {
         include 'includes/body.php';
     break;
 }
+
 include 'includes/footer.php';
 ?>
