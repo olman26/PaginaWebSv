@@ -302,5 +302,16 @@ right: 0;
   width: 100%;          /* Ocupa todo el ancho */
 }
 
+.rse {
+  background: #7d1ca3;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 2cm; /* Espacio blanco de 2 cm */
+}
+
+
+
+
 }
 
