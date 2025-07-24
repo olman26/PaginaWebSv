@@ -303,11 +303,16 @@ right: 0;
     align-items: center;
   }
 
-  .footer-column {
-    min-width: unset;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-  }
+  .footer-columns {
+  flex: 1;
+  display: flex;
+  gap: 80px; /* Más espacio entre columnas */
+  flex-wrap: wrap;
+  justify-content: center; /* CENTRAMOS LAS COLUMNAS */
+  align-items: flex-start;
+  max-width: 900px; /* Evita que se vayan muy a la derecha */
+  margin: 0 auto;   /* Las centra dentro del footer */
+}
+
 }
 
