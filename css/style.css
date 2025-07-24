@@ -232,7 +232,7 @@ right: 0;
   font-weight: bold;
   margin: 0;
   position: absolute;
-  top: 20px;             /* Ajusta la posición debajo del logo */
+  top: 100px;             /* Ajusta la posición debajo del logo */
   left: -30px; 
 }
 
