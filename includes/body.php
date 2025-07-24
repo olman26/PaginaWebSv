@@ -91,11 +91,11 @@
   <div class="footer">
   <div class="footer-left">
     <img src="Abrazo BI Color.svg" alt="Logo" class="footer-logo">
-    <p class="footer-title">LOTO - ¡Te cambia la vida!</p>
+    <p class="footer-title">¡Te cambia la vida!</p>
   </div>
   
   <div class="social-icons">
-    <img src="tiktok.png" alt="TikTok">
+    <img src="tik-tok.png" alt="TikTok">
     <img src="facebook.png" alt="Facebook">
     <img src="instagram.png" alt="Instagram">
     <img src="youtube.png" alt="YouTube">

@@ -215,9 +215,13 @@ right: 0;
 
 /* Logo */
 .footer-logo {
-  height: 80px; /* ajusta tamaño */
+  height: 80px; /* Ajusta el tamaño según tu preferencia */
   margin-right: 15px;
+  position: relative;
+  top: -20px; /* Sube el logo */
+  left: -20px; /* Mueve el logo hacia la izquierda */
 }
+
 
 /* Texto LOTO */
 .footer-title {
