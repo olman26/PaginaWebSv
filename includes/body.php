@@ -91,11 +91,11 @@
   <div class="footer">
     <p>LOTO - ¡Te cambia la vida!</p>
     <div class="social-icons">
-      <img src="tiktok.svg" alt="TikTok">
-      <img src="facebook.svg" alt="Facebook">
-      <img src="instagram.svg" alt="Instagram">
-      <img src="youtube.svg" alt="YouTube">
-      <img src="linkedin.svg" alt="LinkedIn">
+      <img src="tik-tok.png" alt="TikTok">
+      <img src="facebook.png" alt="Facebook">
+      <img src="instagram.png" alt="Instagram">
+      <img src="youtube.png" alt="YouTube">
+      <img src="linkedin.png" alt="LinkedIn">
     </div>
     <p>© <?php echo date('Y'); ?> Loto. Todos los derechos reservados.</p>
   </div>
