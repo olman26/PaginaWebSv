@@ -1,11 +1,3 @@
-<style>
-  body {
-    background-color: #f0f8ff !important; /* azul claro */
-  }
-  h1, h2, h3, p {
-    color: red !important;
-  }
-</style>
 
 <body>
  
