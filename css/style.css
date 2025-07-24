@@ -192,12 +192,14 @@ right: 0;
   background: #7d1ca3;
   color: white;
 }
-
 .footer {
   background: #003399;
   color: white;
   font-size: 14px;
+  padding-top: 80px;  /* aumenta el espacio arriba */
+  padding-bottom: 80px; /* aumenta el espacio abajo */
 }
+
 
 .social-icons img {
   width: 24px;
