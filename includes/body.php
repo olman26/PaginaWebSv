@@ -54,8 +54,7 @@
   <div class="resultados-box">
   <!-- Título y fecha -->
   <div class="resultados-header">
-    <h2>ÚLTIMOS RESULTADOS</h2>
-    <p>Domingo 08 de Junio, 2025 a las 09:00 PM</p>
+    <h2>ÚLTIMOS RESULTADOS, VIERNES 25 DE JULIO, 2025 A LAS 09:00 PM</h2>
   </div>
 
   <!-- Carrusel -->
@@ -63,28 +62,28 @@
     <button class="res-prev">&#10094;</button>
     <div class="res-cards">
       <div class="res-card">
-        <img src="diaria.png" alt="Diaria">
+        <img src="Diaria.webp" alt="Diaria">
         <h4>Diaria</h4>
         <div class="numeros">5 • 8</div>
         <button class="btn-jugar">Jugar</button>
         <button class="btn-info">Conoce más</button>
       </div>
       <div class="res-card">
-        <img src="super-premio.png" alt="Super Premio">
+        <img src="superpremio.webp" alt="Super Premio">
         <h4>Súper Premio</h4>
         <div class="numeros">12 • 15 • 28</div>
         <button class="btn-jugar">Jugar</button>
         <button class="btn-info">Conoce más</button>
       </div>
       <div class="res-card">
-        <img src="tres.png" alt="Juga Tres">
+        <img src="juga3.webp" alt="Juga Tres">
         <h4>Juga Tres</h4>
         <div class="numeros">4 • 6 • 9</div>
         <button class="btn-jugar">Jugar</button>
         <button class="btn-info">Conoce más</button>
       </div>
       <div class="res-card">
-        <img src="premia2.png" alt="Premia 2">
+        <img src="Premia2.webp" alt="Premia 2">
         <h4>Premia 2</h4>
         <div class="numeros">0 • 5</div>
         <button class="btn-jugar">Jugar</button>
