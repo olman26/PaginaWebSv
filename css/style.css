@@ -155,7 +155,7 @@ right: 0;
 /* Contenedor general */
 .resultados-box {
   background: #fff;
-  border: 2px solid #ddd; /* Gris como noticias */
+  border: 2px solid #ddd; /* Borde gris */
   border-radius: 12px;
   padding: 20px;
   width: 80%;
@@ -204,7 +204,7 @@ right: 0;
 .res-prev { margin-right: 10px; }
 .res-next { margin-left: 10px; }
 
-/* Cards */
+/* Cards (manteniendo diseño) */
 .res-cards {
   display: flex;
   gap: 20px;
@@ -212,9 +212,8 @@ right: 0;
 }
 
 .res-card {
-  width: 220px;
-  min-height: 300px;
-  background: #f9f9f9;
+  width: 240px;
+  min-height: 320px;
   border-radius: 15px;
   padding: 15px;
   text-align: center;
@@ -227,8 +226,8 @@ right: 0;
 
 /* Imagen del juego */
 .res-card img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   margin: 0 auto 10px;
 }
@@ -249,8 +248,8 @@ right: 0;
 }
 
 .numeros span, .numeros div {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: white;
   color: #333;
@@ -279,8 +278,9 @@ right: 0;
 }
 
 .btn-info {
-  background: #eee;
-  color: #333;
+  background: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 /* Hover efectos */
@@ -289,7 +289,7 @@ right: 0;
 }
 
 .btn-info:hover {
-  background: #ddd;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 /* Próximo sorteo */
@@ -300,38 +300,32 @@ right: 0;
   color: #003399;
 }
 
-/* Colores específicos por posición */
+/* === Colores por tarjeta === */
 .res-cards .res-card:nth-child(1) {
-  background: #28a745; /* Verde para Diaria */
+  background: #28a745; /* Verde */
   color: white;
 }
 
 .res-cards .res-card:nth-child(2) {
-  background: #ff7f00; /* Naranja para Súper Premio */
+  background: #ff7f00; /* Naranja */
   color: white;
 }
 
 .res-cards .res-card:nth-child(3) {
-  background: #007bff; /* Azul para Juga Tres */
+  background: #007bff; /* Azul */
   color: white;
 }
 
 .res-cards .res-card:nth-child(4) {
-  background: #8e44ad; /* Morado para Premia 2 */
+  background: #8e44ad; /* Morado */
   color: white;
 }
 
-/* Aseguramos que los textos sean blancos */
-.res-card h4, .res-card .numeros, .res-card .btn-info {
+/* Texto blanco en botones e info */
+.res-card h4, .res-card .numeros, .btn-info {
   color: white;
 }
 
-/* Números siguen en círculos blancos */
-.numeros span, .numeros div {
-  background: white;
-  color: #333;
-  border: none;
-}
 
 
 
