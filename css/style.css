@@ -155,12 +155,12 @@ right: 0;
 /* ===== CONTENEDOR GENERAL ===== */
 .resultados-box {
   background: #fff;
-  border: 2px solid #ddd; /* Gris */
+  border: 2px solid #ddd; /* Gris como noticias */
   border-radius: 12px;
   padding: 20px;
   width: 80%;
   max-width: 1100px;
-  margin: 30px auto; /* ✅ Centrado */
+  margin: 30px auto; /* Centrado */
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
@@ -195,6 +195,7 @@ right: 0;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: background 0.3s ease;
+  z-index: 10;
 }
 
 .res-prev:hover, .res-next:hover {
@@ -222,7 +223,13 @@ right: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Imagen del juego */
+/* COLORES PERSONALIZADOS */
+.res-card.verde { background: #28a745; }
+.res-card.naranja { background: #ff7f00; }
+.res-card.azul { background: #007bff; }
+.res-card.morado { background: #8e44ad; }
+
+/* Imagen */
 .res-card img {
   width: 90px;
   height: 90px;
@@ -279,11 +286,6 @@ right: 0;
   color: #003399;
 }
 
-/* ===== COLORES POR TARJETA ===== */
-.res-card:nth-child(1) { background: #28a745; } /* Diaria */
-.res-card:nth-child(2) { background: #ff7f00; } /* Súper Premio */
-.res-card:nth-child(3) { background: #007bff; } /* Juga Tres */
-.res-card:nth-child(4) { background: #8e44ad; } /* Premia2 */
 
 
 

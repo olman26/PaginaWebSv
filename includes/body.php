@@ -51,37 +51,51 @@
 
 
  
-  <div class="res-cards">
-  <div class="res-card diaria">
-    <img src="Diaria.webp" alt="Diaria">
-    <h4>Diaria</h4>
-    <div class="numeros">5 • 8</div>
-    <button class="btn-jugar">Jugar</button>
-    <button class="btn-info">Conoce más</button>
+  <div class="resultados-box">
+  <!-- Título -->
+  <div class="resultados-header">
+    <h2>ÚLTIMOS RESULTADOS, VIERNES 25 DE JULIO, 2025 A LAS 09:00 PM</h2>
   </div>
-  <div class="res-card loto">
-    <img src="superpremio.webp" alt="Super Premio">
-    <h4>Súper Premio</h4>
-    <div class="numeros">12 • 15 • 28</div>
-    <button class="btn-jugar">Jugar</button>
-    <button class="btn-info">Conoce más</button>
-  </div>
-  <div class="res-card juga-tres">
-    <img src="juga3.webp" alt="Juga Tres">
-    <h4>Juga Tres</h4>
-    <div class="numeros">4 • 6 • 9</div>
-    <button class="btn-jugar">Jugar</button>
-    <button class="btn-info">Conoce más</button>
-  </div>
-  <div class="res-card premia2">
-    <img src="Premia2.webp" alt="Premia 2">
-    <h4>Premia 2</h4>
-    <div class="numeros">0 • 5</div>
-    <button class="btn-jugar">Jugar</button>
-    <button class="btn-info">Conoce más</button>
-  </div>
-</div>
 
+  <!-- Carrusel -->
+  <div class="resultados-carousel">
+    <button class="res-prev">&#10094;</button>
+    <div class="res-cards">
+      <div class="res-card verde">
+        <img src="Diaria.webp" alt="Diaria">
+        <h4>Diaria</h4>
+        <div class="numeros">5 • 8</div>
+        <button class="btn-jugar">Jugar</button>
+        <button class="btn-info">Conoce más</button>
+      </div>
+      <div class="res-card naranja">
+        <img src="superpremio.webp" alt="Super Premio">
+        <h4>Súper Premio</h4>
+        <div class="numeros">12 • 15 • 28</div>
+        <button class="btn-jugar">Jugar</button>
+        <button class="btn-info">Conoce más</button>
+      </div>
+      <div class="res-card azul">
+        <img src="juga3.webp" alt="Juga Tres">
+        <h4>Juga Tres</h4>
+        <div class="numeros">4 • 6 • 9</div>
+        <button class="btn-jugar">Jugar</button>
+        <button class="btn-info">Conoce más</button>
+      </div>
+      <div class="res-card morado">
+        <img src="Premia2.webp" alt="Premia 2">
+        <h4>Premia 2</h4>
+        <div class="numeros">0 • 5</div>
+        <button class="btn-jugar">Jugar</button>
+        <button class="btn-info">Conoce más</button>
+      </div>
+    </div>
+    <button class="res-next">&#10095;</button>
+  </div>
+
+  <!-- Próximo sorteo -->
+  <p class="proximo">PRÓXIMO SORTEO EN VIVO: 0H : 51M : 53S</p>
+</div>
 
   
  
