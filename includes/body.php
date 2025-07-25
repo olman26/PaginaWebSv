@@ -98,23 +98,54 @@
 
 
 
+  <!-- Banner rojo -->
+<div class="banner-rojo">
+  <img src="banner1.jpg" alt="Banner Promoción">
+</div>
 
- 
-  <div class="promo">
-    <h2>3 MILLONES - Jugada Sencilla</h2>
-    <h2>6 MILLONES - Jugada Doble</h2>
-  </div>
- 
-  <div class="noticias">
-    <h3>Noticias relevantes</h3>
-    <div class="tarjetas">
-      <div class="tarjeta">Loto beneficia a niños con cáncer</div>
-      <div class="tarjeta">Sorteos especiales recaudan fondos</div>
-      <div class="tarjeta">Donaciones impactan comunidades</div>
+<!-- Banner negro -->
+<div class="banner-negro">
+  <img src="banner2.jpg" alt="Banner Apuestas">
+</div>
+
+<!-- Noticias Relevantes -->
+<div class="noticias">
+  <h3>Noticias relevantes</h3>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="card">
+        <img src="img1.jpg" alt="Noticia 1">
+        <div class="card-content">
+          <h4>Loto lleva premios...</h4>
+          <p>...a más de 10 centros de la Ceiba.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img2.jpg" alt="Noticia 2">
+        <div class="card-content">
+          <h4>Juga Tres en...</h4>
+          <p>¡Nueva sucursal en San Pedro Sula!</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img3.jpg" alt="Noticia 3">
+        <div class="card-content">
+          <h4>Premios para todos</h4>
+          <p>Beneficios únicos para clientes.</p>
+        </div>
+      </div>
     </div>
-    <br>
-    <button class="boton">Ver más noticias</button>
+    <!-- Flechas -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
   </div>
+  <div class="boton-container">
+    <button class="noticias-boton">Ver más noticias</button>
+  </div>
+</div>
+
+
+
  
  <div class="rse">
   <div class="rse-content">
