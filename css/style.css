@@ -150,9 +150,129 @@ right: 0;
   text-align: center;
 }
 
-.resultados {
-  background: #f2f2f2;
+
+
+.resultados-box {
+  background: #fff;
+  border: 2px solid #ff7f00;
+  border-radius: 12px;
+  padding: 20px;
+  width: 80%;
+  max-width: 1100px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
+
+/* Título */
+.resultados-header h2 {
+  color: #ff7f00;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.resultados-header p {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Carrusel */
+.resultados-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.res-cards {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.4s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.res-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  width: 180px; /* Tarjetas pequeñas */
+}
+
+.res-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.res-card h4 {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.numeros {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #000;
+}
+
+/* Botones dentro de tarjetas */
+.btn-jugar, .btn-info {
+  background: #ff7f00;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  margin: 4px 0;
+  font-size: 12px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.btn-info {
+  background: #0072bc; /* Azul */
+}
+
+.btn-jugar:hover { background: #ff5500; }
+.btn-info:hover { background: #005fa3; }
+
+/* Flechas */
+.res-prev, .res-next {
+  background: #ff7f00;
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.res-prev:hover, .res-next:hover {
+  background: #ff5500;
+}
+
+/* Próximo sorteo */
+.proximo {
+  color: #003399;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+
+
+
+
 
 .tarjetas {
   display: flex;
