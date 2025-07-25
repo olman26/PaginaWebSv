@@ -97,21 +97,26 @@
 
 
 
-
-  <!-- Banner rojo -->
-<div class="banner-rojo">
+<!-- Banner rojo -->
+<div class="banner">
   <img src="Loto.webp" alt="Banner Promoción">
 </div>
 
 <!-- Banner negro -->
-<div class="banner-negro">
+<div class="banner">
   <img src="apostemos.webp" alt="Banner Apuestas">
 </div>
 
 <!-- Noticias Relevantes -->
-<div class="noticias">
-  <h3>Noticias relevantes</h3>
-  <div class="carousel-container">
+<div class="noticias-box">
+  <!-- Columna izquierda -->
+  <div class="noticias-left">
+    <h3>Noticias relevantes</h3>
+    <button class="noticias-boton">Ver más noticias</button>
+  </div>
+
+  <!-- Carrusel a la derecha -->
+  <div class="noticias-right">
     <div class="carousel">
       <div class="card">
         <img src="noticia1.webp" alt="Noticia 1">
@@ -139,10 +144,9 @@
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
   </div>
-  <div class="boton-container">
-    <button class="noticias-boton">Ver más noticias</button>
-  </div>
 </div>
+
+ 
 
 
 
