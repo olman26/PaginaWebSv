@@ -170,8 +170,10 @@ right: 0;
   font-weight: bold;
 }
 
+
+
 .youtube {
-  background: #0047b2;
+  background: #0047b2; /* Azul de fondo */
   color: white;
   padding: 40px;
 }
@@ -179,48 +181,55 @@ right: 0;
 .youtube-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-/* Columna izquierda con video */
+/* Video */
 .youtube-video {
   flex: 1;
   max-width: 600px;
 }
 
-/* Columna derecha con texto dentro de rectángulo naranja brillante */
-.youtube-text {
-  background: #ff9d00; /* ✅ Naranja brillante */
+.video-subtext {
+  font-size: 14px;
   color: white;
-  padding: 30px 20px;
+  margin-top: 8px;
+  text-align: left;
+  opacity: 0.9;
+}
+
+/* Rectángulo naranja */
+.youtube-text {
+  background: #ff9d00; /* Naranja brillante */
+  color: white;
+  padding: 25px;
   border-radius: 15px;
   text-align: center;
-  width: 450px; /* ✅ Menos ancho */
-  margin-top: -40px; /* Sube el cuadro */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* ✅ Sombra para destacar */
+  width: 400px; /* Ajusta el tamaño */
+  margin-top: -20px; /* Subir un poco */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .youtube-text h2 {
-  font-size: 26px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .youtube-text p {
   font-size: 18px;
-  font-weight: bold;
   margin: 0;
 }
 
-/* Botón centrado */
+/* Botón */
 .boton-container {
   text-align: center;
   margin-top: 20px;
 }
 
 .youtube-boton {
-  background: #ff9d00; /* ✅ Naranja brillante */
+  background: #ff9d00;
   color: white;
   border: none;
   padding: 15px 40px;
@@ -236,10 +245,23 @@ right: 0;
   background: #ff8000;
 }
 
+/* Texto adicional debajo */
+.youtube-extra {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.youtube-extra p {
+  font-size: 14px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .youtube-content {
     flex-direction: column;
+    text-align: center;
   }
 
   .youtube-video iframe {
@@ -250,7 +272,13 @@ right: 0;
     width: 100%;
     margin-top: 20px;
   }
+
+  .video-subtext {
+    text-align: center;
+  }
 }
+
+
 
 
 
