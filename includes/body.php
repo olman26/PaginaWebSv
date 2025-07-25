@@ -100,12 +100,12 @@
 
   <!-- Banner rojo -->
 <div class="banner-rojo">
-  <img src="banner1.jpg" alt="Banner Promoción">
+  <img src="Loto.webp" alt="Banner Promoción">
 </div>
 
 <!-- Banner negro -->
 <div class="banner-negro">
-  <img src="banner2.jpg" alt="Banner Apuestas">
+  <img src="apostemos.webp" alt="Banner Apuestas">
 </div>
 
 <!-- Noticias Relevantes -->
@@ -114,21 +114,21 @@
   <div class="carousel-container">
     <div class="carousel">
       <div class="card">
-        <img src="img1.jpg" alt="Noticia 1">
+        <img src="noticia1.webp" alt="Noticia 1">
         <div class="card-content">
           <h4>Loto lleva premios...</h4>
           <p>...a más de 10 centros de la Ceiba.</p>
         </div>
       </div>
       <div class="card">
-        <img src="img2.jpg" alt="Noticia 2">
+        <img src="noticia2.webp" alt="Noticia 2">
         <div class="card-content">
           <h4>Juga Tres en...</h4>
           <p>¡Nueva sucursal en San Pedro Sula!</p>
         </div>
       </div>
       <div class="card">
-        <img src="img3.jpg" alt="Noticia 3">
+        <img src="noticia3.webp" alt="Noticia 3">
         <div class="card-content">
           <h4>Premios para todos</h4>
           <p>Beneficios únicos para clientes.</p>
