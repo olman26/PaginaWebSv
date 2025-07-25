@@ -205,13 +205,13 @@ right: 0;
 
 /* SOLO el número con borde naranja */
 .numero {
-  font-size: 80px;
+  font-size: 120px;          /* ✅ Número MUY grande */
   font-weight: bold;
   margin: 0;
-  border: 6px solid orange; /* ✅ Borde alrededor del número */
-  display: inline-block;
-  padding: 10px 25px; /* Espacio dentro del borde */
-  border-radius: 12px; /* Esquinas redondeadas opcional */
+  border: 6px solid orange;  /* ✅ Borde naranja alrededor */
+  display: inline-block;     /* ✅ Para que el borde rodee el contenido */
+  padding: 20px 40px;        /* ✅ Espacio interno para que no quede pegado */
+  border-radius: 15px;       /* ✅ Opcional: bordes redondeados */
 }
 
 .rse-text p {
@@ -227,7 +227,7 @@ right: 0;
 
 .boton-container {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .rse-boton {
