@@ -64,14 +64,13 @@
   <div class="youtube-content">
     <!-- Columna izquierda con video -->
     <div class="youtube-video">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed?v=jRn_jPySTmI&list=RDGMEMveQBJ5EaHfODz2alVFs-IQVMwRPCDOFebHQ&index=5" 
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed?v=1qsx5zpIp7w" 
         title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!-- Columna derecha con texto y botón -->
     <div class="youtube-text">
-      <h2>Visualizá nuestros sorteos en YouTube</h2>
-      <p>Los 365 días del año</p>
+      <h2>VISUALIZA NUESTROS SORTEOS EN YOUTUBE LOS 365 DIAS DEL AÑO</h2>
     </div>
   </div>
 
