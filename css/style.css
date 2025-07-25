@@ -293,18 +293,22 @@ right: 0;
   align-items: flex-start;
   gap: 20px;
   background: #fff;
-  border: 2px solid #ddd; /* ✅ Borde visible */
+  border: 2px solid #ddd; /* Borde visible */
   border-radius: 12px;
   padding: 20px;
-  margin-top: 20px;
+  width: 80%; /* ✅ No ocupa todo el ancho */
+  max-width: 1100px; /* ✅ Limita en pantallas grandes */
+  margin: 30px auto; /* ✅ Lo centra en la página */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* ✅ Sombra suave */
 }
 
 /* Columna izquierda */
 .noticias-left {
-  flex: 0 0 250px; /* ancho fijo */
+  flex: 0 0 220px; /* ✅ Ajuste para no hacerla muy ancha */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: left; /* ✅ Texto alineado a la izquierda */
 }
 
 .noticias-left h3 {
@@ -317,11 +321,12 @@ right: 0;
   background: #ff7f00;
   color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 18px;
   font-size: 16px;
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
+  width: fit-content; /* ✅ Botón ajustado al texto */
 }
 
 .noticias-boton:hover {
@@ -335,6 +340,7 @@ right: 0;
   align-items: center;
   position: relative;
   overflow: hidden;
+  min-width: 0;
 }
 
 .carousel {
@@ -344,7 +350,7 @@ right: 0;
 }
 
 .card {
-  min-width: 220px;
+  min-width: 200px; /* ✅ Más delgado */
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -353,7 +359,7 @@ right: 0;
 
 .card img {
   width: 100%;
-  height: 120px; /* ✅ Más delgado */
+  height: 110px; /* ✅ Más delgado */
   object-fit: cover;
 }
 
@@ -361,6 +367,7 @@ right: 0;
   background: #ff7f00;
   color: white;
   padding: 10px;
+  text-align: center;
 }
 
 .card-content h4 {
@@ -389,6 +396,7 @@ right: 0;
 
 .prev { left: -15px; }
 .next { right: -15px; }
+
 
 
 
