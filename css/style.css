@@ -208,7 +208,7 @@ right: 0;
   font-size: 120px;          /* ✅ Número MUY grande */
   font-weight: bold;
   margin: 0;
-  border: 6px solid orange;  /* ✅ Borde naranja alrededor */
+  background: transparent; 
   display: inline-block;     /* ✅ Para que el borde rodee el contenido */
   padding: 20px 40px;        /* ✅ Espacio interno para que no quede pegado */
   border-radius: 15px;       /* ✅ Opcional: bordes redondeados */
