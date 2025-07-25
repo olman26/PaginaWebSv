@@ -189,13 +189,15 @@ right: 0;
 }
 
 
+/* Contenedor principal */
 .rse {
   background: #7d1ca3; /* Fondo morado */
   color: white;
   padding: 30px;
+  margin-bottom: 1.5cm; /* Espacio blanco debajo */
 }
 
-/* Flex para poner texto e imagen lado a lado */
+/* Texto a la izquierda + imagen a la derecha */
 .rse-content {
   display: flex;
   justify-content: space-between;
@@ -208,8 +210,8 @@ right: 0;
   border: 5px solid orange; /* ✅ borde naranja */
   padding: 20px;
   border-radius: 15px;
-  text-align: left; /* ✅ alineado a la izquierda */
-  display: inline-block; /* se ajusta al contenido */
+  text-align: left; /* alineación izquierda */
+  display: inline-block; /* ajusta al contenido */
 }
 
 /* Número grande */
@@ -253,6 +255,7 @@ right: 0;
 .rse-boton:hover {
   background: #ff8000;
 }
+
 
 
 

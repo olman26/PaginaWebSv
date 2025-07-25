@@ -96,11 +96,12 @@
     </div>
   </div>
 
-  <!-- Botón centrado -->
+  <!-- Botón centrado debajo -->
   <div class="boton-container">
     <button class="rse-boton">Conocer más</button>
   </div>
 </div>
+
 
 
 
