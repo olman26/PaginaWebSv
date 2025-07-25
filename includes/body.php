@@ -44,7 +44,7 @@
       MIRALO AQUÍ
     </button>
   </div>
-  <img src="modelo" alt="Conductora">
+  <img src="modelo.webp" alt="Conductora">
 </div>
 
  
@@ -92,7 +92,7 @@
 
     <!-- Imagen a la derecha -->
     <div class="rse-image">
-      <img src="imagen-rse.png" alt="Imagen RSE">
+      <img src="rse.webp" alt="Imagen RSE">
     </div>
   </div>
 

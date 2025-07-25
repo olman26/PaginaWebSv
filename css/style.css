@@ -205,14 +205,6 @@ right: 0;
   flex-wrap: wrap;
 }
 
-/* SOLO el texto con borde naranja */
-.rse-text {
-  border: 5px solid orange; /* ✅ borde naranja */
-  padding: 20px;
-  border-radius: 15px;
-  text-align: left; /* alineación izquierda */
-  display: inline-block; /* ajusta al contenido */
-}
 
 /* Número grande */
 .rse-text h2 {
