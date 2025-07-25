@@ -200,6 +200,11 @@ right: 0;
   opacity: 0.9;
 }
 
+/* Contenedor derecho (rectángulo + texto) */
+.youtube-right {
+  max-width: 400px;
+}
+
 /* Rectángulo naranja */
 .youtube-text {
   background: #ff9d00; /* Naranja brillante */
@@ -207,8 +212,6 @@ right: 0;
   padding: 25px;
   border-radius: 15px;
   text-align: center;
-  width: 400px; /* Ajusta el tamaño */
-  margin-top: -20px; /* Subir un poco */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -222,7 +225,19 @@ right: 0;
   margin: 0;
 }
 
-/* Botón */
+/* Texto adicional debajo del rectángulo */
+.youtube-info {
+  margin-top: 15px;
+}
+
+.youtube-info p {
+  font-size: 14px;
+  color: white;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* Botón centrado */
 .boton-container {
   text-align: center;
   margin-top: 20px;
@@ -245,18 +260,6 @@ right: 0;
   background: #ff8000;
 }
 
-/* Texto adicional debajo */
-.youtube-extra {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.youtube-extra p {
-  font-size: 14px;
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .youtube-content {
@@ -268,7 +271,7 @@ right: 0;
     height: 200px;
   }
 
-  .youtube-text {
+  .youtube-right {
     width: 100%;
     margin-top: 20px;
   }
@@ -277,6 +280,7 @@ right: 0;
     text-align: center;
   }
 }
+
 
 
 

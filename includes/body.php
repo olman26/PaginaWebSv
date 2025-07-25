@@ -61,7 +61,7 @@
   </div>
   
  
-  
+
 
 <div class="youtube">
   <div class="youtube-content">
@@ -76,9 +76,16 @@
     </div>
 
     <!-- Columna derecha con rectángulo naranja -->
-    <div class="youtube-text">
-      <h2>VISUALIZA NUESTROS SORTEOS EN YOUTUBE LOS 365 DIAS DEL AÑO</h2>
-      <p>Los 365 días del año</p>
+    <div class="youtube-right">
+      <div class="youtube-text">
+        <h2>Visualizá nuestros sorteos en YouTube</h2>
+        <p>Los 365 días del año</p>
+      </div>
+      <!-- Texto debajo del rectángulo -->
+      <div class="youtube-info">
+        <p>Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por canal 5, HRN, Radio Satélite y Radio América.</p>
+        <p>Podrás disfrutar del sorteo de las 9:00 p.m. por Telecadena 7 y 4, HRN y Radio Satélite.</p>
+      </div>
     </div>
   </div>
 
@@ -86,13 +93,8 @@
   <div class="boton-container">
     <button class="youtube-boton">Ver más sorteos</button>
   </div>
-
-  <!-- Texto adicional debajo del botón -->
-  <div class="youtube-extra">
-    <p>Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por canal 5, HRN, Radio Satélite y Radio América.</p>
-    <p>Podrás disfrutar del sorteo de las 9:00 p.m. por Telecadena 7 y 4, HRN y Radio Satélite.</p>
-  </div>
 </div>
+
 
 
 
