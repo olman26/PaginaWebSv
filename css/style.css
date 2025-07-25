@@ -380,22 +380,30 @@ right: 0;
   margin: 0;
 }
 
-/* Flechas */
+/* Flechas del carrusel */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #ff7f00;
+  background: #ff7f00; /* Color naranja */
   color: white;
   border: none;
-  font-size: 18px;
-  padding: 8px 10px;
-  border-radius: 50%;
+  font-size: 28px; /* ✅ Más grandes */
+  padding: 14px 18px; /* ✅ Más espacio para el clic */
+  border-radius: 50%; /* ✅ Forma circular */
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ✅ Destaca sobre las tarjetas */
+  z-index: 10; /* ✅ Siempre encima */
+  transition: background 0.3s ease;
 }
 
-.prev { left: -15px; }
-.next { right: -15px; }
+.prev { left: -35px; }  /* ✅ Más hacia adentro */
+.next { right: -35px; } /* ✅ Más hacia adentro */
+
+.prev:hover, .next:hover {
+  background: #ff5500; /* ✅ Efecto hover más oscuro */
+}
+
 
 
 
