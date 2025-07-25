@@ -64,7 +64,7 @@
   <div class="youtube-content">
     <!-- Columna izquierda con video -->
     <div class="youtube-video">
-      <iframe width="100%" height="315" src="https://www.youtube.com/watch?v=jRn_jPySTmI&list=RDGMEMveQBJ5EaHfODz2alVFs-IQVMwRPCDOFebHQ&index=5" 
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed?v=jRn_jPySTmI&list=RDGMEMveQBJ5EaHfODz2alVFs-IQVMwRPCDOFebHQ&index=5" 
         title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </div>
 
