@@ -97,15 +97,6 @@
 
 
 
-<!-- Banner rojo -->
-<div class="banner">
-  <img src="Loto.webp" alt="Banner Promoción">
-</div>
-
-<!-- Banner negro -->
-<div class="banner">
-  <img src="apostemos.webp" alt="Banner Apuestas">
-</div>
 
 <!-- Noticias Relevantes -->
 <div class="noticias-box">
