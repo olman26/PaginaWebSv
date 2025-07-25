@@ -173,7 +173,82 @@ right: 0;
 .youtube {
   background: #0047b2;
   color: white;
+  padding: 40px;
 }
+
+.youtube-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Columna izquierda con video */
+.youtube-video {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Columna derecha con texto dentro de rectángulo naranja */
+.youtube-text {
+  background: orange;
+  color: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.youtube-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.youtube-text p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Botón centrado */
+.boton-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.youtube-boton {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.youtube-boton:hover {
+  background: #ff8000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .youtube-content {
+    flex-direction: column;
+  }
+
+  .youtube-video iframe {
+    height: 200px;
+  }
+
+  .youtube-text {
+    margin-top: 20px;
+  }
+}
+
 
 .promo {
   background: #b40000;

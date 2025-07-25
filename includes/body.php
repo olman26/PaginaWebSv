@@ -61,10 +61,26 @@
   </div>
  
   <div class="youtube">
-    <h2>Visualizá nuestros sorteos en YouTube</h2>
-    <p>Los 365 días del año</p>
-    <button class="boton">Ver más sorteos</button>
+  <div class="youtube-content">
+    <!-- Columna izquierda con video -->
+    <div class="youtube-video">
+      <iframe width="100%" height="315" src="https://www.youtube.com/watch?v=jRn_jPySTmI&list=RDGMEMveQBJ5EaHfODz2alVFs-IQVMwRPCDOFebHQ&index=5" 
+        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Columna derecha con texto y botón -->
+    <div class="youtube-text">
+      <h2>Visualizá nuestros sorteos en YouTube</h2>
+      <p>Los 365 días del año</p>
+    </div>
   </div>
+
+  <!-- Botón centrado debajo -->
+  <div class="boton-container">
+    <button class="youtube-boton">Ver más sorteos</button>
+  </div>
+</div>
+
  
   <div class="promo">
     <h2>3 MILLONES - Jugada Sencilla</h2>
