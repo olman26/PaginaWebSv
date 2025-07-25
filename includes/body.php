@@ -83,10 +83,16 @@
   </div>
  
   <div class="rse">
-    <h2>+50,261</h2>
-    <p>Personas beneficiadas con nuestros programas de RSE</p>
-    <button class="boton">Conocer más</button>
+  <div class="rse-content">
+    <div class="rse-text">
+      <h2>+50,261</h2>
+      <p>Personas beneficiadas con nuestros programas de RSE</p>
+      <button class="rse-boton">Conocer más</button>
+    </div>
+    <div class="rse-image">
+      <img src="imagen-rse.png" alt="Imagen RSE">
+    </div>
   </div>
-  
- <div class="espacio-blanco"></div>
-  
+</div>
+
+
