@@ -191,8 +191,54 @@ right: 0;
 .rse {
   background: #7d1ca3;
   color: white;
-  margin-bottom: 1.5cm;   /* espacio blanco debajo */
+  margin-bottom: 1.5cm;
+  border: 5px solid orange; /*  borde naranja */
+  border-radius: 12px;       /* opcional para estética */
+  padding: 30px;
 }
+
+.rse-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* para móvil */
+}
+
+.rse-text h2 {
+  font-size: 80px; /*  número grande */
+  margin: 0;
+  font-weight: bold;
+}
+
+.rse-text p {
+  font-size: 24px; /*  letras grandes (menos que número) */
+  margin: 15px 0;
+}
+
+.rse-boton {
+  background: orange;       /*  botón color naranja */
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 25px;      /*  redondeado */
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.rse-boton:hover {
+  background: #ff7f00; /* un naranja más oscuro al pasar el mouse */
+}
+
+.rse-image img {
+  max-width: 250px; /*  imagen en la derecha */
+  height: auto;
+  margin-left: 30px;
+}
+
+
+
 .footer {
   background: #003399;
   color: white;
