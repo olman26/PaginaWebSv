@@ -296,18 +296,13 @@ right: 0;
   max-width: 900px; /* Evita que se vayan muy a la derecha */
   margin: 0 auto;   /* Las centra dentro del footer */
 }
-.espacio-blanco {
-  background: #ffffff;  /* Color blanco */
-  height: 2cm;          /* Altura exacta */
-  width: 100%;          /* Ocupa todo el ancho */
-}
 
-.rse {
-  background: #7d1ca3;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-  margin-bottom: 2cm; /* Espacio blanco de 2 cm */
+.espacio-blanco {
+  background: #ffffff;
+  height: 2cm;
+  width: 100%;
+  border: 1px solid #00000033; /* para que se note el espacio */
+  box-sizing: border-box;
 }
 
 
