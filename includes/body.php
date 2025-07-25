@@ -86,8 +86,8 @@
   <div class="rse-content">
     <!-- Texto y número con borde naranja -->
     <div class="rse-text">
-      <h2>+50,261</h2>
-      <p>Personas beneficiadas con nuestros programas de RSE</p>
+      <h2 class="numero">+50,261</h2>
+      <p>PERSONAS BENEFICIADAS CON NUESTRO PROGRAMA RSE</p>
     </div>
 
     <!-- Imagen a la derecha -->
