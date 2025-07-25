@@ -203,14 +203,15 @@ right: 0;
   flex-wrap: wrap;
 }
 
-.rse-text h2 {
+/* SOLO el número con borde naranja */
+.numero {
   font-size: 80px;
-  margin: 0;
   font-weight: bold;
-  border: 5px solid orange; /* ✅ borde solo en el número */
-  display: inline-block; /* Ajusta el borde al tamaño del texto */
-  padding: 10px 20px; /* Espacio dentro del borde */
-  border-radius: 10px; /* Esquinas redondeadas */
+  margin: 0;
+  border: 6px solid orange; /* ✅ Borde alrededor del número */
+  display: inline-block;
+  padding: 10px 25px; /* Espacio dentro del borde */
+  border-radius: 12px; /* Esquinas redondeadas opcional */
 }
 
 .rse-text p {
@@ -219,7 +220,7 @@ right: 0;
 }
 
 .rse-image img {
-  max-width: 250px;
+  max-width: 350px;
   height: auto;
   margin-left: 40px;
 }
