@@ -300,6 +300,39 @@ right: 0;
   color: #003399;
 }
 
+/* Colores específicos por posición */
+.res-cards .res-card:nth-child(1) {
+  background: #28a745; /* Verde para Diaria */
+  color: white;
+}
+
+.res-cards .res-card:nth-child(2) {
+  background: #ff7f00; /* Naranja para Súper Premio */
+  color: white;
+}
+
+.res-cards .res-card:nth-child(3) {
+  background: #007bff; /* Azul para Juga Tres */
+  color: white;
+}
+
+.res-cards .res-card:nth-child(4) {
+  background: #8e44ad; /* Morado para Premia 2 */
+  color: white;
+}
+
+/* Aseguramos que los textos sean blancos */
+.res-card h4, .res-card .numeros, .res-card .btn-info {
+  color: white;
+}
+
+/* Números siguen en círculos blancos */
+.numeros span, .numeros div {
+  background: white;
+  color: #333;
+  border: none;
+}
+
 
 
 
