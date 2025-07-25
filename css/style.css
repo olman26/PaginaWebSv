@@ -188,13 +188,14 @@ right: 0;
   width: 250px;
 }
 
+
 .rse {
-  background: #7d1ca3;
+  background: #7d1ca3; /* Fondo morado */
   color: white;
   padding: 30px;
-  /* Quitamos el margen */
 }
 
+/* Flex para poner texto e imagen lado a lado */
 .rse-content {
   display: flex;
   justify-content: space-between;
@@ -202,34 +203,41 @@ right: 0;
   flex-wrap: wrap;
 }
 
+/* SOLO el texto con borde naranja */
 .rse-text {
-  border: 5px solid orange;
+  border: 5px solid orange; /* ✅ borde naranja */
   padding: 20px;
   border-radius: 15px;
-  text-align: center;
-  flex: 1;
+  text-align: left; /* ✅ alineado a la izquierda */
+  display: inline-block; /* se ajusta al contenido */
 }
 
-/* Número muy grande */
+/* Número grande */
 .rse-text h2 {
   font-size: 80px;
   margin: 0;
   font-weight: bold;
 }
 
-/* Texto descriptivo más grande */
+/* Texto descriptivo más pequeño */
 .rse-text p {
   font-size: 28px;
-  margin: 15px 0;
+  margin: 10px 0 0 0;
 }
 
-/* Contenedor para centrar el botón */
+/* Imagen a la derecha */
+.rse-image img {
+  max-width: 250px;
+  height: auto;
+  margin-left: 40px;
+}
+
+/* Botón centrado debajo */
 .boton-container {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
 }
 
-/* Botón naranja y redondeado */
 .rse-boton {
   background: orange;
   color: white;
@@ -246,11 +254,6 @@ right: 0;
   background: #ff8000;
 }
 
-.rse-image img {
-  max-width: 250px;
-  height: auto;
-  margin-left: 40px;
-}
 
 
 

@@ -82,15 +82,12 @@
     <button class="boton">Ver más noticias</button>
   </div>
  
-  <div class="rse">
+ <div class="rse">
   <div class="rse-content">
-    <!-- Contenedor con borde naranja -->
+    <!-- Texto y número con borde naranja -->
     <div class="rse-text">
       <h2>+50,261</h2>
       <p>Personas beneficiadas con nuestros programas de RSE</p>
-      <div class="boton-container">
-        <button class="rse-boton">Conocer más</button>
-      </div>
     </div>
 
     <!-- Imagen a la derecha -->
@@ -98,7 +95,13 @@
       <img src="imagen-rse.png" alt="Imagen RSE">
     </div>
   </div>
+
+  <!-- Botón centrado -->
+  <div class="boton-container">
+    <button class="rse-boton">Conocer más</button>
+  </div>
 </div>
+
 
 
 
