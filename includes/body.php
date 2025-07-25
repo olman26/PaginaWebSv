@@ -84,11 +84,13 @@
  
   <div class="rse">
   <div class="rse-content">
-    <!-- Contenedor del texto con borde naranja -->
+    <!-- Contenedor con borde naranja -->
     <div class="rse-text">
       <h2>+50,261</h2>
       <p>Personas beneficiadas con nuestros programas de RSE</p>
-      <button class="rse-boton">Conocer más</button>
+      <div class="boton-container">
+        <button class="rse-boton">Conocer más</button>
+      </div>
     </div>
 
     <!-- Imagen a la derecha -->
