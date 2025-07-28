@@ -962,7 +962,7 @@ img {
 /*  Botón JUGAR EN LÍNEA */
 .play-button a {
   display: inline-block;
-  background: linear-gradient(45deg, #ff7f00, #ffcc00); /* Degradado llamativo */
+  background: linear-gradient(45deg, #003399, #0047cc); /* Degradado llamativo */
   color: #fff;
   padding: 12px 28px;
   border-radius: 50px; /* Botón ovalado */
