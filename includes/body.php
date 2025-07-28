@@ -39,8 +39,9 @@
       SINTONIZÁ EL PRÓXIMO SORTEO EN VIVO A LAS
     </h1>
     <div class="horarios">
-      11:00 AM, 3:00 PM Y 9:00 PM.
+  11:00 AM, 3:00 PM<br>Y 9:00 PM.
     </div>
+
     <button class="boton">
       MIRALO AQUÍ >
     </button>
