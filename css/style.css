@@ -340,22 +340,15 @@ min-height: 320px; /* Más alto */
 .btn-group {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 6px; /* Menos espacio entre ellos */
 }
 
-/* Botones transparentes con borde blanco */
 .btn-jugar, .btn-info {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 6px 14px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 12px;  /* Texto más pequeño */
+  padding: 4px 10px; /* Botón más compacto */
+  border-radius: 12px; /* Más pequeño el redondeo */
 }
+
 
 /* Hover: Fondo blanco, texto oscuro */
 .btn-jugar:hover, .btn-info:hover {
