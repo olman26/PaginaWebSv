@@ -913,3 +913,26 @@ img {
     font-size: 20px;
   }
 }
+
+
+
+
+
+/*  Efecto botón para el menú superior */
+.top-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 14px; /* Espacio extra para parecer botón */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.top-menu a:hover {
+  background-color: #ff9d00; /* Naranja */
+  color: #fff;
+  transform: scale(1.05); /* Ligeramente más grande */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

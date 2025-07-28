@@ -4,13 +4,14 @@
   <header>
     <!-- Menú superior azul -->
     <div class="top-menu">
-      <a href="#">Sobre nosotros</a>
-      <a href="#">Juego responsable</a>
-      <a href="#">RSE</a>
-      <a href="#">Quiero ser vendedor</a>
-      <a href="#">Lotocentros</a>
-      <a href="#">Aplica con nosotros</a>
-    </div>
+  <a href="https://loto.sv/sobre-nosotros/">Sobre nosotros</a>
+  <a href="https://loto.sv/sobre-nosotros/">Juego responsable</a>
+  <a href="https://loto.sv/sobre-nosotros/">RSE</a>
+  <a href="https://loto.sv/sobre-nosotros/">Quiero ser vendedor</a>
+  <a href="https://loto.sv/sobre-nosotros/">Lotocentros</a>
+  <a href="https://loto.sv/sobre-nosotros/">Aplica con nosotros</a>
+     </div>
+
  
     <!-- Cuadro naranja con logo, navegación y botón -->
     <div class="main-header">
