@@ -959,4 +959,27 @@ img {
 
 
 
+/*  Botón JUGAR EN LÍNEA */
+.play-button a {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff7f00, #ffcc00); /* Degradado llamativo */
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px; /* Botón ovalado */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*  Hover animado */
+.play-button a:hover {
+  background: linear-gradient(45deg, #ff9d00, #ffe600);
+  color: #003399; /* Contraste en hover */
+  transform: scale(1.08); /* Sensación de botón real */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
 
