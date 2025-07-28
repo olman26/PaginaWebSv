@@ -337,19 +337,42 @@ min-height: 320px; /* Más alto */
 }
 
 /* ===== BOTONES EN FILA ===== */
+.btn-group {
+  display: flex;
+  justify-content: center; /* centrado horizontal */
+  gap: 6px; /* espacio pequeño entre botones */
+  margin-top: 8px;
+}
+
 .btn-jugar, .btn-info {
   background: transparent;
   color: white;
   border: 2px solid white;
-  border-radius: 20px; /* sigue siendo redondeado */
-  font-size: 12px;  /* antes 14px → ahora más pequeño */
+  border-radius: 15px;
+  font-size: 12px; /* más pequeño */
   font-weight: bold;
-  padding: 4px 10px; /* antes 6px 14px → más compacto */
+  padding: 4px 10px; /* reduce espacio interno */
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Hover (opcional para mantener la sensación de botón interactivo) */
+.btn-jugar:hover, .btn-info:hover {
+  background: white;
+  color: #333;
+}
+
+.btn-jugar, .btn-info {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 15px;
+  font-size: 12px; /* más pequeño */
+  font-weight: bold;
+  padding: 4px 10px; /* reduce espacio interno */
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
 .btn-jugar:hover, .btn-info:hover {
   background: white;
   color: #333;
@@ -364,18 +387,17 @@ min-height: 320px; /* Más alto */
 
 /* Próximo sorteo */
 .proximo {
-  background-color: #ff7f00; /* Naranja */
-  color: white; /* Letras blancas */
-  font-size: 18px; /* Más grande para que destaque */
+  background-color: #ff7f00; /* naranja */
+  color: white; /* texto blanco */
+  font-size: 20px;
   font-weight: bold;
-  padding: 12px 20px; /* Espacio interno */
-  border-radius: 10px; /* Bordes redondeados */
+  padding: 12px;
   text-align: center;
+  border-radius: 8px;
   margin-top: 20px;
-  display: inline-block; /* Para que el fondo se ajuste al texto */
+  width: 100%; /* ocupa todo el ancho */
+  display: block;
 }
-
-
 
 
 
