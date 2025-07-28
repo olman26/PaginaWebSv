@@ -42,10 +42,11 @@
   11:00 AM, 3:00 PM<br>Y 9:00 PM.
     </div>
 
-    <button class="boton">
-      MIRALO AQUÍ >
-    </button>
-  </div>
+<a href="https://loto.sv/sorteo-en-vivo/" class="boton">
+  MIRALO AQUÍ >
+</a>
+</div>
+
   <img src="modelo.webp" alt="Conductora">
 </div>
 

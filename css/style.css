@@ -219,10 +219,12 @@ min-height: 320px; /* Más alto */
 
 
 .hero img {
-max-height: 280px;
-position: relative;
-right: 0;
+  max-height: 380px; /* Antes 280px, ahora más grande */
+  width: auto; /* Mantiene proporción */
+  position: relative;
+  right: 0;
 }
+
 
 .resultados, .youtube, .promo, .noticias, .footer, .rse {
   padding: 20px;
