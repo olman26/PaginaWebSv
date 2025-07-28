@@ -19,14 +19,15 @@
         <img src="Abrazo BI Color.svg" alt="Logo">
       </div>
       <nav class="nav-menu">
-        <a href="#">JUEGOS</a>
-        <a href="#">RESULTADOS</a>
-        <a href="#">PROMOCIONES</a>
-        <a href="#">NOTICIAS</a>
-        <a href="#">PUNTO DE VENTA</a>
-        <a href="#">SMS</a>
-        <a href="#">TENGO</a>
+  <a href="https://loto.sv/puntos-de-venta/">JUEGOS</a>
+  <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
+  <a href="https://loto.sv/puntos-de-venta/">PROMOCIONES</a>
+  <a href="https://loto.sv/puntos-de-venta/">NOTICIAS</a>
+  <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
+  <a href="https://loto.sv/puntos-de-venta/">SMS</a>
+  <a href="https://loto.sv/puntos-de-venta/">TENGO</a>
       </nav>
+
       <div class="play-button">
         <a href="#">JUGAR EN LÍNEA</a>
       </div>
