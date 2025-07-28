@@ -5,11 +5,11 @@
     <!-- Menú superior azul -->
     <div class="top-menu">
   <a href="https://loto.sv/sobre-nosotros/">Sobre nosotros</a>
-  <a href="https://loto.sv/sobre-nosotros/">Juego responsable</a>
-  <a href="https://loto.sv/sobre-nosotros/">RSE</a>
-  <a href="https://loto.sv/sobre-nosotros/">Quiero ser vendedor</a>
-  <a href="https://loto.sv/sobre-nosotros/">Lotocentros</a>
-  <a href="https://loto.sv/sobre-nosotros/">Aplica con nosotros</a>
+  <a href="https://loto.sv/juego-responsable/">Juego responsable</a>
+  <a href="">RSE</a>
+  <a href="https://loto.sv/quiero-ser-vendedor/">Quiero ser vendedor</a>
+  <a href="">Lotocentros</a>
+  <a href="https://loto.sv/contactanos/">Aplica con nosotros</a>
      </div>
 
  
