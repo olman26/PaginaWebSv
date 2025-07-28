@@ -21,7 +21,6 @@
       <nav class="nav-menu">
   <a href="https://loto.sv/puntos-de-venta/">JUEGOS</a>
   <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
-  <a href="https://loto.sv/puntos-de-venta/">PROMOCIONES</a>
   <a href="https://loto.sv/puntos-de-venta/">NOTICIAS</a>
   <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
   <a href="https://loto.sv/puntos-de-venta/">SMS</a>
@@ -29,9 +28,9 @@
       </nav>
 
       <div class="play-button">
-        <a href="#">JUGAR EN LÍNEA</a>
-      </div>
-    </div>
+  <a href="https://juega.loto.sv/websales/?pk_campaign=WS_SITE_BOTON_WEBSALES" target="_blank">JUGAR EN LÍNEA</a>
+</div>
+
   </header>
  
   <div class="hero">
