@@ -292,6 +292,122 @@ right: 0;
 
 
 
+/*  Ajuste responsive global */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*  HEADER */
+@media (max-width: 992px) {
+  .main-header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .main-header .logo img {
+    height: 80px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    margin: 10px 0;
+    gap: 10px;
+  }
+
+  .play-button a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/*  HERO */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 5%;
+  }
+
+  .hero img {
+    max-height: 200px;
+    margin-top: 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+
+/*  CARRUSEL DE RESULTADOS */
+@media (max-width: 768px) {
+  .resultados-carousel {
+    flex-direction: column;
+  }
+
+  .res-cards {
+    display: flex;
+    overflow-x: auto; /*  Scroll horizontal */
+    gap: 10px;
+    padding: 10px;
+    scroll-snap-type: x mandatory; /*  Carrusel táctil */
+  }
+
+  .res-card {
+    flex: 0 0 80%;
+    max-width: 250px;
+    scroll-snap-align: center;
+  }
+
+  .res-prev, .res-next {
+    display: none; /*  Quitamos flechas en móvil */
+  }
+}
+
+/*  NOTICIAS */
+@media (max-width: 768px) {
+  .noticias-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .noticias-left {
+    text-align: center;
+  }
+
+  .noticias-right {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .carousel {
+    display: flex;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .card {
+    min-width: 250px;
+    scroll-snap-align: start;
+  }
+}
+
+/*  FOOTER */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
 
 
 
