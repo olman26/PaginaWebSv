@@ -191,19 +191,21 @@ min-height: 320px; /* Más alto */
 }
 
 .hero .boton {
-  background-color: #fff200; /* Amarillo original */
-  color: #003399; /* Azul para el texto */
-  padding: 16px 36px; /* Más grande */
+  background-color: #fff200; /* Amarillo */
+  color: #003399; /* Azul */
+  padding: 16px 36px;
   border: none;
-  border-radius: 12px; /* Redondeado */
-  font-weight: 900; /* Súper grueso */
-  font-size: 20px; /* Más grande */
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-top: 20px;
+  text-decoration: none; /* ✅ Quita la raya */
   display: inline-block;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  transition: transform 0.2s ease;
 }
+
 
 .hero .boton:hover {
   transform: scale(1.08);
