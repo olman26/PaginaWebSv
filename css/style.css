@@ -639,19 +639,19 @@ img {
   border: 2px solid #ddd; /* Borde visible */
   border-radius: 12px;
   padding: 20px;
-  width: 80%; /* ✅ No ocupa todo el ancho */
-  max-width: 1100px; /* ✅ Limita en pantallas grandes */
-  margin: 30px auto; /* ✅ Lo centra en la página */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* ✅ Sombra suave */
+  width: 80%; /* No ocupa todo el ancho */
+  max-width: 1100px; /*  Limita en pantallas grandes */
+  margin: 30px auto; /*  Lo centra en la página */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /*  Sombra suave */
 }
 
 /* Columna izquierda */
 .noticias-left {
-  flex: 0 0 220px; /* ✅ Ajuste para no hacerla muy ancha */
+  flex: 0 0 220px; /*  Ajuste para no hacerla muy ancha */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: left; /* ✅ Texto alineado a la izquierda */
+  text-align: left; /*  Texto alineado a la izquierda */
 }
 
 .noticias-left h3 {
@@ -669,7 +669,7 @@ img {
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
-  width: fit-content; /* ✅ Botón ajustado al texto */
+  width: fit-content; /* Botón ajustado al texto */
 }
 
 .noticias-boton:hover {
@@ -694,7 +694,7 @@ img {
 }
 
 .card {
-  min-width: 280px; /* ✅ Más ancha */
+  min-width: 280px; /*  Más ancha */
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -703,7 +703,7 @@ img {
 
 .card img {
   width: 100%;
-  height: 180px; /* ✅ Imagen más alta */
+  height: 180px; /*  Imagen más alta */
   object-fit: cover;
 }
 
@@ -722,8 +722,8 @@ img {
 
 .card-content p {
   font-size: 14px;
-  line-height: 1.4; /* ✅ Mejor legibilidad */
-  white-space: normal; /* ✅ Permite varias líneas */
+  line-height: 1.4; /*  Mejor legibilidad */
+  white-space: normal; /*  Permite varias líneas */
   overflow: hidden;
 }
 
@@ -736,20 +736,20 @@ img {
   background: #ff7f00; /* Color naranja */
   color: white;
   border: none;
-  font-size: 28px; /* ✅ Más grandes */
-  padding: 14px 18px; /* ✅ Más espacio para el clic */
-  border-radius: 50%; /* ✅ Forma circular */
+  font-size: 28px; /*  Más grandes */
+  padding: 14px 18px; /*  Más espacio para el clic */
+  border-radius: 50%; /*  Forma circular */
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ✅ Destaca sobre las tarjetas */
-  z-index: 10; /* ✅ Siempre encima */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*  Destaca sobre las tarjetas */
+  z-index: 10; /*  Siempre encima */
   transition: background 0.3s ease;
 }
 
-.prev { left: -35px; }  /* ✅ Más hacia adentro */
-.next { right: -35px; } /* ✅ Más hacia adentro */
+.prev { left: -35px; }  /*  Más hacia adentro */
+.next { right: -35px; } /*  Más hacia adentro */
 
 .prev:hover, .next:hover {
-  background: #ff5500; /* ✅ Efecto hover más oscuro */
+  background: #ff5500; /*  Efecto hover más oscuro */
 }
 
 
@@ -777,13 +777,13 @@ img {
 
 /* SOLO el número con borde naranja */
 .numero {
-  font-size: 120px;          /* ✅ Número MUY grande */
+  font-size: 120px;          /*  Número MUY grande */
   font-weight: bold;
   margin: 0;
   background: transparent; 
-  display: inline-block;     /* ✅ Para que el borde rodee el contenido */
-  padding: 20px 40px;        /* ✅ Espacio interno para que no quede pegado */
-  border-radius: 15px;       /* ✅ Opcional: bordes redondeados */
+  display: inline-block;     /*  Para que el borde rodee el contenido */
+  padding: 20px 40px;        /* Espacio interno para que no quede pegado */
+  border-radius: 15px;       /* Opcional: bordes redondeados */
 }
 
 .rse-text p {
@@ -1046,3 +1046,17 @@ img {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
+.resultados-header h2 {
+  font-size: 24px; /* Más grande que el original */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.titulo-naranja {
+  color: #ff7f00; /* Naranja */
+}
+
+.titulo-azul {
+  color: #003399; /* Azul */
+}
