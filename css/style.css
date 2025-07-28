@@ -83,30 +83,14 @@ border-radius: 10px;
   font-weight: bold;
 }
 
-/*  Botón JUGAR EN LÍNEA llamativo */
 .play-button a {
-  background: linear-gradient(45deg, #ff7f00, #ffcc00); /* Degradado atractivo */
+  background-color: #0072bc;
   color: white;
-  padding: 12px 28px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
   text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: bold;
 }
-
-/* Hover animado */
-.play-button a:hover {
-  background: linear-gradient(45deg, #ff9d00, #ffe600);
-  color: #003399; /* Azul para contraste */
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-}
-
 
 /* Hero principal naranja body */
 .hero {
@@ -956,23 +940,3 @@ img {
 
 
 
-/* Botones del menú principal con sensación real */
-.nav-menu a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 10px 18px;
-  border: 2px solid white; /* Borde visible */
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-}
-
-.nav-menu a:hover {
-  background-color: white; /* Fondo blanco en hover */
-  color: #ff7f00; /* Texto naranja para contraste */
-  transform: scale(1.05); /* Ligero zoom */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
-  cursor: pointer;
-}
