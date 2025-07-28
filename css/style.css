@@ -387,17 +387,19 @@ min-height: 320px; /* Más alto */
 
 /* Próximo sorteo */
 .proximo {
-  background-color: #ff7f00; /* naranja */
-  color: white; /* texto blanco */
+  background-color: #ff7f00; /* Naranja */
+  color: white;
   font-size: 20px;
   font-weight: bold;
-  padding: 12px;
+  padding: 15px 0;
   text-align: center;
-  border-radius: 8px;
-  margin-top: 20px;
-  width: 100%; /* ocupa todo el ancho */
+  border-radius: 0 0 12px 12px; /* Bordes redondeados solo abajo */
   display: block;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  margin: 0; /* Elimina separación */
+  box-sizing: border-box;
 }
+
 
 
 
