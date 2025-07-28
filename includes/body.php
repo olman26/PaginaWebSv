@@ -42,7 +42,7 @@
       11:00 AM, 3:00 PM Y 9:00 PM.
     </div>
     <button class="boton">
-      MIRALO AQUÍ
+      MIRALO AQUÍ >
     </button>
   </div>
   <img src="modelo.webp" alt="Conductora">
