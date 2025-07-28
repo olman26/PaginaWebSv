@@ -319,11 +319,12 @@ min-height: 320px; /* Más alto */
 
 /* Imagen */
 .res-card img {
-  width: 90px;
-  height: 90px;
+  width: 120px;  /* antes 90px */
+  height: 120px; /* antes 90px */
   object-fit: contain;
-  margin: 0 auto 10px;
+  margin: 0 auto 12px;
 }
+
 
 /* Números */
 .numeros {
@@ -1054,9 +1055,10 @@ img {
 }
 
 .titulo-naranja {
-  color: #ff7f00; /* Naranja */
+  color: #ff7f00 !important; /* Naranja fuerte */
 }
 
 .titulo-azul {
-  color: #003399; /* Azul */
+  color: #003399 !important; /* Azul */
 }
+
