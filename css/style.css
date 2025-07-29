@@ -476,9 +476,45 @@ img {
     scroll-snap-align: center;
   }
 
-  .res-prev, .res-next {
-    display: none; /*  Quitamos flechas en móvil */
-  }
+  /* Estilos base para flechas */
+.res-prev, .res-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ff7f00, #ff5500);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Hover animado */
+.res-prev:hover, .res-next:hover {
+  background: linear-gradient(135deg, #ff9d00, #ff6700);
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Posiciones */
+.res-prev { left: 10px; }
+.res-next { right: 10px; }
+
+/* SVG ajuste */
+.res-prev svg, .res-next svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+
 }
 
 /*  NOTICIAS */
