@@ -243,14 +243,16 @@ min-height: 320px; /* Más alto */
 /* ===== CONTENEDOR GENERAL ===== */
 .resultados-box {
   background: #fff;
-  border: 2px solid #ddd; /* Gris como noticias */
+  border: 2px solid #ddd;
   border-radius: 12px;
   padding: 20px;
   width: 95%;
   max-width: 1400px;
-  margin: 30px auto; /* Centrado */
+  margin: 30px auto;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative; /* importante para que .proximo se posicione dentro */
+  padding-bottom: 60px; /*  espacio para que no tape las tarjetas */
 }
 
 /* ===== TÍTULO ===== */
@@ -385,19 +387,20 @@ min-height: 320px; /* Más alto */
   color: #333;
 }
 
-/* Próximo sorteo */
+/* Pegamos el texto abajo */
 .proximo {
-  background-color: #ff7f00; /* Naranja */
+  background-color: #ff7f00;
   color: white;
   font-size: 20px;
   font-weight: bold;
   padding: 15px 0;
   text-align: center;
-  border-radius: 0 0 12px 12px; /* Bordes redondeados solo abajo */
-  display: block;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  margin: 0; /* Elimina separación */
-  box-sizing: border-box;
+  border-radius: 0 0 12px 12px;
+  position: absolute;  /*  posición absoluta */
+  bottom: 0;           /*  lo llevamos al fondo */
+  left: 0;
+  width: 100%;         /*  ocupa todo el ancho */
+  margin: 0;
 }
 
 
