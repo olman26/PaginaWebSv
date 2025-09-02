@@ -19,7 +19,7 @@
         <img src="Abrazo BI Color.svg" alt="Logo">
       </div>
       <nav class="nav-menu">
-  <a href="https://loto.sv/puntos-de-venta/">JUEGOS</a>
+  <a href="diaria.php">JUEGOS</a>
   <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
   <a href="https://loto.sv/puntos-de-venta/">NOTICIAS</a>
   <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
@@ -50,53 +50,71 @@
   <img src="modelo.webp" alt="Conductora">
 </div>
 
-
-
-
  
   <div class="resultados-box">
   <!-- Título -->
   <div class="resultados-header">
-    <h2>ÚLTIMOS RESULTADOS, VIERNES 25 DE JULIO, 2025 A LAS 09:00 PM</h2>
-  </div>
+  <h2>
+    <span class="titulo-naranja">ÚLTIMOS RESULTADOS,</span>
+    <span class="titulo-azul"> VIERNES 25 DE JULIO, 2025 A LAS 09:00 PM</span>
+  </h2>
+</div>
+
 
   <!-- Carrusel -->
-  <div class="resultados-carousel">
-    <button class="res-prev">&#10094;</button>
-    <div class="res-cards">
-      <div class="res-card verde">
-        <img src="Diaria.webp" alt="Diaria">
-        <h4>Diaria</h4>
-        <div class="numeros">5 • 8</div>
+<div class="resultados-carousel">
+  <!-- Flecha izquierda -->
+  <button class="res-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+
+  <!-- Contenedor de tarjetas -->
+  <div class="res-cards">
+    <div class="res-card verde">
+      <img src="Diaria.webp" alt="Diaria">
+      <h4>Diaria</h4>
+      <div class="numeros">5 • 8</div>
+      <button class="btn-jugar">Jugar</button>
+      <button class="btn-info">Conoce más</button>
+    </div>
+
+    <div class="res-card naranja">
+      <img src="superpremio.webp" alt="Super Premio">
+      <h4>Súper Premio</h4>
+      <div class="numeros">12 • 15 • 28</div>
+      <button class="btn-jugar">Jugar</button>
+      <button class="btn-info">Conoce más</button>
+    </div>
+
+    <div class="res-card azul">
+      <img src="juga3.webp" alt="Juga Tres">
+      <h4>Juga Tres</h4>
+      <div class="numeros">4 • 6 • 9</div>
+      <button class="btn-jugar">Jugar</button>
+      <button class="btn-info">Conoce más</button>
+    </div>
+
+    <div class="res-card morado">
+      <img src="Premia2.webp" alt="Premia 2">
+      <h4>Premia 2</h4>
+      <div class="numeros">05 • 15</div>
+      <div class="btn-group">
         <button class="btn-jugar">Jugar</button>
         <button class="btn-info">Conoce más</button>
-      </div>
-      <div class="res-card naranja">
-        <img src="superpremio.webp" alt="Super Premio">
-        <h4>Súper Premio</h4>
-        <div class="numeros">12 • 15 • 28</div>
-        <button class="btn-jugar">Jugar</button>
-        <button class="btn-info">Conoce más</button>
-      </div>
-      <div class="res-card azul">
-        <img src="juga3.webp" alt="Juga Tres">
-        <h4>Juga Tres</h4>
-        <div class="numeros">4 • 6 • 9</div>
-        <button class="btn-jugar">Jugar</button>
-        <button class="btn-info">Conoce más</button>
-      </div>
-      <div class="res-card morado">
-        <img src="Premia2.webp" alt="Premia 2">
-        <h4>Premia 2</h4>
-        <div class="numeros">0 • 5</div>
-        <div class="btn-group">
-  <button class="btn-jugar">Jugar</button>
-  <button class="btn-info">Conoce más</button>
-     </div>
       </div>
     </div>
-    <button class="res-next">&#10095;</button>
   </div>
+
+  <!-- Flecha derecha -->
+  <button class="res-next">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+    </svg>
+  </button>
+</div>
+
 
   <!-- Próximo sorteo -->
   <p class="proximo">PRÓXIMO SORTEO EN VIVO: 0H : 51M : 53S</p>
