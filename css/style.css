@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -64,7 +63,6 @@ position: relative;
 border-radius: 10px;
 }
 
-
 /* Tamaño del logo*/
 .main-header .logo img {
   height: 120px;
@@ -101,7 +99,6 @@ border-radius: 10px;
 .nav-menu a:hover::after {
   width: 100%;
 }
-
 
 .play-button a {
   background-color: #0072bc;
@@ -162,15 +159,11 @@ min-height: 320px; /* Más alto */
   transform: scale(1.05); /* Efecto de agrandar */
 }
 
-
-
 /* Contenedor del texto: mover hacia la derecha */
 .texto-hero {
   max-width: 650px;
   margin-left: 80px; /* 🔹 Ajusta este valor para moverlo */
 }
-
-
 
 /* Texto principal */
 .hero h1 {
@@ -206,19 +199,16 @@ min-height: 320px; /* Más alto */
   transition: transform 0.2s ease;
 }
 
-
 .hero .boton:hover {
   transform: scale(1.08);
   background-color: #ffe600; /* Amarillo más intenso al pasar el mouse */
 }
-
 
 /* Contenedor del texto: mover hacia la derecha */
 .texto-hero {
   max-width: 650px;
   margin-left: 80px; /* 🔹 Ajusta este valor para moverlo */
 }
-
 
 .hero img {
   max-height: 380px; /* Antes 280px, ahora más grande */
@@ -227,18 +217,10 @@ min-height: 320px; /* Más alto */
   right: 0;
 }
 
-
 .resultados, .youtube, .promo, .noticias, .footer, .rse {
   padding: 20px;
   text-align: center;
 }
-
-
-
-
-
-
-
 
 /* ===== CONTENEDOR GENERAL ===== */
 .resultados-box {
@@ -327,7 +309,6 @@ min-height: 320px; /* Más alto */
   margin: 0 auto 12px;
 }
 
-
 /* Números */
 .numeros {
   display: flex;
@@ -380,7 +361,6 @@ min-height: 320px; /* Más alto */
   color: #333;
 }
 
-
 /* Hover: Fondo blanco, texto oscuro */
 .btn-jugar:hover, .btn-info:hover {
   background: white;
@@ -402,10 +382,6 @@ min-height: 320px; /* Más alto */
   width: 100%;         /*  ocupa todo el ancho */
   margin: 0;
 }
-
-
-
-
 
 /*  Ajuste responsive global */
 img {
@@ -514,7 +490,6 @@ img {
   fill: white;
 }
 
-
 }
 
 /*  NOTICIAS */
@@ -555,16 +530,6 @@ img {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 .tarjetas {
   display: flex;
   flex-wrap: wrap;
@@ -580,8 +545,6 @@ img {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   font-weight: bold;
 }
-
-
 
 .youtube {
   background: #0047b2; /* Azul de fondo */
@@ -691,11 +654,6 @@ img {
     text-align: center;
   }
 }
-
-
-
-
-
 
 /* Contenedor Noticias */
 .noticias-box {
@@ -820,15 +778,6 @@ img {
   background: #ff5500; /*  Efecto hover más oscuro */
 }
 
-
-
-
-
-
-
-
-
-
 .rse {
   background: #7d1ca3;
   color: white;
@@ -886,7 +835,6 @@ img {
   background: #ff8000;
 }
 
-
 .footer {
   background: #003399;
   color: white;
@@ -904,7 +852,6 @@ img {
   justify-content: flex-start; /* pega arriba */
   margin-top: -20px; /* sube todo el bloque */
 }
-
 
 .footer-logo {
   width: 140px;
@@ -968,7 +915,7 @@ img {
   }
 
   .footer-left {
-    margin-bottom: 20px;
+    margin-bottom: -20px;
     align-items: center;
     flex: unset;
   }
@@ -1052,10 +999,6 @@ img {
   }
 }
 
-
-
-
-
 /*  Efecto botón para el menú superior */
 .top-menu a {
   color: #ffffff;
@@ -1074,8 +1017,6 @@ img {
   transform: scale(1.05); /* Ligeramente más grande */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
-
 
 /*  Botón JUGAR EN LÍNEA */
 .play-button a {
@@ -1115,9 +1056,6 @@ img {
 .titulo-azul {
   color: #003399 !important; /* Azul */
 }
-
-
-
 
 /* ====== ESTILOS PARA DIARIA ====== */
 .diaria-page {
@@ -1207,7 +1145,6 @@ img {
   background: hsl(20, 100%, 50%);
 }
 
-
 .banner-superpremio {
   width: 95%;                /* similar a resultados-box */
   max-width: 1400px;         /* límite ancho en pantallas grandes */
@@ -1223,8 +1160,6 @@ img {
   height: auto;
   display: block;
 }
-
-
 
 .footer {
   position: relative;
@@ -1244,8 +1179,6 @@ img {
   max-width: 120px; /* ajusta el tamaño */
   height: auto;
 }
-
-
 
 .social-icons img {
   cursor: pointer;  /* mano al pasar encima */
