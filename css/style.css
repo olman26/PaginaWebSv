@@ -772,58 +772,62 @@ img {
 
 
 .rse {
-  background: #9647a5;  /* morado de la franja */
+  background: #9647a5;
   color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  max-width: 1000px;
-  margin: 0 auto 2cm auto; /* centrado y espacio abajo */
+  padding: 15px 10px;   /* menos alto que antes */
+  margin-bottom: 1.5cm;
 }
 
 .rse-content {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  justify-content: center; /* centra todo horizontalmente */
+  align-items: center;     /* centra verticalmente */
   flex-wrap: wrap;
+  gap: 30px; /* espacio entre texto y la imagen */
 }
 
 .rse-text {
-  text-align: left; /* alineado como en la imagen */
-  max-width: 500px;
+  text-align: center;
+  max-width: 600px;
 }
 
 .numero {
-  font-size: 60px;   /* grande pero proporcional */
+  font-size: 120px;       /* más grande que antes */
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
+  background: transparent;
+  display: inline-block;
+  padding: 15px 30px;     /* relleno proporcional al tamaño */
+  border-radius: 15px;
 }
 
 .rse-text p {
-  font-size: 18px;
-  line-height: 1.3;
-  margin-bottom: 15px;
+  font-size: 28px;   /* texto más grande */
+  line-height: 1.5;  /* un poco más aireado */
 }
 
 .rse-image img {
-  max-width: 250px; /* ajusta según tu imagen */
+  max-width: 400px; /* imagen más grande */
   height: auto;
-  border-radius: 10px;
+  top: -50px;       /* ajusta según quieras subirla o bajarla */
+  margin: 0 auto;
 }
 
+/* Botón */
 .boton-container {
-  text-align: left;
+  text-align: center;
+  margin-top: 1px; /* menos espacio hacia arriba */
+  position: relative;
+  top: 30px;       /* baja un poquito, sin alargar mucho la franja */
 }
 
 .rse-boton {
   background: #ff7e00;
   color: white;
   border: none;
-  padding: 10px 25px;
+  padding: 12px 30px;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 18px;  /* más pequeño que 20px */
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -833,8 +837,6 @@ img {
   background: #ff8000;
   transform: scale(1.05);
 }
-
-
 
 
 
