@@ -127,7 +127,7 @@
 
 <!-- Banner Superpremio -->
 <div class="banner-superpremio">
-  <img src="Banner-Superpremio.webp" alt="Banner Superpremio">
+  <img src="Banner-Superpremio.gif" alt="Banner Superpremio">
 </div>
 
 
