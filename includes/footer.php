@@ -1,7 +1,7 @@
 <div class="footer">
   <div class="footer-left">
     <img src="Abrazo BI Color.svg" alt="Logo" class="footer-logo">
-    <p class="footer-title">¡Te cambia la vida!</p>
+  
   </div>
 
   <div class="footer-right">
