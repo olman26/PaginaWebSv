@@ -7,7 +7,7 @@ body {
 
 /* Encabezado azul superior */
 header {
-  background: #003399;
+  background: #034ea2;
   color: white;
   padding: 0;
   position: relative;
@@ -38,7 +38,7 @@ header {
 
 /* Cuadro naranja con logo y navegación */
 .main-header {
-background-color: #f7931e;
+background-color: #ff7e00;
 border-radius: 15px;
 height: 100px;
 display: flex;
