@@ -213,7 +213,7 @@
   }
  
   // Llamada a la función
-  animarContador("contador", 50261, 2000); // (id, número final, duración en ms)
+  animarContador("contador",+ 50261, 2000); // (id, número final, duración en ms)
 </script>
 
 
