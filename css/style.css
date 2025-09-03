@@ -772,16 +772,18 @@ img {
 
 
 .rse {
-  background: #9647a5;
+  background: #7a2fa5; /* morado más elegante */
   color: white;
-  padding: 15px 10px;   /* menos alto que antes */
-  margin-bottom: 1.5cm;
+  padding: 20px 10px;   /* altura cómoda */
+  margin-bottom: 1.5cm; /* espacio debajo */
+  border-radius: 10px;  /* opcional, bordes redondeados */
+  text-align: center;
 }
 
 .rse-content {
   display: flex;
-  justify-content: center; /* centra todo horizontalmente */
-  align-items: center;     /* centra verticalmente */
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px; /* espacio entre texto y la imagen */
 }
@@ -792,33 +794,34 @@ img {
 }
 
 .numero {
-  font-size: 120px;       /* más grande que antes */
+  font-size: 120px;       /* grande y visible */
   font-weight: bold;
   margin: 0 auto 10px auto;
   background: transparent;
   display: inline-block;
-  padding: 15px 30px;     /* relleno proporcional al tamaño */
+  padding: 15px 30px;
   border-radius: 15px;
 }
 
 .rse-text p {
   font-size: 28px;   /* texto más grande */
-  line-height: 1.5;  /* un poco más aireado */
+  line-height: 1.5;
+  margin: 10px 0 0;
 }
 
 .rse-image img {
   max-width: 400px; /* imagen más grande */
   height: auto;
-  top: -50px;       /* ajusta según quieras subirla o bajarla */
   margin: 0 auto;
+  display: block;
+  position: relative;
+  top: -20px; /* ligeramente arriba */
 }
 
 /* Botón */
 .boton-container {
   text-align: center;
-  margin-top: 1px; /* menos espacio hacia arriba */
-  position: relative;
-  top: 30px;       /* baja un poquito, sin alargar mucho la franja */
+  margin-top: 20px;
 }
 
 .rse-boton {
@@ -827,7 +830,7 @@ img {
   border: none;
   padding: 12px 30px;
   border-radius: 30px;
-  font-size: 18px;  /* más pequeño que 20px */
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -837,6 +840,7 @@ img {
   background: #ff8000;
   transform: scale(1.05);
 }
+
 
 
 
