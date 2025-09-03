@@ -1230,17 +1230,23 @@ img {
 
 
 
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .footer-logos {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Alinea al extremo derecho */
+  align-items: flex-end;
   gap: 10px;
-  margin-right: 0; /* aseguramos que no quede separado */
 }
 
 .footer-extra-logo {
-  max-width: 120px; /* ajusta según lo necesites */
+  max-width: 120px; /* ajusta el tamaño */
   height: auto;
 }
+
 
