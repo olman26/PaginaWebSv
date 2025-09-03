@@ -21,7 +21,7 @@
         <!-- Cuadro naranja con logo, navegación y botón -->
         <div class="main-header">
           <div class="logo">
-            <img src="Abrazo BI Color.svg" alt="Logo">
+            <img src="Abrazo BI Color 1.svg" alt="Logo">
           </div>
           <nav class="nav-menu">
       <a href="index.php?pag=diaria">JUEGOS</a>
