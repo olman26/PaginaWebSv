@@ -3,21 +3,21 @@
  <div ></div>
 
  
-  <div class="hero">
-  <div class="texto-hero">
-    <h1>
-      SINTONIZÁ EL PRÓXIMO SORTEO EN VIVO A LAS
-    </h1>
-    <div class="horarios">
-  11:00 AM, 3:00 PM<br>Y 9:00 PM.
-    </div>
+<div class="hero">
+    <div class="texto-hero">
+      <h1>
+        SINTONIZÁ EL PRÓXIMO SORTEO EN VIVO A LAS
+      </h1>
+      <div class="horarios">
+    11:00 AM, 3:00 PM<br>Y 9:00 PM.
+      </div>
 
-<a href="https://loto.sv/sorteo-en-vivo/" class="boton">
-  MIRALO AQUÍ >
-</a>
-</div>
+  <a href="https://loto.sv/sorteo-en-vivo/" class="boton">
+    MIRALO AQUÍ >
+  </a>
+  </div>
 
-  <img src="modelo.png" alt="Conductora">
+    <img src="modelo.png" alt="Conductora">
 </div>
 
  
@@ -173,12 +173,14 @@
 
  
  <div class="rse">
-  <div class="rse-content">
-    <!-- Texto y número con borde naranja -->
-    <div class="rse-text">
-      <h2 class="numero">+50,261</h2>
-      <p>PERSONAS BENEFICIADAS CON NUESTRO PROGRAMA RSE</p>
-    </div>
+<div class="rse-content">
+<div class="rse-text">
+<h2 class="numero" id="contador">0</h2>
+<p>PERSONAS BENEFICIADAS CON NUESTRO PROGRAMA RSE</p>
+</div>
+</div>
+</div>
+ 
 
     <!-- Imagen a la derecha -->
     <div class="rse-image">
@@ -192,6 +194,27 @@
   </div>
 </div>
 
+
+<script>
+  // Función animar número
+  function animarContador(idElemento, valorFinal, duracion) {
+    const elemento = document.getElementById(idElemento);
+    let valorInicial = 0;
+    const incremento = Math.ceil(valorFinal / (duracion / 30)); // Ajusta la velocidad
+    const intervalo = setInterval(() => {
+      valorInicial += incremento;
+      if (valorInicial >= valorFinal) {
+        valorInicial = valorFinal;
+        clearInterval(intervalo);
+      }
+      // Formatear con separador de miles
+      elemento.textContent = valorInicial.toLocaleString("es-ES");
+    }, 30);
+  }
+ 
+  // Llamada a la función
+  animarContador("contador", 50261, 2000); // (id, número final, duración en ms)
+</script>
 
 
 
