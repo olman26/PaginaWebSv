@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 
 <main class="diaria-page">
   <!-- Contenido de la página -->
@@ -29,4 +28,4 @@
   </section>
 </main>
 
-<?php include 'footer.php'; ?>
+
