@@ -1,20 +1,15 @@
 <div class="footer">
   <div class="footer-left">
     <img src="Abrazo BI Color.svg" alt="Logo" class="footer-logo">
-  
   </div>
 
   <div class="footer-right">
     <div class="footer-columns">
       <div class="footer-column">
         <h3>Juegos</h3>
-        <p>Bingo con Todo</p>
         <p>Diaria</p>
-        <p>Juga tres</p>
         <p>Súper premio</p>
         <p>Instacash</p>
-        <p>Premia2</p>
-        <p>Multi - x</p>
         <p>Apostemos</p>
         <p>Online Gaming</p>
         <p>Ganagol</p>
@@ -40,20 +35,19 @@
         <p>Contáctanos</p>
       </div>
     </div>
+
+    <!-- NUEVO: Logos en la parte inferior derecha -->
+    <div class="footer-logos">
+      <img src="Logo ESR.png" alt="Logo ESR" class="footer-extra-logo">
+      <img src="LOTO_21.png" alt="Logo Loto 21" class="footer-extra-logo">
+    </div>
   </div>
 
   <div class="social-icons">
-    <img src="tik-tok.png" alt="TikTok">
+    <img src="tik-tok.svg" alt="TikTok">
+    <img src="instagram.svg" alt="Instagram">
+    <img src="facebook.svg" alt="Facebook">
     <img src="facebook.png" alt="Facebook">
-    <img src="instagram.png" alt="Instagram">
-    <img src="youtube.png" alt="YouTube">
-    <img src="linkedin.png" alt="LinkedIn">
+    <img src="linkedin.svg" alt="LinkedIn">
   </div>
 </div>
-
-</div>
-
-
- 
-</body>
-</html>

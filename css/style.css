@@ -1227,3 +1227,16 @@ img {
   height: auto;
   display: block;
 }
+
+.footer-logos {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* que se alineen a la derecha */
+  gap: 10px; /* espacio entre imágenes */
+}
+
+.footer-extra-logo {
+  max-width: 120px; /* ajusta el tamaño a lo que necesites */
+  height: auto;
+}
