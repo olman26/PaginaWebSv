@@ -32,9 +32,12 @@
       <a href="https://loto.sv/puntos-de-venta/">TENGO</a>
           </nav>
 
-          <div class="play-button">
-      <a href="https://juega.loto.sv/websales/?pk_campaign=WS_SITE_BOTON_WEBSALES" target="_blank">JUGAR EN LÍNEA</a>
-    </div>
+        <div class="play-button">
+     <a href="https://juega.loto.sv/websales/?pk_campaign=WS_SITE_BOTON_WEBSALES" target="_blank">
+     <img src="boton-jugar-en-linea.png" alt="Jugar en línea">
+     </a>
+        </div>
+
 
   </header>
   <div ></div>
