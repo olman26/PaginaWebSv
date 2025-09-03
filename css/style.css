@@ -770,29 +770,35 @@ img {
   background: #ff5500; /*  Efecto hover más oscuro */
 }
 
+
 .rse {
-  background: #7d1ca3;
+  background: #9647a5;
   color: white;
-  padding: 30px;
-  margin-bottom: 1.5cm; /* Espacio blanco debajo */
+  padding: 50px 30px;  /* más espacio arriba y abajo */
+  margin-bottom: 1.5cm;
 }
 
 .rse-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;  /* centra horizontalmente */
   align-items: center;
   flex-wrap: wrap;
+  gap: 40px; /* espacio entre texto e imagen */
 }
 
-/* SOLO el número con borde naranja */
+.rse-text {
+  text-align: center;  /* centra texto */
+  max-width: 600px;    /* evita que el texto llegue al borde */
+}
+
 .numero {
-  font-size: 120px;          /*  Número MUY grande */
+  font-size: 120px;
   font-weight: bold;
-  margin: 0;
-  background: transparent; 
-  display: inline-block;     /*  Para que el borde rodee el contenido */
-  padding: 20px 40px;        /* Espacio interno para que no quede pegado */
-  border-radius: 15px;       /* Opcional: bordes redondeados */
+  margin: 0 auto 20px auto; /* centrado horizontalmente */
+  background: transparent;
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 15px;
 }
 
 .rse-text p {
@@ -803,16 +809,17 @@ img {
 .rse-image img {
   max-width: 350px;
   height: auto;
-  margin-left: 40px;
+  display: block;
+  margin: -20px auto 0 auto; /* sube la imagen un poco y la centra */
 }
 
 .boton-container {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px; /* más espacio para mover el botón hacia abajo */
 }
 
 .rse-boton {
-  background: orange;
+  background: #ff7e00;
   color: white;
   border: none;
   padding: 15px 40px;
@@ -820,12 +827,15 @@ img {
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .rse-boton:hover {
   background: #ff8000;
+  transform: scale(1.05); /* efecto moderno al pasar el mouse */
 }
+
+
 
 .footer {
   background: #003399;
