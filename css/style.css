@@ -821,7 +821,7 @@ img {
   text-align: center;
   margin-top: 15px; /* menos espacio hacia arriba */
   position: relative;
-  top: 5px;         /* baja un poquito, sin alargar mucho la franja */
+  top: 15px;         /* baja un poquito, sin alargar mucho la franja */
 }
 
 .rse-boton {
