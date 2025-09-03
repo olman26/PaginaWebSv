@@ -172,7 +172,7 @@
 </div>
 
 <!-- Espacio en blanco -->
-<div style="height: 30px;"></div>
+<div style="height: 60px;"></div>
 
 
  

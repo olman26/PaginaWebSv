@@ -812,16 +812,16 @@ img {
   max-width: 300px; /* más pequeña que 350px */
   height: auto;
   position: relative;
-  top: -20px;   /* un poco más arriba */
+  top: -60px;   /* un poco más arriba */
   margin: 0 auto;
 }
 
 /* Botón */
 .boton-container {
   text-align: center;
-  margin-top: 5px; /* menos espacio hacia arriba */
+  margin-top: 1px; /* menos espacio hacia arriba */
   position: relative;
-  top: 25px;         /* baja un poquito, sin alargar mucho la franja */
+  top: 30px;         /* baja un poquito, sin alargar mucho la franja */
 }
 
 .rse-boton {
