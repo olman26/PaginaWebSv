@@ -172,14 +172,13 @@
 </div>
 
  
- <div class="rse">
-<div class="rse-content">
-<div class="rse-text">
-<h2 class="numero" id="contador">0</h2>
-<p>PERSONAS BENEFICIADAS CON NUESTRO PROGRAMA RSE</p>
-</div>
-</div>
-</div>
+   <div class="rse">
+  <div class="rse-content">
+    <!-- Texto y número con borde naranja -->
+    <div class="rse-text">
+      <h2 class="numero" id="contador">+0</h2>
+      <p>PERSONAS BENEFICIADAS CON NUESTRO PROGRAMA RSE</p>
+    </div>
  
 
     <!-- Imagen a la derecha -->
