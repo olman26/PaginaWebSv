@@ -19,7 +19,7 @@
         <img src="Abrazo BI Color.svg" alt="Logo">
       </div>
       <nav class="nav-menu">
-  <a href="diaria.php">JUEGOS</a>
+  <a href="index.php?pag=diaria">JUEGOS</a>
   <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
   <a href="https://loto.sv/puntos-de-venta/">NOTICIAS</a>
   <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
