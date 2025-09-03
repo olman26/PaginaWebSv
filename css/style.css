@@ -772,65 +772,58 @@ img {
 
 
 .rse {
-  background: #7a2fa5; /* morado más elegante */
+  background: #9647a5;  /* morado de la franja */
   color: white;
-  padding: 20px 10px;   /* altura cómoda */
-  margin-bottom: 1.5cm; /* espacio debajo */
-  border-radius: 10px;  /* opcional, bordes redondeados */
-  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 0 auto 2cm auto; /* centrado y espacio abajo */
 }
 
 .rse-content {
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 30px;
   flex-wrap: wrap;
-  gap: 30px; /* espacio entre texto y la imagen */
 }
 
 .rse-text {
-  text-align: center;
-  max-width: 600px;
+  text-align: left; /* alineado como en la imagen */
+  max-width: 500px;
 }
 
 .numero {
-  font-size: 120px;       /* grande y visible */
+  font-size: 60px;   /* grande pero proporcional */
   font-weight: bold;
-  margin: 0 auto 10px auto;
-  background: transparent;
-  display: inline-block;
-  padding: 15px 30px;
-  border-radius: 15px;
+  margin-bottom: 10px;
 }
 
 .rse-text p {
-  font-size: 28px;   /* texto más grande */
-  line-height: 1.5;
-  margin: 10px 0 0;
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 15px;
 }
 
 .rse-image img {
-  max-width: 400px; /* imagen más grande */
+  max-width: 250px; /* ajusta según tu imagen */
   height: auto;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  top: -20px; /* ligeramente arriba */
+  border-radius: 10px;
 }
 
-/* Botón */
 .boton-container {
-  text-align: center;
-  margin-top: 20px;
+  text-align: left;
 }
 
 .rse-boton {
   background: #ff7e00;
   color: white;
   border: none;
-  padding: 12px 30px;
+  padding: 10px 25px;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -840,6 +833,7 @@ img {
   background: #ff8000;
   transform: scale(1.05);
 }
+
 
 
 
