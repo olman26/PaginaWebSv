@@ -1228,15 +1228,19 @@ img {
   display: block;
 }
 
+
+
 .footer-logos {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* que se alineen a la derecha */
-  gap: 10px; /* espacio entre imágenes */
+  align-items: flex-end; /* Alinea al extremo derecho */
+  gap: 10px;
+  margin-right: 0; /* aseguramos que no quede separado */
 }
 
 .footer-extra-logo {
-  max-width: 120px; /* ajusta el tamaño a lo que necesites */
+  max-width: 120px; /* ajusta según lo necesites */
   height: auto;
 }
+
