@@ -11,8 +11,6 @@
         <p>Súper premio</p>
         <p>Instacash</p>
         <p>Apostemos</p>
-        <p>Online Gaming</p>
-        <p>Ganagol</p>
       </div>
 
       <div class="footer-column">
