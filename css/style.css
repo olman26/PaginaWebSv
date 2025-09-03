@@ -1248,22 +1248,8 @@ img {
 
 
 .social-icons img {
-  width: 35px;   /* mismo tamaño */
-  height: auto;
-  cursor: pointer; /* cambia el cursor para que se note clickeable */
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;  /* mano al pasar encima */
 }
 
-/* Al pasar el mouse */
-.social-icons img:hover {
-  transform: scale(1.1);  /* se agranda un poquito */
-  opacity: 0.8;           /* se ve como que se presiona */
-}
-
-/* Al hacer clic */
-.social-icons img:active {
-  transform: scale(0.95); /* efecto de “botón presionado” */
-  opacity: 0.6;
-}
 
 
