@@ -774,7 +774,7 @@ img {
 .rse {
   background: #9647a5;
   color: white;
-  padding: 20px;      /* antes tenías 30px, prueba con menos */
+  padding: 10px;      /* antes tenías 30px, prueba con menos */
   margin-bottom: 1.5cm;
 }
 
