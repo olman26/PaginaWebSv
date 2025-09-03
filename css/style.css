@@ -811,7 +811,7 @@ img {
   max-width: 350px;
   height: auto;
   position: relative; 
-  top: -50px;   /* mueve la imagen hacia arriba */
+  top: -80px;   /* mueve la imagen hacia arriba */
   margin: 0 auto; /* centrada */
 }
 
@@ -820,7 +820,7 @@ img {
   text-align: center;
   margin-top: 30px; /* espacio normal */
   position: relative;
-  top: 50px;   /* mueve el botón hacia abajo */
+  top: 65px;   /* mueve el botón hacia abajo */
 }
 
 
