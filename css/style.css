@@ -791,31 +791,34 @@ img {
   max-width: 600px;
 }
 
-.rse-text p {
-  font-size: 28px;   /* antes 22px, ahora más grande */
-  line-height: 1.5;  /* un poco más aireado */
+.numero {
+  font-size: 120px;       /* más grande que antes */
+  font-weight: bold;
+  margin: 0 auto 10px auto;
+  background: transparent;
+  display: inline-block;
+  padding: 15px 30px;     /* relleno proporcional al tamaño */
+  border-radius: 15px;
 }
 
-
 .rse-text p {
-  font-size: 28px;   /* antes 22px, ahora más grande */
+  font-size: 28px;   /* texto más grande */
   line-height: 1.5;  /* un poco más aireado */
 }
-
 
 .rse-image img {
-  max-width: 400px; /* antes 300px */
+  max-width: 400px; /* imagen más grande */
   height: auto;
-  top: -30px;       /* ajusta según quieras subirla o bajarla */
+  top: -50px;       /* ajusta según quieras subirla o bajarla */
+  margin: 0 auto;
 }
-
 
 /* Botón */
 .boton-container {
   text-align: center;
   margin-top: 1px; /* menos espacio hacia arriba */
   position: relative;
-  top: 30px;         /* baja un poquito, sin alargar mucho la franja */
+  top: 30px;       /* baja un poquito, sin alargar mucho la franja */
 }
 
 .rse-boton {
@@ -834,6 +837,7 @@ img {
   background: #ff8000;
   transform: scale(1.05);
 }
+
 
 
 
