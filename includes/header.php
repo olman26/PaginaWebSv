@@ -35,6 +35,7 @@
           <div class="play-button">
       <a href="https://juega.loto.sv/websales/?pk_campaign=WS_SITE_BOTON_WEBSALES" target="_blank">JUGAR EN LÍNEA</a>
     </div>
-<div ></div>
+
   </header>
+  <div ></div>
 </head>
