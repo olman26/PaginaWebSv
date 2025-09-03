@@ -774,11 +774,10 @@ img {
 .rse {
   background: #9647a5;
   color: white;
-  padding: 30px;
-  margin: 40px auto;   /* centra horizontalmente */
-  max-width: 1000px;   /* define el ancho máximo del bloque morado */
-  border-radius: 15px; /* opcional: bordes redondeados */
+  padding: 20px;      /* antes tenías 30px, prueba con menos */
+  margin-bottom: 1.5cm;
 }
+
 
 
 .rse-content {
