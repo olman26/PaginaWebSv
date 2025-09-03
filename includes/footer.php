@@ -47,6 +47,7 @@
     <img src="tik-tok.svg" alt="TikTok">
     <img src="instagram.svg" alt="Instagram">
     <img src="facebook.svg" alt="Facebook">
+    <img src="Twitter.svg" alt="Twitter">
     <img src="Youtube.svg" alt="Youtube">
     <img src="linkedin.svg" alt="LinkedIn">
   </div>
