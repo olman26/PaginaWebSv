@@ -176,8 +176,12 @@
   <div class="rse-content">
     <!-- Texto y número con borde naranja -->
     <div class="rse-text">
-      <h2 class="numero" id="contador">+0</h2>
-      <p>PERSONAS BENEFICIADAS CON NUESTRO PROGRAMA RSE</p>
+      <h2 class="numero" id="contador">0</h2>
+      <p>
+         PERSONAS BENEFICIADAS CON <br>
+         NUESTRO PROGRAMA RSE
+      </p>
+
     </div>
  
 
