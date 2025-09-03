@@ -774,16 +774,16 @@ img {
 .rse {
   background: #9647a5;
   color: white;
-  padding: 15px 5px;   /* menos espacio arriba y abajo */
-  margin-bottom: 1cm;  /* un poco menos de espacio debajo */
+  padding: 15px 10px;   /* menos alto que antes */
+  margin-bottom: 1.5cm;
 }
 
 .rse-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* centra todo horizontalmente */
+  align-items: center;     /* centra verticalmente */
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px; /* espacio entre texto y la imagen */
 }
 
 .rse-text {
@@ -792,39 +792,45 @@ img {
 }
 
 .numero {
-  font-size: 100px;    /* más pequeño que 120px */
+  font-size: 90px;       /* más pequeño que 120px */
+  font-weight: bold;
   margin: 0 auto 10px auto;
-  padding: 10px 20px;
+  background: transparent;
+  display: inline-block;
+  padding: 10px 20px;   /* menos espacio interno */
   border-radius: 15px;
 }
 
 .rse-text p {
-  font-size: 24px;
+  font-size: 22px;   /* más pequeño que 28px */
   margin: 10px 0 0;
+  line-height: 1.3;  /* compacta el texto */
 }
 
+/* Imagen */
 .rse-image img {
-  max-width: 300px;    /* más compacta */
+  max-width: 300px; /* más pequeña que 350px */
   height: auto;
   position: relative;
-  top: -20px;          /* la sube un poco */
+  top: -20px;   /* un poco más arriba */
   margin: 0 auto;
 }
 
+/* Botón */
 .boton-container {
   text-align: center;
-  margin-top: 20px;    /* menos espacio arriba */
+  margin-top: 15px; /* menos espacio hacia arriba */
   position: relative;
-  top: 15px;           /* lo baja un poco */
+  top: 5px;         /* baja un poquito, sin alargar mucho la franja */
 }
 
 .rse-boton {
   background: #ff7e00;
   color: white;
   border: none;
-  padding: 15px 40px;
+  padding: 12px 30px;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 18px;  /* más pequeño que 20px */
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -834,6 +840,7 @@ img {
   background: #ff8000;
   transform: scale(1.05);
 }
+
 
 
 
