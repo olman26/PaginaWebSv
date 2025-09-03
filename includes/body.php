@@ -1,37 +1,37 @@
 
 <body>
  
-  <header>
-    <!-- Menú superior azul -->
-    <div class="top-menu">
-  <a href="https://loto.sv/sobre-nosotros/">Sobre nosotros</a>
-  <a href="https://loto.sv/juego-responsable/">Juego responsable</a>
-  <a href="">RSE</a>
-  <a href="https://loto.sv/quiero-ser-vendedor/">Quiero ser vendedor</a>
-  <a href="">Lotocentros</a>
-  <a href="https://loto.sv/contactanos/">Aplica con nosotros</a>
-     </div>
+   <!-- <header>
+         Menú superior azul 
+        <div class="top-menu">
+      <a href="https://loto.sv/sobre-nosotros/">Sobre nosotros</a>
+      <a href="https://loto.sv/juego-responsable/">Juego responsable</a>
+      <a href="">RSE</a>
+      <a href="https://loto.sv/quiero-ser-vendedor/">Quiero ser vendedor</a>
+      <a href="">Lotocentros</a>
+      <a href="https://loto.sv/contactanos/">Aplica con nosotros</a>
+        </div>
 
- 
-    <!-- Cuadro naranja con logo, navegación y botón -->
-    <div class="main-header">
-      <div class="logo">
-        <img src="Abrazo BI Color.svg" alt="Logo">
-      </div>
-      <nav class="nav-menu">
-  <a href="index.php?pag=diaria">JUEGOS</a>
-  <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
-  <a href="https://loto.sv/puntos-de-venta/">NOTICIAS</a>
-  <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
-  <a href="https://loto.sv/puntos-de-venta/">SMS</a>
-  <a href="https://loto.sv/puntos-de-venta/">TENGO</a>
-      </nav>
+    
+         Cuadro naranja con logo, navegación y botón 
+        <div class="main-header">
+          <div class="logo">
+            <img src="Abrazo BI Color.svg" alt="Logo">
+          </div>
+          <nav class="nav-menu">
+      <a href="index.php?pag=diaria">JUEGOS</a>
+      <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
+      <a href="https://loto.sv/puntos-de-venta/">NOTICIAS</a>
+      <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
+      <a href="https://loto.sv/puntos-de-venta/">SMS</a>
+      <a href="https://loto.sv/puntos-de-venta/">TENGO</a>
+          </nav>
 
-      <div class="play-button">
-  <a href="https://juega.loto.sv/websales/?pk_campaign=WS_SITE_BOTON_WEBSALES" target="_blank">JUGAR EN LÍNEA</a>
-</div>
+          <div class="play-button">
+      <a href="https://juega.loto.sv/websales/?pk_campaign=WS_SITE_BOTON_WEBSALES" target="_blank">JUGAR EN LÍNEA</a>
+    </div>
 
-  </header>
+  </header>-->
  
   <div class="hero">
   <div class="texto-hero">
@@ -200,10 +200,6 @@
     <button class="next">&#10095;</button>
   </div>
 </div>
-
- 
-
-
 
  
  <div class="rse">
