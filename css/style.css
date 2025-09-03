@@ -998,16 +998,7 @@ img {
   margin: 0 auto;   /* Las centra dentro del footer */
 }
 
-
-
 }
-
-
-
-
-
-
-
 
 /*  Ajuste del segundo encabezado (main-header) */
 @media (max-width: 992px) {
@@ -1218,4 +1209,21 @@ img {
 
 .btn-reglamento:hover {
   background: #ff5500;
+}
+
+
+.banner-superpremio {
+  width: 95%;                /* similar a resultados-box */
+  max-width: 1400px;         /* límite ancho en pantallas grandes */
+  margin: 40px auto;         /* lo centra y da espacio */
+  border-radius: 12px;       /* esquinas redondeadas */
+  overflow: hidden;          /* para que respete el borde redondeado */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* sombra sutil */
+  text-align: center;
+}
+
+.banner-superpremio img {
+  width: 100%;  /* ocupa todo el contenedor */
+  height: auto;
+  display: block;
 }
