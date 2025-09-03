@@ -1168,6 +1168,12 @@ img {
   align-items: flex-start;
 }
 
+.footer-logo {
+  position: relative;
+  top: -60px; /* ajusta el valor */
+}
+
+
 .footer-logos {
   display: flex;
   flex-direction: column;
