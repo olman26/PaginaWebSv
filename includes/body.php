@@ -17,7 +17,7 @@
 </a>
 </div>
 
-  <img src="modelo.webp" alt="Conductora">
+  <img src="modelo.png" alt="Conductora">
 </div>
 
  
