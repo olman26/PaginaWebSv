@@ -1245,21 +1245,25 @@ img {
   height: auto;
 }
 
-.social-icons a {
-  display: inline-block;
-  margin: 5px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+
 
 .social-icons img {
-  width: 35px;  /* ajusta el tamaño */
+  width: 35px;   /* mismo tamaño */
   height: auto;
-  border-radius: 50%; /* los hace circulares si los SVG tienen fondo */
+  cursor: pointer; /* cambia el cursor para que se note clickeable */
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Efecto hover */
-.social-icons a:hover {
-  transform: scale(1.2); /* efecto de agrandarse */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra tipo botón */
+/* Al pasar el mouse */
+.social-icons img:hover {
+  transform: scale(1.1);  /* se agranda un poquito */
+  opacity: 0.8;           /* se ve como que se presiona */
 }
+
+/* Al hacer clic */
+.social-icons img:active {
+  transform: scale(0.95); /* efecto de “botón presionado” */
+  opacity: 0.6;
+}
+
 
