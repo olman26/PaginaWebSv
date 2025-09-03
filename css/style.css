@@ -780,10 +780,10 @@ img {
 
 .rse-content {
   display: flex;
-  justify-content: center;  /* centra horizontalmente */
-  align-items: center;
+  justify-content: center; /* centra todo horizontalmente */
+  align-items: center;     /* centra verticalmente */
   flex-wrap: wrap;
-  gap: 40px; /* espacio entre texto e imagen */
+  gap: 40px; /* espacio entre texto y la imagen */
 }
 
 .rse-text {
@@ -806,16 +806,18 @@ img {
   margin: 15px 0 0;
 }
 
+/* Imagen centrada y un poco más arriba */
 .rse-image img {
   max-width: 350px;
   height: auto;
   display: block;
-  margin: -5px auto 0 auto; /* sube la imagen un poco y la centra */
+  margin: -20px auto 0 auto; /* ajusta el -20px según quieras subirla más */
 }
 
+/* Botón centrado y más abajo */
 .boton-container {
   text-align: center;
-  margin-top: 80px; /* más espacio para mover el botón hacia abajo */
+  margin-top: 60px; /* aumenta o disminuye para moverlo */
 }
 
 .rse-boton {
