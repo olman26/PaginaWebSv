@@ -887,12 +887,6 @@ img {
 }
 
 
-
-
-
-
-
-
 .footer {
   background: #003399;
   color: white;
@@ -907,8 +901,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 0 0 200px;
+  justify-content: flex-start; /* pega arriba */
+  margin-top: -20px; /* sube todo el bloque */
 }
+
 
 .footer-logo {
   width: 140px;
@@ -1208,7 +1204,7 @@ img {
 }
 
 .btn-reglamento:hover {
-  background: #ff5500;
+  background: hsl(20, 100%, 50%);
 }
 
 
@@ -1249,4 +1245,21 @@ img {
   height: auto;
 }
 
+.social-icons a {
+  display: inline-block;
+  margin: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-icons img {
+  width: 35px;  /* ajusta el tamaño */
+  height: auto;
+  border-radius: 50%; /* los hace circulares si los SVG tienen fondo */
+}
+
+/* Efecto hover */
+.social-icons a:hover {
+  transform: scale(1.2); /* efecto de agrandarse */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra tipo botón */
+}
 

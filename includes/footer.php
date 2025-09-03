@@ -44,11 +44,24 @@
   </div>
 
   <div class="social-icons">
+  <a href="https://www.tiktok.com/tu-cuenta" target="_blank">
     <img src="tik-tok.svg" alt="TikTok">
+  </a>
+  <a href="https://www.instagram.com/tu-cuenta" target="_blank">
     <img src="instagram.svg" alt="Instagram">
+  </a>
+  <a href="https://www.facebook.com/tu-cuenta" target="_blank">
     <img src="facebook.svg" alt="Facebook">
+  </a>
+  <a href="https://twitter.com/tu-cuenta" target="_blank">
     <img src="Twitter.svg" alt="Twitter">
+  </a>
+  <a href="https://www.youtube.com/tu-cuenta" target="_blank">
     <img src="Youtube.svg" alt="Youtube">
+  </a>
+  <a href="https://www.linkedin.com/company/tu-cuenta" target="_blank">
     <img src="linkedin.svg" alt="LinkedIn">
-  </div>
+  </a>
+</div>
+
 </div>
