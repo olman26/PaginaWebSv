@@ -73,15 +73,16 @@
     .proximo {
      background: #ffd400;
      color: #000;
-     padding: 6px 0;            /* solo padding vertical */
+     padding: 6px 0;           /* padding vertical */
      border-radius: 20px;
      font-weight: bold;
      font-size: 14px;
-     text-align: center;         /* centrado de texto */
-     width: 100%;                /* ocupa todo el ancho del contenedor */
-     max-width: fit-content;     /* se ajusta al contenido del bloque superior */
-     margin-top: 5px;            /* espacio entre números y etiqueta */
+     text-align: center;
+     width: 100%;              /* mismo ancho que contenedor */
+     max-width: fit-content;
+     margin-top: 15px;         /* aquí controlas cuánto baja debajo de los números */
      }
+
 
 
     /* Menú */
@@ -91,7 +92,7 @@
       flex-wrap: wrap;
       gap: 10px;
       background: #aeca36;
-      padding: 10px;
+      padding: 12px;
     }
 
     .menu a {
