@@ -13,23 +13,22 @@
     }
 
     /* Div superior centrado */
-    .top {
-   background: #aeca36;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 60px 20px; /* antes 30px */
-   color: #fff;
-   }
+.top {
+  background: #aeca36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px; /* menos alto */
+  color: #fff;
+}
 
-
-    /* Contenedor interno para imagen + texto */
-    .top-content {
-   display: flex;
-   align-items: center;
-   gap: 30px;
-   margin-top: 20px; /* agrega espacio desde arriba */
-   }
+/* Contenedor interno para imagen + texto */
+.top-content {
+  display: flex;
+  align-items: flex-start; /* alineamos desde arriba */
+  gap: 30px;
+  margin-top: 0; /* eliminamos margen extra */
+}
 
 
     /* Logo */
@@ -42,11 +41,11 @@
 
 
     /* Contenido de los números */
-    .ganador-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* centra horizontalmente dentro del bloque */
-    }
+.ganador-box {
+  display: flex;
+  flex-direction: column; /* vertical */
+  align-items: center;    /* centrado horizontal */
+}
 
     .ganador-box {
      display: flex;
@@ -55,9 +54,10 @@
      }
 
 
-    .nums {
-      margin-bottom: 12px;
-    }
+    /* Números */
+.nums {
+  margin: 10px 0 5px 0; /* margen entre números y texto de próximo sorteo */
+}
 
     .num {
       display: inline-block;
@@ -70,18 +70,17 @@
       font-size: 18px;
     }
 
-    .proximo {
-     background: #ffd400;
-     color: #000;
-     padding: 6px 0;           /* padding vertical */
-     border-radius: 20px;
-     font-weight: bold;
-     font-size: 14px;
-     text-align: center;
-     width: 100%;              /* mismo ancho que contenedor */
-     max-width: fit-content;
-     margin-top: 15px;         /* aquí controlas cuánto baja debajo de los números */
-     }
+    /* Próximo sorteo */
+.proximo {
+  background: #ffd400;
+  color: #000;
+  padding: 6px 12px; 
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0; /* ya no necesitamos espacio extra */
+}
 
 
 
