@@ -5,11 +5,7 @@
  
 <div class="hero" style="position: relative;">
   <div class="texto-hero">
-    <h1>
-      <!-- Agregamos la imagen pequeña junto al texto -->
-      <img src="esfera 3.png" alt="Esfera" style="width: 25px; height: 25px; vertical-align: middle; margin-right: 8px;">
-      SINTONIZÁ EL PRÓXIMO SORTEO EN VIVO A LAS
-    </h1>
+    <h1>SINTONIZÁ EL PRÓXIMO SORTEO EN VIVO A LAS</h1>
     <div class="horarios">
       11:00 AM, 3:00 PM<br>Y 9:00 PM.
     </div>
@@ -19,8 +15,14 @@
     </a>
   </div>
 
-  <img src="modelo.png" alt="Conductora">
+  <!-- Imagen de la modelo -->
+  <img src="modelo.png" alt="Conductora" style="display: block; max-width: 100%;">
+
+  <!-- Imagen de la esfera, posición absoluta -->
+  <img src="esfera 3.png" alt="Esfera" 
+       style="position: absolute; width: 50px; height: 50px; top: 50px; left: 200px;">
 </div>
+
 
 
 
