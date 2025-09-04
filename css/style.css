@@ -213,7 +213,7 @@ min-height: 320px; /* Más alto */
   display: block;
   max-width: 100%;
   height: auto;
-  max-height: 350px; /*  este valor limita la altura */
+  max-height: 500px; /*  este valor limita la altura */
 }
 
 .resultados, .youtube, .promo, .noticias, .footer, .rse {
