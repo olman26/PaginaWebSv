@@ -18,18 +18,19 @@
   <!-- Imagen de la modelo -->
   <img src="modelo.png" alt="Conductora" style="display: block; max-width: 100%;">
 
-  <!-- Esfera 3: a la par de la modelo, flotando sobre ella -->
-  <img src="esfera 3.png" alt="Esfera 3" 
+  <!-- Esfera 3 -->
+  <img src="esfera 3.png" alt="Esfera 3" class="esfera"
        style="position: absolute; width: 60px; height: 60px; top: 130px; left: 600px;">
 
-  <!-- Esfera 9: entre el botón y la imagen de la modelo -->
-  <img src="esfera 9.png" alt="Esfera 9" 
+  <!-- Esfera 9 -->
+  <img src="esfera 9.png" alt="Esfera 9" class="esfera"
        style="position: absolute; width: 60px; height: 60px; top: 500px; left: 800px;">
 
-  <!-- Esfera 11: al lado derecho de la modelo -->
-  <img src="esfera 11.png" alt="Esfera 11" 
+  <!-- Esfera 11 -->
+  <img src="esfera 11.png" alt="Esfera 11" class="esfera"
        style="position: absolute; width: 60px; height: 60px; top: 350px; left: 1200px;">
 </div>
+
 
 
 

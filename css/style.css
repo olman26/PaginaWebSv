@@ -839,10 +839,6 @@ img {
 }
 
 
-
-
-
-
 .footer {
   background: #003399;
   color: white;
@@ -1201,6 +1197,23 @@ img {
 .social-icons img {
   cursor: pointer;  /* mano al pasar encima */
 }
+
+
+
+
+.esfera {
+  animation: girar 30s linear infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 
 
