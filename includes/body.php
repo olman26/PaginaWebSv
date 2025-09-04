@@ -3,22 +3,26 @@
  <div ></div>
 
  
-<div class="hero">
-    <div class="texto-hero">
-      <h1>
-        SINTONIZÁ EL PRÓXIMO SORTEO EN VIVO A LAS
-      </h1>
-      <div class="horarios">
-    11:00 AM, 3:00 PM<br>Y 9:00 PM.
-      </div>
+<div class="hero" style="position: relative;">
+  <div class="texto-hero">
+    <h1>
+      <!-- Agregamos la imagen pequeña junto al texto -->
+      <img src="esfera 3.png" alt="Esfera" style="width: 25px; height: 25px; vertical-align: middle; margin-right: 8px;">
+      SINTONIZÁ EL PRÓXIMO SORTEO EN VIVO A LAS
+    </h1>
+    <div class="horarios">
+      11:00 AM, 3:00 PM<br>Y 9:00 PM.
+    </div>
 
-  <a href="https://loto.sv/sorteo-en-vivo/" class="boton">
-    MIRALO AQUÍ >
-  </a>
+    <a href="https://loto.sv/sorteo-en-vivo/" class="boton">
+      MIRALO AQUÍ >
+    </a>
   </div>
 
-    <img src="modelo.png" alt="Conductora">
+  <img src="modelo.png" alt="Conductora">
 </div>
+
+
 
  
   <div class="resultados-box">
