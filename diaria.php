@@ -228,9 +228,8 @@
     <span class="num">0</span>
     <span class="num">9</span>
   </div>
-
-  <!-- NUEVO: etiqueta amarilla justo debajo de los números -->
-  <div class="proximo-label">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
+  <!-- Etiqueta amarilla minimalista -->
+  <span class="proximo-label">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</span>
 </div>
 
 
