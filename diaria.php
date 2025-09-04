@@ -12,36 +12,37 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Div superior */
+    /* === SECCIÓN SUPERIOR === */
     .top {
-      background: #aeca36; /* color del div */
+      background: #aeca36; /* Fondo verde solo aquí */
       display: flex;
+      justify-content: center;
       align-items: center;
-      padding: 15px 20px;
-      color: #fff;
+      padding: 50px 20px; /* baja un poco el bloque */
     }
 
-    /* Logo */
+    /* Imagen */
     .top img {
       width: 150px;
       margin-right: 20px;
     }
 
-    /* Contenido a la derecha */
+    /* Caja de ganador */
     .ganador-box {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
     }
 
     .ganador {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      color: #000;
     }
 
     .nums {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .num {
@@ -49,142 +50,51 @@
       background: #fff;
       color: #000;
       border-radius: 50%;
-      padding: 10px 15px;
-      margin: 0 4px;
+      padding: 12px 18px;
+      margin: 0 5px;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .proximo {
       display: inline-block;
       background: #ffd400;
       color: #000;
-      padding: 6px 15px;
+      padding: 8px 18px;
       border-radius: 20px;
       font-weight: bold;
       font-size: 14px;
-      align-self: flex-start; /* alinea la etiqueta debajo de los números */
     }
 
-    /* Menú */
-    .menu {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      background: #aeca36;
-      padding: 12px;
-    }
-
-    .menu a {
-      background: #fff;
-      color: #000;
-      text-decoration: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    /* Resultados anteriores */
-    .resultados {
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    .resultados h2 {
-      font-size: 20px;
-      margin-bottom: 15px;
-      font-weight: bold;
-    }
-
-    .resultados button {
-      background: #aeca36;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .calendario {
-      margin: 20px auto 0;
-      padding: 30px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      max-width: 250px;
-      background: #fafafa;
-    }
-
-    /* Cómo jugar */
-    .seccion {
-      background: #f6f6f6;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .seccion h2 {
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
-
-    .seccion p {
-      margin-bottom: 12px;
-      line-height: 1.5;
-      font-size: 14px;
-    }
-
-    /* Botones de acción */
+    /* === BOTONES === */
     .acciones {
       text-align: center;
-      margin: 20px 0;
+      margin-top: 40px;
     }
 
     .acciones button {
-      display: block;
-      margin: 12px auto;
-      background: #aeca36;
+      background: #438f4f; /* verde original de botones */
       color: white;
       border: none;
-      padding: 12px 25px;
-      border-radius: 8px;
-      cursor: pointer;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 5px;
       font-weight: bold;
-      font-size: 14px;
+      cursor: pointer;
     }
 
     .acciones button:hover {
-      background: #8ea22c;
-    }
-
-    /* Botón reglamento */
-    .reglamento {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .reglamento button {
-      background: #ff6f00;
-      color: white;
-      border: none;
-      padding: 14px 30px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
+      background: #356c3d;
     }
   </style>
 </head>
-<html>
-  <!-- Bloque superior -->
+<body>
+  <!-- Sección superior -->
   <div class="top">
-    <!-- Logo a la izquierda -->
+    <!-- Imagen -->
     <img src="Diaria.webp" alt="Diaria Loto">
 
-    <!-- Texto y números a la derecha -->
+    <!-- Texto -->
     <div class="ganador-box">
       <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
       <div class="nums">
@@ -196,42 +106,10 @@
     </div>
   </div>
 
-  <!-- Menú -->
-  <div class="menu">
-    <a href="#">CÓMO JUGAR DIARIA</a>
-    <a href="#">DESCARGÁ GUÍA DE SUEÑOS</a>
-    <a href="#">RESULTADOS NÚMEROS DE DIARIA</a>
-  </div>
-
-  <!-- Resultados anteriores -->
-  <div class="resultados">
-    <h2>RESULTADOS ANTERIORES</h2>
-    <button>SELECCIONÁ LA FECHA</button>
-    <div class="calendario">
-      [Aquí va el calendario]
-    </div>
-  </div>
-
-  <!-- Cómo jugar -->
-  <div class="seccion">
-    <h2>CÓMO JUGAR Y GANAR</h2>
-    <p>Venta en puntos autorizados. Escoge 3 números del 0 al 9.</p>
-    <p><b>¿CÓMO SE JUEGA?</b><br>
-      • Escoge 3 dígitos del 0 al 9.<br>
-      • Compra tu boleto en un punto autorizado.<br>
-      • Espera el sorteo en vivo y revisa si ganaste.
-    </p>
-  </div>
-
-  <!-- Botones de acción -->
+  <!-- Botones -->
   <div class="acciones">
-    <button>JUGÁ EN SORTEOS CONSECUTIVOS</button>
-    <button>CONOCÉ LOS RESULTADOS</button>
-    <button>RECLAMÁ TU PREMIO</button>
+    <button>Botón 1</button>
+    <button>Botón 2</button>
   </div>
-
-  <!-- Reglamento -->
-  <div class="reglamento">
-    <button>LEER EL REGLAMENTO</button>
-  </div>
+</body>
 </html>
