@@ -28,7 +28,7 @@
 
   <!-- Esfera 11 -->
   <img src="esfera 11.png" alt="Esfera 11" class="esfera"
-       style="position: absolute; width: 5vw; height: auto; top: 50%; left: 90%;">
+       style="position: absolute; width: 5vw; height: auto; top: 50%; left: 94%;">
 </div>
 
 
