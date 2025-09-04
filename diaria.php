@@ -12,25 +12,36 @@
       font-family: Arial, sans-serif;
     }
 
+    /* Div superior */
     .top {
-      background: #438f4f; /* verde principal */
-      text-align: center;
-      padding: 20px 10px;
+      background: #aeca36; /* color del div */
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
       color: #fff;
     }
 
+    /* Logo */
     .top img {
-      width: 180px; /* ajusta tamaño del logo */
-      margin-bottom: 10px;
+      width: 150px;
+      margin-right: 20px;
+    }
+
+    /* Contenido a la derecha */
+    .ganador-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .ganador {
       font-size: 18px;
+      font-weight: bold;
       margin-bottom: 8px;
     }
 
     .nums {
-      margin: 10px 0;
+      margin-bottom: 10px;
     }
 
     .num {
@@ -38,10 +49,10 @@
       background: #fff;
       color: #000;
       border-radius: 50%;
-      padding: 12px 18px;
-      margin: 0 5px;
+      padding: 10px 15px;
+      margin: 0 4px;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .proximo {
@@ -49,18 +60,19 @@
       background: #ffd400;
       color: #000;
       padding: 6px 15px;
-      border-radius: 6px;
+      border-radius: 20px;
       font-weight: bold;
-      margin-top: 10px;
       font-size: 14px;
+      align-self: flex-start; /* alinea la etiqueta debajo de los números */
     }
 
+    /* Menú */
     .menu {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      background: #438f4f; /* verde menú */
+      background: #aeca36;
       padding: 12px;
     }
 
@@ -74,6 +86,7 @@
       font-size: 14px;
     }
 
+    /* Resultados anteriores */
     .resultados {
       text-align: center;
       padding: 25px 15px;
@@ -86,7 +99,7 @@
     }
 
     .resultados button {
-      background: #438f4f; /* verde botón fecha */
+      background: #aeca36;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -104,6 +117,7 @@
       background: #fafafa;
     }
 
+    /* Cómo jugar */
     .seccion {
       background: #f6f6f6;
       padding: 20px;
@@ -123,6 +137,7 @@
       font-size: 14px;
     }
 
+    /* Botones de acción */
     .acciones {
       text-align: center;
       margin: 20px 0;
@@ -131,7 +146,7 @@
     .acciones button {
       display: block;
       margin: 12px auto;
-      background: #438f4f; /* verde botones */
+      background: #aeca36;
       color: white;
       border: none;
       padding: 12px 25px;
@@ -142,9 +157,10 @@
     }
 
     .acciones button:hover {
-      background: #356f3d; /* verde más oscuro hover */
+      background: #8ea22c;
     }
 
+    /* Botón reglamento */
     .reglamento {
       text-align: center;
       margin: 30px 0;
@@ -163,24 +179,31 @@
   </style>
 </head>
 <html>
+  <!-- Bloque superior -->
   <div class="top">
-    <!-- Logo imagen en lugar del título -->
+    <!-- Logo a la izquierda -->
     <img src="Diaria.webp" alt="Diaria Loto">
-    <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
-    <div class="nums">
-      <span class="num">0</span>
-      <span class="num">9</span>
-      <span class="num">2</span>
+
+    <!-- Texto y números a la derecha -->
+    <div class="ganador-box">
+      <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
+      <div class="nums">
+        <span class="num">0</span>
+        <span class="num">9</span>
+        <span class="num">2</span>
+      </div>
+      <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
     </div>
-    <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
   </div>
 
+  <!-- Menú -->
   <div class="menu">
     <a href="#">CÓMO JUGAR DIARIA</a>
     <a href="#">DESCARGÁ GUÍA DE SUEÑOS</a>
     <a href="#">RESULTADOS NÚMEROS DE DIARIA</a>
   </div>
 
+  <!-- Resultados anteriores -->
   <div class="resultados">
     <h2>RESULTADOS ANTERIORES</h2>
     <button>SELECCIONÁ LA FECHA</button>
@@ -189,6 +212,7 @@
     </div>
   </div>
 
+  <!-- Cómo jugar -->
   <div class="seccion">
     <h2>CÓMO JUGAR Y GANAR</h2>
     <p>Venta en puntos autorizados. Escoge 3 números del 0 al 9.</p>
@@ -199,12 +223,14 @@
     </p>
   </div>
 
+  <!-- Botones de acción -->
   <div class="acciones">
     <button>JUGÁ EN SORTEOS CONSECUTIVOS</button>
     <button>CONOCÉ LOS RESULTADOS</button>
     <button>RECLAMÁ TU PREMIO</button>
   </div>
 
+  <!-- Reglamento -->
   <div class="reglamento">
     <button>LEER EL REGLAMENTO</button>
   </div>
