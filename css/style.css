@@ -1202,7 +1202,7 @@ img {
 
 
 .esfera {
-  animation: girar 30s linear infinite;
+  animation: girar 3s linear infinite;
 }
 
 @keyframes girar {
