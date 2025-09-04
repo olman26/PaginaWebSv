@@ -24,11 +24,11 @@
 
   <!-- Esfera 9 -->
   <img src="esfera 9.png" alt="Esfera 9" class="esfera"
-       style="position: absolute; width: 5vw; height: auto; top: 45%; left: 60%;">
+       style="position: absolute; width: 5vw; height: auto; top: 55%; left: 60%;">
 
   <!-- Esfera 11 -->
   <img src="esfera 11.png" alt="Esfera 11" class="esfera"
-       style="position: absolute; width: 5vw; height: auto; top: 30%; left: 90%;">
+       style="position: absolute; width: 5vw; height: auto; top: 35%; left: 97%;">
 </div>
 
 
