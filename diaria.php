@@ -201,6 +201,17 @@
       font-weight: bold;
       cursor: pointer;
     }
+    .proximo-label {
+  background-color: #ffd400; /* amarillo */
+  color: #000;                /* texto negro */
+  padding: 5px 12px;          /* espacio dentro del recuadro */
+  border-radius: 15px;        /* bordes redondeados */
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;            /* separación de los números */
+}
+
   </style>
 </head>
 <body>
@@ -217,9 +228,11 @@
     <span class="num">0</span>
     <span class="num">9</span>
   </div>
-  <!-- Etiqueta amarilla justo debajo de los números -->
-  <div class="proximo-sorteo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
+
+  <!-- NUEVO: etiqueta amarilla justo debajo de los números -->
+  <div class="proximo-label">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
 </div>
+
 
 
   <!-- Menú -->
