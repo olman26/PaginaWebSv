@@ -34,9 +34,12 @@
 
     /* Logo */
     .top img {
-      width: 300px;
-      height: auto;
+    width: 150px;
+    height: auto;
+    position: relative;
+    left: -10px; /* mueve la imagen 10px a la izquierda */
     }
+
 
     /* Contenido de los números */
     .ganador-box {
@@ -87,14 +90,20 @@
     }
 
     .menu a {
-      background: #fff;
-      color: #000;
-      text-decoration: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 14px;
+     background: #438f4f; /* nuevo color verde */
+     color: white;        /* texto blanco */
+     text-decoration: none;
+     padding: 8px 15px;
+     border-radius: 25px; /* más redondeado */
+     font-weight: bold;
+     font-size: 14px;
+     transition: background 0.3s; /* para efecto hover */
     }
+
+    .menu a:hover {
+    background: #367743; /* un verde un poco más oscuro al pasar el mouse */
+    }
+
 
     /* Resultados anteriores */
     .resultados {
