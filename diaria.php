@@ -34,7 +34,7 @@
 
     /* Logo */
     .top img {
-    width: 150px;
+    width: 300px;
     height: auto;
     position: relative;
     left: -10px; /* mueve la imagen 10px a la izquierda */
@@ -60,8 +60,8 @@
 
     .num {
       display: inline-block;
-      background: #fff;
-      color: #000;
+      background: #438f4f; /* verde */
+      color: #fff;          /* número en blanco */
       border-radius: 50%;
       padding: 12px 18px;
       margin: 0 5px;
@@ -86,7 +86,7 @@
       flex-wrap: wrap;
       gap: 10px;
       background: #aeca36;
-      padding: 12px;
+      padding: 17px;
     }
 
     .menu a {
@@ -210,7 +210,6 @@
         <div class="nums">
           <span class="num">0</span>
           <span class="num">9</span>
-          <span class="num">2</span>
         </div>
         <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
       </div>
