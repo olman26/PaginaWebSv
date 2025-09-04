@@ -20,15 +20,15 @@
 
   <!-- Esfera 3: a la par de la modelo, flotando sobre ella -->
   <img src="esfera 3.png" alt="Esfera 3" 
-       style="position: absolute; width: 50px; height: 50px; top: 150px; left: 600px;">
+       style="position: absolute; width: 60px; height: 60px; top: 130px; left: 600px;">
 
   <!-- Esfera 9: entre el botón y la imagen de la modelo -->
   <img src="esfera 9.png" alt="Esfera 9" 
-       style="position: absolute; width: 40px; height: 40px; top: 400px; left: 800px;">
+       style="position: absolute; width: 60px; height: 60px; top: 500px; left: 800px;">
 
   <!-- Esfera 11: al lado derecho de la modelo -->
   <img src="esfera 11.png" alt="Esfera 11" 
-       style="position: absolute; width: 40px; height: 40px; top: 2500px; left: 1200px;">
+       style="position: absolute; width: 60px; height: 60px; top: 350px; left: 1200px;">
 </div>
 
 
