@@ -47,16 +47,8 @@
   align-items: center;    /* centrado horizontal */
 }
 
-    .ganador-box {
-     display: flex;
-     flex-direction: column; /* ya está vertical */
-     align-items: center;    /* centra horizontalmente */
-     }
-
-
-    /* Números */
 .nums {
-  margin: 10px 0 5px 0; /* margen entre números y texto de próximo sorteo */
+  margin: 10px 0; /* espacio entre los números y la etiqueta */
 }
 
     .num {
@@ -80,6 +72,15 @@
   font-size: 14px;
   text-align: center;
   margin-top: 0; /* ya no necesitamos espacio extra */
+}
+.proximo-sorteo {
+  background-color: #ffd400; /* amarillo */
+  color: #000;                /* texto negro */
+  padding: 6px 15px;          /* espacio dentro del recuadro */
+  border-radius: 15px;        /* bordes redondeados */
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
 }
 
 
@@ -211,15 +212,15 @@
 
       <!-- Texto y números centrados -->
       <div class="ganador-box">
-        <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
-        <div class="nums">
-          <span class="num">0</span>
-          <span class="num">9</span>
-        </div>
-        <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
-      </div>
-    </div>
+  <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
+  <div class="nums">
+    <span class="num">0</span>
+    <span class="num">9</span>
   </div>
+  <!-- Etiqueta amarilla justo debajo de los números -->
+  <div class="proximo-sorteo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
+</div>
+
 
   <!-- Menú -->
   <div class="menu">
