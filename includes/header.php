@@ -28,8 +28,7 @@
       <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
       <a href="https://loto.sv/puntos-de-venta/">NOTICIAS</a>
       <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
-      <a href="https://loto.sv/puntos-de-venta/">SMS</a>
-      <a href="https://loto.sv/puntos-de-venta/">TENGO</a>
+      
           </nav>
 
         <div class="play-button">
