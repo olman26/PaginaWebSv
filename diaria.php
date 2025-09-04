@@ -14,24 +14,27 @@
 
     /* Div superior centrado */
     .top {
-      background: #aeca36; /* color verde */
-      display: flex;
-      justify-content: center; /* centra horizontalmente */
-      align-items: center;     /* centra verticalmente */
-      padding: 30px 20px;
-      color: #fff;
-    }
+   background: #aeca36;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 60px 20px; /* antes 30px */
+   color: #fff;
+   }
+
 
     /* Contenedor interno para imagen + texto */
     .top-content {
-      display: flex;
-      align-items: center; /* centra verticalmente imagen y texto */
-      gap: 30px;
-    }
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   margin-top: 20px; /* agrega espacio desde arriba */
+   }
+
 
     /* Logo */
     .top img {
-      width: 150px;
+      width: 300px;
       height: auto;
     }
 
