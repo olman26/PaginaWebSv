@@ -20,15 +20,15 @@
 
   <!-- Esfera 3 -->
   <img src="esfera 3.png" alt="Esfera 3" class="esfera"
-       style="position: absolute; width: 60px; height: 60px; top: 130px; left: 600px;">
+       style="position: absolute; width: 60px; height: 60px; top: 125px; left: 1500px;">
 
   <!-- Esfera 9 -->
   <img src="esfera 9.png" alt="Esfera 9" class="esfera"
-       style="position: absolute; width: 60px; height: 60px; top: 500px; left: 800px;">
+       style="position: absolute; width: 60px; height: 60px; top: 450px; left: 1200px;">
 
   <!-- Esfera 11 -->
   <img src="esfera 11.png" alt="Esfera 11" class="esfera"
-       style="position: absolute; width: 60px; height: 60px; top: 350px; left: 1200px;">
+       style="position: absolute; width: 60px; height: 60px; top: 300px; left: 1800px;">
 </div>
 
 
