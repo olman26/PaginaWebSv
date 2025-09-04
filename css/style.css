@@ -209,6 +209,13 @@ min-height: 320px; /* Más alto */
   right: 0;
 }
 
+.hero img.modelo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 350px; /*  este valor limita la altura */
+}
+
 .resultados, .youtube, .promo, .noticias, .footer, .rse {
   padding: 20px;
   text-align: center;
