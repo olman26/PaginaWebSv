@@ -48,11 +48,12 @@
       align-items: center; /* centra horizontalmente dentro del bloque */
     }
 
-    .ganador {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+    .ganador-box {
+     display: flex;
+     flex-direction: column; /* ya está vertical */
+     align-items: center;    /* centra horizontalmente */
+     }
+
 
     .nums {
       margin-bottom: 12px;
@@ -70,14 +71,18 @@
     }
 
     .proximo {
-      display: inline-block;
-      background: #ffd400;
-      color: #000;
-      padding: 6px 15px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 14px;
-    }
+     background: #ffd400;
+     color: #000;
+     padding: 6px 0;            /* solo padding vertical */
+     border-radius: 20px;
+     font-weight: bold;
+     font-size: 14px;
+     text-align: center;         /* centrado de texto */
+     width: 100%;                /* ocupa todo el ancho del contenedor */
+     max-width: fit-content;     /* se ajusta al contenido del bloque superior */
+     margin-top: 5px;            /* espacio entre números y etiqueta */
+     }
+
 
     /* Menú */
     .menu {
@@ -86,7 +91,7 @@
       flex-wrap: wrap;
       gap: 10px;
       background: #aeca36;
-      padding: 17px;
+      padding: 10px;
     }
 
     .menu a {
