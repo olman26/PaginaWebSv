@@ -13,15 +13,14 @@
     }
 
     .top {
-      background: #a5cd39;
+      background: #438f4f; /* verde principal */
       text-align: center;
       padding: 20px 10px;
       color: #fff;
     }
 
-    .top h1 {
-      font-size: 32px;
-      font-weight: bold;
+    .top img {
+      width: 180px; /* ajusta tamaño del logo */
       margin-bottom: 10px;
     }
 
@@ -61,7 +60,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      background: #a5cd39;
+      background: #438f4f; /* verde menú */
       padding: 12px;
     }
 
@@ -87,7 +86,7 @@
     }
 
     .resultados button {
-      background: #00a651;
+      background: #438f4f; /* verde botón fecha */
       color: white;
       border: none;
       padding: 10px 20px;
@@ -132,7 +131,7 @@
     .acciones button {
       display: block;
       margin: 12px auto;
-      background: #a5cd39;
+      background: #438f4f; /* verde botones */
       color: white;
       border: none;
       padding: 12px 25px;
@@ -143,7 +142,7 @@
     }
 
     .acciones button:hover {
-      background: #8bb32e;
+      background: #356f3d; /* verde más oscuro hover */
     }
 
     .reglamento {
@@ -165,7 +164,8 @@
 </head>
 <html>
   <div class="top">
-    <h1>DIARIA Loto</h1>
+    <!-- Logo imagen en lugar del título -->
+    <img src="Diaria.webp" alt="Diaria Loto">
     <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
     <div class="nums">
       <span class="num">0</span>
