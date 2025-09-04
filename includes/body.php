@@ -20,18 +20,16 @@
 
   <!-- Esfera 3 -->
   <img src="esfera 3.png" alt="Esfera 3" class="esfera"
-       style="position: absolute; width: 5vw; height: auto; top: 15%; left: 75%;">
+       style="position: absolute; width: 5vw; height: auto; top: 20%; left: 65%;">
 
   <!-- Esfera 9 -->
   <img src="esfera 9.png" alt="Esfera 9" class="esfera"
-       style="position: absolute; width: 5vw; height: auto; top: 55%; left: 60%;">
+       style="position: absolute; width: 5vw; height: auto; top: 70%; left: 55%;">
 
   <!-- Esfera 11 -->
   <img src="esfera 11.png" alt="Esfera 11" class="esfera"
-       style="position: absolute; width: 5vw; height: auto; top: 35%; left: 97%;">
+       style="position: absolute; width: 5vw; height: auto; top: 50%; left: 90%;">
 </div>
-
-
 
 
 
