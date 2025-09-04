@@ -16,19 +16,19 @@
   </div>
 
   <!-- Imagen de la modelo -->
-  <img src="modelo.png" alt="Conductora" style="display: block; max-width: 100%;">
+  <img src="modelo.png" alt="Conductora" style="display: block; max-width: 100%; height: auto;">
 
   <!-- Esfera 3 -->
   <img src="esfera 3.png" alt="Esfera 3" class="esfera"
-       style="position: absolute; width: 60px; height: 60px; top: 125px; left: 1500px;">
+       style="position: absolute; width: 5vw; height: auto; top: 15%; left: 75%;">
 
   <!-- Esfera 9 -->
   <img src="esfera 9.png" alt="Esfera 9" class="esfera"
-       style="position: absolute; width: 60px; height: 60px; top: 450px; left: 1200px;">
+       style="position: absolute; width: 5vw; height: auto; top: 45%; left: 60%;">
 
   <!-- Esfera 11 -->
   <img src="esfera 11.png" alt="Esfera 11" class="esfera"
-       style="position: absolute; width: 60px; height: 60px; top: 300px; left: 1800px;">
+       style="position: absolute; width: 5vw; height: auto; top: 30%; left: 90%;">
 </div>
 
 
