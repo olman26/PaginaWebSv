@@ -18,7 +18,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 30px 20px; /* antes 30px */
+   padding: 60px 20px; /* antes 30px */
    color: #fff;
    }
 
@@ -216,9 +216,11 @@
         <div class="nums">
           <span class="num">0</span>
           <span class="num">9</span>
-          <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
         </div>
+        <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
+      </div>
     </div>
+  </div>
 
   <!-- Menú -->
   <div class="menu">
