@@ -12,36 +12,44 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Div superior */
+    /* Div superior centrado */
     .top {
-      background: #aeca36; /* color del div */
+      background: #aeca36; /* color verde */
       display: flex;
-      align-items: center;
-      padding: 15px 20px;
+      justify-content: center; /* centra horizontalmente */
+      align-items: center;     /* centra verticalmente */
+      padding: 30px 20px;
       color: #fff;
+    }
+
+    /* Contenedor interno para imagen + texto */
+    .top-content {
+      display: flex;
+      align-items: center; /* centra verticalmente imagen y texto */
+      gap: 30px;
     }
 
     /* Logo */
     .top img {
       width: 150px;
-      margin-right: 20px;
+      height: auto;
     }
 
-    /* Contenido a la derecha */
+    /* Contenido de los números */
     .ganador-box {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center; /* centra horizontalmente dentro del bloque */
     }
 
     .ganador {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .nums {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .num {
@@ -49,8 +57,8 @@
       background: #fff;
       color: #000;
       border-radius: 50%;
-      padding: 10px 15px;
-      margin: 0 4px;
+      padding: 12px 18px;
+      margin: 0 5px;
       font-weight: bold;
       font-size: 18px;
     }
@@ -63,7 +71,6 @@
       border-radius: 20px;
       font-weight: bold;
       font-size: 14px;
-      align-self: flex-start; /* alinea la etiqueta debajo de los números */
     }
 
     /* Menú */
@@ -181,18 +188,20 @@
 <body>
   <!-- Bloque superior -->
   <div class="top">
-    <!-- Logo a la izquierda -->
-    <img src="Diaria.webp" alt="Diaria Loto">
+    <div class="top-content">
+      <!-- Logo a la izquierda -->
+      <img src="Diaria.webp" alt="Diaria Loto">
 
-    <!-- Texto y números a la derecha -->
-    <div class="ganador-box">
-      <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
-      <div class="nums">
-        <span class="num">0</span>
-        <span class="num">9</span>
-        <span class="num">2</span>
+      <!-- Texto y números centrados -->
+      <div class="ganador-box">
+        <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
+        <div class="nums">
+          <span class="num">0</span>
+          <span class="num">9</span>
+          <span class="num">2</span>
+        </div>
+        <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
       </div>
-      <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
     </div>
   </div>
 
