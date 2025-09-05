@@ -1233,88 +1233,44 @@ img {
   justify-content: space-between;
   background-color: #FFA500;
   padding: 10px 20px;
-  flex-wrap: nowrap; /* No permitir que bajen los items */
-  position: relative;
+  flex-wrap: wrap; /* Permite que los items se muevan si no caben */
+  gap: 10px; /* Espacio entre items */
 }
 
-/* Logo */
 .logo img {
   height: 60px;
   width: auto;
+  flex-shrink: 0; /* No se encoge demasiado */
 }
 
-/* Menú normal */
 .nav-menu {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap; /* Si no caben, bajan a la siguiente línea */
 }
 
 .nav-menu a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: bold;
-  padding: 5px 10px;
+  white-space: nowrap; /* Evita que los links se rompan */
 }
 
-/* Botón de jugar */
-.play-button a img {
+.play-button img {
   height: 50px;
   width: auto;
+  flex-shrink: 0;
 }
 
-/* Hamburger */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
-
-/* Checkbox oculto */
-#menu-toggle {
-  display: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .main-header {
-    flex-wrap: wrap;
-  }
-
-  /* Mostrar hamburger */
-  .hamburger {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #FFA500;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-
+/* Opcional: ajustar tamaños en pantallas muy pequeñas */
+@media (max-width: 600px) {
   .nav-menu a {
-    padding: 10px;
-    border-top: 1px solid #ffb84d;
+    font-size: 14px;
   }
-
-  /* Mostrar menú al hacer click */
-  #menu-toggle:checked + .hamburger + .nav-menu {
-    display: flex;
+  .logo img {
+    height: 50px;
   }
-
-  .play-button {
-    order: 3;
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .logo {
-    order: 1;
-    margin-bottom: 10px;
+  .play-button img {
+    height: 40px;
   }
 }
