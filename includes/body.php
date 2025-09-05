@@ -47,6 +47,7 @@
 <div class="resultados-carousel">
   <div class="res-cards">
     
+    <!-- Diaria -->
     <div class="res-card verde">
       <img src="Diaria.webp" alt="Diaria">
       <h4>Diaria</h4>
@@ -58,6 +59,7 @@
       <button class="btn-info">Conoce más</button>
     </div>
 
+    <!-- Súper Premio (Rojo) -->
     <div class="res-card roja">
       <img src="superpremio.webp" alt="Super Premio">
       <h4>Súper Premio</h4>

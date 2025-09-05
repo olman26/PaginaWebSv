@@ -246,6 +246,7 @@ min-height: 320px; /* Más alto */
 }
 
 /* ===== CARRUSEL ===== */
+/* Carrusel */
 .resultados-carousel {
   width: 100%;
   display: flex;
@@ -276,11 +277,13 @@ min-height: 320px; /* Más alto */
 /* Contenedor de tarjetas */
 .res-cards {
   display: flex;
-  flex-direction: row;   /* tarjetas en fila */
-  gap: 20px;             /* espacio entre tarjetas */
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap; /* siempre lado a lado */
 }
 
-/* Tarjeta */
+/* Tarjeta base */
 .res-card {
   width: 260px;
   height: 360px;
@@ -291,6 +294,7 @@ min-height: 320px; /* Más alto */
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 
