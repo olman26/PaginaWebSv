@@ -71,12 +71,18 @@
 
     
 
-  <!-- Flecha derecha -->
-  <button class="res-next">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
-      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
-    </svg>
-  </button>
+    <div class="res-card morado">
+      <img src="Premia2.webp" alt="Premia 2">
+      <h4>Premia 2</h4>
+      <div class="numeros">05 • 15</div>
+      <div class="btn-group">
+        <button class="btn-jugar">Jugar</button>
+        <button class="btn-info">Conoce más</button>
+      </div>
+    </div>
+  </div>
+
+  
 </div>
 
 
