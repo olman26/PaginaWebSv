@@ -69,24 +69,7 @@
       <button class="btn-info">Conoce más</button>
     </div>
 
-    <div class="res-card azul">
-      <img src="juga3.webp" alt="Juga Tres">
-      <h4>Juga Tres</h4>
-      <div class="numeros">4 • 6 • 9</div>
-      <button class="btn-jugar">Jugar</button>
-      <button class="btn-info">Conoce más</button>
-    </div>
-
-    <div class="res-card morado">
-      <img src="Premia2.webp" alt="Premia 2">
-      <h4>Premia 2</h4>
-      <div class="numeros">05 • 15</div>
-      <div class="btn-group">
-        <button class="btn-jugar">Jugar</button>
-        <button class="btn-info">Conoce más</button>
-      </div>
-    </div>
-  </div>
+    
 
   <!-- Flecha derecha -->
   <button class="res-next">
