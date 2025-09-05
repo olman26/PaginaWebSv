@@ -43,8 +43,16 @@
 </div>
 
 
-<!-- Carrusel simplificado -->
-<div class="resultados-carousel fixed-carousel">
+  <!-- Carrusel -->
+<div class="resultados-carousel">
+  <!-- Flecha izquierda -->
+  <button class="res-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+
+  <!-- Contenedor de tarjetas -->
   <div class="res-cards">
     <div class="res-card verde">
       <img src="Diaria.webp" alt="Diaria">
@@ -61,11 +69,13 @@
       <button class="btn-jugar">Jugar</button>
       <button class="btn-info">Conoce más</button>
     </div>
-  </div>
+
 </div>
 
-<p class="proximo">PRÓXIMO SORTEO EN VIVO: 0H : 51M : 53S</p>
 
+  <!-- Próximo sorteo -->
+  <p class="proximo">PRÓXIMO SORTEO EN VIVO: 0H : 51M : 53S</p>
+</div>
 
   
 
