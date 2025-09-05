@@ -44,12 +44,7 @@
 
   <!-- Carrusel -->
 <div class="resultados-carousel">
-  <!-- Flecha izquierda -->
-  <button class="res-prev">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
-      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    </svg>
-  </button>
+  
 
   <!-- Contenedor de tarjetas -->
   <div class="res-cards">
@@ -70,16 +65,6 @@
     </div>
 
     
-
-    <div class="res-card morado">
-      <img src="Premia2.webp" alt="Premia 2">
-      <h4>Premia 2</h4>
-      <div class="numeros">05 • 15</div>
-      <div class="btn-group">
-        <button class="btn-jugar">Jugar</button>
-        <button class="btn-info">Conoce más</button>
-      </div>
-    </div>
   </div>
 
   
