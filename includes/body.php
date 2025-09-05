@@ -43,32 +43,32 @@
 
 
   <!-- Carrusel -->
-<div class="resultados-carousel">
-  
-
-  <!-- Contenedor de tarjetas -->
-  <div class="res-cards">
-    <div class="res-card verde">
-      <img src="Diaria.webp" alt="Diaria">
-      <h4>Diaria</h4>
-      <div class="numeros">5 • 8</div>
-      <button class="btn-jugar">Jugar</button>
-      <button class="btn-info">Conoce más</button>
-    </div>
-
-    <div class="res-card naranja">
-      <img src="superpremio.webp" alt="Super Premio">
-      <h4>Súper Premio</h4>
-      <div class="numeros">12 • 15 • 28</div>
-      <button class="btn-jugar">Jugar</button>
-      <button class="btn-info">Conoce más</button>
-    </div>
-
-    
+<div class="res-card verde">
+  <img src="Diaria.webp" alt="Diaria">
+  <h4>Diaria</h4>
+  <div class="numeros">
+    <span class="bola-verde">5</span>
+    <span class="bola-verde">8</span>
   </div>
-
-  
+  <button class="btn-jugar">Jugar</button>
+  <button class="btn-info">Conoce más</button>
 </div>
+
+<div class="res-card naranja">
+  <img src="superpremio.webp" alt="Super Premio">
+  <h4>Súper Premio</h4>
+  <div class="numeros">
+    <span class="bola-amarilla">12</span>
+    <span class="bola-amarilla">15</span>
+    <span class="bola-amarilla">28</span>
+    <span class="bola-amarilla">1</span>
+    <span class="bola-amarilla">6</span>
+    <span class="bola-amarilla">2</span>
+  </div>
+  <button class="btn-jugar">Jugar</button>
+  <button class="btn-info">Conoce más</button>
+</div>
+
 
 
   <!-- Próximo sorteo -->
