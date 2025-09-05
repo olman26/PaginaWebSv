@@ -45,7 +45,7 @@
   <!-- Carrusel -->
 <div class="res-card verde">
   <img src="Diaria.webp" alt="Diaria">
-  <h4>Diaria</h4>
+ 
   <div class="numeros">
     <span class="bola-verde">5</span>
     <span class="bola-verde">8</span>
@@ -56,7 +56,7 @@
 
 <div class="res-card naranja">
   <img src="superpremio.webp" alt="Super Premio">
-  <h4>Súper Premio</h4>
+  
   <div class="numeros">
     <span class="bola-amarilla">12</span>
     <span class="bola-amarilla">15</span>
