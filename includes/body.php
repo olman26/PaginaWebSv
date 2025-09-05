@@ -32,8 +32,6 @@
 </div>
 
 
-
-
  
   <div class="resultados-box">
   <!-- Título -->
@@ -45,16 +43,8 @@
 </div>
 
 
-  <!-- Carrusel -->
-<div class="resultados-carousel">
-  <!-- Flecha izquierda -->
-  <button class="res-prev">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
-      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    </svg>
-  </button>
-
-  <!-- Contenedor de tarjetas -->
+<!-- Carrusel simplificado -->
+<div class="resultados-carousel fixed-carousel">
   <div class="res-cards">
     <div class="res-card verde">
       <img src="Diaria.webp" alt="Diaria">
@@ -71,38 +61,11 @@
       <button class="btn-jugar">Jugar</button>
       <button class="btn-info">Conoce más</button>
     </div>
-
-    <div class="res-card azul">
-      <img src="juga3.webp" alt="Juga Tres">
-      <h4>Juga Tres</h4>
-      <div class="numeros">4 • 6 • 9</div>
-      <button class="btn-jugar">Jugar</button>
-      <button class="btn-info">Conoce más</button>
-    </div>
-
-    <div class="res-card morado">
-      <img src="Premia2.webp" alt="Premia 2">
-      <h4>Premia 2</h4>
-      <div class="numeros">05 • 15</div>
-      <div class="btn-group">
-        <button class="btn-jugar">Jugar</button>
-        <button class="btn-info">Conoce más</button>
-      </div>
-    </div>
   </div>
-
-  <!-- Flecha derecha -->
-  <button class="res-next">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
-      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
-    </svg>
-  </button>
 </div>
 
+<p class="proximo">PRÓXIMO SORTEO EN VIVO: 0H : 51M : 53S</p>
 
-  <!-- Próximo sorteo -->
-  <p class="proximo">PRÓXIMO SORTEO EN VIVO: 0H : 51M : 53S</p>
-</div>
 
   
 
