@@ -247,12 +247,9 @@ min-height: 320px; /* Más alto */
 
 /* ===== CARRUSEL ===== */
 .resultados-carousel {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 15px;
-  position: relative;
-  overflow: hidden;
 }
 
 /* Flechas */
@@ -276,21 +273,17 @@ min-height: 320px; /* Más alto */
 /* ===== TARJETAS ===== */
 /* Contenedor de tarjetas en el carrusel */
 /* Contenedor de tarjetas (carrusel) */
+/* Contenedor de tarjetas */
 .res-cards {
   display: flex;
-  flex-direction: row;   /* Fuerza horizontal */
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: nowrap;     /* Nunca se vayan abajo */
-  width: 100%;
+  flex-direction: row;   /* tarjetas en fila */
+  gap: 20px;             /* espacio entre tarjetas */
 }
 
-/* Cada tarjeta */
+/* Tarjeta */
 .res-card {
-  width: 260px;          /* ancho fijo */
-  height: 360px;         /* alto fijo */
-  flex-shrink: 0;        /* no se reduce */
+  width: 260px;
+  height: 360px;
   border-radius: 15px;
   padding: 15px;
   text-align: center;
@@ -298,7 +291,6 @@ min-height: 320px; /* Más alto */
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 
