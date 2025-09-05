@@ -1224,3 +1224,62 @@ img {
 
 
 
+
+/* Contenedor principal del header */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFA500; /* Ajusta tu color naranja */
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Permite que los elementos bajen en pantallas pequeñas */
+}
+
+/* Logo */
+.main-header .logo img {
+  height: 60px; /* Ajusta según tu preferencia */
+  width: auto;
+}
+
+/* Navegación */
+.nav-menu {
+  display: flex;
+  gap: 20px; /* Espacio entre enlaces */
+  flex-wrap: wrap; /* Permite que los links bajen si no caben */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+/* Botón de jugar */
+.play-button a img {
+  height: 50px; /* Ajusta el tamaño del botón */
+  width: auto;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column; /* Logo, nav y botón en columna */
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .play-button {
+    margin-top: 10px;
+  }
+}
+
+
+
+
