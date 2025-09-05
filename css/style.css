@@ -295,10 +295,9 @@ min-height: 320px; /* Más alto */
 }
 
 /* COLORES PERSONALIZADOS */
-.res-card.verde { background: #28a745; }
-.res-card.naranja { background: #ff7f00; }
-.res-card.azul { background: #007bff; }
-.res-card.morado { background: #8e44ad; }
+.res-card.verde { background: #aeca36; }
+.res-card.naranja { background: #e31f26; }
+
 
 /* Imagen */
 .res-card img {
