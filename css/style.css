@@ -1225,27 +1225,28 @@ img {
 
 
 
-/* Contenedor principal del header */
+
+
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #FFA500; /* Ajusta tu color naranja */
+  background-color: #FFA500;
   padding: 10px 20px;
-  flex-wrap: wrap; /* Permite que los elementos bajen en pantallas pequeñas */
+  flex-wrap: nowrap; /* No permitir que bajen los items */
+  position: relative;
 }
 
 /* Logo */
-.main-header .logo img {
-  height: 60px; /* Ajusta según tu preferencia */
+.logo img {
+  height: 60px;
   width: auto;
 }
 
-/* Navegación */
+/* Menú normal */
 .nav-menu {
   display: flex;
-  gap: 20px; /* Espacio entre enlaces */
-  flex-wrap: wrap; /* Permite que los links bajen si no caben */
+  gap: 20px;
 }
 
 .nav-menu a {
@@ -1257,29 +1258,63 @@ img {
 
 /* Botón de jugar */
 .play-button a img {
-  height: 50px; /* Ajusta el tamaño del botón */
+  height: 50px;
   width: auto;
 }
 
-/* Ajustes responsivos */
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Checkbox oculto */
+#menu-toggle {
+  display: none;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .main-header {
-    flex-direction: column; /* Logo, nav y botón en columna */
-    align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  /* Mostrar hamburger */
+  .hamburger {
+    display: block;
   }
 
   .nav-menu {
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #FFA500;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-menu a {
+    padding: 10px;
+    border-top: 1px solid #ffb84d;
+  }
+
+  /* Mostrar menú al hacer click */
+  #menu-toggle:checked + .hamburger + .nav-menu {
+    display: flex;
   }
 
   .play-button {
+    order: 3;
     margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    order: 1;
+    margin-bottom: 10px;
   }
 }
-
-
-
-
