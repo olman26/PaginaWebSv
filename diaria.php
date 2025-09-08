@@ -355,28 +355,35 @@
     border: 2px solid #438f4f;
     border-radius: 10px;
     margin: 20px 1cm; /* alineado con el div resultados */
-    background: #aeca36; /* verde */
+    background: #006400; /* verde */
     color: white;
     font-weight: bold;
 }
 
 .accordion-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* centra horizontalmente */
     align-items: center;
     cursor: pointer;
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: 20px 20px; /* más espacio vertical */
+    font-size: 24px; /* más grande */
+    font-weight: bold;
+    position: relative;
 }
 
+/* Flecha a la derecha */
 .accordion-header .arrow {
+    position: absolute;
+    right: 20px; /* separada del borde derecho */
     transition: transform 0.3s;
+    font-size: 28px; /* flecha más grande */
 }
+
 
 .accordion-content {
     display: none;
     padding: 15px 20px;
-    background: #f0f9d2; /* verde claro para el contenido */
+    background: #fafafaff; /* verde claro para el contenido */
     color: #000;
     font-weight: normal;
     font-size: 14px;
@@ -471,13 +478,6 @@ function toggleAccordion(header) {
     <div class="reglamento">
   <button onclick="window.open('reglamento.pdf', '_blank')">LEER EL REGLAMENTO</button>
   
-  <!-- Flecha hacia arriba -->
-  <div class="flecha">⬆️</div>
-  
-  <!-- Texto en azul -->
-  <div class="nota">
-    ABRE EL REGLAMENTO EN UN PDF EN UNA NUEVA PESTAÑA
-  </div>
 </div>
 
 </body>
