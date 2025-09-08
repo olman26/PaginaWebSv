@@ -102,15 +102,13 @@
 
         /* Menú */
         .menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    background: #aeca36;
-    padding: 12px;
-    margin-top: 15px; /* <- Aquí ajustas hacia abajo */
-}
-
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background: #aeca36;
+            padding: 12px;
+        }
 
         .menu a {
             background: #438f4f;
