@@ -1249,23 +1249,21 @@ img {
 }
 
 .banner-apostemos {
-  width: 80%;                /* ancho deseado menor que antes */
-  max-width: 1200px;         /* límite en pantallas grandes */
-  margin: 20px auto;         /* centrado y espacio superior/inferior */
-  border-radius: 12px;       /* esquinas redondeadas */
-  overflow: hidden;          /* respeta bordes redondeados */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* sombra sutil */
+  width: 95%;
+  max-width: 1400px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   text-align: center;
-  background: none;          /* elimina cualquier color de fondo */
-  padding: 0;                /* elimina espacio interno */
 }
 
-
 .banner-apostemos img {
-  width: 100%;  /* ocupa todo el contenedor */
+  width: 100%;
   height: auto;
   display: block;
 }
+
 
 
 
