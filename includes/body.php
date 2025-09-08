@@ -120,9 +120,12 @@
 <div class="banner-superpremio">
   <img src="Banner-Superpremio.gif" alt="Banner Superpremio">
 </div>
+<!-- Banner Superpremio -->
+<div class="banner-superpremio">
+  <img src="Fondo seccion apostemos.png" alt="Banner Superpremio">
+</div>
 
-<!-- Nuevo banner similar -->
-<img src="Fondo seccion apostemos.png" alt="Banner Apostemos" style="width:100%; height:auto; display:block;">
+
 
 
 
