@@ -41,6 +41,15 @@
             left: -10px;
             /* mueve la imagen 10px a la izquierda */
         }
+        .ganador {
+    font-weight: bold;
+    font-size: 18px;       /* tamaño de la letra */
+    width: 250px;          /* ancho de la caja */
+    text-align: center;    /* centrado del texto */
+    margin-bottom: 10px;   /* distancia hacia los números */
+    margin-top: -10px;     /* mueve hacia arriba */
+}
+
 
         /* Contenido de los números */
         .ganador-box {
