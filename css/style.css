@@ -319,8 +319,9 @@ min-height: 320px; /* Más alto */
 }
 
 .resultados-carousel {
-  scroll-margin-top: -50px; /* Ajusta el valor a lo que quieras */
+  margin-top: -20px; /* súbelo 20px */
 }
+
 
 
 
