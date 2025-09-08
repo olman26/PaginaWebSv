@@ -257,21 +257,41 @@
         }
 
         /* Botón reglamento */
-        .reglamento {
-            text-align: center;
-            margin: 30px 0;
-        }
+       .reglamento {
+  text-align: center;
+  margin: 30px 0;
+}
 
-        .reglamento button {
-            background: #438f4f;
-            color: white;
-            border: none;
-            padding: 14px 30px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+/* Botón naranja redondeado */
+.reglamento button {
+  background: #ff6f00;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reglamento button:hover {
+  background: #e65c00;
+}
+
+/* Flecha */
+.reglamento .flecha {
+  font-size: 24px;
+  margin: 12px 0;
+}
+
+/* Texto azul */
+.reglamento .nota {
+  color: #0066cc;
+  font-size: 14px;
+  font-weight: bold;
+}
+
         .etiqueta-hola {
     background-color: #ffd400; /* amarillo */
     color: #006400;            /* verde */
@@ -335,14 +355,18 @@
 </div>
 
 
-    </div> <!-- Cómo jugar -->
-    <div class="seccion">
-        <h2>CÓMO JUGAR Y GANAR</h2>
-        <p>Venta en puntos autorizados. Escoge 3 números del 0 al 9.</p>
-        <p><b>¿CÓMO SE JUEGA?</b><br> • Escoge 3 dígitos del 0 al 9.<br> • Compra tu boleto en un punto autorizado.<br> • Espera el sorteo en vivo y revisa si ganaste. </p>
-    </div> <!-- Botones de acción -->
-    <div class="acciones"> <button>JUGÁ EN SORTEOS CONSECUTIVOS</button> <button>CONOCÉ LOS RESULTADOS</button> <button>RECLAMÁ TU PREMIO</button> </div> <!-- Reglamento -->
-    <div class="reglamento"> <button>LEER EL REGLAMENTO</button> </div>
+    <div class="reglamento">
+  <button onclick="window.open('reglamento.pdf', '_blank')">LEER EL REGLAMENTO</button>
+  
+  <!-- Flecha hacia arriba -->
+  <div class="flecha">⬆️</div>
+  
+  <!-- Texto en azul -->
+  <div class="nota">
+    ABRE EL REGLAMENTO EN UN PDF EN UNA NUEVA PESTAÑA
+  </div>
+</div>
+
 </body>
 
 </html> 
