@@ -263,7 +263,7 @@
         }
 
         .reglamento button {
-            background: #ff6f00;
+            background: #438f4f;
             color: white;
             border: none;
             padding: 14px 30px;
