@@ -132,6 +132,68 @@
 
         /* Resultados anteriores */
         .resultados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 1cm;          /* margen alrededor del bloque */
+    background: #fafafa;
+}
+
+.resultados .col {
+    flex: 1;
+    text-align: center;
+}
+
+/* Izquierda */
+.resultados .izquierda h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.resultados .izquierda button {
+    background: #aeca36;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Centro */
+.resultados .centro .calendario {
+    background: white;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 14px;
+}
+
+/* Derecha */
+.resultados .derecha .sorteo {
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Esferas verdes */
+.resultados .derecha .num {
+    display: inline-block;
+    background: #438f4f;   /* verde */
+    color: white;          /* número en blanco */
+    border-radius: 50%;
+    padding: 8px 12px;
+    margin: 0 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+        .resultados {
             text-align: center;
             padding: 25px 15px;
         }
@@ -242,14 +304,31 @@
                 <div class="nums"> <span class="num">0</span> <span class="num">9</span> </div>
                  <!-- Etiqueta HOLA -->
     <div class="etiqueta-hola">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
-                <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
             </div>
         </div>
     </div> <!-- Menú -->
     <div class="menu"> <a href="#">CÓMO JUGAR DIARIA</a> <a href="#">DESCARGÁ GUÍA DE SUEÑOS</a> <a href="#">RESULTADOS NÚMEROS DE DIARIA</a> </div> <!-- Resultados anteriores -->
     <div class="resultados">
-        <h2>RESULTADOS ANTERIORES</h2> <button>SELECCIONÁ LA FECHA</button>
-        <div class="calendario"> [Aquí va el calendario] </div>
+    <!-- Columna izquierda -->
+    <div class="col izquierda">
+        <h2>RESULTADOS ANTERIORES</h2>
+        <button>SELECCIONÁ LA FECHA</button>
+    </div>
+
+    <!-- Columna centro -->
+    <div class="col centro">
+        <div class="calendario">
+            [Aquí va el calendario]
+        </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="col derecha">
+        <div class="sorteo">SORTEO <span class="num">11</span>:<span class="num">00</span> A.M</div>
+        <div class="sorteo">SORTEO <span class="num">0</span>:<span class="num">00</span> P.M</div>
+    </div>
+</div>
+
     </div> <!-- Cómo jugar -->
     <div class="seccion">
         <h2>CÓMO JUGAR Y GANAR</h2>
