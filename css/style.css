@@ -512,7 +512,7 @@ img {
 
   .res-card {
     flex: 0 0 80%;
-    max-width: 300px;
+    max-width: 400px;
     scroll-snap-align: center;
   }
 
