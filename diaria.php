@@ -347,6 +347,43 @@
 }
 
 
+
+
+
+
+.accordion {
+    border: 2px solid #438f4f;
+    border-radius: 10px;
+    margin: 20px 1cm; /* alineado con el div resultados */
+    background: #aeca36; /* verde */
+    color: white;
+    font-weight: bold;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.accordion-header .arrow {
+    transition: transform 0.3s;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px 20px;
+    background: #f0f9d2; /* verde claro para el contenido */
+    color: #000;
+    font-weight: normal;
+    font-size: 14px;
+    border-top: 1px solid #438f4f;
+}
+
+
     </style>
 </head>
 
@@ -398,6 +435,36 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<script>
+function toggleAccordion(header) {
+    const content = header.nextElementSibling;
+    const arrow = header.querySelector('.arrow');
+
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        arrow.style.transform = "rotate(0deg)";
+    } else {
+        content.style.display = "block";
+        arrow.style.transform = "rotate(180deg)";
+    }
+}
+</script>
+
+<div class="resultados">
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    <span>CÓMO JUGAR Y GANAR</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="accordion-content">
+    <p>
+      Aquí puedes poner las instrucciones para jugar y ganar.  
+      Explica cómo seleccionar los números, fechas de sorteos y cualquier detalle importante.
+    </p>
+  </div>
 </div>
 
 
