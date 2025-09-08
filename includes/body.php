@@ -85,21 +85,18 @@ document.addEventListener("DOMContentLoaded", function() {
   const carrusel = document.querySelector(".resultados-carousel");
 
   window.addEventListener("scroll", function() {
-    // Detecta cuando el carrusel ya es visible en la pantalla
-    const rect = carrusel.getBoundingClientRect();
-    const alturaVentana = window.innerHeight || document.documentElement.clientHeight;
+    // Cuánto scroll hizo el usuario
+    const scrollTop = window.scrollY;
 
-    if (rect.top < alturaVentana && rect.bottom >= 0) {
-      // Cuando el carrusel está en vista, lo sube 100px
-      carrusel.style.transform = "translateY(-100px)";
-      carrusel.style.transition = "transform 0.5s ease"; // animado suave
-    } else {
-      // Cuando no está en vista, vuelve a su posición normal
-      carrusel.style.transform = "translateY(0)";
-    }
+    // Movemos el carrusel un poco hacia arriba dependiendo del scroll
+    // Limita el movimiento a unos 50px (aprox 3 cm)
+    const mover = Math.min(scrollTop / 2, 50); // ajusta divisor y máximo
+    carrusel.style.transform = `translateY(-${mover}px)`;
+    carrusel.style.transition = "transform 0.2s ease";
   });
 });
 </script>
+
 
 
  
