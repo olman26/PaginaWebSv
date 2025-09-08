@@ -303,6 +303,50 @@
     display: inline-block;     
 }
 
+.resultados-anteriores {
+  text-align: center;
+  margin: 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Título verde grande */
+.resultados-anteriores h2 {
+  font-size: 28px;
+  color: green;
+  margin-bottom: 20px;
+}
+
+/* Label amarillo redondeado */
+.label-fecha {
+  background: yellow;
+  color: green;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Input calendario dentro del label */
+.label-fecha input[type="date"] {
+  border: none;
+  background: white;
+  padding: 6px 10px;
+  margin-left: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Texto verde para sorteo */
+.sorteo {
+  margin-top: 15px;
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
     </style>
 </head>
 
@@ -322,11 +366,25 @@
     
     <div class="resultados">
     <!-- Columna izquierda -->
-    <div class="col izquierda">
-        <h2>RESULTADOS ANTERIORES</h2>
-        <label for="fecha">SELECCIONÁ LA FECHA:</label><br>
-        <input type="date" id="fecha" name="fecha">
-    </div>
+    <div class="resultados-anteriores">
+  <h2>RESULTADOS ANTERIORES</h2>
+
+  <!-- Label amarillo con calendario -->
+  <label class="label-fecha">
+    SELECCIONÁ LA FECHA:
+    <input type="date">
+  </label>
+
+  <!-- Texto verde para sorteo -->
+  <div class="sorteo">
+    SORTEO 11:00 A.M.
+  </div>
+  <div class="sorteo">
+    SORTEO 9:00 P.M.
+  </div>
+</div>
+
+
 
     <!-- Columna centro -->
     <div class="col centro">
@@ -338,14 +396,14 @@
     <!-- Columna derecha -->
     <div class="col derecha">
         <div class="sorteo">
-            <h3>SORTEO 11:00 A.M</h3>
+            
             <div class="nums">
                 <span class="num">1</span>
                 <span class="num">5</span>
             </div>
         </div>
         <div class="sorteo">
-            <h3>SORTEO 0:00 P.M</h3>
+            
             <div class="nums">
                 <span class="num">8</span>
                 <span class="num">3</span>
