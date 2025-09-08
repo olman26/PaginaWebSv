@@ -241,7 +241,7 @@
                 <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
                 <div class="nums"> <span class="num">0</span> <span class="num">9</span> </div>
                  <!-- Etiqueta HOLA -->
-    <div class="etiqueta-hola">HOLA</div>
+    <div class="etiqueta-hola">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
                 <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
             </div>
         </div>
