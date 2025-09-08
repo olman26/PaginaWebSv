@@ -131,64 +131,77 @@
         }
 
         /* Resultados anteriores */
-        .resultados {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border: 3px solid #438f4f;
-    border-radius: 15px;
-    padding: 25px;
-    margin: 1cm;
-    background: #fafafaff; 
+     /* Resultados anteriores */
+.resultados {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 3px solid #438f4f;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 1cm;
+  background: #fafafa;
 }
 
 /* Columnas */
 .resultados .col {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 /* Izquierda */
 .resultados .izquierda h2 {
-    font-size: 26px;
-    color: #438f4f;
-    margin-bottom: 15px;
+  font-size: 28px;
+  color: green;
+  margin-bottom: 15px;
 }
 
-.resultados .izquierda label {
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
+.label-fecha {
+  background: yellow;
+  color: green;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  font-size: 16px;
 }
 
-.resultados .izquierda input[type="date"] {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 2px solid #aeca36;
-    font-size: 16px;
+.label-fecha input[type="date"] {
+  border: none;
+  background: white;
+  padding: 6px 10px;
+  margin-left: 10px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-/* Centro */
+/* Centro (calendario de ejemplo) */
 .resultados .centro .calendario {
-    background: white;
-    border: 2px solid #ccc;
-    border-radius: 12px;
-    padding: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #555;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
 }
 
 /* Derecha */
-.resultados .derecha .sorteo {
-    margin-bottom: 25px;
+.resultados .derecha h3 {
+  font-size: 20px;
+  color: green;
+  margin-bottom: 10px;
 }
 
-.resultados .derecha h3 {
-    font-size: 20px;
-    color: #ff6f00;
-    margin-bottom: 10px;
+.resultados .num {
+  display: inline-block;
+  background: #438f4f;
+  color: white;
+  border-radius: 50%;
+  padding: 15px 20px;
+  margin: 0 6px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* Esferas verdes */
@@ -365,52 +378,59 @@
     
     
     <div class="resultados">
-    <!-- Columna izquierda -->
-    <div class="resultados-anteriores">
-  <h2>RESULTADOS ANTERIORES</h2>
-
-  <!-- Label amarillo con calendario -->
-  <label class="label-fecha">
-    SELECCIONÁ LA FECHA:
-    <input type="date">
-  </label>
-
-  <!-- Texto verde para sorteo -->
-  <div class="sorteo">
-    SORTEO 11:00 A.M.
+  <!-- Columna izquierda -->
+  <div class="col izquierda">
+    <h2>RESULTADOS ANTERIORES</h2>
+    <label class="label-fecha">
+      SELECCIONÁ LA FECHA:
+    </label>
   </div>
-  <div class="sorteo">
-    SORTEO 9:00 P.M.
-  </div>
-</div>
-
 
 
     <!-- Columna centro -->
-    <div class="col centro">
-        <div class="calendario">
-             Aquí podría ir un calendario más grande o embebido
-        </div>
+  <div class="col centro">
+    <div class="calendario">
+      Aquí podría ir un calendario más grande o embebido
     </div>
+  </div>
 
     <!-- Columna derecha -->
-    <div class="col derecha">
-        <div class="sorteo">
-            
-            <div class="nums">
-                <span class="num">1</span>
-                <span class="num">5</span>
-            </div>
-        </div>
-        <div class="sorteo">
-            
-            <div class="nums">
-                <span class="num">8</span>
-                <span class="num">3</span>
-            </div>
-        </div>
+   <div class="resultados">
+  <!-- Columna izquierda -->
+  <div class="col izquierda">
+    <h2>RESULTADOS ANTERIORES</h2>
+    <label class="label-fecha">
+      SELECCIONÁ LA FECHA:
+      <input type="date">
+    </label>
+  </div>
+
+  <!-- Columna centro -->
+  <div class="col centro">
+    <div class="calendario">
+      Aquí podría ir un calendario más grande o embebido
     </div>
+  </div>
+
+  <!-- Columna derecha -->
+  <div class="col derecha">
+    <div class="sorteo">
+      <h3>SORTEO 11:00 A.M.</h3>
+      <div class="nums">
+        <span class="num">1</span>
+        <span class="num">5</span>
+      </div>
+    </div>
+    <div class="sorteo">
+      <h3>SORTEO 9:00 P.M.</h3>
+      <div class="nums">
+        <span class="num">8</span>
+        <span class="num">3</span>
+      </div>
+    </div>
+  </div>
 </div>
+
 
 
     <div class="reglamento">
