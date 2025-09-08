@@ -248,6 +248,7 @@ min-height: 320px; /* Más alto */
 /* ===== CARRUSEL ===== */
 /* Carrusel */
 .resultados-carousel {
+  margin-top: -110px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -317,7 +318,6 @@ min-height: 320px; /* Más alto */
   color: #e31f26;
   font-weight: bold;
 }
-
 
 
 
