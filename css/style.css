@@ -705,9 +705,13 @@ img {
     text-align: center;
   }
 
-  .youtube-video iframe {
-    height: 200px;
-  }
+  /* REDONDEAR VIDEO DE YOUTUBE */
+.youtube-video iframe {
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+}
+
 
   .youtube-right {
     width: 100%;
