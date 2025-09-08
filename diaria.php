@@ -445,6 +445,61 @@
 </div>
 
 
+<!-- Accordion principal -->
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    <span style="font-weight:bold; font-size:24px;">CÓMO JUGAR Y GANAR</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="accordion-content">
+    <!-- Contenido principal alineado a la izquierda y a la par -->
+    <div style="display:flex; align-items:flex-start; gap:20px; margin-bottom:15px;">
+      
+      <!-- Columna izquierda -->
+      <div style="flex:1;">
+        <h3 style="color:#aeca36; margin-bottom:10px;">¿CÓMO SE JUEGA?</h3>
+        <img src="Diaria.webp" alt="Diaria" style="width:80px; height:auto;">
+      </div>
+
+      <!-- Columna derecha -->
+      <div style="flex:2;">
+        <p>
+          SELECCIONA 1 NÚMERO DE DOS DÍGITOS DEL 00 AL 99 Y SI TU NÚMERO ES FAVORITO, GANA 50 VECES TU INVERSIÓN.
+        </p>
+        <p>DISPONIBLES DESDE L.5.</p>
+      </div>
+    </div>
+
+    <!-- Sub-accordions -->
+    <div class="sub-accordion">
+      <div class="sub-accordion-header" onclick="toggleAccordion(this)" style="background:#438f4f; color:white; border-radius:10px; padding:10px 15px; margin-bottom:5px; display:flex; justify-content:space-between; align-items:center; cursor:pointer;">
+        <span>JUEGA EN 3 SORTEOS CONSECUTIVOS</span>
+        <span class="arrow" style="background:#aeca36; border-radius:50%; padding:5px;">▼</span>
+      </div>
+      <div class="sub-accordion-content" style="display:none; padding:10px 15px; background:#d9f0b2; border-radius:0 0 10px 10px; margin-bottom:10px;">
+        Información sobre cómo jugar en 3 sorteos consecutivos.
+      </div>
+
+      <div class="sub-accordion-header" onclick="toggleAccordion(this)" style="background:#438f4f; color:white; border-radius:10px; padding:10px 15px; margin-bottom:5px; display:flex; justify-content:space-between; align-items:center; cursor:pointer;">
+        <span>CONOCE LOS RESULTADOS</span>
+        <span class="arrow" style="background:#aeca36; border-radius:50%; padding:5px;">▼</span>
+      </div>
+      <div class="sub-accordion-content" style="display:none; padding:10px 15px; background:#d9f0b2; border-radius:0 0 10px 10px; margin-bottom:10px;">
+        Información sobre cómo ver los resultados.
+      </div>
+
+      <div class="sub-accordion-header" onclick="toggleAccordion(this)" style="background:#438f4f; color:white; border-radius:10px; padding:10px 15px; display:flex; justify-content:space-between; align-items:center; cursor:pointer;">
+        <span>RECLAMA TU PREMIO</span>
+        <span class="arrow" style="background:#aeca36; border-radius:50%; padding:5px;">▼</span>
+      </div>
+      <div class="sub-accordion-content" style="display:none; padding:10px 15px; background:#d9f0b2; border-radius:0 0 10px 10px;">
+        Información sobre cómo reclamar tu premio.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script para abrir/cerrar accordion y sub-accordions -->
 <script>
 function toggleAccordion(header) {
     const content = header.nextElementSibling;
@@ -461,39 +516,8 @@ function toggleAccordion(header) {
 </script>
 
 
-<div class="accordion">
-  <div class="accordion-header" onclick="toggleAccordion(this)">
-    <span>CÓMO JUGAR Y GANAR</span>
-    <span class="arrow">▼</span>
-  </div>
-  <div class="accordion-content">
-    <!-- Texto principal -->
-    <p style="font-size:16px; font-weight:bold; margin-bottom:10px; text-align:center;">
-      SOÑA Y GANA TODOS LOS DÍAS CON DIARIA
-    </p>
 
-    <p style="margin-bottom:15px; text-align:center;">
-      VISITA NUESTROS PUNTOS DE VENTA LOTO, COMPRAS EN LÍNEA O LOTOCENTRO PARA ADQUIRIR TU BOLETO
-    </p>
 
-    <!-- Título color verde claro -->
-    <h3 style="color:#aeca36; text-align:center; margin-bottom:10px;">¿CÓMO SE JUEGA?</h3>
-
-    <!-- Imagen pequeña -->
-    <div style="text-align:center; margin-bottom:15px;">
-      <img src="Diaria.webp" alt="Diaria" style="width:80px; height:auto;">
-    </div>
-
-    <!-- Instrucciones -->
-    <p style="margin-bottom:10px; text-align:center;">
-      SELECCIONA 1 NÚMERO DE DOS DÍGITOS DEL 00 AL 99 Y SI TU NÚMERO ES FAVORITO, GANA 50 VECES TU INVERSIÓN.
-    </p>
-
-    <p style="margin-bottom:10px; text-align:center;">
-      DISPONIBLES DESDE L.5.
-    </p>
-  </div>
-</div>
 
 
 
