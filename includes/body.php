@@ -80,7 +80,20 @@
 
 </div>
 
-  
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const carrusel = document.querySelector(".resultados-carousel");
+  if (carrusel) {
+    carrusel.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+    // Ajustar un poquito más hacia arriba
+    window.scrollBy(0, -50);
+  }
+});
+</script>
+
 
 <div class="youtube">
   <div class="youtube-content">
