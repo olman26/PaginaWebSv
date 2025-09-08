@@ -294,7 +294,7 @@
 
         .etiqueta-hola {
     background-color: #ffd400; /* amarillo */
-    color: #006400;            /* verde */
+    color: #438f4f;            /* verde */
     padding: 6px 12px;         /* espacio interno */
     border-radius: 12px;       /* esquinas redondeadas */
     font-weight: bold;
@@ -352,10 +352,10 @@
 
 
 .accordion {
-    border: 2px solid #438f4f;
+    border: 0px solid #438f4f;
     border-radius: 10px;
     margin: 20px 1cm; /* alineado con el div resultados */
-    background: #006400; /* verde */
+    background: #438f4f; /* verde */
     color: white;
     font-weight: bold;
 }
@@ -387,7 +387,7 @@
     color: #000;
     font-weight: normal;
     font-size: 14px;
-    border-top: 1px solid #438f4f;
+    border-top: 1px solid #080808ff;
 }
 
 
