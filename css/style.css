@@ -355,11 +355,9 @@ min-height: 320px; /* Más alto */
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: nowrap; /* evita que se vaya a la siguiente línea */
+  flex-wrap: wrap;
   margin: 10px 0;
-  overflow-x: auto; /* opcional: agrega scroll si no caben en pantalla */
 }
-
 
 /* Esferas generales */
 .numeros span {
@@ -514,7 +512,7 @@ img {
 
   .res-card {
     flex: 0 0 80%;
-    max-width: 250px;
+    max-width: 300px;
     scroll-snap-align: center;
   }
 
