@@ -453,7 +453,7 @@ function toggleAccordion(header) {
 }
 </script>
 
-<div class="resultados">
+
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)">
     <span>CÓMO JUGAR Y GANAR</span>
