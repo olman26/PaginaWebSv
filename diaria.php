@@ -220,6 +220,17 @@
             font-weight: bold;
             cursor: pointer;
         }
+        .etiqueta-hola {
+    background-color: #ffd400; /* amarillo */
+    color: #006400;            /* verde */
+    padding: 6px 12px;         /* espacio interno */
+    border-radius: 12px;       /* esquinas redondeadas */
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;            /* separación de números y próximo sorteo */
+    display: inline-block;     
+}
+
     </style>
 </head>
 
@@ -229,6 +240,8 @@
             <div class="ganador-box">
                 <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
                 <div class="nums"> <span class="num">0</span> <span class="num">9</span> </div>
+                 <!-- Etiqueta HOLA -->
+    <div class="etiqueta-hola">HOLA</div>
                 <div class="proximo">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
             </div>
         </div>
