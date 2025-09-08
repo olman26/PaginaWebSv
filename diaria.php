@@ -139,7 +139,7 @@
     border-radius: 15px;
     padding: 25px;
     margin: 1cm;
-    background: #f0f8f4; /* un verde muy suave */
+    background: #fafafaff; 
 }
 
 /* Columnas */
@@ -334,13 +334,6 @@
     </div>
 </div>
 
-
-    <!-- Columna derecha -->
-    <div class="col derecha">
-        <div class="sorteo">SORTEO <span class="num">11</span>:<span class="num">00</span> A.M</div>
-        <div class="sorteo">SORTEO <span class="num">0</span>:<span class="num">00</span> P.M</div>
-    </div>
-</div>
 
     </div> <!-- Cómo jugar -->
     <div class="seccion">
