@@ -253,12 +253,7 @@ min-height: 320px; /* Más alto */
   justify-content: center;
 }
 
-.resultados-carousel {
-  transition: transform 0.3s ease; /* animación suave */
-  position: relative;
-}
-.resultados-carousel.scroll-up {
-  transform: translateY(-3cm); /* sube 3 cm */
+
 
 
 

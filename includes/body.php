@@ -81,19 +81,7 @@
 </div>
 
 
-<script>
-window.addEventListener('scroll', function() {
-  const carousel = document.querySelector('.resultados-carousel');
-  const scrollY = window.scrollY;
 
-  // Si quieres que suba siempre después de un pequeño scroll
-  if(scrollY > 10){ // puedes ajustar el valor
-    carousel.classList.add('scroll-up');
-  } else {
-    carousel.classList.remove('scroll-up');
-  }
-});
-</script>
 
 
 
