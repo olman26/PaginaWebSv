@@ -1248,24 +1248,6 @@ img {
   display: block;
 }
 
-.banner-apostemos {
-  width: 95%;
-  max-width: 1400px;
-  margin: 40px auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-.banner-apostemos img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-
 
 
 .footer {
