@@ -100,7 +100,6 @@
             /* aquí controlas cuánto baja debajo de los números */
         }
 
-        /* Menú */
         .menu {
     display: flex;
     justify-content: center;
@@ -108,7 +107,8 @@
     gap: 10px;
     background: #aeca36;
     padding: 12px;
-    margin-top: 10px; /* baja los botones ~1cm */
+    position: relative;  /* necesario para top */
+    top: 10px;           /* mueve el menú 10px hacia abajo (~1cm) */
 }
 
 
