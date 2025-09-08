@@ -467,12 +467,34 @@ function toggleAccordion(header) {
     <span class="arrow">▼</span>
   </div>
   <div class="accordion-content">
-    <p>
-      Aquí puedes poner las instrucciones para jugar y ganar.  
-      Explica cómo seleccionar los números, fechas de sorteos y cualquier detalle importante.
+    <!-- Texto principal -->
+    <p style="font-size:16px; font-weight:bold; margin-bottom:10px; text-align:center;">
+      SOÑA Y GANA TODOS LOS DÍAS CON DIARIA
+    </p>
+
+    <p style="margin-bottom:15px; text-align:center;">
+      VISITA NUESTROS PUNTOS DE VENTA LOTO, COMPRAS EN LÍNEA O LOTOCENTRO PARA ADQUIRIR TU BOLETO
+    </p>
+
+    <!-- Título color verde claro -->
+    <h3 style="color:#aeca36; text-align:center; margin-bottom:10px;">¿CÓMO SE JUEGA?</h3>
+
+    <!-- Imagen pequeña -->
+    <div style="text-align:center; margin-bottom:15px;">
+      <img src="Diaria.webp" alt="Diaria" style="width:80px; height:auto;">
+    </div>
+
+    <!-- Instrucciones -->
+    <p style="margin-bottom:10px; text-align:center;">
+      SELECCIONA 1 NÚMERO DE DOS DÍGITOS DEL 00 AL 99 Y SI TU NÚMERO ES FAVORITO, GANA 50 VECES TU INVERSIÓN.
+    </p>
+
+    <p style="margin-bottom:10px; text-align:center;">
+      DISPONIBLES DESDE L.5.
     </p>
   </div>
 </div>
+
 
 
     <div class="reglamento">
