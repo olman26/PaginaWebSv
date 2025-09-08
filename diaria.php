@@ -134,14 +134,15 @@
         .resultados {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 1cm;          /* margen alrededor del bloque */
-    background: #fafafa;
+    align-items: flex-start;
+    border: 3px solid #438f4f;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 1cm;
+    background: #f0f8f4; /* un verde muy suave */
 }
 
+/* Columnas */
 .resultados .col {
     flex: 1;
     text-align: center;
@@ -149,70 +150,59 @@
 
 /* Izquierda */
 .resultados .izquierda h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 26px;
+    color: #438f4f;
+    margin-bottom: 15px;
 }
 
-.resultados .izquierda button {
-    background: #aeca36;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
+.resultados .izquierda label {
+    font-size: 18px;
     font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.resultados .izquierda input[type="date"] {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #aeca36;
+    font-size: 16px;
 }
 
 /* Centro */
 .resultados .centro .calendario {
     background: white;
-    border: 1px solid #bbb;
-    border-radius: 10px;
-    padding: 30px;
-    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
 }
 
 /* Derecha */
 .resultados .derecha .sorteo {
-    margin-bottom: 12px;
-    font-weight: bold;
-    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.resultados .derecha h3 {
+    font-size: 20px;
+    color: #ff6f00;
+    margin-bottom: 10px;
 }
 
 /* Esferas verdes */
-.resultados .derecha .num {
+.resultados .num {
     display: inline-block;
-    background: #438f4f;   /* verde */
-    color: white;          /* número en blanco */
+    background: #438f4f;
+    color: white;
     border-radius: 50%;
-    padding: 8px 12px;
-    margin: 0 2px;
+    padding: 15px 20px;
+    margin: 0 6px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-
-
-        .resultados {
-            text-align: center;
-            padding: 25px 15px;
-        }
-
-        .resultados h2 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .resultados button {
-            background: #aeca36;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-        }
 
         .calendario {
             margin: 20px auto 0;
@@ -308,19 +298,42 @@
         </div>
     </div> <!-- Menú -->
     <div class="menu"> <a href="#">CÓMO JUGAR DIARIA</a> <a href="#">DESCARGÁ GUÍA DE SUEÑOS</a> <a href="#">RESULTADOS NÚMEROS DE DIARIA</a> </div> <!-- Resultados anteriores -->
+    
+    
     <div class="resultados">
     <!-- Columna izquierda -->
     <div class="col izquierda">
         <h2>RESULTADOS ANTERIORES</h2>
-        <button>SELECCIONÁ LA FECHA</button>
+        <label for="fecha">SELECCIONÁ LA FECHA:</label><br>
+        <input type="date" id="fecha" name="fecha">
     </div>
 
     <!-- Columna centro -->
     <div class="col centro">
         <div class="calendario">
-            [Aquí va el calendario]
+             Aquí podría ir un calendario más grande o embebido
         </div>
     </div>
+
+    <!-- Columna derecha -->
+    <div class="col derecha">
+        <div class="sorteo">
+            <h3>SORTEO 11:00 A.M</h3>
+            <div class="nums">
+                <span class="num">1</span>
+                <span class="num">5</span>
+            </div>
+        </div>
+        <div class="sorteo">
+            <h3>SORTEO 0:00 P.M</h3>
+            <div class="nums">
+                <span class="num">8</span>
+                <span class="num">3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- Columna derecha -->
     <div class="col derecha">
