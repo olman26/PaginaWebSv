@@ -339,10 +339,11 @@ min-height: 320px; /* Más alto */
   margin: 0 auto; /* centra la imagen dentro de la tarjeta */
 }
 
-/* Opcional: aumentar tamaño de la tarjeta para que se vea bien */
+/* Aumentar un poco el ancho de las tarjetas para que quepa la última esfera */
 .res-card {
-  width: 270px;   /* ancho de la tarjeta más grande */
-  padding: 15px;
+  width: 270px; /* antes estaba en 250-260px, ahora le damos un poco más */
+  padding: 10px;
+  box-sizing: border-box; /* importante para que padding no aumente ancho total */
 }
 
 
