@@ -82,20 +82,16 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const carrusel = document.querySelector(".resultados-carousel");
+  const contenedor = document.querySelector(".resultados-carousel");
 
   window.addEventListener("scroll", function() {
-    // Cuánto scroll hizo el usuario
-    const scrollTop = window.scrollY;
-
-    // Movemos el carrusel un poco hacia arriba dependiendo del scroll
-    // Limita el movimiento a unos 50px (aprox 3 cm)
-    const mover = Math.min(scrollTop / 2, 50); // ajusta divisor y máximo
-    carrusel.style.transform = `translateY(-${mover}px)`;
-    carrusel.style.transition = "transform 0.2s ease";
+    // Subir el contenedor 3cm aprox (50px)
+    contenedor.style.transform = "translateY(-50px)";
+    contenedor.style.transition = "transform 0.3s ease";
   });
 });
 </script>
+
 
 
 
