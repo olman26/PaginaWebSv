@@ -318,6 +318,14 @@ min-height: 320px; /* Más alto */
   font-weight: bold;
 }
 
+.resultados-carousel {
+  scroll-margin-top: -50px; /* Ajusta el valor a lo que quieras */
+}
+
+
+
+
+
 /* Imagen */
 .res-card img {
   width: 150px;  /* antes 90px */
