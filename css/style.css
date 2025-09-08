@@ -287,17 +287,14 @@ min-height: 320px; /* Más alto */
 }
 
 /* Tarjeta base */
+/* Tarjetas de resultados */
 .res-card {
-  width: 260px;
-  height: 360px;
-  border-radius: 15px;
+  width: 310px;             /* más ancho para que quepan las 6 esferas */
   padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 
@@ -349,26 +346,44 @@ min-height: 320px; /* Más alto */
 
 
 
+.res-card button {
+  width: 100%;             /* igual que Diaria */
+  padding: 6px 0;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
 
-/* Contenedor de números */
+.res-card button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* Contenedor de números (esferas) */
 .numeros {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  justify-content: center;  /* centra todas las esferas */
+  flex-wrap: wrap;          /* si sobra espacio, va a la siguiente línea */
+  gap: 8px;                 /* separación entre esferas */
   margin: 10px 0;
 }
 
 /* Esferas generales */
+/* Esferas */
 .numeros span {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+  background-color: #f7d000;  /* amarillo de Loto Super Premio */
+  color: #000;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* Esferas verdes (Diaria) */
