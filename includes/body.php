@@ -80,24 +80,20 @@
 
 </div>
 
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const contenedor = document.querySelector(".resultados-carousel"); // todo el container
-  const offsetMax = 50; // cuánto subir, en px (aprox 3 cm)
-  
-  window.addEventListener("scroll", function() {
-    // obtenemos cuánto hemos hecho scroll
-    let scroll = window.scrollY;
-    
-    // limitar la subida a offsetMax
-    let translate = Math.min(scroll, offsetMax);
-    
-    contenedor.style.transform = `translateY(-${translate}px)`;
-    contenedor.style.transition = "transform 0.2s ease-out";
-  });
+window.addEventListener('scroll', function() {
+  const carousel = document.querySelector('.resultados-carousel');
+  const scrollY = window.scrollY;
+
+  // Si quieres que suba siempre después de un pequeño scroll
+  if(scrollY > 10){ // puedes ajustar el valor
+    carousel.classList.add('scroll-up');
+  } else {
+    carousel.classList.remove('scroll-up');
+  }
 });
 </script>
-
 
 
 
