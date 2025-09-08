@@ -35,16 +35,16 @@
 
         /* Logo */
         .top img {
-            width: 300px;
+            width: 350px;
             height: auto;
             position: relative;
-            left: -10px;
+            left: -20px;
             /* mueve la imagen 10px a la izquierda */
         }
         .ganador {
     font-weight: bold;
-    font-size: 18px;       /* tamaño de la letra */
-    width: 250px;          /* ancho de la caja */
+    font-size: 21px;       /* tamaño de la letra */
+    width: 300px;          /* ancho de la caja */
     text-align: center;    /* centrado del texto */
     margin-bottom: 10px;   /* distancia hacia los números */
     margin-top: -10px;     /* mueve hacia arriba */
@@ -100,17 +100,15 @@
             /* aquí controlas cuánto baja debajo de los números */
         }
 
+        /* Menú */
         .menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    background: #aeca36;
-    padding: 12px;
-    position: relative;  /* necesario para top */
-    top: 10px;           /* mueve el menú 10px hacia abajo (~1cm) */
-}
-
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background: #aeca36;
+            padding: 12px;
+        }
 
         .menu a {
             background: #438f4f;
