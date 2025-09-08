@@ -302,6 +302,21 @@ min-height: 320px; /* Más alto */
 .res-card.verde { background: #aeca36; }
 .res-card.naranja { background: #e31f26; }
 
+ .res-card.roja {
+  background-color: #e31f26; /* Rojo oficial */
+  color: #fff;              /* Texto blanco para contraste */
+}
+
+.res-card.roja h4 {
+  color: #fff;
+}
+
+.res-card.roja .btn-jugar,
+.res-card.roja .btn-info {
+  background: #fff;
+  color: #e31f26;
+  font-weight: bold;
+}
 
 /* Imagen */
 .res-card img {
