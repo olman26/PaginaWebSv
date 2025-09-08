@@ -121,7 +121,7 @@
   <img src="Banner-Superpremio.gif" alt="Banner Superpremio">
 </div>
 
-<!-- Banner  -->
+<!-- Banner apopstemos -->
 <div class="banner-apostemos">
   <img src="Fondo seccion apostemos.png" alt="Banner apostemos">
 </div>

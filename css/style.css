@@ -1248,6 +1248,23 @@ img {
   display: block;
 }
 
+.banner-apostemos {
+  width: 95%;                /* similar a resultados-box */
+  max-width: 1400px;         /* límite ancho en pantallas grandes */
+  margin: 40px auto;         /* lo centra y da espacio */
+  border-radius: 12px;       /* esquinas redondeadas */
+  overflow: hidden;          /* para que respete el borde redondeado */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* sombra sutil */
+  text-align: center;
+}
+
+.banner-apostemos img {
+  width: 100%;  /* ocupa todo el contenedor */
+  height: auto;
+  display: block;
+}
+
+
 .footer {
   position: relative;
   display: flex;
