@@ -80,19 +80,29 @@
 
 </div>
 
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
   const carrusel = document.querySelector(".resultados-carousel");
-  if (carrusel) {
-    carrusel.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-    // Ajustar un poquito más hacia arriba
-    window.scrollBy(0, -50);
-  }
+
+  window.addEventListener("scroll", function() {
+    // Detecta cuando el carrusel ya es visible en la pantalla
+    const rect = carrusel.getBoundingClientRect();
+    const alturaVentana = window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top < alturaVentana && rect.bottom >= 0) {
+      // Cuando el carrusel está en vista, lo sube 100px
+      carrusel.style.transform = "translateY(-100px)";
+      carrusel.style.transition = "transform 0.5s ease"; // animado suave
+    } else {
+      // Cuando no está en vista, vuelve a su posición normal
+      carrusel.style.transform = "translateY(0)";
+    }
+  });
 });
 </script>
+
+
+ 
 
 
 <div class="youtube">
