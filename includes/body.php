@@ -82,15 +82,22 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const contenedor = document.querySelector(".resultados-carousel");
-
+  const contenedor = document.querySelector(".resultados-carousel"); // todo el container
+  const offsetMax = 50; // cuánto subir, en px (aprox 3 cm)
+  
   window.addEventListener("scroll", function() {
-    // Subir el contenedor 3cm aprox (50px)
-    contenedor.style.transform = "translateY(-50px)";
-    contenedor.style.transition = "transform 0.3s ease";
+    // obtenemos cuánto hemos hecho scroll
+    let scroll = window.scrollY;
+    
+    // limitar la subida a offsetMax
+    let translate = Math.min(scroll, offsetMax);
+    
+    contenedor.style.transform = `translateY(-${translate}px)`;
+    contenedor.style.transition = "transform 0.2s ease-out";
   });
 });
 </script>
+
 
 
 
