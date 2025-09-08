@@ -122,9 +122,8 @@
 </div>
 
 <!-- Nuevo banner similar -->
-<div class="banner-apostemos">
-  <img src="Fondo seccion apostemos.png" alt="Banner Apostemos">
-</div>
+<img src="Fondo seccion apostemos.png" alt="Banner Apostemos" style="width:100%; height:auto; display:block;">
+
 
 
 
