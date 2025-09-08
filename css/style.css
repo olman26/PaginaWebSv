@@ -318,7 +318,10 @@ min-height: 320px; /* Más alto */
   font-weight: bold;
 }
 
-
+/* Clase que aplicaremos cuando hagas scroll */
+.scroll-up {
+  transform: translateY(-3cm); /* sube 3 cm */
+}
 
 
 
