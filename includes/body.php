@@ -60,7 +60,7 @@
 
     <!-- Súper Premio (Rojo) -->
     <div class="res-card roja">
-      <img src="superpremio.webp" alt="Super Premio">
+      <img src="LOGOS HN_super premio-26.png" alt="Super Premio">
       <div class="numeros">
         <span class="bola-amarilla">12</span>
         <span class="bola-amarilla">15</span>
@@ -81,12 +81,6 @@
 </div>
 
 
-
-
-
-
-
- 
 
 
 <div class="youtube">
