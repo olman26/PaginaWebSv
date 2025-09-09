@@ -724,13 +724,18 @@ img {
     border-radius: 30px;
   }
 
-  .youtube-right {
+  /* Contenedor padre */
+.contenedor-principal {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Alinea el contenido a la derecha */
-  text-align: right; /* Hace que el texto también quede alineado */
-  margin-left: auto; /* Empuja el div hacia la derecha */
+  justify-content: space-between; /* manda los hijos a extremos */
 }
+
+/* Columna derecha */
+.youtube-right {
+  max-width: 400px;   /* opcional, para que no ocupe todo */
+  text-align: right;  /* texto alineado */
+}
+
 
   .video-subtext {
     text-align: center;

@@ -97,33 +97,34 @@
     </div>
 
     <!-- Columna derecha con rectángulo naranja -->
-    <div class="youtube-right">
-      <div class="youtube-text">
-  <h2>
-    VISUALIZA NUESTROS<br>
-    SORTEOS EN YOUTUBE<br>
-    LOS 365 DÍAS DEL AÑO
-  </h2>
-</div>
+    <div class="contenedor-principal">
+  <!-- Columna izquierda -->
+  <div class="izquierda">
+    <!-- tu contenido izquierdo -->
+  </div>
 
-      <div class="youtube-info">
-  <p>
-    Sintoniza en vivo los sorteos de las 11:00 a.m. y 9:00 p.m. por Canal 4.
-    <br>
-  </p>
-  <p>
-    Podrás disfrutar del sorteo de las 9:00 p.m. por Nuestras redes sociales.
-    
-  </p>
-</div>
+  <!-- Columna derecha con rectángulo naranja -->
+  <div class="youtube-right">
+    <div class="youtube-text">
+      <h2>
+        VISUALIZA NUESTROS<br>
+        SORTEOS EN YOUTUBE<br>
+        LOS 365 DÍAS DEL AÑO
+      </h2>
+    </div>
 
+    <div class="youtube-info">
+      <p>
+        Sintoniza en vivo los sorteos de las 11:00 a.m. y 9:00 p.m. por Canal 4.
+        <br>
+      </p>
+      <p>
+        Podrás disfrutar del sorteo de las 9:00 p.m. por Nuestras redes sociales.
+      </p>
     </div>
   </div>
-
-  <div class="boton-container">
-    <button class="youtube-boton">Ver más sorteos</button>
-  </div>
 </div>
+
 
 <!-- Espacio en blanco -->
 <div style="height: 50px;"></div>
