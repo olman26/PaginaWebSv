@@ -80,18 +80,19 @@
 
 </div>
 
-
+<!-- Espacio en blanco -->
+<div style="height: 50px;"></div>
 
 
 <div class="youtube">
   <div class="youtube-content">
     <!-- Columna izquierda con video -->
     <div class="youtube-video">
-      <iframe width="100%" height="315" 
+      <iframe 
         src="https://www.youtube.com/embed/1qsx5zpIp7w?start=14" 
-        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-      
-      <!-- Texto pequeño debajo del video -->
+        title="YouTube video player" 
+        allowfullscreen>
+      </iframe>
       <p class="video-subtext">Sorteo LOTO 11:00 a.m 25 de Julio del 2025</p>
     </div>
 
@@ -101,7 +102,6 @@
         <h2>Visualizá nuestros sorteos en YouTube</h2>
         <p>Los 365 días del año</p>
       </div>
-      <!-- Texto debajo del rectángulo -->
       <div class="youtube-info">
         <p>Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por canal 5, HRN, Radio Satélite y Radio América.</p>
         <p>Podrás disfrutar del sorteo de las 9:00 p.m. por Telecadena 7 y 4, HRN y Radio Satélite.</p>
@@ -109,11 +109,11 @@
     </div>
   </div>
 
-  <!-- Botón centrado debajo -->
   <div class="boton-container">
     <button class="youtube-boton">Ver más sorteos</button>
   </div>
 </div>
+
 
 
 <!-- Banner Superpremio -->

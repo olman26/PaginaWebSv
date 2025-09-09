@@ -612,49 +612,58 @@ img {
 .youtube {
   background: #0047b2; /* Azul de fondo */
   color: white;
-  padding: 40px;
+  padding: 40px 5%;
 }
 
 .youtube-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 30px;
   flex-wrap: wrap;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: flex-start;
 }
 
 /* Video */
 .youtube-video {
-  flex: 1;
+  flex: 1 1 600px; /* crece hasta 600px */
   max-width: 600px;
+}
+
+.youtube-video iframe {
+  width: 100%;
+  aspect-ratio: 16/9; /* mantiene proporción */
+  border-radius: 20px; /* redondea esquinas */
+  border: none; /* quita borde */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* sombra sutil */
 }
 
 .video-subtext {
   font-size: 14px;
   color: white;
-  margin-top: 8px;
+  margin-top: 10px;
   text-align: left;
   opacity: 0.9;
 }
 
-/* Contenedor derecho (rectángulo + texto) */
+/* Columna derecha */
 .youtube-right {
+  flex: 1 1 400px;
   max-width: 400px;
 }
 
-/* Rectángulo naranja */
 .youtube-text {
-  background: #ff7e00; /* Naranja brillante */
+  background: #ff7e00; 
   color: white;
   padding: 25px;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
 }
 
 .youtube-text h2 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .youtube-text p {
@@ -662,24 +671,14 @@ img {
   margin: 0;
 }
 
-/* Texto adicional debajo del rectángulo */
-.youtube-info {
-  margin-top: 15px;
-}
-
 .youtube-info p {
   font-size: 14px;
   color: white;
-  margin: 8px 0;
+  margin: 6px 0;
   line-height: 1.4;
 }
 
-/* Botón centrado */
-.boton-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
+/* Botón centrado debajo */
 .youtube-boton {
   background: #ff7e00;
   color: white;
@@ -690,29 +689,26 @@ img {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .youtube-boton:hover {
   background: #ff8000;
+  transform: scale(1.05);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .youtube-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  /* REDONDEAR VIDEO DE YOUTUBE */
-.youtube-video iframe {
-  width: 100%;
-  max-height: 164px;
-  border-radius: 40px;
-  overflow: hidden;
-  border: none;
-}
-
+  .youtube-video iframe {
+    max-height: 200px;
+    border-radius: 30px;
+  }
 
   .youtube-right {
     width: 100%;
@@ -723,6 +719,7 @@ img {
     text-align: center;
   }
 }
+
 
 /* Contenedor Noticias */
 .noticias-box {
