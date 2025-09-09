@@ -869,6 +869,7 @@ img {
 }
 
 .numero {
+  border: 3px solid orange; /* Borde naranja */
   font-size: 120px;       /* más grande que antes */
   font-weight: bold;
   margin: 0 auto 10px auto;
@@ -884,6 +885,7 @@ img {
 }
 
 .rse-image img {
+  border: 3px solid orange;
   border-radius: 20px; /* Redondea los bordes */
   max-width: 400px; /* imagen más grande */
   height: auto;
