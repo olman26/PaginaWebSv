@@ -725,9 +725,13 @@ img {
   }
 
   .youtube-right {
-    width: 120%;
-     margin-left: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea el contenido a la derecha */
+  text-align: right; /* Hace que el texto también quede alineado */
+  margin-left: auto; /* Empuja el div hacia la derecha */
+}
+
 
   .video-subtext {
     text-align: center;
