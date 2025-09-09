@@ -39,15 +39,15 @@
             height: auto;
             position: relative;
             left: -50px;
-            top: 15px;   /* mueve hacia abajo */
+            top: 20px;   /* mueve hacia abajo */
             /* mueve la imagen 10px a la izquierda */
         }
         .ganador {
     font-weight: bold;
-    font-size: 21px;       /* tamaño de la letra */
+    font-size: 26px;       /* tamaño de la letra */
     width: 300px;          /* ancho de la caja */
     text-align: center;    /* centrado del texto */
-    margin-bottom: 10px;   /* distancia hacia los números */
+    margin-bottom: 15px;   /* distancia hacia los números */
     margin-top: -10px;     /* mueve hacia arriba */
 }
 
@@ -57,6 +57,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            top: 30px;
             /* centra horizontalmente dentro del bloque */
         }
 
