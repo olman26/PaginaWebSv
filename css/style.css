@@ -886,7 +886,7 @@ img {
 .rse-image {
   position: relative;
   left: 50px;   /* mueve a la derecha */
-  top: -60px;   /* mueve hacia arriba */
+  top: -30px;   /* mueve hacia arriba */
 }
 
 .rse-image img {
