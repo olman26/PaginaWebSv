@@ -895,7 +895,7 @@ img {
   width: 500px;   /* ancho deseado */
   height: auto;   /* mantiene proporción */
   position: relative;
-  top: -80px;     /* mover hacia arriba */
+  top: -50px;     /* mover hacia arriba */
   margin-left: 80px; /* mover a la derecha */
 }
 
