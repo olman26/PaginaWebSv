@@ -93,14 +93,14 @@
         title="YouTube video player" 
         allowfullscreen>
       </iframe>
-      <p class="video-subtext">Sorteo LOTO 11:00 a.m 25 de Julio del 2025</p>
+      <p class="video-subtext">Sorteo LOTO 11:00 a.m 25 de 8 de Julio del 2025</p>
     </div>
 
     <!-- Columna derecha con rectángulo naranja -->
     <div class="youtube-right">
       <div class="youtube-text">
         <h2>Visualizá nuestros sorteos en YouTube</h2>
-        <p>Los 365 días del año</p>
+        <h2>Los 365 días del año</h2>
       </div>
       <div class="youtube-info">
         <p>Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por canal 5, HRN, Radio Satélite y Radio América.</p>
