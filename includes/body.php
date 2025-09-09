@@ -108,7 +108,7 @@
 
       <div class="youtube-info">
   <p>
-    Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por 
+    Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por Canal 5, HRN, Radio Satélite y Radio América.
     <span class="canales">Canal 5, HRN, Radio Satélite y Radio América.</span><br>
   </p>
   <p>
