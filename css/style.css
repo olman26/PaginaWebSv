@@ -255,10 +255,9 @@ min-height: 320px; /* Más alto */
 
 
 
-
 /* Flechas */
 .res-prev, .res-next {
-  background: #ff7f00;
+  background: #ff7e00;
   color: white;
   border: none;
   font-size: 28px;
@@ -271,7 +270,7 @@ min-height: 320px; /* Más alto */
 }
 
 .res-prev:hover, .res-next:hover {
-  background: #ff5500;
+  background: #ff7e00;
 }
 
 /* ===== TARJETAS ===== */
@@ -433,7 +432,7 @@ min-height: 320px; /* Más alto */
 
 /* Pegamos el texto abajo */
 .proximo {
-  background-color: #ff7f00;
+  background-color: #ff7e00;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -645,7 +644,7 @@ img {
 
 /* Rectángulo naranja */
 .youtube-text {
-  background: #ff9d00; /* Naranja brillante */
+  background: #ff7e00; /* Naranja brillante */
   color: white;
   padding: 25px;
   border-radius: 15px;
@@ -682,7 +681,7 @@ img {
 }
 
 .youtube-boton {
-  background: #ff9d00;
+  background: #ff7e00;
   color: white;
   border: none;
   padding: 15px 40px;
@@ -758,7 +757,7 @@ img {
 }
 
 .noticias-boton {
-  background: #ff7f00;
+  background: #ff7e00;
   color: white;
   border: none;
   padding: 12px 18px;
@@ -806,7 +805,7 @@ img {
 
 .card-content {
   padding: 15px;
-  background: #ff7f00;
+  background: #ff7e00;
   color: white;
   font-size: 16px;
 }
@@ -830,7 +829,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #ff7f00; /* Color naranja */
+  background: #ff7e00; /* Color naranja */
   color: white;
   border: none;
   font-size: 28px; /*  Más grandes */
@@ -913,7 +912,7 @@ img {
 }
 
 .rse-boton:hover {
-  background: #ff8000;
+  background: #ff7e00;
   transform: scale(1.05);
 }
 
