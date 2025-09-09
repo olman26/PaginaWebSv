@@ -694,6 +694,8 @@ img {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: background 0.3s ease, transform 0.2s ease;
   margin-top: 1px; /* <- aquí lo bajas más, ajusta el valor */
+  position: relative; /* permite mover con top/left/right/bottom */
+  top: 20px; /* mueve el botón 20px hacia abajo */
 }
 
 .youtube-boton:hover {
