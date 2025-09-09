@@ -405,7 +405,18 @@
             </div>
         </div>
     </div> <!-- Menú -->
-    <div class="menu"> <a href="#">CÓMO JUGAR DIARIA</a> <a href="#">DESCARGÁ GUÍA DE SUEÑOS</a> <a href="#">RESULTADOS NÚMEROS DE DIARIA</a> </div> <!-- Resultados anteriores -->
+    <div class="menu">
+  <a href="#" style="margin-top:40px; margin-left:40px; margin-right:20px; padding:10px 18px; display:inline-block; background:#f0f0f0; border-radius:6px; text-decoration:none;">
+    CÓMO JUGAR DIARIA
+  </a>
+  <a href="#" style="margin-top:40px; margin-left:40px; margin-right:20px; padding:10px 18px; display:inline-block; background:#f0f0f0; border-radius:6px; text-decoration:none;">
+    DESCARGÁ GUÍA DE SUEÑOS
+  </a>
+  <a href="#" style="margin-top:40px; margin-left:40px; margin-right:20px; padding:10px 18px; display:inline-block; background:#f0f0f0; border-radius:6px; text-decoration:none;">
+    RESULTADOS NÚMEROS DE DIARIA
+  </a>
+</div>
+
     
     
     <div class="resultados">
