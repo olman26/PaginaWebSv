@@ -665,13 +665,12 @@ img {
 }
 
 .youtube-text h2 {
-  font-size: 36px; /* tamaño más grande */
-  line-height: 1.2; /* espacio entre líneas */
-  text-align: center; /* centra el texto */
-  color: white; /* color blanco si quieres */
-  font-weight: bold; /* opcional */
+  font-size: 24px; /* más grande y más largo */
+  line-height: 1.2; /* mantiene el salto de línea agradable */
+  text-align: center; /* centra el texto horizontalmente */
+  color: white;
+  font-weight: bold;
 }
-
 
 .youtube-text p {
   font-size: 18px;
