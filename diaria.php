@@ -38,7 +38,8 @@
             width: 350px;
             height: auto;
             position: relative;
-            left: -20px;
+            left: -50px;
+            top: 15px;   /* mueve hacia abajo */
             /* mueve la imagen 10px a la izquierda */
         }
         .ganador {
@@ -345,9 +346,6 @@
   font-size: 20px;
   font-weight: bold;
 }
-
-
-
 
 
 
