@@ -207,7 +207,7 @@
 
 
 <script>
-  // Función animar número
+  // Función animar número con + y coma como separador de miles
   function animarContador(idElemento, valorFinal, duracion) {
     const elemento = document.getElementById(idElemento);
     let valorInicial = 0;
@@ -218,13 +218,13 @@
         valorInicial = valorFinal;
         clearInterval(intervalo);
       }
-      // Formatear con separador de miles
-      elemento.textContent = valorInicial.toLocaleString("es-ES");
+      // Formatear con separador de miles (coma) y agregar + al inicio
+      elemento.textContent = "+" + valorInicial.toLocaleString("es-ES").replace(/\./g, ",");
     }, 30);
   }
  
   // Llamada a la función
-  animarContador("contador",+ 50261, 2000); // (id, número final, duración en ms)
+  animarContador("contador", 50261, 2000); // (id, número final, duración en ms)
 </script>
 
 
