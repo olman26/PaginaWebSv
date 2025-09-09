@@ -677,11 +677,16 @@ img {
   margin: 0;
 }
 
-.youtube-info p {
-  font-size: 14px;
-  color: white;
-  margin: 6px 0;
-  line-height: 1.4;
+.youtube-info {
+  text-align: left;  /* todo el texto a la izquierda */
+  margin-top: 15px;  /* espacio arriba */
+  line-height: 1.5;  /* espacio entre líneas */
+  font-size: 16px;   /* tamaño de letra */
+}
+
+.youtube-info .canales {
+  display: block;    /* hace que cada lista de canales quede en su propia línea */
+  margin-left: 10px; /* opcional: un pequeño margen para diferenciar */
 }
 
 /* Botón centrado debajo */

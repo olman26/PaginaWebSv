@@ -107,9 +107,16 @@
 </div>
 
       <div class="youtube-info">
-        <p>Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por canal 5, HRN, Radio Satélite y Radio América.</p>
-        <p>Podrás disfrutar del sorteo de las 9:00 p.m. por Telecadena 7 y 4, HRN y Radio Satélite.</p>
-      </div>
+  <p>
+    Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por 
+    <span class="canales">Canal 5, HRN, Radio Satélite y Radio América</span>.<br>
+  </p>
+  <p>
+    Podrás disfrutar del sorteo de las 9:00 p.m. por 
+    <span class="canales">Telecadena 7 y 4, HRN y Radio Satélite</span>.
+  </p>
+</div>
+
     </div>
   </div>
 
