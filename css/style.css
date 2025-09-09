@@ -869,7 +869,7 @@ img {
 }
 
 .numero {
-  font-size: 80px;       /* más grande que antes */
+  font-size: 120px;       /* más grande que antes */
   font-weight: bold;
   margin: 0 auto 10px auto;
   background: transparent;
@@ -1073,8 +1073,12 @@ img {
   }
 
   .rse-image img {
+    position: relative;
+    top: -10cm; /* mueve la imagen 2 cm hacia arriba */
+    margin-left: 50px; /* opcional, para mantenerla a la derecha */
     max-width: 220px;
     margin: 0 auto;
+    height: 120px; /* ajusta tamaño si quieres */
   }
 
   .rse-text p {
