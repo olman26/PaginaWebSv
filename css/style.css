@@ -665,7 +665,7 @@ img {
 }
 
 .youtube-text h2 {
-  font-size: 24px; /* más grande y más largo */
+  font-size: 26px; /* más grande y más largo */
   line-height: 1.2; /* mantiene el salto de línea agradable */
   text-align: center; /* centra el texto horizontalmente */
   color: white;
@@ -725,8 +725,8 @@ img {
   }
 
   .youtube-right {
-    width: 100%;
-    margin-top: 20px;
+    width: 120%;
+     margin-left: auto;
   }
 
   .video-subtext {
