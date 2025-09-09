@@ -883,6 +883,12 @@ img {
   line-height: 1.5;  /* un poco más aireado */
 }
 
+.rse-image {
+  position: relative;
+  left: 50px;   /* mueve a la derecha */
+  top: -80px;   /* mueve hacia arriba */
+}
+
 .rse-image img {
   border: 1px solid orange;
   border-radius: 20px; /* Redondea los bordes */
