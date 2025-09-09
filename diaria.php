@@ -45,10 +45,10 @@
         .ganador {
     font-weight: bold;
     font-size: 26px;       /* tamaño de la letra */
-    width: 300px;          /* ancho de la caja */
+    width: 500px;          /* ancho de la caja */
     text-align: center;    /* centrado del texto */
-    margin-bottom: 15px;   /* distancia hacia los números */
-    margin-top: -10px;     /* mueve hacia arriba */
+    margin-bottom: 17px;   /* distancia hacia los números */
+    margin-top: 10px;     /* mueve hacia arriba */
 }
 
 
@@ -83,7 +83,7 @@
             padding: 12px 18px;
             margin: 0 5px;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 21px;
         }
 
         .proximo {
@@ -295,14 +295,15 @@
 }
 
         .etiqueta-hola {
-    background-color: #ffd400; /* amarillo */
+    background-color: #ffff00; /* amarillo */
     color: #438f4f;            /* verde */
     padding: 6px 12px;         /* espacio interno */
     border-radius: 12px;       /* esquinas redondeadas */
     font-weight: bold;
     text-align: center;
     margin: 10px 0;            /* separación de números y próximo sorteo */
-    display: inline-block;     
+    display: inline-block;  
+    font-size: 20px;           /* tamaño de letra más grande */   
 }
 
 .resultados-anteriores {
