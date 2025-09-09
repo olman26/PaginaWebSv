@@ -885,18 +885,18 @@ img {
 
 .rse-image {
   position: relative;
-  left: 50px;   /* mueve a la derecha */
+  left: 60px;   /* mueve a la derecha */
   top: -30px;   /* mueve hacia arriba */
 }
 
 .rse-image img {
   border: 1px solid orange;
   border-radius: 20px; /* bordes redondeados */
-  width: 500px;   /* ancho deseado */
+  width: 400px;   /* ancho deseado */
   height: auto;   /* mantiene proporción */
   position: relative;
-  top: -50px;     /* mover hacia arriba */
-  margin-left: 80px; /* mover a la derecha */
+  top: -40px;     /* mover hacia arriba */
+  margin-left: 90px; /* mover a la derecha */
 }
 
  
