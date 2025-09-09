@@ -884,6 +884,7 @@ img {
 }
 
 .rse-image img {
+  border-radius: 20px; /* Redondea los bordes */
   max-width: 400px; /* imagen más grande */
   height: auto;
   top: -50px;       /* ajusta según quieras subirla o bajarla */
