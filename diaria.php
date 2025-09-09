@@ -45,7 +45,7 @@
         .ganador {
     font-weight: bold;
     font-size: 26px;       /* tamaño de la letra */
-    width: 500px;          /* ancho de la caja */
+    width: 450px;          /* ancho de la caja */
     text-align: center;    /* centrado del texto */
     margin-bottom: 17px;   /* distancia hacia los números */
     margin-top: 10px;     /* mueve hacia arriba */
@@ -57,7 +57,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            top: 30px;
+            top: 50px;
             /* centra horizontalmente dentro del bloque */
         }
 
