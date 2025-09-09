@@ -887,11 +887,12 @@ img {
   border: 1px solid orange;
   border-radius: 20px; /* Redondea los bordes */
   max-width: 400px; /* imagen más grande */
+  margin-left: 80px; /* opcional, para mantenerla a la derecha */
   height: auto;
-  top: -50px;       /* ajusta según quieras subirla o bajarla */
+  top: -80px;       /* ajusta según quieras subirla o bajarla */
   margin: 0 auto;
 }
-
+ 
 /* Botón */
 .boton-container {
   text-align: center;
@@ -1072,14 +1073,6 @@ img {
     padding: 10px 20px;
   }
 
-  .rse-image img {
-    position: relative;
-    top: -10cm; /* mueve la imagen 2 cm hacia arriba */
-    margin-left: 50px; /* opcional, para mantenerla a la derecha */
-    max-width: 220px;
-    margin: 0 auto;
-    height: 120px; /* ajusta tamaño si quieres */
-  }
 
   .rse-text p {
     font-size: 20px;
