@@ -628,7 +628,7 @@ img {
   flex: 1;
   max-width: 600px;
   margin-left: -150px; /* mueve a la izquierda */
-  margin-top: -60px;  /* sube hacia arriba */
+  margin-top: -80px;  /* sube hacia arriba */
 }
 
 
