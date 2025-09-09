@@ -627,8 +627,8 @@ img {
 .youtube-video {
   flex: 1;
   max-width: 600px;
-  margin-left: -110px; /* mueve a la izquierda */
-  margin-top: -30px;  /* sube hacia arriba */
+  margin-left: -150px; /* mueve a la izquierda */
+  margin-top: -60px;  /* sube hacia arriba */
 }
 
 
