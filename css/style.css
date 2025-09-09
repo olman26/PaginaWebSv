@@ -851,7 +851,7 @@ img {
 .rse {
   background: #9647a5;
   color: white;
-  padding: 15px 10px;   /* menos alto que antes */
+  padding: 20px 20px 15px 20px; /* reduce el padding superior e inferior */
   margin-bottom: 1.5cm;
 }
 
@@ -869,7 +869,6 @@ img {
 }
 
 .numero {
-  border: 3px solid orange; /* Borde naranja */
   font-size: 120px;       /* más grande que antes */
   font-weight: bold;
   margin: 0 auto 10px auto;
@@ -880,12 +879,12 @@ img {
 }
 
 .rse-text p {
-  font-size: 28px;   /* texto más grande */
+  font-size: 35px;   /* texto más grande */
   line-height: 1.5;  /* un poco más aireado */
 }
 
 .rse-image img {
-  border: 3px solid orange;
+  border: 1px solid orange;
   border-radius: 20px; /* Redondea los bordes */
   max-width: 400px; /* imagen más grande */
   height: auto;
