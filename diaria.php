@@ -152,7 +152,7 @@
 
 /* Izquierda */
 .resultados .izquierda h2 {
-    font-size: 32px;
+    font-size: 26px;
     color: #438f4f;
     margin-bottom: 15px;
 }
@@ -321,7 +321,7 @@
 
 /* Label amarillo redondeado */
 .label-fecha {
-  background: #FFD700;
+  background: yellow;
   color: green;
   font-weight: bold;
   padding: 10px 20px;
@@ -329,7 +329,6 @@
   display: inline-block;
   margin-bottom: 15px;
   font-size: 16px;
-  width: 100%; /* ocupar todo el ancho del contenedor */
 }
 
 /* Input calendario dentro del label */
@@ -413,6 +412,7 @@
   <!-- Columna izquierda -->
   <div class="col izquierda">
     <h2>RESULTADOS <span class="subtitulo">ANTERIORES</span></h2>
+
     <label class="label-fecha">
       SELECCIONÁ LA FECHA:
     </label>
