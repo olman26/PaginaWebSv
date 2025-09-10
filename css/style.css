@@ -364,10 +364,12 @@ header {
 
 .res-card.roja .btn-jugar,
 .res-card.roja .btn-info {
-  background: #fff;
-  color: #e31f26;
+  background: transparent;  /* igual que Diaria */
+  color: white;             /* texto blanco */
+  border: 2px solid white;  /* borde igual que Diaria */
   font-weight: bold;
 }
+
 
 /* Clase que aplicaremos cuando hagas scroll */
 .scroll-up {
