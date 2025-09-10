@@ -84,7 +84,50 @@
 <div style="height: 50px;"></div>
 
 
-<div class="youtube"> <div class="youtube-content"> <!-- Columna izquierda con video --> <div class="youtube-video"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/1qsx5zpIp7w?start=14" title="YouTube video player" frameborder="0" allowfullscreen></iframe> <!-- Texto pequeño debajo del video --> <p class="video-subtext">Sorteo LOTO 11:00 a.m 25 de Julio del 2025</p> </div> <!-- Columna derecha con rectángulo naranja --> <div class="youtube-right"> <div class="youtube-text"> <h2>Visualizá nuestros sorteos en YouTube</h2> <p>Los 365 días del año</p> </div> <!-- Texto debajo del rectángulo --> <div class="youtube-info"> <p>Sintoniza en vivo los sorteos de las 11:00 a.m. y 3:00 p.m. por canal 5, HRN, Radio Satélite y Radio América.</p> <p>Podrás disfrutar del sorteo de las 9:00 p.m. por Telecadena 7 y 4, HRN y Radio Satélite.</p> </div> </div> </div> <!-- Botón centrado debajo --> <div class="boton-container"> <button class="youtube-boton">Ver más sorteos</button> </div> </div>
+<div class="youtube">
+  <div class="youtube-content">
+
+    <!-- Contenedor principal que contiene dos columnas: video + texto -->
+    <div class="contenedor-principal">
+
+      <!-- Columna izquierda: video -->
+      <div class="youtube-video">
+        <iframe 
+          src="https://www.youtube.com/embed/1qsx5zpIp7w?start=14" 
+          title="YouTube video player" 
+          allowfullscreen>
+        </iframe>
+        <p class="video-subtext">Sorteo LOTO 11:00 a.m 25 de 8 de Julio del 2025</p>
+      </div>
+
+      <!-- Columna derecha: texto en rectángulo naranja -->
+      <div class="youtube-right">
+        <div class="youtube-text">
+          <h2>
+            VISUALIZA NUESTROS<br>
+            SORTEOS EN YOUTUBE<br>
+            LOS 365 DÍAS DEL AÑO
+          </h2>
+        </div>
+
+        <div class="youtube-info">
+          <p>
+            Sintoniza en vivo los sorteos de las 11:00 a.m. y 9:00 p.m. por Canal 4.
+          </p>
+          <p>
+            Podrás disfrutar del sorteo de las 9:00 p.m. por nuestras redes sociales.
+          </p>
+        </div>
+      </div>
+
+    </div> <!-- fin contenedor-principal -->
+
+  </div> <!-- fin youtube-content -->
+</div> <!-- fin youtube -->
+ <div class="boton-container">
+    <button class="youtube-boton">Ver más sorteos</button>
+  </div>
+</div>
 
 
 
