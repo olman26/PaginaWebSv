@@ -369,6 +369,13 @@ header {
   border: 2px solid white;  /* borde igual que Diaria */
   font-weight: bold;
 }
+/* Hover para tarjeta roja */
+.res-card.roja .btn-jugar:hover,
+.res-card.roja .btn-info:hover {
+  background: white;       /* Fondo blanco al pasar el mouse */
+  color: #e31f26;          /* Texto rojo */
+  transition: 0.3s ease;   /* Suave transición */
+}
 
 
 /* Clase que aplicaremos cuando hagas scroll */
