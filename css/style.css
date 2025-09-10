@@ -711,9 +711,11 @@ img {
   }
 
   .youtube-right {
-    max-width: 100%;
-    text-align: center;
-  }
+  text-align: right;    /* Alinea el texto a la derecha */
+  float: right;         /* Mueve todo el bloque a la derecha */
+  width: 50%;           /* Ajusta el ancho del bloque (puedes cambiar el % según lo necesites) */
+}
+
 }
 
 
