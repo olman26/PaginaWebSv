@@ -377,6 +377,23 @@ header {
   transition: 0.3s ease;   /* Suave transición */
 }
 
+/* Contenedor para los botones dentro de la tarjeta */
+.res-card .botones {
+  display: flex;            /* Pone los botones en línea */
+  gap: 8px;                 /* Espacio entre botones */
+  justify-content: center;  /* Centra los botones en la tarjeta */
+  margin-top: 10px;         /* Espacio sobre los botones */
+}
+
+/* Estilo más pequeño para todos los botones */
+.res-card .btn-jugar,
+.res-card .btn-info {
+  padding: 4px 8px;         /* Más pequeño que antes */
+  font-size: 11px;          /* Texto más pequeño */
+}
+
+
+
 
 /* Clase que aplicaremos cuando hagas scroll */
 .scroll-up {
