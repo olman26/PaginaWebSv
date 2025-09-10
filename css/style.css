@@ -290,7 +290,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  border: 2px solid #007bff; /* azul */
+  
 }
 
 
@@ -392,6 +392,11 @@ header {
 .res-card .btn-info {
   margin-right: 0;
 }
+
+.btn-info {
+  margin-top: 4px; /* mueve el botón 4px hacia abajo */
+}
+
 
 
 
