@@ -96,8 +96,9 @@
       <p class="video-subtext">Sorteo LOTO 11:00 a.m 25 de 8 de Julio del 2025</p>
     </div>
 
-    <!-- Columna derecha con rectángulo naranja -->
-    <div class="contenedor-principal">
+   <!-- Columna derecha con rectángulo naranja -->
+<div class="contenedor-principal">
+  
   <!-- Columna izquierda -->
   <div class="izquierda">
     <!-- tu contenido izquierdo -->
@@ -105,6 +106,7 @@
 
   <!-- Columna derecha con rectángulo naranja -->
   <div class="youtube-right">
+    
     <div class="youtube-text">
       <h2>
         VISUALIZA NUESTROS<br>
@@ -116,14 +118,16 @@
     <div class="youtube-info">
       <p>
         Sintoniza en vivo los sorteos de las 11:00 a.m. y 9:00 p.m. por Canal 4.
-        <br>
       </p>
       <p>
-        Podrás disfrutar del sorteo de las 9:00 p.m. por Nuestras redes sociales.
+        Podrás disfrutar del sorteo de las 9:00 p.m. por nuestras redes sociales.
       </p>
     </div>
+
   </div>
+
 </div>
+
 
 
 <!-- Espacio en blanco -->
