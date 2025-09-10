@@ -75,7 +75,9 @@
       </div>
     </div>
 
-    <p class="proximo">PRÓXIMO SORTEO EN VIVO: 0H : 51M : 53S</p>
+    <p class="proximo">
+  <span class="azul">PRÓXIMO SORTEO EN VIVO:</span> 0H : 51M : 53S
+</p>
 
   </div>
 

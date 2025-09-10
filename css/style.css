@@ -537,6 +537,11 @@ header {
   /*  ocupa todo el ancho */
   margin: 0;
 }
+.azul {
+  color: #007bff; /* el mismo azul que la fecha */
+  font-weight: bold; /* opcional */
+}
+
 
 /*  Ajuste responsive global */
 img {
