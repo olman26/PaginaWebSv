@@ -393,7 +393,7 @@ header {
 
 /* Opcional: aumentar tamaño de la tarjeta para que se vea bien */
 .res-card {
-  width: 270px;
+  width: 290px;
   /* ancho de la tarjeta más grande */
   padding: 15px;
 }
@@ -413,7 +413,7 @@ header {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  width: 47px;
   height: 40px;
   border-radius: 50%;
   font-weight: bold;
