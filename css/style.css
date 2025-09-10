@@ -635,36 +635,25 @@ img {
   padding: 40px 5%;
 }
 
-.youtube-content {
-  display: flex;
-  justify-content: center; 
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-/* Contenedor padre: 2 columnas (video izquierda + texto derecha) */
+/* Contenedor principal: 2 columnas lado a lado */
 .contenedor-principal {
   display: flex;
-  justify-content: space-between; /* separa video a la izquierda y texto a la derecha */
-  align-items: flex-start;
+  justify-content: space-between; /* video a la izq, texto a la der */
+  align-items: flex-start; /* alineados arriba */
   gap: 40px; /* espacio entre columnas */
-  width: 100%;
 }
 
-/* Video */
 .youtube-video {
   flex: 1;
   max-width: 600px;
-  margin: 0; /* quité los márgenes negativos */
 }
 
 .youtube-video iframe {
   width: 100%;
-  aspect-ratio: 16/9; /* mantiene proporción */
-  border-radius: 20px; /* redondea esquinas */
-  border: none; /* quita borde */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* sombra sutil */
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 .video-subtext {
@@ -675,7 +664,6 @@ img {
   opacity: 0.9;
 }
 
-/* Columna derecha */
 .youtube-right {
   flex: 1;
   max-width: 400px;
@@ -683,7 +671,6 @@ img {
 
 .youtube-text {
   background: #ff7e00; 
-  color: white;
   padding: 25px;
   border-radius: 15px;
   text-align: center;
@@ -692,16 +679,10 @@ img {
 }
 
 .youtube-text h2 {
-  font-size: 26px; 
+  font-size: 26px;
   line-height: 1.2;
-  text-align: center;
-  color: white;
   font-weight: bold;
-}
-
-.youtube-text p {
-  font-size: 18px;
-  margin: 0;
+  color: white;
 }
 
 .youtube-info {
@@ -709,33 +690,6 @@ img {
   margin-top: 15px;
   line-height: 1.5;
   font-size: 16px;
-}
-
-.youtube-info .canales {
-  display: block; 
-  margin-left: 10px;
-}
-
-/* Botón centrado debajo */
-.youtube-boton {
-  background: #ff7e00;
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
-  margin-top: 1px;
-  position: relative;
-  top: 40px; /* mueve el botón hacia abajo */
-}
-
-.youtube-boton:hover {
-  background: #ff8000;
-  transform: scale(1.05);
 }
 
 /* Responsive */
@@ -761,6 +715,10 @@ img {
     text-align: center;
   }
 }
+
+
+
+
 
 
 
