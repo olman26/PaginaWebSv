@@ -690,7 +690,7 @@ img {
   color: white;
   padding: 40px 5%;
   min-height: 400px;  /* fuerza a mostrar el fondo */
-  border-radius: 20px; /* opcional, si quieres bordes redondeados */
+  border-radius: 0px; /* opcional, si quieres bordes redondeados */
 }
 
 
