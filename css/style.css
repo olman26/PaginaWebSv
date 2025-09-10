@@ -273,6 +273,8 @@ header {
   /* importante para que .proximo se posicione dentro */
   padding-bottom: 60px;
   /*  espacio para que no tape las tarjetas */
+  transition: transform 0.3s ease; /* movimiento suave */
+  position: relative; /* necesario para moverlo */
 }
 
 /* ===== TÍTULO ===== */

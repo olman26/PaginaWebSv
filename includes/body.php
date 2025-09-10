@@ -224,3 +224,16 @@
     // Llamada a la función
     animarContador("contador", 50261, 2000); // (id, número final, duración en ms)
   </script>
+
+  <script>
+window.addEventListener('scroll', function() {
+    const box = document.querySelector('.resultados-box');
+    
+    // Desplaza 4 cm (≈151px) hacia arriba al hacer scroll
+    if (window.scrollY > 0) {
+        box.style.transform = 'translateY(-151px)';
+    } else {
+        box.style.transform = 'translateY(0)';
+    }
+});
+</script>
