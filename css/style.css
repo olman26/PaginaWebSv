@@ -629,6 +629,30 @@ img {
 }
 
 /* Video */
+.youtube {
+  background: #0047b2; /* Azul de fondo */
+  color: white;
+  padding: 40px 5%;
+}
+
+.youtube-content {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Contenedor padre: 2 columnas (video izquierda + texto derecha) */
+.contenedor-principal {
+  display: flex;
+  justify-content: space-between; /* separa video a la izquierda y texto a la derecha */
+  align-items: flex-start;
+  gap: 40px; /* espacio entre columnas */
+  width: 100%;
+}
+
+/* Video */
 .youtube-video {
   flex: 1;
   max-width: 600px;
@@ -737,6 +761,7 @@ img {
     text-align: center;
   }
 }
+
 
 
 /* Contenedor Noticias */
