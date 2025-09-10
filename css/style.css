@@ -607,44 +607,7 @@ img {
 
 
 
-/* Contenedor general que tendrá las dos columnas */
-.contenedor-principal {
-  display: flex;                /* Activa el flexbox */
-  justify-content: space-between; /* Coloca las columnas en extremos */
-  align-items: flex-start;        /* Alinea arriba */
-  width: 100%;                   /* Ocupa todo el ancho */
-  padding: 20px;                 /* Espaciado interno opcional */
-  box-sizing: border-box;
-}
-
-/* Columna izquierda (puedes ajustar) */
-.izquierda {
-  flex: 1;               /* Que ocupe el espacio sobrante */
-  padding: 10px;
-}
-
-/* Columna derecha */
-.youtube-right {
-  max-width: 400px;       /* ancho máximo */
-  margin-left: auto;      /* lo empuja a la derecha */
-  text-align: right;      /* texto alineado a la derecha */
-  background: orange;     /* tu rectángulo naranja */
-  padding: 20px;          /* espacio interno */
-  border-radius: 10px;    /* bordes redondeados opcional */
-  color: white;           /* texto en blanco para contraste */
-}
-
-.youtube-text h2 {
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.4;
-}
-
-.youtube-info p {
-  margin: 10px 0 0 0;
-  font-size: 14px;
-}
-
+youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5%; } .youtube-content { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; /* Centra horizontalmente */ align-items: flex-start; } /* Video */ .youtube-video { flex: 1; max-width: 600px; margin-left: -150px; /* mueve a la izquierda */ margin-top: -80px; /* sube hacia arriba */ } .youtube-video iframe { width: 100%; aspect-ratio: 16/9; /* mantiene proporción */ border-radius: 20px; /* redondea esquinas */ border: none; /* quita borde */ box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* sombra sutil */ } .video-subtext { font-size: 14px; color: white; margin-top: 10px; text-align: left; opacity: 0.9; } /* Columna derecha */ .youtube-right { flex: 1 1 400px; max-width: 400px; } .youtube-text { background: #ff7e00; color: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-bottom: 15px; } .youtube-text h2 { font-size: 26px; /* más grande y más largo */ line-height: 1.2; /* mantiene el salto de línea agradable */ text-align: center; /* centra el texto horizontalmente */ color: white; font-weight: bold; } .youtube-text p { font-size: 18px; margin: 0; } .youtube-info { text-align: left; /* todo el texto a la izquierda */ margin-top: 15px; /* espacio arriba */ line-height: 1.5; /* espacio entre líneas */ font-size: 16px; /* tamaño de letra */ } .youtube-info .canales { display: block; /* hace que cada lista de canales quede en su propia línea */ margin-left: 10px; /* opcional: un pequeño margen para diferenciar */ } /* Botón centrado debajo */ .youtube-boton { background: #ff7e00; color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 20px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: background 0.3s ease, transform 0.2s ease; margin-top: 1px; /* <- aquí lo bajas más, ajusta el valor */ position: relative; /* permite mover con top/left/right/bottom */ top: 40px; /* mueve el botón 20px hacia abajo */ } .youtube-boton:hover { background: #ff8000; transform: scale(1.05); } /* Responsive */ @media (max-width: 768px) { .youtube-content { flex-direction: column; align-items: center; text-align: center; } .youtube-video iframe { max-height: 200px; border-radius: 30px; } /* Contenedor padre */ .contenedor-principal { display: flex; justify-content: space-between; /* manda los hijos a extremos */ } /* Columna derecha */ .youtube-right { max-width: 400px; /* opcional, para que no ocupe todo */ text-align: right; /* texto alineado */ } .video-subtext { text-align: center; } }
 
 
 
