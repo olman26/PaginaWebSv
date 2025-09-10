@@ -377,20 +377,22 @@ header {
   transition: 0.3s ease;   /* Suave transición */
 }
 
-/* Contenedor para los botones dentro de la tarjeta */
-.res-card .botones {
-  display: flex;            /* Pone los botones en línea */
-  gap: 8px;                 /* Espacio entre botones */
-  justify-content: center;  /* Centra los botones en la tarjeta */
-  margin-top: 10px;         /* Espacio sobre los botones */
-}
-
-/* Estilo más pequeño para todos los botones */
+/* Botones más pequeños y alineados al centro */
 .res-card .btn-jugar,
 .res-card .btn-info {
-  padding: 4px 8px;         /* Más pequeño que antes */
-  font-size: 11px;          /* Texto más pequeño */
+  padding: 4px 8px;    /* reduce tamaño */
+  font-size: 11px;     /* texto más pequeño */
+  display: inline-block; /* asegura que se mantengan en línea */
+  margin-right: 5px;    /* espacio entre botones */
+  vertical-align: middle; /* alineación vertical */
 }
+
+/* Elimina margen innecesario al último botón */
+.res-card .btn-info {
+  margin-right: 0;
+}
+
+
 
 
 
