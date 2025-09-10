@@ -19,7 +19,8 @@ header {
   flex-wrap: wrap;
   gap: 20px;
   padding: 10px 0;
-  width: 90%; /* más ancho */
+  width: 90%;
+  /* más ancho */
   margin: 0 auto;
 }
 
@@ -37,30 +38,34 @@ header {
 
 /* Cuadro naranja con logo y navegación */
 .main-header {
-background-color: #ff7e00;
-border-radius: 15px;
-height: 100px;
-display: flex;
-align-items: center;
-padding: 0 20px;
-justify-content: space-between;
+  background-color: #ff7e00;
+  border-radius: 15px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
 
-width: 60%;                 /* más angosto que el azul */
-margin: 10px auto 20px;    /* sube 40px (la mitad) para que quede mitad en azul, mitad afuera */
-position: relative;
-z-index: 2;
+  width: 60%;
+  /* más angosto que el azul */
+  margin: 10px auto 20px;
+  /* sube 40px (la mitad) para que quede mitad en azul, mitad afuera */
+  position: relative;
+  z-index: 2;
 }
+
 .orange-header {
-background-color: orange;
-padding: 20px;
-text-align: center;
-font-weight: bold;
-font-size: 24px;
-width: 60%;
-margin: -40px auto 0 auto; /* Esto lo sube hacia arriba a la mitad */
-z-index: 2;
-position: relative;
-border-radius: 10px;
+  background-color: orange;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  width: 60%;
+  margin: -40px auto 0 auto;
+  /* Esto lo sube hacia arriba a la mitad */
+  z-index: 2;
+  position: relative;
+  border-radius: 10px;
 }
 
 /* Tamaño del logo*/
@@ -103,43 +108,55 @@ border-radius: 10px;
 
 /* Hero principal naranja body */
 .hero {
-background: linear-gradient(to bottom, #ff6700, #ff9c00);
-color: white;
-padding: 60px 5%;
-text-align: left;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: space-between;
-min-height: 320px; /* Más alto */
+  background: linear-gradient(to bottom, #ff6700, #ff9c00);
+  color: white;
+  padding: 60px 5%;
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 320px;
+  /* Más alto */
 }
 
 /* Texto principal */
 .hero h1 {
-  font-size: 48px; /* Más grande */
-  font-weight: 900; /* Súper grueso */
+  font-size: 48px;
+  /* Más grande */
+  font-weight: 900;
+  /* Súper grueso */
   line-height: 1.3;
   margin-bottom: 20px;
   text-transform: uppercase;
-  color: #fff; /* Blanco para contraste */
+  color: #fff;
+  /* Blanco para contraste */
 }
 
 /* Horarios */
 .hero .horarios {
-  font-size: 36px; /* Más grande */
+  font-size: 36px;
+  /* Más grande */
   font-weight: 800;
-  color: #003399; /* Azul corporativo */
+  color: #003399;
+  /* Azul corporativo */
   margin-bottom: 20px;
 }
 
 .hero .boton {
-  background-color: #fff200; /* Amarillo SIEMPRE */
-  color: #003399; /* Letras azules */
-  padding: 16px 36px; /* Botón grande */
+  background-color: #fff200;
+  /* Amarillo SIEMPRE */
+  color: #003399;
+  /* Letras azules */
+  padding: 16px 36px;
+  /* Botón grande */
   border: none;
-  border-radius: 12px; /* Bordes redondeados */
-  font-weight: 900; /* Texto grueso */
-  font-size: 20px; /* Texto más grande */
+  border-radius: 12px;
+  /* Bordes redondeados */
+  font-weight: 900;
+  /* Texto grueso */
+  font-size: 20px;
+  /* Texto más grande */
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
@@ -148,43 +165,53 @@ min-height: 320px; /* Más alto */
 }
 
 .hero .boton:hover {
-  transform: scale(1.05); /* Efecto de agrandar */
+  transform: scale(1.05);
+  /* Efecto de agrandar */
 }
 
 /* Contenedor del texto: mover hacia la derecha */
 .texto-hero {
   max-width: 650px;
-  margin-left: 80px; /* 🔹 Ajusta este valor para moverlo */
+  margin-left: 80px;
+  /* 🔹 Ajusta este valor para moverlo */
 }
 
 /* Texto principal */
 .hero h1 {
-  font-size: 55px; /* Más grande */
-  font-weight: 920; /* Súper grueso */
+  font-size: 55px;
+  /* Más grande */
+  font-weight: 920;
+  /* Súper grueso */
   line-height: 1.3;
   margin-bottom: 20px;
   text-transform: uppercase;
-  color: #fff; /* Blanco para contraste */
+  color: #fff;
+  /* Blanco para contraste */
 }
 
 /* Horarios */
 .hero .horarios {
-  font-size: 41px; /* Más grande */
+  font-size: 41px;
+  /* Más grande */
   font-weight: 820;
-  color: #003399; /* Azul corporativo */
+  color: #003399;
+  /* Azul corporativo */
   margin-bottom: 20px;
 }
 
 .hero .boton {
-  background-color: #fff200; /* Amarillo */
-  color: #003399; /* Azul */
+  background-color: #fff200;
+  /* Amarillo */
+  color: #003399;
+  /* Azul */
   padding: 16px 36px;
   border: none;
   border-radius: 12px;
   font-weight: 900;
   font-size: 20px;
   cursor: pointer;
-  text-decoration: none; /* ✅ Quita la raya */
+  text-decoration: none;
+  /* ✅ Quita la raya */
   display: inline-block;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
@@ -193,18 +220,22 @@ min-height: 320px; /* Más alto */
 
 .hero .boton:hover {
   transform: scale(1.08);
-  background-color: #ffe600; /* Amarillo más intenso al pasar el mouse */
+  background-color: #ffe600;
+  /* Amarillo más intenso al pasar el mouse */
 }
 
 /* Contenedor del texto: mover hacia la derecha */
 .texto-hero {
   max-width: 650px;
-  margin-left: 80px; /* 🔹 Ajusta este valor para moverlo */
+  margin-left: 80px;
+  /* 🔹 Ajusta este valor para moverlo */
 }
 
 .hero img {
-  max-height: 380px; /* Antes 280px, ahora más grande */
-  width: auto; /* Mantiene proporción */
+  max-height: 380px;
+  /* Antes 280px, ahora más grande */
+  width: auto;
+  /* Mantiene proporción */
   position: relative;
   right: 0;
 }
@@ -213,10 +244,16 @@ min-height: 320px; /* Más alto */
   display: block;
   max-width: 100%;
   height: auto;
-  max-height: 500px; /*  este valor limita la altura */
+  max-height: 500px;
+  /*  este valor limita la altura */
 }
 
-.resultados, .youtube, .promo, .noticias, .footer, .rse {
+.resultados,
+.youtube,
+.promo,
+.noticias,
+.footer,
+.rse {
   padding: 20px;
   text-align: center;
 }
@@ -232,8 +269,10 @@ min-height: 320px; /* Más alto */
   margin: 30px auto;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  position: relative; /* importante para que .proximo se posicione dentro */
-  padding-bottom: 60px; /*  espacio para que no tape las tarjetas */
+  position: relative;
+  /* importante para que .proximo se posicione dentro */
+  padding-bottom: 60px;
+  /*  espacio para que no tape las tarjetas */
 }
 
 /* ===== TÍTULO ===== */
@@ -256,7 +295,8 @@ min-height: 320px; /* Más alto */
 
 
 /* Flechas */
-.res-prev, .res-next {
+.res-prev,
+.res-next {
   background: #ff7e00;
   color: white;
   border: none;
@@ -269,7 +309,8 @@ min-height: 320px; /* Más alto */
   z-index: 10;
 }
 
-.res-prev:hover, .res-next:hover {
+.res-prev:hover,
+.res-next:hover {
   background: #ff7e00;
 }
 
@@ -282,7 +323,8 @@ min-height: 320px; /* Más alto */
   flex-direction: row;
   justify-content: center;
   gap: 20px;
-  flex-wrap: nowrap; /* siempre lado a lado */
+  flex-wrap: nowrap;
+  /* siempre lado a lado */
 }
 
 /* Tarjeta base */
@@ -296,17 +338,24 @@ min-height: 320px; /* Más alto */
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 
 /* COLORES PERSONALIZADOS */
-.res-card.verde { background: #aeca36; }
-.res-card.naranja { background: #e31f26; }
+.res-card.verde {
+  background: #aeca36;
+}
 
- .res-card.roja {
-  background-color: #e31f26; /* Rojo oficial */
-  color: #fff;              /* Texto blanco para contraste */
+.res-card.naranja {
+  background: #e31f26;
+}
+
+.res-card.roja {
+  background-color: #e31f26;
+  /* Rojo oficial */
+  color: #fff;
+  /* Texto blanco para contraste */
 }
 
 .res-card.roja h4 {
@@ -322,7 +371,8 @@ min-height: 320px; /* Más alto */
 
 /* Clase que aplicaremos cuando hagas scroll */
 .scroll-up {
-  transform: translateY(-3cm); /* sube 3 cm */
+  transform: translateY(-3cm);
+  /* sube 3 cm */
 }
 
 
@@ -332,15 +382,19 @@ min-height: 320px; /* Más alto */
 /* Imagen */
 /* Aumentar tamaño de las imágenes del carrusel */
 .res-card img {
-  width: 250px;   /* ancho fijo más grande */
-  height: auto;   /* mantiene proporción */
+  width: 250px;
+  /* ancho fijo más grande */
+  height: auto;
+  /* mantiene proporción */
   display: block;
-  margin: 0 auto; /* centra la imagen dentro de la tarjeta */
+  margin: 0 auto;
+  /* centra la imagen dentro de la tarjeta */
 }
 
 /* Opcional: aumentar tamaño de la tarjeta para que se vea bien */
 .res-card {
-  width: 270px;   /* ancho de la tarjeta más grande */
+  width: 270px;
+  /* ancho de la tarjeta más grande */
   padding: 15px;
 }
 
@@ -381,47 +435,58 @@ min-height: 320px; /* Más alto */
 /* ===== BOTONES EN FILA ===== */
 .btn-group {
   display: flex;
-  justify-content: center; /* centrado horizontal */
-  gap: 6px; /* espacio pequeño entre botones */
+  justify-content: center;
+  /* centrado horizontal */
+  gap: 6px;
+  /* espacio pequeño entre botones */
   margin-top: 8px;
 }
 
-.btn-jugar, .btn-info {
+.btn-jugar,
+.btn-info {
   background: transparent;
   color: white;
   border: 2px solid white;
   border-radius: 15px;
-  font-size: 12px; /* más pequeño */
+  font-size: 12px;
+  /* más pequeño */
   font-weight: bold;
-  padding: 4px 10px; /* reduce espacio interno */
+  padding: 4px 10px;
+  /* reduce espacio interno */
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.btn-jugar:hover, .btn-info:hover {
+.btn-jugar:hover,
+.btn-info:hover {
   background: white;
   color: #333;
 }
 
-.btn-jugar, .btn-info {
+.btn-jugar,
+.btn-info {
   background: transparent;
   color: white;
   border: 2px solid white;
   border-radius: 15px;
-  font-size: 12px; /* más pequeño */
+  font-size: 12px;
+  /* más pequeño */
   font-weight: bold;
-  padding: 4px 10px; /* reduce espacio interno */
+  padding: 4px 10px;
+  /* reduce espacio interno */
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.btn-jugar:hover, .btn-info:hover {
+.btn-jugar:hover,
+.btn-info:hover {
   background: white;
   color: #333;
 }
 
 /* Hover: Fondo blanco, texto oscuro */
-.btn-jugar:hover, .btn-info:hover {
+.btn-jugar:hover,
+.btn-info:hover {
   background: white;
   color: #333;
 }
@@ -435,10 +500,13 @@ min-height: 320px; /* Más alto */
   padding: 15px 0;
   text-align: center;
   border-radius: 0 0 12px 12px;
-  position: absolute;  /*  posición absoluta */
-  bottom: 0;           /*  lo llevamos al fondo */
+  position: absolute;
+  /*  posición absoluta */
+  bottom: 0;
+  /*  lo llevamos al fondo */
   left: 0;
-  width: 100%;         /*  ocupa todo el ancho */
+  width: 100%;
+  /*  ocupa todo el ancho */
   margin: 0;
 }
 
@@ -499,10 +567,12 @@ img {
 
   .res-cards {
     display: flex;
-    overflow-x: auto; /*  Scroll horizontal */
+    overflow-x: auto;
+    /*  Scroll horizontal */
     gap: 10px;
     padding: 10px;
-    scroll-snap-type: x mandatory; /*  Carrusel táctil */
+    scroll-snap-type: x mandatory;
+    /*  Carrusel táctil */
   }
 
   .res-card {
@@ -512,42 +582,50 @@ img {
   }
 
   /* Estilos base para flechas */
-.res-prev, .res-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #ff7f00, #ff5500);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
-  z-index: 10;
-}
+  .res-prev,
+  .res-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff7f00, #ff5500);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
 
-/* Hover animado */
-.res-prev:hover, .res-next:hover {
-  background: linear-gradient(135deg, #ff9d00, #ff6700);
-  transform: translateY(-50%) scale(1.15);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+  /* Hover animado */
+  .res-prev:hover,
+  .res-next:hover {
+    background: linear-gradient(135deg, #ff9d00, #ff6700);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
 
-/* Posiciones */
-.res-prev { left: 10px; }
-.res-next { right: 10px; }
+  /* Posiciones */
+  .res-prev {
+    left: 10px;
+  }
 
-/* SVG ajuste */
-.res-prev svg, .res-next svg {
-  width: 24px;
-  height: 24px;
-  fill: white;
-}
+  .res-next {
+    right: 10px;
+  }
+
+  /* SVG ajuste */
+  .res-prev svg,
+  .res-next svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
 
 }
 
@@ -601,14 +679,112 @@ img {
   border-radius: 10px;
   padding: 15px;
   width: 150px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-weight: bold;
 }
 
 
 
-youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5%; } .youtube-content { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; /* Centra horizontalmente */ align-items: flex-start; } /* Video */ .youtube-video { flex: 1; max-width: 600px; margin-left: -150px; /* mueve a la izquierda */ margin-top: -80px; /* sube hacia arriba */ } .youtube-video iframe { width: 100%; aspect-ratio: 16/9; /* mantiene proporción */ border-radius: 20px; /* redondea esquinas */ border: none; /* quita borde */ box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* sombra sutil */ } .video-subtext { font-size: 14px; color: white; margin-top: 10px; text-align: left; opacity: 0.9; } /* Columna derecha */ .youtube-right { flex: 1 1 400px; max-width: 400px; } .youtube-text { background: #ff7e00; color: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-bottom: 15px; } .youtube-text h2 { font-size: 26px; /* más grande y más largo */ line-height: 1.2; /* mantiene el salto de línea agradable */ text-align: center; /* centra el texto horizontalmente */ color: white; font-weight: bold; } .youtube-text p { font-size: 18px; margin: 0; } .youtube-info { text-align: left; /* todo el texto a la izquierda */ margin-top: 15px; /* espacio arriba */ line-height: 1.5; /* espacio entre líneas */ font-size: 16px; /* tamaño de letra */ } .youtube-info .canales { display: block; /* hace que cada lista de canales quede en su propia línea */ margin-left: 10px; /* opcional: un pequeño margen para diferenciar */ } /* Botón centrado debajo */ .youtube-boton { background: #ff7e00; color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 20px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: background 0.3s ease, transform 0.2s ease; margin-top: 1px; /* <- aquí lo bajas más, ajusta el valor */ position: relative; /* permite mover con top/left/right/bottom */ top: 40px; /* mueve el botón 20px hacia abajo */ } .youtube-boton:hover { background: #ff8000; transform: scale(1.05); } /* Responsive */ @media (max-width: 768px) { .youtube-content { flex-direction: column; align-items: center; text-align: center; } .youtube-video iframe { max-height: 200px; border-radius: 30px; } /* Contenedor padre */ .contenedor-principal { display: flex; justify-content: space-between; /* manda los hijos a extremos */ } /* Columna derecha */ .youtube-right { max-width: 400px; /* opcional, para que no ocupe todo */ text-align: right; /* texto alineado */ } .video-subtext { text-align: center; } }
+/* Video */
+.youtube-video {
+  flex: 1;
+  max-width: 600px;
+}
 
+.video-subtext {
+  font-size: 14px;
+  color: white;
+  margin-top: 8px;
+  text-align: left;
+  opacity: 0.9;
+}
+
+/* Contenedor derecho (rectángulo + texto) */
+.youtube-right {
+  max-width: 400px;
+}
+
+/* Rectángulo naranja */
+.youtube-text {
+  background: #ff7e00;
+  /* Naranja brillante */
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.youtube-text p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Texto adicional debajo del rectángulo */
+.youtube-info {
+  margin-top: 15px;
+}
+
+.youtube-info p {
+  font-size: 14px;
+  color: white;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* Botón centrado */
+.boton-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.youtube-boton {
+  background: #ff7e00;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.youtube-boton:hover {
+  background: #ff8000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .youtube-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* REDONDEAR VIDEO DE YOUTUBE */
+  .youtube-video iframe {
+    width: 100%;
+    max-height: 164px;
+    border-radius: 40px;
+    overflow: hidden;
+    border: none;
+  }
+
+  .youtube-right {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .video-subtext {
+    text-align: center;
+  }
+}
 
 
 
@@ -621,22 +797,29 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   align-items: flex-start;
   gap: 20px;
   background: #fff;
-  border: 2px solid #ddd; /* Borde visible */
+  border: 2px solid #ddd;
+  /* Borde visible */
   border-radius: 12px;
   padding: 20px;
-  width: 80%; /* No ocupa todo el ancho */
-  max-width: 1100px; /*  Limita en pantallas grandes */
-  margin: 30px auto; /*  Lo centra en la página */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /*  Sombra suave */
+  width: 80%;
+  /* No ocupa todo el ancho */
+  max-width: 1100px;
+  /*  Limita en pantallas grandes */
+  margin: 30px auto;
+  /*  Lo centra en la página */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  /*  Sombra suave */
 }
 
 /* Columna izquierda */
 .noticias-left {
-  flex: 0 0 220px; /*  Ajuste para no hacerla muy ancha */
+  flex: 0 0 220px;
+  /*  Ajuste para no hacerla muy ancha */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: left; /*  Texto alineado a la izquierda */
+  text-align: left;
+  /*  Texto alineado a la izquierda */
 }
 
 .noticias-left h3 {
@@ -654,7 +837,8 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
-  width: fit-content; /* Botón ajustado al texto */
+  width: fit-content;
+  /* Botón ajustado al texto */
 }
 
 .noticias-boton:hover {
@@ -667,7 +851,8 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   display: flex;
   align-items: center;
   position: relative;
-  width: 75%; /* Ajusta el ancho para centrar */
+  width: 75%;
+  /* Ajusta el ancho para centrar */
   overflow: hidden;
   min-width: 0;
 }
@@ -679,16 +864,18 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 }
 
 .card {
-  min-width: 280px; /*  Más ancha */
+  min-width: 280px;
+  /*  Más ancha */
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
   width: 100%;
-  height: 180px; /*  Imagen más alta */
+  height: 180px;
+  /*  Imagen más alta */
   object-fit: cover;
 }
 
@@ -707,50 +894,73 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 
 .card-content p {
   font-size: 14px;
-  line-height: 1.4; /*  Mejor legibilidad */
-  white-space: normal; /*  Permite varias líneas */
+  line-height: 1.4;
+  /*  Mejor legibilidad */
+  white-space: normal;
+  /*  Permite varias líneas */
   overflow: hidden;
 }
 
 
 /* Flechas del carrusel */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #ff7e00; /* Color naranja */
+  background: #ff7e00;
+  /* Color naranja */
   color: white;
   border: none;
-  font-size: 28px; /*  Más grandes */
-  padding: 14px 18px; /*  Más espacio para el clic */
-  border-radius: 50%; /*  Forma circular */
+  font-size: 28px;
+  /*  Más grandes */
+  padding: 14px 18px;
+  /*  Más espacio para el clic */
+  border-radius: 50%;
+  /*  Forma circular */
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*  Destaca sobre las tarjetas */
-  z-index: 10; /*  Siempre encima */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /*  Destaca sobre las tarjetas */
+  z-index: 10;
+  /*  Siempre encima */
   transition: background 0.3s ease;
 }
 
-.prev { left: -35px; }  /*  Más hacia adentro */
-.next { right: -35px; } /*  Más hacia adentro */
+.prev {
+  left: -35px;
+}
 
-.prev:hover, .next:hover {
-  background: #ff5500; /*  Efecto hover más oscuro */
+/*  Más hacia adentro */
+.next {
+  right: -35px;
+}
+
+/*  Más hacia adentro */
+
+.prev:hover,
+.next:hover {
+  background: #ff5500;
+  /*  Efecto hover más oscuro */
 }
 
 
 .rse {
   background: #9647a5;
   color: white;
-  padding: 20px 20px 15px 20px; /* reduce el padding superior e inferior */
+  padding: 20px 20px 15px 20px;
+  /* reduce el padding superior e inferior */
   margin-bottom: 1.5cm;
 }
 
 .rse-content {
   display: flex;
-  justify-content: center; /* centra todo horizontalmente */
-  align-items: center;     /* centra verticalmente */
+  justify-content: center;
+  /* centra todo horizontalmente */
+  align-items: center;
+  /* centra verticalmente */
   flex-wrap: wrap;
-  gap: 30px; /* espacio entre texto y la imagen */
+  gap: 30px;
+  /* espacio entre texto y la imagen */
 }
 
 .rse-text {
@@ -759,43 +969,56 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 }
 
 .numero {
-  font-size: 120px;       /* más grande que antes */
+  font-size: 120px;
+  /* más grande que antes */
   font-weight: bold;
   margin: 0 auto 10px auto;
   background: transparent;
   display: inline-block;
-  padding: 15px 30px;     /* relleno proporcional al tamaño */
+  padding: 15px 30px;
+  /* relleno proporcional al tamaño */
   border-radius: 15px;
 }
 
 .rse-text p {
-  font-size: 25px;   /* texto más grande */
-  line-height: 1.5;  /* un poco más aireado */
+  font-size: 25px;
+  /* texto más grande */
+  line-height: 1.5;
+  /* un poco más aireado */
 }
 
 .rse-image {
   position: relative;
-  left: 60px;   /* mueve a la derecha */
-  top: -20px;   /* mueve hacia arriba */
+  left: 60px;
+  /* mueve a la derecha */
+  top: -20px;
+  /* mueve hacia arriba */
 }
 
 .rse-image img {
   border: 2px solid orange;
-  border-radius: 20px; /* bordes redondeados */
-  width: 400px;   /* ancho deseado */
-  height: auto;   /* mantiene proporción */
+  border-radius: 20px;
+  /* bordes redondeados */
+  width: 400px;
+  /* ancho deseado */
+  height: auto;
+  /* mantiene proporción */
   position: relative;
-  top: -30px;     /* mover hacia arriba */
-  margin-left: 90px; /* mover a la derecha */
+  top: -30px;
+  /* mover hacia arriba */
+  margin-left: 90px;
+  /* mover a la derecha */
 }
 
- 
+
 /* Botón */
 .boton-container {
   text-align: center;
-  margin-top: 1px; /* menos espacio hacia arriba */
+  margin-top: 1px;
+  /* menos espacio hacia arriba */
   position: relative;
-  top: 30px;       /* baja un poquito, sin alargar mucho la franja */
+  top: 30px;
+  /* baja un poquito, sin alargar mucho la franja */
 }
 
 .rse-boton {
@@ -804,7 +1027,8 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   border: none;
   padding: 12px 30px;
   border-radius: 30px;
-  font-size: 18px;  /* más pequeño que 20px */
+  font-size: 18px;
+  /* más pequeño que 20px */
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -830,8 +1054,10 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start; /* pega arriba */
-  margin-top: -20px; /* sube todo el bloque */
+  justify-content: flex-start;
+  /* pega arriba */
+  margin-top: -20px;
+  /* sube todo el bloque */
 }
 
 .footer-logo {
@@ -849,12 +1075,14 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 .footer-right {
   flex: 1;
   display: flex;
-  justify-content: center; /* CENTRAR columnas */
+  justify-content: center;
+  /* CENTRAR columnas */
 }
 
 .footer-columns {
   display: flex;
-  gap: 80px; /* Espacio entre columnas */
+  gap: 80px;
+  /* Espacio entre columnas */
 }
 
 .footer-column h3 {
@@ -912,15 +1140,19 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   }
 
   .footer-columns {
-  flex: 1;
-  display: flex;
-  gap: 80px; /* Más espacio entre columnas */
-  flex-wrap: wrap;
-  justify-content: center; /* CENTRAMOS LAS COLUMNAS */
-  align-items: flex-start;
-  max-width: 900px; /* Evita que se vayan muy a la derecha */
-  margin: 0 auto;   /* Las centra dentro del footer */
-}
+    flex: 1;
+    display: flex;
+    gap: 80px;
+    /* Más espacio entre columnas */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* CENTRAMOS LAS COLUMNAS */
+    align-items: flex-start;
+    max-width: 900px;
+    /* Evita que se vayan muy a la derecha */
+    margin: 0 auto;
+    /* Las centra dentro del footer */
+  }
 
 }
 
@@ -966,7 +1198,8 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   }
 
   .numero {
-    font-size: 60px; /* Reducimos tamaño en móvil */
+    font-size: 60px;
+    /* Reducimos tamaño en móvil */
     padding: 10px 20px;
   }
 
@@ -982,17 +1215,20 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
-  padding: 8px 14px; /* Espacio extra para parecer botón */
+  padding: 8px 14px;
+  /* Espacio extra para parecer botón */
   border-radius: 6px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .top-menu a:hover {
-  background-color: #ff9d00; /* Naranja */
+  background-color: #ff9d00;
+  /* Naranja */
   color: #fff;
-  transform: scale(1.05); /* Ligeramente más grande */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+  /* Ligeramente más grande */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*  Botón JUGAR EN LÍNEA */
@@ -1003,10 +1239,12 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 }
 
 .play-button img {
-  max-width: 220px;  /* controla el ancho de la imagen/botón */
+  max-width: 220px;
+  /* controla el ancho de la imagen/botón */
   height: auto;
   display: block;
-  border-radius: 50px; /* conserva look moderno (opcional) */
+  border-radius: 50px;
+  /* conserva look moderno (opcional) */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1024,18 +1262,21 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 
 
 .resultados-header h2 {
-  font-size: 24px; /* Más grande que el original */
+  font-size: 24px;
+  /* Más grande que el original */
   font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
 .titulo-naranja {
-  color: #ff7f00 !important; /* Naranja fuerte */
+  color: #ff7f00 !important;
+  /* Naranja fuerte */
 }
 
 .titulo-azul {
-  color: #003399 !important; /* Azul */
+  color: #003399 !important;
+  /* Azul */
 }
 
 /* ====== ESTILOS PARA DIARIA ====== */
@@ -1127,17 +1368,24 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 }
 
 .banner-superpremio {
-  width: 95%;                /* similar a resultados-box */
-  max-width: 1400px;         /* límite ancho en pantallas grandes */
-  margin: 40px auto;         /* lo centra y da espacio */
-  border-radius: 12px;       /* esquinas redondeadas */
-  overflow: hidden;          /* para que respete el borde redondeado */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* sombra sutil */
+  width: 95%;
+  /* similar a resultados-box */
+  max-width: 1400px;
+  /* límite ancho en pantallas grandes */
+  margin: 40px auto;
+  /* lo centra y da espacio */
+  border-radius: 12px;
+  /* esquinas redondeadas */
+  overflow: hidden;
+  /* para que respete el borde redondeado */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  /* sombra sutil */
   text-align: center;
 }
 
 .banner-superpremio img {
-  width: 100%;  /* ocupa todo el contenedor */
+  width: 100%;
+  /* ocupa todo el contenedor */
   height: auto;
   display: block;
 }
@@ -1153,7 +1401,8 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 
 .footer-logo {
   position: relative;
-  top: -40px; /* ajusta el valor */
+  top: -40px;
+  /* ajusta el valor */
 }
 
 
@@ -1165,12 +1414,14 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
 }
 
 .footer-extra-logo {
-  max-width: 120px; /* ajusta el tamaño */
+  max-width: 120px;
+  /* ajusta el tamaño */
   height: auto;
 }
 
 .social-icons img {
-  cursor: pointer;  /* mano al pasar encima */
+  cursor: pointer;
+  /* mano al pasar encima */
 }
 
 
@@ -1184,15 +1435,8 @@ youtube { background: #0047b2; /* Azul de fondo */ color: white; padding: 40px 5
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-
-
-
-
-
-
-
-
