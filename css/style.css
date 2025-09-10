@@ -461,8 +461,8 @@ header {
 
 .btn-jugar:hover,
 .btn-info:hover {
-  background: white;
-  color: #333;
+  background: white;      /* Fondo que aparece al pasar el mouse */
+  color: #e31f26;         /* Texto rojo */
 }
 
 .btn-jugar,
