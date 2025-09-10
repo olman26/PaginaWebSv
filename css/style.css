@@ -605,118 +605,46 @@ img {
   font-weight: bold;
 }
 
-.youtube {
-  background: #0047b2; /* Azul de fondo */
-  color: white;
-  padding: 40px 5%;
-}
 
-.youtube-content {
-  display: flex;
-  justify-content: center; 
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px;
-}
 
-/* Contenedor padre: 2 columnas (video izquierda + texto derecha) */
+/* Contenedor general que tendrá las dos columnas */
 .contenedor-principal {
-  display: flex;
-  justify-content: space-between; /* separa video a la izquierda y texto a la derecha */
-  align-items: flex-start;
-  gap: 40px; /* espacio entre columnas */
-  width: 100%;
+  display: flex;                /* Activa el flexbox */
+  justify-content: space-between; /* Coloca las columnas en extremos */
+  align-items: flex-start;        /* Alinea arriba */
+  width: 100%;                   /* Ocupa todo el ancho */
+  padding: 20px;                 /* Espaciado interno opcional */
+  box-sizing: border-box;
 }
 
-/* Video */
-.youtube {
-  background: #0047b2; /* Azul de fondo */
-  color: white;
-  padding: 40px 5%;
+/* Columna izquierda (puedes ajustar) */
+.izquierda {
+  flex: 1;               /* Que ocupe el espacio sobrante */
+  padding: 10px;
 }
 
-/* Contenedor principal: 2 columnas lado a lado */
-.contenedor-principal {
-  display: flex;
-  justify-content: space-between; /* video a la izq, texto a la der */
-  align-items: flex-start; /* alineados arriba */
-  gap: 40px; /* espacio entre columnas */
-}
-
-.youtube-video {
-  flex: 1;
-  max-width: 600px;
-}
-
-.youtube-video iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-.video-subtext {
-  font-size: 14px;
-  color: white;
-  margin-top: 10px;
-  text-align: left;
-  opacity: 0.9;
-}
-
+/* Columna derecha */
 .youtube-right {
-  flex: 1;
-  max-width: 400px;
-}
-
-.youtube-text {
-  background: #ff7e00; 
-  padding: 25px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  margin-bottom: 15px;
+  max-width: 400px;       /* ancho máximo */
+  margin-left: auto;      /* lo empuja a la derecha */
+  text-align: right;      /* texto alineado a la derecha */
+  background: orange;     /* tu rectángulo naranja */
+  padding: 20px;          /* espacio interno */
+  border-radius: 10px;    /* bordes redondeados opcional */
+  color: white;           /* texto en blanco para contraste */
 }
 
 .youtube-text h2 {
-  font-size: 26px;
-  line-height: 1.2;
-  font-weight: bold;
-  color: white;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
-.youtube-info {
-  text-align: left;
-  margin-top: 15px;
-  line-height: 1.5;
-  font-size: 16px;
+.youtube-info p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contenedor-principal {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .youtube-video iframe {
-    max-height: 200px;
-    border-radius: 30px;
-  }
-
-  .video-subtext {
-    text-align: center;
-  }
-
-  .youtube-right {
-  text-align: right;    /* Alinea el texto a la derecha */
-  float: right;         /* Mueve todo el bloque a la derecha */
-  width: 50%;           /* Ajusta el ancho del bloque (puedes cambiar el % según lo necesites) */
-}
-
-}
 
 
 
