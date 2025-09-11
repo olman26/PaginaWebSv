@@ -34,7 +34,7 @@
   <div class="resultados-box">
     <!-- Título -->
     <div class="resultados-header">
-        <h2 style="font-size: 36px; font-weight: bold; width: 100%; text-align: center;">
+      <h2 style="font-size: 32px; font-weight: bold; width: 100%; text-align: center; font-stretch: expanded;">
         <span class="titulo-naranja">ÚLTIMOS RESULTADOS,</span>
         <span class="titulo-azul"> VIERNES 25 DE JULIO, 2025 A LAS 09:00 PM</span>
       </h2>
@@ -76,12 +76,12 @@
     </div>
 
     <p class="proximo">
-  <span class="titulo-azul">PRÓXIMO SORTEO EN VIVO:</span> 0H : 51M : 53S
-</p>
+      <span class="titulo-azul">PRÓXIMO SORTEO EN VIVO:</span> 0H : 51M : 53S
+    </p>
 
   </div>
 
-  
+
 
   <div class="youtube">
     <div class="youtube-content"> <!-- Columna izquierda con video -->
@@ -105,7 +105,7 @@
     <div class="boton-container"> <button class="youtube-boton">Ver más sorteos</button> </div>
   </div>
 
-<!-- Espacio en blanco -->
+  <!-- Espacio en blanco -->
   <div style="height: 50px;"></div>
 
 
@@ -221,14 +221,14 @@
   </script>
 
   <script>
-window.addEventListener('scroll', function() {
-    const box = document.querySelector('.resultados-box');
-    
-    // Desplaza 4 cm (≈151px) hacia arriba al hacer scroll
-    if (window.scrollY > 0) {
+    window.addEventListener('scroll', function() {
+      const box = document.querySelector('.resultados-box');
+
+      // Desplaza 4 cm (≈151px) hacia arriba al hacer scroll
+      if (window.scrollY > 0) {
         box.style.transform = 'translateY(-80px)';
-    } else {
+      } else {
         box.style.transform = 'translateY(0)';
-    }
-});
-</script>
+      }
+    });
+  </script>
