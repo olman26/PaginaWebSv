@@ -401,7 +401,7 @@ header {
 /* Botones más pequeños y alineados al centro */
 .res-card .btn-jugar,
 .res-card .btn-info {
-  padding: 4px 35px;
+  padding: 4px 38px;
   /* reduce tamaño */
   font-size: 11px;
   /* texto más pequeño */

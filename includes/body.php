@@ -69,7 +69,6 @@
     <span class="bola-amarilla">28</span>
     <span class="bola-amarilla">1</span>
     <span class="bola-amarilla">6</span>
-    <span class="bola-amarilla">2</span>
   </div>
   <div class="btn-container">
     <button class="btn-jugar">Jugar</button>
