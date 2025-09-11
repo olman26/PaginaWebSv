@@ -109,11 +109,6 @@
 
 
 
-
-  <!-- Espacio en blanco -->
-  <div style="height: 50px;"></div>
-
-
   <!-- Banner Superpremio -->
   <div class="banner-superpremio">
     <img src="Banner-Superpremio.gif" alt="Banner Superpremio">
