@@ -45,7 +45,6 @@ header {
   align-items: center;
   padding: 0 20px;
   justify-content: space-between;
-
   width: 60%;
   /* más angosto que el azul */
   margin: 10px auto 20px;
@@ -104,7 +103,6 @@ header {
 .nav-menu a:hover::after {
   width: 100%;
 }
-
 
 /* Hero principal naranja body */
 .hero {
@@ -245,7 +243,7 @@ header {
   max-width: 100%;
   height: auto;
   max-height: 500px;
-  /*  este valor limita la altura */
+  /* este valor limita la altura */
 }
 
 .resultados,
@@ -272,28 +270,36 @@ header {
   position: relative;
   /* importante para que .proximo se posicione dentro */
   padding-bottom: 60px;
-  /*  espacio para que no tape las tarjetas */
-  transition: transform 0.3s ease; /* movimiento suave */
-  position: relative; /* necesario para moverlo */
+  /* espacio para que no tape las tarjetas */
+  transition: transform 0.3s ease;
+  /* movimiento suave */
+  position: relative;
+  /* necesario para moverlo */
 }
 
 /* ===== TÍTULO ===== */
 .resultados-header h2 {
-    font-size: 36px;      /* Tamaño del texto, cámbialo a tu gusto */
-    font-weight: bold;     /* Más grosor */
-    display: block;        /* Asegura que ocupe toda la línea */
-    width: 100%;           /* Ancho completo del contenedor */
-    text-align: center;    /* Centrado, opcional */
+  font-size: 36px;
+  /* Tamaño del texto, cámbialo a tu gusto */
+  font-weight: bold;
+  /* Más grosor */
+  display: block;
+  /* Asegura que ocupe toda la línea */
+  width: 100%;
+  /* Ancho completo del contenedor */
+  text-align: center;
+  /* Centrado, opcional */
 }
 
 .titulo-naranja {
-    color: orange;         /* Mantiene tu color original */
+  color: orange;
+  /* Mantiene tu color original */
 }
 
 .titulo-azul {
-    color: blue;           /* Mantiene tu color azul */
+  color: blue;
+  /* Mantiene tu color azul */
 }
-
 
 /* ===== CARRUSEL ===== */
 /* Carrusel */
@@ -301,10 +307,22 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  
 }
 
-
+/* Flechas */
+.res-prev,
+.res-next {
+  background: #ff7e00;
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+  z-index: 10;
+}
 
 .res-prev:hover,
 .res-next:hover {
@@ -338,7 +356,6 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 /* COLORES PERSONALIZADOS */
 .res-card.verde {
   background: #aeca36;
@@ -361,27 +378,39 @@ header {
 
 .res-card.roja .btn-jugar,
 .res-card.roja .btn-info {
-  background: transparent;  /* igual que Diaria */
-  color: white;             /* texto blanco */
-  border: 2px solid white;  /* borde igual que Diaria */
+  background: transparent;
+  /* igual que Diaria */
+  color: white;
+  /* texto blanco */
+  border: 2px solid white;
+  /* borde igual que Diaria */
   font-weight: bold;
 }
+
 /* Hover para tarjeta roja */
 .res-card.roja .btn-jugar:hover,
 .res-card.roja .btn-info:hover {
-  background: white;       /* Fondo blanco al pasar el mouse */
-  color: #e31f26;          /* Texto rojo */
-  transition: 0.3s ease;   /* Suave transición */
+  background: white;
+  /* Fondo blanco al pasar el mouse */
+  color: #e31f26;
+  /* Texto rojo */
+  transition: 0.3s ease;
+  /* Suave transición */
 }
 
 /* Botones más pequeños y alineados al centro */
 .res-card .btn-jugar,
 .res-card .btn-info {
-  padding: 4px 8px;    /* reduce tamaño */
-  font-size: 11px;     /* texto más pequeño */
-  display: inline-block; /* asegura que se mantengan en línea */
-  margin-right: 5px;    /* espacio entre botones */
-  vertical-align: middle; /* alineación vertical */
+  padding: 4px 8px;
+  /* reduce tamaño */
+  font-size: 11px;
+  /* texto más pequeño */
+  display: inline-block;
+  /* asegura que se mantengan en línea */
+  margin-right: 5px;
+  /* espacio entre botones */
+  vertical-align: middle;
+  /* alineación vertical */
 }
 
 /* Elimina margen innecesario al último botón */
@@ -390,24 +419,15 @@ header {
 }
 
 .btn-info {
-  margin-top: 4px; /* mueve el botón 4px hacia abajo */
+  margin-top: 4px;
+  /* mueve el botón 4px hacia abajo */
 }
-
-
-
-
-
-
 
 /* Clase que aplicaremos cuando hagas scroll */
 .scroll-up {
   transform: translateY(-3cm);
   /* sube 3 cm */
 }
-
-
-
-
 
 /* Imagen */
 /* Aumentar tamaño de las imágenes del carrusel */
@@ -427,7 +447,6 @@ header {
   /* ancho de la tarjeta más grande */
   padding: 15px;
 }
-
 
 /* Contenedor de números */
 .numeros {
@@ -489,8 +508,10 @@ header {
 
 .btn-jugar:hover,
 .btn-info:hover {
-  background: white;      /* Fondo que aparece al pasar el mouse */
-  color: #e31f26;         /* Texto rojo */
+  background: white;
+  /* Fondo que aparece al pasar el mouse */
+  color: #e31f26;
+  /* Texto rojo */
 }
 
 .btn-jugar,
@@ -531,27 +552,29 @@ header {
   text-align: center;
   border-radius: 0 0 12px 12px;
   position: absolute;
-  /*  posición absoluta */
+  /* posición absoluta */
   bottom: 0;
-  /*  lo llevamos al fondo */
+  /* lo llevamos al fondo */
   left: 0;
   width: 100%;
-  /*  ocupa todo el ancho */
+  /* ocupa todo el ancho */
   margin: 0;
 }
+
 .azul {
-  color: #007bff; /* el mismo azul que la fecha */
-  font-weight: bold; /* opcional */
+  color: #007bff;
+  /* el mismo azul que la fecha */
+  font-weight: bold;
+  /* opcional */
 }
 
-
-/*  Ajuste responsive global */
+/* Ajuste responsive global */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/*  HEADER */
+/* HEADER */
 @media (max-width: 992px) {
   .main-header {
     flex-direction: column;
@@ -576,7 +599,7 @@ img {
   }
 }
 
-/*  HERO */
+/* HERO */
 @media (max-width: 992px) {
   .hero {
     flex-direction: column;
@@ -594,7 +617,7 @@ img {
   }
 }
 
-/*  CARRUSEL DE RESULTADOS */
+/* CARRUSEL DE RESULTADOS */
 @media (max-width: 768px) {
   .resultados-carousel {
     flex-direction: column;
@@ -603,11 +626,11 @@ img {
   .res-cards {
     display: flex;
     overflow-x: auto;
-    /*  Scroll horizontal */
+    /* Scroll horizontal */
     gap: 10px;
     padding: 10px;
     scroll-snap-type: x mandatory;
-    /*  Carrusel táctil */
+    /* Carrusel táctil */
   }
 
   .res-card {
@@ -616,7 +639,26 @@ img {
     scroll-snap-align: center;
   }
 
- 
+  /* Estilos base para flechas */
+  .res-prev,
+  .res-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff7f00, #ff5500);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
 
   /* Hover animado */
   .res-prev:hover,
@@ -642,10 +684,9 @@ img {
     height: 24px;
     fill: white;
   }
-
 }
 
-/*  NOTICIAS */
+/* NOTICIAS */
 @media (max-width: 768px) {
   .noticias-box {
     flex-direction: column;
@@ -673,7 +714,7 @@ img {
   }
 }
 
-/*  FOOTER */
+/* FOOTER */
 @media (max-width: 768px) {
   .footer-columns {
     flex-direction: column;
@@ -681,7 +722,6 @@ img {
     text-align: center;
   }
 }
-
 
 .tarjetas {
   display: flex;
@@ -699,16 +739,15 @@ img {
   font-weight: bold;
 }
 
-
-
 .youtube {
   background: #0047b2;
   color: white;
   padding: 40px 5%;
-  min-height: 400px;  /* fuerza a mostrar el fondo */
-  border-radius: 0px; /* opcional, si quieres bordes redondeados */
+  min-height: 400px;
+  /* fuerza a mostrar el fondo */
+  border-radius: 0px;
+  /* opcional, si quieres bordes redondeados */
 }
-
 
 .youtube-content {
   display: flex;
@@ -809,11 +848,11 @@ img {
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, transform 0.2s ease;
-  margin-top: 1px; /* <- aquí lo bajas más, ajusta el valor */
+  margin-top: 1px;
+  /* <- aquí lo bajas más, ajusta el valor */
 }
-
 
 .youtube-boton:hover {
   background: #ff8000;
@@ -853,190 +892,156 @@ img {
   }
 }
 
-
-
-
-
-
 /* Contenedor Noticias */
-
-
-/* 🔹 Noticias Relevantes */
 .noticias-box {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 25px;
-  background: #fdfdfd;
-  border: none; /* sin borde gris */
-  border-radius: 18px;
-  padding: 30px;
-  width: 85%;
-  max-width: 1200px;
-  margin: 50px auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.noticias-box:hover {
-  transform: translateY(-5px);
+  gap: 20px;
+  background: #fff;
+  border: 2px solid #ddd;
+  /* Borde visible */
+  border-radius: 12px;
+  padding: 20px;
+  width: 80%;
+  /* No ocupa todo el ancho */
+  max-width: 1100px;
+  /* Limita en pantallas grandes */
+  margin: 30px auto;
+  /* Lo centra en la página */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  /* Sombra suave */
 }
 
 /* Columna izquierda */
-.noticias-left h3 {
-  font-size: 26px;
-  color: #003399;
-  margin-bottom: 20px;
-  position: relative;
+.noticias-left {
+  flex: 0 0 220px;
+  /* Ajuste para no hacerla muy ancha */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  /* Texto alineado a la izquierda */
 }
 
-.noticias-left h3::after {
-  content: "";
-  width: 60px;
-  height: 4px;
-  background: #ff7e00;
-  display: block;
-  margin-top: 8px;
-  border-radius: 2px;
+.noticias-left h3 {
+  font-size: 24px;
+  color: #003399;
+  margin-bottom: 15px;
 }
 
 .noticias-boton {
-  background: linear-gradient(135deg, #ff7e00, #ff5500);
+  background: #ff7e00;
   color: white;
   border: none;
-  padding: 14px 24px;
-  font-size: 15px;
+  padding: 12px 18px;
+  font-size: 16px;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 20px;
   cursor: pointer;
   width: fit-content;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+  /* Botón ajustado al texto */
 }
 
 .noticias-boton:hover {
-  transform: scale(1.07);
-  background: linear-gradient(135deg, #ff9d00, #ff6700);
+  background: #ff5500;
 }
-
-/* 🔹 Flechas SOLO para el carrusel de noticias */
-.noticias-box .prev,
-.noticias-box .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(135deg, #ff7f00, #ff5500);
-  border: none;
-  color: white;
-  font-size: 22px;
-  padding: 14px 18px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-}
-
-/* Hover solo en noticias */
-.noticias-box .prev:hover,
-.noticias-box .next:hover {
-  background: linear-gradient(135deg, #ff9d00, #ff6700);
-  transform: translateY(-50%) scale(1.15);
-}
-
-.noticias-box .prev {
-  left: -25px;
-}
-
-.noticias-box .next {
-  right: -25px;
-}
-
 
 /* Carrusel */
+.noticias-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 75%;
+  /* Ajusta el ancho para centrar */
+  overflow: hidden;
+  min-width: 0;
+}
+
 .carousel {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   transition: transform 0.4s ease;
 }
 
 .card {
-  min-width: 300px;
+  min-width: 280px;
+  /* Más ancha */
   background: white;
-  border-radius: 15px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
   width: 100%;
-  height: 190px;
+  height: 180px;
+  /* Imagen más alta */
   object-fit: cover;
 }
 
 .card-content {
-  padding: 18px;
+  padding: 15px;
   background: #ff7e00;
   color: white;
-  font-size: 15px;
-  min-height: 120px;
+  font-size: 16px;
 }
 
 .card-content h4 {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .card-content p {
   font-size: 14px;
   line-height: 1.4;
-  margin: 0;
+  /* Mejor legibilidad */
+  white-space: normal;
+  /* Permite varias líneas */
+  overflow: hidden;
 }
 
- 
-.prev, .next {
+/* Flechas del carrusel */
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(135deg, #ff7f00, #ff5500);
-  border: none;
+  background: #ff7e00;
+  /* Color naranja */
   color: white;
-  font-size: 22px;
+  border: none;
+  font-size: 28px;
+  /* Más grandes */
   padding: 14px 18px;
+  /* Más espacio para el clic */
   border-radius: 50%;
+  /* Forma circular */
   cursor: pointer;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-}
-
-.prev:hover, .next:hover {
-  background: linear-gradient(135deg, #ff9d00, #ff6700);
-  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Destaca sobre las tarjetas */
+  z-index: 10;
+  /* Siempre encima */
+  transition: background 0.3s ease;
 }
 
 .prev {
-  left: -25px;
+  left: -35px;
 }
 
+/* Más hacia adentro */
 .next {
-  right: -25px;
+  right: -35px;
 }
 
-
-/*  Más hacia adentro */
-
+/* Más hacia adentro */
 .prev:hover,
 .next:hover {
   background: #ff5500;
-  /*  Efecto hover más oscuro */
+  /* Efecto hover más oscuro */
 }
-
 
 .rse {
   background: #9647a5;
@@ -1104,7 +1109,6 @@ img {
   /* mover a la derecha */
 }
 
-
 /* Botón */
 .boton-container {
   text-align: center;
@@ -1132,7 +1136,6 @@ img {
   background: #ff7e00;
   transform: scale(1.05);
 }
-
 
 .footer {
   background: #003399;
@@ -1203,7 +1206,6 @@ img {
   margin-top: 40px;
 }
 
-
 .social-icons img {
   width: 24px;
   height: 24px;
@@ -1247,10 +1249,9 @@ img {
     margin: 0 auto;
     /* Las centra dentro del footer */
   }
-
 }
 
-/*  Ajuste del segundo encabezado (main-header) */
+/* Ajuste del segundo encabezado (main-header) */
 @media (max-width: 992px) {
   .main-header {
     flex-direction: column;
@@ -1283,7 +1284,7 @@ img {
   }
 }
 
-/*  Ajuste para sección RSE */
+/* Ajuste para sección RSE */
 @media (max-width: 768px) {
   .rse-content {
     flex-direction: column;
@@ -1297,13 +1298,12 @@ img {
     padding: 10px 20px;
   }
 
-
   .rse-text p {
     font-size: 20px;
   }
 }
 
-/*  Efecto botón para el menú superior */
+/* Efecto botón para el menú superior */
 .top-menu a {
   color: #ffffff;
   text-decoration: none;
@@ -1325,8 +1325,8 @@ img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/*  Botón JUGAR EN LÍNEA */
-/*  Botón JUGAR EN LÍNEA con imagen */
+/* Botón JUGAR EN LÍNEA */
+/* Botón JUGAR EN LÍNEA con imagen */
 .play-button a {
   display: inline-block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1343,17 +1343,16 @@ img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*  Hover animado */
+/* Hover animado */
 .play-button a:hover img {
   transform: scale(1.08);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-/*  Click */
+/* Click */
 .play-button a:active img {
   transform: scale(0.95);
 }
-
 
 .resultados-header h2 {
   font-size: 24px;
@@ -1484,8 +1483,6 @@ img {
   display: block;
 }
 
-
-
 .footer {
   position: relative;
   display: flex;
@@ -1498,7 +1495,6 @@ img {
   top: -40px;
   /* ajusta el valor */
 }
-
 
 .footer-logos {
   display: flex;
@@ -1518,9 +1514,6 @@ img {
   /* mano al pasar encima */
 }
 
-
-
-
 .esfera {
   animation: girar 3s linear infinite;
 }
@@ -1533,11 +1526,4 @@ img {
   to {
     transform: rotate(360deg);
   }
-}
-
-.hero .prev,
-.hero .next,
-.hero a::after {
-  display: none !important;
-  content: none !important;
 }
