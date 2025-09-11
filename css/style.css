@@ -434,7 +434,7 @@ header {
 /* Imagen */
 /* Aumentar tamaño de las imágenes del carrusel */
 .res-card img {
-  width: 200px;
+  width: 240px;
   /* ancho fijo más grande */
   height: auto;
   /* mantiene proporción */
