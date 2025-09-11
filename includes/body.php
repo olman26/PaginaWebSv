@@ -41,7 +41,7 @@
     </div>
 
 
-    <!-- Carrusel -->
+  
     <!-- Carrusel -->
     <div class="resultados-carousel">
       <div class="res-cards">
@@ -76,7 +76,7 @@
     </div>
 
     <p class="proximo" style="font-size: 22px; font-weight: 900; font-stretch: expanded; text-align: center;">
-  <span style="color: titulo-azul">PRÓXIMO SORTEO EN VIVO:</span> 0H : 51M : 53S
+  <span style="color: 003399">PRÓXIMO SORTEO EN VIVO:</span> 0H : 51M : 53S
 </p>
 
 
@@ -141,13 +141,13 @@
           <img src="noticia1.webp" alt="Noticia 1">
           <div class="card-content">
             <h4>Loto lleva premios...</h4>
-            <p>...a más de 10 centros de la Ceiba.</p>
+            <p>a más de 10 centros de la Ceiba.</p>
           </div>
         </div>
         <div class="card">
           <img src="noticia2.webp" alt="Noticia 2">
           <div class="card-content">
-            <h4>Juga Tres en...</h4>
+            <h4>Juga Tres en Nicaragua</h4>
             <p>¡Nueva sucursal en San Pedro Sula!</p>
           </div>
         </div>
