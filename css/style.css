@@ -1534,3 +1534,10 @@ img {
     transform: rotate(360deg);
   }
 }
+
+.hero .prev,
+.hero .next,
+.hero a::after {
+  display: none !important;
+  content: none !important;
+}
