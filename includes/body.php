@@ -76,7 +76,7 @@
     </div>
 
     <p class="proximo" style="font-size: 22px; font-weight: 900; font-stretch: expanded; text-align: center;">
-  <span style="color: blue;">PRÓXIMO SORTEO EN VIVO:</span> 0H : 51M : 53S
+  <span style="color: titulo-azul">PRÓXIMO SORTEO EN VIVO:</span> 0H : 51M : 53S
 </p>
 
 
