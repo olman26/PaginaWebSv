@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diaria Loto</title>
+
+  <!-- Fuente Helvetica Rounded -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Helvetica+Rounded:wght@400;700;900&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Helvetica Rounded', Arial, sans-serif;
     }
 
     /* Div superior centrado */
@@ -30,7 +34,6 @@
       margin-top: 20px;
     }
 
-    /* Logo */
     .top img {
       width: 350px;
       height: auto;
@@ -126,16 +129,18 @@
     /* Izquierda */
     .resultados .izquierda h2 {
       font-size: 40px;
-      font-weight: 700;   /* más grueso */
+      font-weight: 900;
       color: #438f4f;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       line-height: 1.2;
+      text-align: center;
     }
 
     .resultados .izquierda .subtitulo {
-      font-size: 40px;
-      font-weight: 700;   /* más grueso */
+      font-size: 32px;
+      font-weight: 700;
       display: block;
+      margin-top: 5px;
     }
 
     .label-fecha {
@@ -145,15 +150,6 @@
       padding: 6px 12px;
       border-radius: 15px;
       display: inline-block;
-      font-size: 14px;
-    }
-
-    .label-fecha input[type="date"] {
-      border: none;
-      background: white;
-      padding: 4px 8px;
-      margin-left: 8px;
-      border-radius: 6px;
       font-size: 14px;
     }
 
@@ -175,8 +171,9 @@
 
     .resultados .derecha h3 {
       font-size: 18px;
-      color: #438f4f;
+      color: green; /* horas en verde */
       margin-bottom: 8px;
+      text-align: center;
     }
 
     .resultados .num {
@@ -334,15 +331,11 @@
     </div>
   </div>
 
-  <div class="reglamento">
-    <button onclick="window.open('reglamento.pdf', '_blank')">LEER EL REGLAMENTO</button>
-  </div>
-
+  <!-- Script accordion -->
   <script>
     function toggleAccordion(header) {
       const content = header.nextElementSibling;
       const arrow = header.querySelector('.arrow');
-
       if (content.style.display === "block") {
         content.style.display = "none";
         arrow.style.transform = "rotate(0deg)";
@@ -352,6 +345,12 @@
       }
     }
   </script>
+
+  <!-- Botón reglamento -->
+  <div class="reglamento">
+    <button onclick="window.open('reglamento.pdf', '_blank')">LEER EL REGLAMENTO</button>
+  </div>
+
 </body>
 
 </html>
