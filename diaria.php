@@ -129,7 +129,7 @@
     /* Izquierda */
     .resultados .izquierda h2 {
       font-size: 40px;
-      font-weight: 900;
+      font-weight: 600;
       color: #438f4f;
       margin-bottom: 10px;
       line-height: 1.2;
@@ -137,8 +137,8 @@
     }
 
     .resultados .izquierda .subtitulo {
-      font-size: 32px;
-      font-weight: 700;
+      font-size: 40px;
+      font-weight: 600;
       display: block;
       margin-top: 5px;
     }
