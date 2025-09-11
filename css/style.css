@@ -306,21 +306,6 @@ header {
 
 
 
-/* Flechas 
-.res-prev,
-.res-next {
-  background: #ff7e00;
-  color: white;
-  border: none;
-  font-size: 28px;
-  padding: 10px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s ease;
-  z-index: 10;
-}*/
-
 .res-prev:hover,
 .res-next:hover {
   background: #ff7e00;
@@ -631,26 +616,7 @@ img {
     scroll-snap-align: center;
   }
 
-  /* Estilos base para flechas 
-  .res-prev,
-  .res-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #ff7f00, #ff5500);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease;
-    z-index: 10;
-  }*/
+ 
 
   /* Hover animado */
   .res-prev:hover,
@@ -953,6 +919,39 @@ img {
   background: linear-gradient(135deg, #ff9d00, #ff6700);
 }
 
+/* 🔹 Flechas SOLO para el carrusel de noticias */
+.noticias-box .prev,
+.noticias-box .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #ff7f00, #ff5500);
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 14px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+/* Hover solo en noticias */
+.noticias-box .prev:hover,
+.noticias-box .next:hover {
+  background: linear-gradient(135deg, #ff9d00, #ff6700);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.noticias-box .prev {
+  left: -25px;
+}
+
+.noticias-box .next {
+  right: -25px;
+}
+
+
 /* Carrusel */
 .carousel {
   display: flex;
@@ -1000,7 +999,7 @@ img {
   margin: 0;
 }
 
-/* Flechas */
+ 
 .prev, .next {
   position: absolute;
   top: 50%;
