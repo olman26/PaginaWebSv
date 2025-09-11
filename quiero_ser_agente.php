@@ -1,130 +1,214 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- BODY -->
+<main class="main-body">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiero ser agente</title>
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-text">
+      <h2>SÉ PARTE DE ESTE <span class="green">EQUIPO GANADOR</span></h2>
+      <p>Juntos maximizamos tus ventas e ingresos para tu negocio.</p>
+    </div>
+    <div class="banner-img">
+      <img src="tu-imagen.png" alt="Imagen persona feliz" />
+    </div>
+  </section>
 
- 
-</head>
+  <!-- Requisitos -->
+  <section class="requisitos">
+    <h2>REQUISITOS</h2>
+    <ul>
+      <li>Poseer un negocio activo</li>
+      <li>Contar con un número de identidad</li>
+      <li>Tener recibo de energía eléctrica</li>
+      <li>Experiencia previa vendiendo</li>
+      <li>Depósito en garantía</li>
+    </ul>
+  </section>
 
-<body>
-  <!-- Bloque superior -->
-  <div class="top">
-    <div class="top-content">
-      <img src="Diaria.webp" alt="Diaria Loto">
-      <div class="ganador-box">
-        <div class="ganador">ÚLTIMO NÚMERO GANADOR:</div>
-        <div class="nums">
-          <span class="num">0</span>
-          <span class="num">9</span>
-        </div>
-        <div class="etiqueta-hola">PRÓXIMO SORTEO EN VIVO: 01/01 - 1:25</div>
+  <!-- Formulario -->
+  <section class="formulario">
+    <h2>¿QUERÉS SER VENDEDOR?<br> ¡LLENÁ ESTE FORMULARIO!</h2>
+
+    <form>
+      <!-- Propietario -->
+      <h3>Ingresar información del propietario del negocio</h3>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="text" placeholder="Número de identidad" required>
+
+      <!-- Negocio -->
+      <h3>Ingresar información del negocio</h3>
+      <input type="text" placeholder="Nombre del negocio" required>
+      <input type="text" placeholder="Dirección del negocio" required>
+
+      <!-- Dropdowns -->
+      <select required>
+        <option value="">Selecciona el departamento</option>
+        <option>Francisco Morazán</option>
+        <option>Cortés</option>
+        <option>Atlántida</option>
+      </select>
+
+      <select required>
+        <option value="">Selecciona la ciudad</option>
+        <option>Tegucigalpa</option>
+        <option>San Pedro Sula</option>
+        <option>La Ceiba</option>
+      </select>
+
+      <!-- Contacto -->
+      <input type="tel" placeholder="Teléfono" required>
+      <input type="email" placeholder="Correo electrónico" required>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="beneficios">
+    <h2>BENEFICIOS</h2>
+    <div class="beneficios-grid">
+      <div class="beneficio">
+        <h3>💰 Comisión diaria inmediata</h3>
+        <p>Recibe comisiones de forma rápida.</p>
+      </div>
+      <div class="beneficio">
+        <h3>📋 Planes de incentivos</h3>
+        <p>Premios y recompensas especiales.</p>
+      </div>
+      <div class="beneficio">
+        <h3>🚶‍♂️ Tráfico en el negocio</h3>
+        <p>Atrae más clientes con la venta de boletos.</p>
+      </div>
+      <div class="beneficio">
+        <h3>🤝 Asesoría personalizada</h3>
+        <p>Un ejecutivo te apoyará en todo momento.</p>
+      </div>
+      <div class="beneficio">
+        <h3>📞 Ayuda 365 días al año</h3>
+        <p>Soporte continuo para tu negocio.</p>
+      </div>
+      <div class="beneficio">
+        <h3>📢 Publicidad</h3>
+        <p>Apoyo en campañas y anuncios para tu negocio.</p>
       </div>
     </div>
-  </div>
+  </section>
+</main>
 
-  <!-- Menú -->
-  <div class="menu">
-    <a href="#">CÓMO JUGAR DIARIA</a>
-    <a href="#">DESCARGÁ GUÍA DE SUEÑOS</a>
-    <a href="#">RESULTADOS NÚMEROS DE DIARIA</a>
-  </div>
 
-  <!-- Resultados anteriores -->
-  <div class="resultados">
-    <!-- Columna izquierda -->
-    <div class="col izquierda">
-      <h2>
-        RESULTADOS <br>
-        <span class="subtitulo">ANTERIORES</span>
-      </h2>
-      <label class="label-fecha">
-        SELECCIONÁ LA FECHA:
-      </label>
-    </div>
+<!-- CSS -->
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-    <!-- Columna centro -->
-    <div class="col centro">
-      <div class="calendario">
-        Aquí podría ir un calendario más grande o embebido
-      </div>
-    </div>
+.main-body {
+  background: #fff;
+}
 
-    <!-- Columna derecha -->
-    <div class="col derecha">
-      <div class="sorteo">
-        <h3>SORTEO 11:00 A.M.</h3>
-        <div class="nums">
-          <span class="num">1</span>
-          <span class="num">5</span>
-        </div>
-      </div>
-      <div class="sorteo">
-        <h3>SORTEO 9:00 P.M.</h3>
-        <div class="nums">
-          <span class="num">8</span>
-          <span class="num">3</span>
-        </div>
-      </div>
-    </div>
-  </div>
+/* Banner */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ff6b00;
+  color: white;
+  padding: 40px 20px;
+}
+.banner h2 {
+  font-size: 32px;
+}
+.banner .green {
+  color: #82d20f;
+}
+.banner p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.banner-img img {
+  max-width: 200px;
+}
 
-  <!-- Accordion principal -->
-  <div class="accordion">
-    <div class="accordion-header" onclick="toggleAccordion(this)">
-      <span style="font-weight:bold; font-size:24px;">CÓMO JUGAR Y GANAR</span>
-      <span class="arrow">▼</span>
-    </div>
-    <div class="accordion-content">
-      <div style="display:flex; align-items:flex-start; gap:20px; margin-bottom:15px;">
-        <div style="flex:1;">
-          <h3 style="color:#aeca36; margin-bottom:10px;">¿CÓMO SE JUEGA?</h3>
-          <img src="Diaria.webp" alt="Diaria" style="width:80px; height:auto;">
-        </div>
-        <div style="flex:2;">
-          <p>SELECCIONA 1 NÚMERO DE DOS DÍGITOS DEL 00 AL 99 Y SI TU NÚMERO ES FAVORITO, GANA 50 VECES TU INVERSIÓN.</p>
-          <p>DISPONIBLES DESDE L.5.</p>
-        </div>
-      </div>
+/* Requisitos */
+.requisitos {
+  background: #fff7eb;
+  text-align: center;
+  padding: 40px 20px;
+}
+.requisitos h2 {
+  color: #ff6b00;
+  font-size: 28px;
+}
+.requisitos ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.requisitos li {
+  font-size: 18px;
+  margin: 8px 0;
+}
 
-      <!-- Sub-accordions -->
-      <div class="sub-accordion">
-        <div class="sub-accordion-header" onclick="toggleAccordion(this)">
-          <span>JUEGA EN 3 SORTEOS CONSECUTIVOS</span>
-          <span class="arrow">▼</span>
-        </div>
-        <div class="sub-accordion-content">
-          Información sobre cómo jugar en 3 sorteos consecutivos.
-        </div>
+/* Formulario */
+.formulario {
+  background: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+.formulario h2 {
+  color: #0066cc;
+  margin-bottom: 20px;
+}
+.formulario form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+.formulario input, .formulario select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.formulario button {
+  background: #ff6b00;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.formulario button:hover {
+  background: #e65a00;
+}
 
-        <div class="sub-accordion-header" onclick="toggleAccordion(this)">
-          <span>CONOCE LOS RESULTADOS</span>
-          <span class="arrow">▼</span>
-        </div>
-        <div class="sub-accordion-content">
-          Información sobre cómo ver los resultados.
-        </div>
-
-        <div class="sub-accordion-header" onclick="toggleAccordion(this)">
-          <span>RECLAMA TU PREMIO</span>
-          <span class="arrow">▼</span>
-        </div>
-        <div class="sub-accordion-content">
-          Información sobre cómo reclamar tu premio.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-
-  <!-- Botón reglamento -->
-  <div class="reglamento">
-    <button onclick="window.open('reglamento.pdf', '_blank')">LEER EL REGLAMENTO</button>
-  </div>
-
-</body>
-
-</html>
+/* Beneficios */
+.beneficios {
+  background: #fff7eb;
+  text-align: center;
+  padding: 40px 20px;
+}
+.beneficios h2 {
+  color: #0066cc;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+.beneficio {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.beneficio h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+</style>
