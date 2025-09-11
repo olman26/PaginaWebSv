@@ -15,6 +15,10 @@ switch ($pag) {
         include 'quiero_ser_agente.php';
     break;
 
+    case 'noticias':
+        include 'noticias.php';
+    break;
+
     default:
         include 'includes/body.php';
     break;

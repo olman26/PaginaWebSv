@@ -26,7 +26,7 @@
           <nav class="nav-menu">
       <a href="index.php?pag=diaria">JUEGOS</a>
       <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
-      <a href="https://loto.sv/puntos-de-venta/">NOTICIAS</a>
+      <a href="index.php?pag=noticias">NOTICIAS</a>
       <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
       
           </nav>
