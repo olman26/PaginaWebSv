@@ -344,12 +344,16 @@ header {
 
 /* Tarjeta base */
 .res-card {
-  width: 200px;        /* controla el ancho de la tarjeta */
-  height: auto;        /* alto automático según el contenido */
-  padding: 10px;       /* espacio interno */
-  margin: 10px;        /* espacio entre tarjetas */
-  border-radius: 12px; /* opcional: bordes redondeados */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* opcional: sombra */
+  width: 200px;
+  height: 360px;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* COLORES PERSONALIZADOS */
@@ -430,7 +434,7 @@ header {
 /* Imagen */
 /* Aumentar tamaño de las imágenes del carrusel */
 .res-card img {
-  width: 250px;
+  width: 200px;
   /* ancho fijo más grande */
   height: auto;
   /* mantiene proporción */
