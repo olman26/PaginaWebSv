@@ -226,7 +226,7 @@ window.addEventListener('scroll', function() {
     
     // Desplaza 4 cm (≈151px) hacia arriba al hacer scroll
     if (window.scrollY > 0) {
-        box.style.transform = 'translateY(-80px)';
+        box.style.transform = 'translateY(-60px)';
     } else {
         box.style.transform = 'translateY(0)';
     }
