@@ -893,149 +893,142 @@ img {
 
 
 /* Contenedor Noticias */
+
+
+/* 🔹 Noticias Relevantes */
 .noticias-box {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
-  background: #fff;
-  border: 2px solid #ddd;
-  /* Borde visible */
-  border-radius: 12px;
-  padding: 20px;
-  width: 80%;
-  /* No ocupa todo el ancho */
-  max-width: 1100px;
-  /*  Limita en pantallas grandes */
-  margin: 30px auto;
-  /*  Lo centra en la página */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  /*  Sombra suave */
+  gap: 25px;
+  background: #fdfdfd;
+  border: none; /* sin borde gris */
+  border-radius: 18px;
+  padding: 30px;
+  width: 85%;
+  max-width: 1200px;
+  margin: 50px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.noticias-box:hover {
+  transform: translateY(-5px);
 }
 
 /* Columna izquierda */
-.noticias-left {
-  flex: 0 0 220px;
-  /*  Ajuste para no hacerla muy ancha */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
-  /*  Texto alineado a la izquierda */
+.noticias-left h3 {
+  font-size: 26px;
+  color: #003399;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.noticias-left h3 {
-  font-size: 24px;
-  color: #003399;
-  margin-bottom: 15px;
+.noticias-left h3::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #ff7e00;
+  display: block;
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
 .noticias-boton {
-  background: #ff7e00;
+  background: linear-gradient(135deg, #ff7e00, #ff5500);
   color: white;
   border: none;
-  padding: 12px 18px;
-  font-size: 16px;
+  padding: 14px 24px;
+  font-size: 15px;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
   width: fit-content;
-  /* Botón ajustado al texto */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .noticias-boton:hover {
-  background: #ff5500;
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #ff9d00, #ff6700);
 }
 
 /* Carrusel */
-.noticias-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 75%;
-  /* Ajusta el ancho para centrar */
-  overflow: hidden;
-  min-width: 0;
-}
-
 .carousel {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   transition: transform 0.4s ease;
 }
 
 .card {
-  min-width: 280px;
-  /*  Más ancha */
+  min-width: 300px;
   background: white;
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
-  /*  Imagen más alta */
+  height: 190px;
   object-fit: cover;
 }
 
 .card-content {
-  padding: 15px;
+  padding: 18px;
   background: #ff7e00;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
+  min-height: 120px;
 }
 
 .card-content h4 {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .card-content p {
   font-size: 14px;
   line-height: 1.4;
-  /*  Mejor legibilidad */
-  white-space: normal;
-  /*  Permite varias líneas */
-  overflow: hidden;
+  margin: 0;
 }
 
-
-/* Flechas del carrusel */
-.prev,
-.next {
+/* Flechas */
+.prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #ff7e00;
-  /* Color naranja */
-  color: white;
+  background: linear-gradient(135deg, #ff7f00, #ff5500);
   border: none;
-  font-size: 28px;
-  /*  Más grandes */
+  color: white;
+  font-size: 22px;
   padding: 14px 18px;
-  /*  Más espacio para el clic */
   border-radius: 50%;
-  /*  Forma circular */
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  /*  Destaca sobre las tarjetas */
-  z-index: 10;
-  /*  Siempre encima */
-  transition: background 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+  background: linear-gradient(135deg, #ff9d00, #ff6700);
+  transform: translateY(-50%) scale(1.15);
 }
 
 .prev {
-  left: -35px;
+  left: -25px;
 }
 
-/*  Más hacia adentro */
 .next {
-  right: -35px;
+  right: -25px;
 }
+
 
 /*  Más hacia adentro */
 
