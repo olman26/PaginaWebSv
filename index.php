@@ -11,6 +11,10 @@ switch ($pag) {
         include 'diaria.php';
     break;
 
+    case 'quiero_ser_agente':
+        include 'quiero_ser_agente.php';
+    break;
+
     default:
         include 'includes/body.php';
     break;
