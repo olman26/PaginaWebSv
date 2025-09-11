@@ -12,7 +12,7 @@
       <a href="https://loto.sv/sobre-nosotros/">Sobre nosotros</a>
       <a href="https://loto.sv/juego-responsable/">Juego responsable</a>
       <a href="">RSE</a>
-      <a href="index.php?pag=quiero_ser_vendedor">Quiero ser vendedor</a>
+      <a href="index.php?pag=quiero_ser_agente">Quiero ser vendedor</a>
       <a href="">Lotocentros</a>
       <a href="https://loto.sv/contactanos/">Aplica con nosotros</a>
         </div>
