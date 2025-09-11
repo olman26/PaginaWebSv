@@ -34,7 +34,7 @@
   <div class="resultados-box">
     <!-- Título -->
     <div class="resultados-header">
-      <h2>
+        <h2 style="font-size: 36px; font-weight: bold; width: 100%; text-align: center;">
         <span class="titulo-naranja">ÚLTIMOS RESULTADOS,</span>
         <span class="titulo-azul"> VIERNES 25 DE JULIO, 2025 A LAS 09:00 PM</span>
       </h2>
