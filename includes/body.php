@@ -81,8 +81,7 @@
 
   </div>
 
-  <!-- Espacio en blanco -->
-  <div style="height: 50px;"></div>
+  
 
   <div class="youtube">
     <div class="youtube-content"> <!-- Columna izquierda con video -->
@@ -106,7 +105,8 @@
     <div class="boton-container"> <button class="youtube-boton">Ver más sorteos</button> </div>
   </div>
 
-
+<!-- Espacio en blanco -->
+  <div style="height: 50px;"></div>
 
 
   <!-- Banner Superpremio -->
@@ -226,7 +226,7 @@ window.addEventListener('scroll', function() {
     
     // Desplaza 4 cm (≈151px) hacia arriba al hacer scroll
     if (window.scrollY > 0) {
-        box.style.transform = 'translateY(-60px)';
+        box.style.transform = 'translateY(-70px)';
     } else {
         box.style.transform = 'translateY(0)';
     }
