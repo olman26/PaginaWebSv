@@ -306,7 +306,7 @@ header {
 
 
 
-/* Flechas */
+/* Flechas 
 .res-prev,
 .res-next {
   background: #ff7e00;
@@ -319,7 +319,7 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: background 0.3s ease;
   z-index: 10;
-}
+}*/
 
 .res-prev:hover,
 .res-next:hover {
@@ -631,7 +631,7 @@ img {
     scroll-snap-align: center;
   }
 
-  /* Estilos base para flechas */
+  /* Estilos base para flechas 
   .res-prev,
   .res-next {
     position: absolute;
@@ -650,7 +650,7 @@ img {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease;
     z-index: 10;
-  }
+  }*/
 
   /* Hover animado */
   .res-prev:hover,
