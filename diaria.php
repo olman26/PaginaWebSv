@@ -187,7 +187,7 @@
       font-size: 20px;
     }
 
-    /* Accordion */
+    /* Accordion principal */
     .accordion {
       border: 0px solid #438f4f;
       border-radius: 10px;
@@ -223,6 +223,32 @@
       font-weight: normal;
       font-size: 14px;
       border-top: 1px solid #080808ff;
+    }
+
+    /* Sub-acordeones */
+    .sub-accordion {
+      border: 1px solid #438f4f;
+      border-radius: 10px;
+      margin: 10px 0;
+      background: #e6f5d6;
+      color: #000;
+    }
+
+    .sub-accordion-header {
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sub-accordion-content {
+      display: none;
+      padding: 10px 15px;
+      font-weight: normal;
+      font-size: 14px;
+      background: #fafafaff;
     }
 
     /* Botón reglamento */
@@ -274,25 +300,18 @@
 
   <!-- Resultados anteriores -->
   <div class="resultados">
-    <!-- Columna izquierda -->
     <div class="col izquierda">
       <h2>
         RESULTADOS <br>
         <span class="subtitulo">ANTERIORES</span>
       </h2>
-      <label class="label-fecha">
-        SELECCIONÁ LA FECHA:
-      </label>
+      <label class="label-fecha">SELECCIONÁ LA FECHA:</label>
     </div>
 
-    <!-- Columna centro -->
     <div class="col centro">
-      <div class="calendario">
-        Aquí podría ir un calendario más grande o embebido
-      </div>
+      <div class="calendario">Aquí podría ir un calendario más grande o embebido</div>
     </div>
 
-    <!-- Columna derecha -->
     <div class="col derecha">
       <div class="sorteo">
         <h3>SORTEO 11:00 A.M.</h3>
@@ -326,12 +345,36 @@
         <div style="flex:2;">
           <p>SELECCIONA 1 NÚMERO DE DOS DÍGITOS DEL 00 AL 99 Y SI TU NÚMERO ES FAVORITO, GANA 50 VECES TU INVERSIÓN.</p>
           <p>DISPONIBLES DESDE L.5.</p>
+
+          <!-- Sub-acordeones -->
+          <div class="sub-accordion">
+            <div class="sub-accordion-header" onclick="toggleSubAccordion(this)">
+              Reglas principales <span>▼</span>
+            </div>
+            <div class="sub-accordion-content">
+              <p>Explicación detallada de las reglas principales del juego.</p>
+            </div>
+          </div>
+
+          <div class="sub-accordion">
+            <div class="sub-accordion-header" onclick="toggleSubAccordion(this)">
+              Premios <span>▼</span>
+            </div>
+            <div class="sub-accordion-content">
+              <p>Lista completa de premios y multiplicadores.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Script accordion -->
+  <!-- Botón reglamento -->
+  <div class="reglamento">
+    <button onclick="window.open('reglamento.pdf', '_blank')">LEER EL REGLAMENTO</button>
+  </div>
+
   <script>
     function toggleAccordion(header) {
       const content = header.nextElementSibling;
@@ -344,13 +387,17 @@
         arrow.style.transform = "rotate(180deg)";
       }
     }
+
+    function toggleSubAccordion(header) {
+      const content = header.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        header.querySelector('span').textContent = "▼";
+      } else {
+        content.style.display = "block";
+        header.querySelector('span').textContent = "▲";
+      }
+    }
   </script>
-
-  <!-- Botón reglamento -->
-  <div class="reglamento">
-    <button onclick="window.open('reglamento.pdf', '_blank')">LEER EL REGLAMENTO</button>
-  </div>
-
 </body>
-
 </html>
