@@ -411,7 +411,7 @@ header {
   /* espacio entre botones */
   vertical-align: middle;
   /* alineación vertical */
-  align-items: center;    /* Centra verticalmente */
+  
 }
 
 /* Elimina margen innecesario al último botón */
