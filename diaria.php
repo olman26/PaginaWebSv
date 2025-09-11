@@ -125,14 +125,16 @@
 
     /* Izquierda */
     .resultados .izquierda h2 {
-      font-size: 34px;
+      font-size: 40px;
+      font-weight: 700;   /* más grueso */
       color: #438f4f;
       margin-bottom: 15px;
       line-height: 1.2;
     }
 
     .resultados .izquierda .subtitulo {
-      font-size: 28px;
+      font-size: 40px;
+      font-weight: 700;   /* más grueso */
       display: block;
     }
 
@@ -173,7 +175,7 @@
 
     .resultados .derecha h3 {
       font-size: 18px;
-      color: #0066cc;
+      color: #438f4f;
       margin-bottom: 8px;
     }
 
@@ -283,7 +285,6 @@
       </h2>
       <label class="label-fecha">
         SELECCIONÁ LA FECHA:
-        <input type="date">
       </label>
     </div>
 
