@@ -343,17 +343,18 @@ header {
 }
 
 /* Tarjeta base */
+/* Contenedor de los botones como flexbox */
 .res-card {
-  width: 260px;
-  height: 360px;
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;  /* Mantiene la estructura de la tarjeta */
+    align-items: center;     /* Centra el contenido horizontalmente */
+}
+
+.res-card .btn-container {
+    display: flex;           /* Los botones alineados horizontalmente */
+    justify-content: center; /* Centra los botones dentro del contenedor */
+    margin-top: 10px;        /* Espacio arriba de los botones */
+    gap: 10px;               /* Espacio entre los botones */
 }
 
 /* COLORES PERSONALIZADOS */
@@ -401,16 +402,11 @@ header {
 /* Botones más pequeños y alineados al centro */
 .res-card .btn-jugar,
 .res-card .btn-info {
-  padding: 4px 8px;
-  /* reduce tamaño */
-  font-size: 11px;
-  /* texto más pequeño */
-  display: inline-block;
-  /* asegura que se mantengan en línea */
-  margin-right: 5px;
-  /* espacio entre botones */
-  vertical-align: middle;
-  /* alineación vertical */
+    font-size: 14px;       /* Tamaño más pequeño */
+    padding: 6px 12px;     /* Ajusta el padding a tu gusto */
+    margin: 4px;           /* Espacio entre botones */
+    border-radius: 8px;    /* Bordes redondeados */
+    cursor: pointer;
 }
 
 /* Elimina margen innecesario al último botón */

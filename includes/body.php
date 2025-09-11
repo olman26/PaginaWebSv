@@ -46,31 +46,37 @@
     <div class="resultados-carousel">
       <div class="res-cards">
 
-        <!-- Diaria -->
-        <div class="res-card verde">
-          <img src="Diaria.webp" alt="Diaria">
-          <div class="numeros">
-            <span class="bola-verde">5</span>
-            <span class="bola-verde">8</span>
-          </div>
-          <button class="btn-jugar">Jugar</button>
-          <button class="btn-info">Conoce más</button>
-        </div>
+    
+       <!-- Diaria -->
+<div class="res-card verde">
+  <img src="Diaria.webp" alt="Diaria">
+  <div class="numeros">
+    <span class="bola-verde">5</span>
+    <span class="bola-verde">8</span>
+  </div>
+  <div class="btn-container">
+    <button class="btn-jugar">Jugar</button>
+    <button class="btn-info">Conoce más</button>
+  </div>
+</div>
 
-        <!-- Súper Premio (Rojo) -->
-        <div class="res-card roja">
-          <img src="LOGOS HN_super premio-26.png" alt="Super Premio">
-          <div class="numeros">
-            <span class="bola-amarilla">12</span>
-            <span class="bola-amarilla">15</span>
-            <span class="bola-amarilla">28</span>
-            <span class="bola-amarilla">1</span>
-            <span class="bola-amarilla">6</span>
-            <span class="bola-amarilla">2</span>
-          </div>
-          <button class="btn-jugar">Jugar</button>
-          <button class="btn-info">Conoce más</button>
-        </div>
+<!-- Súper Premio (Rojo) -->
+<div class="res-card roja">
+  <img src="LOGOS HN_super premio-26.png" alt="Super Premio">
+  <div class="numeros">
+    <span class="bola-amarilla">12</span>
+    <span class="bola-amarilla">15</span>
+    <span class="bola-amarilla">28</span>
+    <span class="bola-amarilla">1</span>
+    <span class="bola-amarilla">6</span>
+    <span class="bola-amarilla">2</span>
+  </div>
+  <div class="btn-container">
+    <button class="btn-jugar">Jugar</button>
+    <button class="btn-info">Conoce más</button>
+  </div>
+</div>
+
 
       </div>
     </div>
