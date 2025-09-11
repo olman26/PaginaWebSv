@@ -151,10 +151,16 @@
 }
 
 /* Izquierda */
+/* RESULTADOS ANTERIORES */
 .resultados .izquierda h2 {
-    font-size: 26px;
-    color: #438f4f;
-    margin-bottom: 15px;
+  font-size: 34px;   /* más grande */
+  color: #438f4f;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.resultados .izquierda .subtitulo {
+  font-size: 28px;   /* tamaño debajo */
+  display: block;    /* hace que "ANTERIORES" baje a otra línea */
 }
 
 .resultados .izquierda label {
@@ -187,11 +193,37 @@
     margin-bottom: 25px;
 }
 
-.resultados .derecha h3 {
-    font-size: 20px;
-    color: #ff6f00;
-    margin-bottom: 10px;
+/* RESULTADOS ANTERIORES */
+.resultados .izquierda h2 {
+  font-size: 34px;   /* más grande */
+  color: #438f4f;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
+
+.resultados .izquierda .subtitulo {
+  font-size: 28px;   /* tamaño debajo */
+  display: block;    /* hace que "ANTERIORES" baje a otra línea */
+}
+
+/* Sorteos (hora arriba de los números) */
+.resultados .derecha h3 {
+  font-size: 18px;
+  color: #438f4f;  /* azul para destacar */
+  margin-bottom: 8px;
+}
+
+/* Label fecha más pequeño */
+label-fecha {
+  background: yellow;
+  color: green;
+  font-weight: bold;
+  padding: 6px 12px;   /* reducido */
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 14px;
+}
+
 
 /* Esferas verdes */
 .resultados .num {
@@ -410,13 +442,17 @@
     
     <div class="resultados">
   <!-- Columna izquierda -->
-  <div class="col izquierda">
-    <h2>RESULTADOS <span class="subtitulo">ANTERIORES</span></h2>
+<div class="col izquierda">
+  <h2>
+    RESULTADOS <br>
+    <span class="subtitulo">ANTERIORES</span>
+  </h2>
 
-    <label class="label-fecha">
-      SELECCIONÁ LA FECHA:
-    </label>
-  </div>
+  <label class="label-fecha">
+    SELECCIONÁ LA FECHA:
+    <input type="date">
+  </label>
+</div>
 
 
     <!-- Columna centro -->
@@ -427,22 +463,21 @@
   </div>
 
     <!-- Columna derecha -->
-    <div class="col derecha">
-        <div class="sorteo">
-            
-            <div class="nums">
-                <span class="num">1</span>
-                <span class="num">5</span>
-            </div>
-        </div>
-        <div class="sorteo">
-            
-            <div class="nums">
-                <span class="num">8</span>
-                <span class="num">3</span>
-            </div>
-        </div>
+<div class="col derecha">
+  <div class="sorteo">
+    <h3>SORTEO 11:00 A.M.</h3>
+    <div class="nums">
+      <span class="num">1</span>
+      <span class="num">5</span>
     </div>
+  </div>
+  <div class="sorteo">
+    <h3>SORTEO 9:00 P.M.</h3>
+    <div class="nums">
+      <span class="num">8</span>
+      <span class="num">3</span>
+    </div>
+  </div>
 </div>
 
 
