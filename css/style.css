@@ -434,7 +434,7 @@ header {
 /* Imagen */
 /* Aumentar tamaño de las imágenes del carrusel */
 .res-card img {
-  width: 240px;
+  width: 230px;
   /* ancho fijo más grande */
   height: auto;
   /* mantiene proporción */
@@ -464,6 +464,7 @@ header {
   gap: 10px;
   flex-wrap: wrap;
   margin: 10px 0;
+  margin-top: -10px;   /* sube las esferas */
 }
 
 /* Esferas generales */
