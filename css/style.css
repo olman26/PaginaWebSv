@@ -401,17 +401,17 @@ header {
 /* Botones más pequeños y alineados al centro */
 .res-card .btn-jugar,
 .res-card .btn-info {
-    display: flex;
-    align-items: center;    /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    font-size: 14px;
-    padding: 4px 35px;
-    min-height: 40px;
-    margin: 4px;
-    border-radius: 8px;
-    cursor: pointer;
+  padding: 4px 40px;
+  /* reduce tamaño */
+  font-size: 11px;
+  /* texto más pequeño */
+  display: inline-block;
+  /* asegura que se mantengan en línea */
+  margin-right: 5px;
+  /* espacio entre botones */
+  vertical-align: middle;
+  /* alineación vertical */
 }
-
 
 /* Elimina margen innecesario al último botón */
 .res-card .btn-info {
