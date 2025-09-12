@@ -920,8 +920,8 @@ img {
   flex-wrap: wrap;
 
   /* 🔹 Forzar altura total */
-  height: 500px; /* o la altura que necesites */
-  min-height: 500px;
+  height: 450px; /* o la altura que necesites */
+  min-height: 450px;
   align-items: stretch; /* hijos ocuparán toda la altura */
 }
 
@@ -985,12 +985,12 @@ img {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 
   /* 🔹 Aumentar altura de la tarjeta */
-  height: 500px; /* o el tamaño que quieras */
+  height: 4500px; /* o el tamaño que quieras */
 }
 
 
 .card:hover {
-  transform: translateY(-25px);
+  transform: translateY(-45px);
 }
 
 /* Imagen de la tarjeta */
