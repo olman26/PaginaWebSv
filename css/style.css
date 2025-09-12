@@ -1002,10 +1002,20 @@ img {
 /* Contenido de la tarjeta */
 .card-content {
   padding: 18px;
-  background: linear-gradient(135deg, #ff7e00, #ff5500);
   color: white;
   height: 100%;
 }
+
+/* Tarjetas impares → naranja */
+.carousel .card:nth-child(odd) .card-content {
+  background: linear-gradient(135deg, #ff7e00, #ff5500);
+}
+
+/* Tarjetas pares → azul */
+.carousel .card:nth-child(even) .card-content {
+  background: linear-gradient(135deg, #003399, #0055cc);
+}
+
 
 .card-content h4 {
   font-size: 20px;
