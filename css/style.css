@@ -904,6 +904,7 @@ img {
 }
 
 /* Contenedor Noticias */
+/* Contenedor Noticias */
 .noticias-box {
   display: flex;
   justify-content: space-between;
@@ -911,18 +912,25 @@ img {
   gap: 20px;
   background: #fff;
   border: 2px solid #ddd;
-  /* Borde visible */
   border-radius: 12px;
   padding: 20px;
-  width: 80%;
-  /* No ocupa todo el ancho */
-  max-width: 1100px;
-  /* Limita en pantallas grandes */
+  width: 90%; /* Aumentamos el ancho del contenedor */
+  max-width: 1400px; /* Más espacio máximo en pantallas grandes */
   margin: 30px auto;
-  /* Lo centra en la página */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  /* Sombra suave */
 }
+
+/* Carrusel */
+.noticias-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto; /* Dejamos que el flex tome todo el espacio disponible */
+  overflow: hidden;
+  min-width: 0;
+}
+
 
 /* Columna izquierda */
 .noticias-left {
