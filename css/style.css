@@ -903,8 +903,7 @@ img {
   }
 }
 
-/* Contenedor Noticias */
-/* Contenedor Noticias */
+/* --- Contenedor Noticias --- */
 .noticias-box {
   display: flex;
   justify-content: space-between;
@@ -914,33 +913,21 @@ img {
   border: 2px solid #ddd;
   border-radius: 12px;
   padding: 20px;
-  width: 90%; /* Aumentamos el ancho del contenedor */
-  max-width: 1400px; /* Más espacio máximo en pantallas grandes */
+  width: 90%;
+  max-width: 1400px;
   margin: 30px auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap; /* Permite que se acomoden las columnas en móviles */
 }
-
-/* Carrusel */
-.noticias-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: auto; /* Dejamos que el flex tome todo el espacio disponible */
-  overflow: hidden;
-  min-width: 0;
-}
-
 
 /* Columna izquierda */
 .noticias-left {
   flex: 0 0 220px;
-  /* Ajuste para no hacerla muy ancha */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  /* Texto alineado a la izquierda */
+  margin-bottom: 20px; /* espacio inferior cuando se acomoda en vertical */
 }
 
 .noticias-left h3 {
@@ -959,7 +946,6 @@ img {
   border-radius: 20px;
   cursor: pointer;
   width: fit-content;
-  /* Botón ajustado al texto */
 }
 
 .noticias-boton:hover {
@@ -967,17 +953,16 @@ img {
 }
 
 /* Carrusel */
-/* Carrusel: subimos las tarjetas */
 .noticias-right {
   flex: 1;
   display: flex;
-  align-items: flex-start; /* cambiamos de center a flex-start */
+  align-items: flex-start;
   position: relative;
-  width: auto;
-  overflow: visible; /* para que los márgenes negativos no se corten */
+  overflow: visible;
   min-width: 0;
 }
 
+/* Carrusel interno */
 .carousel {
   display: flex;
   gap: 15px;
@@ -990,33 +975,26 @@ img {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* sombra más visible */
-  margin-top: -30px; /* mueve la tarjeta hacia arriba */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  margin-top: -30px;
   transition: transform 0.3s ease;
 }
 
-/* Efecto hover opcional para dar sensación de flotante */
 .card:hover {
-  transform: translateY(-25px); /* sube un poco más al pasar el mouse */
+  transform: translateY(-25px);
 }
 
-/* Imagen de la tarjeta */
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
-/* Contenido de la tarjeta */
 .card-content {
   padding: 15px;
   background: #ff7e00;
   color: white;
-  font-size: 16px;
 }
-
 
 .card-content h4 {
   font-size: 18px;
@@ -1027,51 +1005,103 @@ img {
 .card-content p {
   font-size: 14px;
   line-height: 1.4;
-  /* Mejor legibilidad */
-  white-space: normal;
-  /* Permite varias líneas */
-  overflow: hidden;
 }
 
-/* Flechas del carrusel */
+/* Flechas */
 .prev,
 .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: #ff7e00;
-  /* Color naranja */
   color: white;
   border: none;
   font-size: 28px;
-  /* Más grandes */
   padding: 14px 18px;
-  /* Más espacio para el clic */
   border-radius: 50%;
-  /* Forma circular */
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  /* Destaca sobre las tarjetas */
   z-index: 10;
-  /* Siempre encima */
   transition: background 0.3s ease;
 }
 
-.prev {
-  left: -35px;
-}
+.prev { left: -35px; }
+.next { right: -35px; }
 
-/* Más hacia adentro */
-.next {
-  right: -35px;
-}
-
-/* Más hacia adentro */
 .prev:hover,
-.next:hover {
-  background: #ff5500;
-  /* Efecto hover más oscuro */
+.next:hover { background: #ff5500; }
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .noticias-box {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .noticias-left {
+    flex: 1 1 auto;
+    margin-bottom: 15px;
+  }
+
+  .carousel {
+    gap: 10px;
+  }
+
+  .card {
+    min-width: 280px;
+    margin-top: -20px;
+  }
+
+  .card img {
+    height: 180px;
+  }
 }
+
+@media (max-width: 768px) {
+  .noticias-left h3 {
+    font-size: 20px;
+  }
+
+  .noticias-boton {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .card {
+    min-width: 240px;
+    margin-top: -15px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .prev, .next {
+    font-size: 24px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .noticias-left, .noticias-right {
+    width: 100%;
+  }
+
+  .card {
+    min-width: 200px;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .prev, .next {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+}
+
+
 
 .rse {
   background: #9647a5;
