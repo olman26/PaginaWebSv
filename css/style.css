@@ -904,6 +904,7 @@ img {
 }
 
 /* --- Contenedor Noticias --- */
+/* --- Contenedor Noticias --- */
 .noticias-box {
   display: flex;
   justify-content: space-between;
@@ -912,15 +913,14 @@ img {
   background: #fff;
   border: 2px solid #ddd;
   border-radius: 12px;
-  padding: 40px 20px; /* más espacio arriba y abajo */
+  padding: 40px 20px; /* más espacio interno */
   width: 90%;
   max-width: 1400px;
   margin: 30px auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   flex-wrap: wrap;
-  min-height: 500px; /* más alto según necesites */
+  min-height: 600px; /* altura mínima más alta */
 }
-
 
 /* Columna izquierda */
 .noticias-left {
@@ -955,13 +955,12 @@ img {
 }
 
 /* Carrusel */
-/* --- Carrusel corregido para móviles --- */
 .noticias-right {
   flex: 1;
   display: flex;
   align-items: flex-start;
   position: relative;
-  overflow: hidden; /* eliminamos scroll lateral */
+  overflow: hidden;
   min-width: 0;
 }
 
@@ -972,7 +971,6 @@ img {
   transition: transform 0.4s ease;
 }
 
-/* Tarjetas flexibles */
 /* Tarjetas */
 .card {
   flex: 0 0 auto;
@@ -982,10 +980,10 @@ img {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  margin-top: 0; /* cambiar de -60px a 0 */
+  margin-top: 0; /* quitar margen negativo */
+  min-height: 400px; /* altura más alta para la tarjeta */
   transition: transform 0.3s ease;
 }
-
 
 .card:hover {
   transform: translateY(-25px);
@@ -994,10 +992,9 @@ img {
 /* Imagen de la tarjeta */
 .card img {
   width: 100%;
-  height: 200px;
+  height: 250px; /* más alta */
   object-fit: cover;
 }
-
 
 .card-content {
   padding: 15px;
@@ -1045,7 +1042,18 @@ img {
   .card {
     width: calc(100% - 20px); /* 1 tarjeta por fila */
     max-width: none;
-    margin-top: -15px;
+    min-height: 350px; /* ajustar altura en móvil */
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 15px);
+    min-height: 300px; /* ajustar altura en móvil */
   }
 
   .card img {
@@ -1053,16 +1061,6 @@ img {
   }
 }
 
-@media (max-width: 480px) {
-  .card {
-    width: calc(100% - 15px);
-    margin-top: -10px;
-  }
-
-  .card img {
-    height: 140px;
-  }
-}
 
 
 
