@@ -997,7 +997,7 @@ img {
 
 /* Efecto hover opcional para dar sensación de flotante */
 .card:hover {
-  transform: translateY(-10px); /* sube un poco más al pasar el mouse */
+  transform: translateY(-25px); /* sube un poco más al pasar el mouse */
 }
 
 /* Imagen de la tarjeta */

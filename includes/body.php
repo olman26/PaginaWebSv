@@ -129,6 +129,8 @@
             margin:0 auto;">
 
   </div> -->
+<!-- Espacio en blanco -->
+  <div style="height: 70px;"></div>
 
 
   <!-- Noticias Relevantes -->
