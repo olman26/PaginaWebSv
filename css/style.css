@@ -920,8 +920,8 @@ img {
   flex-wrap: wrap;
 
   /* 🔹 Forzar altura total */
-  height: 700px; /* o la altura que necesites */
-  min-height: 700px;
+  height: 500px; /* o la altura que necesites */
+  min-height: 500px;
   align-items: stretch; /* hijos ocuparán toda la altura */
 }
 
