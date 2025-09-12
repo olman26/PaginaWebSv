@@ -134,43 +134,53 @@
 
 
   <!-- Noticias Relevantes -->
-  <div class="noticias-box">
-    <!-- Columna izquierda -->
-    <div class="noticias-left">
-      <h3>Noticias relevantes</h3>
-      <button class="noticias-boton">Ver más noticias</button>
-    </div>
+<div class="noticias-box">
+  <!-- Columna izquierda -->
+  <div class="noticias-left">
+    <h3>Noticias relevantes</h3>
+    <button class="noticias-boton">Ver más noticias</button>
+  </div>
 
-    <!-- Carrusel a la derecha -->
-    <div class="noticias-right">
-      <div class="carousel">
-        <div class="card">
-          <img src="noticia1.webp" alt="Noticia 1">
-          <div class="card-content">
-            <h4>Loto lleva premios...</h4>
-            <p>a más de 10 centros de la Ceiba.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="noticia2.webp" alt="Noticia 2">
-          <div class="card-content">
-            <h4>Juga Tres en Nicaragua</h4>
-            <p>¡Nueva sucursal en San Pedro Sula!</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="noticia3.webp" alt="Noticia 3">
-          <div class="card-content">
-            <h4>Premios para todos</h4>
-            <p>Beneficios únicos para clientes.</p>
-          </div>
+  <!-- Carrusel a la derecha -->
+  <div class="noticias-right">
+    <div class="carousel">
+      <div class="card">
+        <img src="noticia1.webp" alt="Noticia 1">
+        <div class="card-content">
+          <h4>Loto lleva premios...</h4>
+          <p>a más de 10 centros de la Ceiba.</p>
         </div>
       </div>
-      <!-- Flechas -->
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
+      <div class="card">
+        <img src="noticia2.webp" alt="Noticia 2">
+        <div class="card-content">
+          <h4>Juga Tres en Nicaragua</h4>
+          <p>¡Nueva sucursal en San Pedro Sula!</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="noticia3.webp" alt="Noticia 3">
+        <div class="card-content">
+          <h4>Premios para todos</h4>
+          <p>Beneficios únicos para clientes.</p>
+        </div>
+      </div>
+      <!-- Nueva noticia -->
+      <div class="card">
+        <img src="rse.webp" alt="Noticia 4">
+        <div class="card-content">
+          <h4>Título de la nueva noticia</h4>
+          <p>Descripción breve de la noticia.</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Flechas -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
   </div>
+</div>
+
 
   <!-- Espacio en blanco -->
   <div style="height: 50px;"></div>
