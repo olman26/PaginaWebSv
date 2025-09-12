@@ -130,7 +130,7 @@
 
   </div> -->
 <!-- Espacio en blanco -->
-  <div style="height: 70px;"></div>
+  <div style="height: 50px;"></div>
 
 
   <!-- Noticias Relevantes -->
