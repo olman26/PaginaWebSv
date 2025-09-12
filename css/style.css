@@ -953,13 +953,14 @@ img {
 }
 
 /* Carrusel */
+/* Ajuste del carrusel para evitar scroll lateral */
 .noticias-right {
   flex: 1;
   display: flex;
   align-items: flex-start;
   position: relative;
-  overflow: visible;
-  min-width: 0;
+  overflow: hidden; /* importante: evita scroll lateral */
+  min-width: 0; /* para que flex-shrink funcione */
 }
 
 /* Carrusel interno */
@@ -971,13 +972,36 @@ img {
 
 /* Tarjetas */
 .card {
-  min-width: 320px;
+  flex: 0 0 auto; /* no crecen pero pueden encogerse si se necesita */
+  width: 100%;
+  max-width: 320px; /* ancho máximo de la tarjeta */
   background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   margin-top: -30px;
   transition: transform 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    max-width: 280px;
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 240px;
+    margin-top: -15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 200px;
+    margin-top: -10px;
+  }
 }
 
 .card:hover {
