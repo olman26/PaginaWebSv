@@ -972,15 +972,16 @@ img {
 }
 
 /* Tarjetas flexibles */
+/* Tarjetas */
 .card {
-  flex: 0 0 auto; /* no se encogen ni crecen automáticamente */
-  width: calc(100% / 3 - 10px); /* hasta 3 tarjetas por fila en escritorio */
+  flex: 0 0 auto;
+  width: calc(100% / 3 - 10px);
   max-width: 320px;
   background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  margin-top: -30px;
+  margin-top: -60px; /* MÁS ARRIBA */
   transition: transform 0.3s ease;
 }
 
@@ -988,11 +989,14 @@ img {
   transform: translateY(-25px);
 }
 
+/* Imagen de la tarjeta */
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
+
 
 .card-content {
   padding: 15px;
