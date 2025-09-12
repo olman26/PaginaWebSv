@@ -965,9 +965,10 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* 🔹 permite que la tarjeta sobresalga */
   min-width: 0;
 }
+
 
 /* Carrusel interno */
 .carousel {
@@ -985,12 +986,17 @@ img {
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   height: 460px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 0; /* posición base */
 }
 
 .card:hover {
-  transform: translateY(-15px) scale(1.02);
+  transform: translateY(-25px) scale(1.05); /* más arriba */
+  z-index: 10; /* se eleva sobre todo */
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25); /* sombra más fuerte */
 }
+
 
 /* Imagen de la tarjeta */
 .card img {
