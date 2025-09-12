@@ -908,19 +908,23 @@ img {
 .noticias-box {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   gap: 20px;
   background: #fff;
   border: 2px solid #ddd;
   border-radius: 12px;
-  padding: 40px 20px; /* más espacio interno */
+  padding: 20px;
   width: 90%;
   max-width: 1400px;
   margin: 30px auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   flex-wrap: wrap;
-  min-height: 600px; /* altura mínima más alta */
+
+  /* 🔹 Forzar altura total */
+  height: 700px; /* o la altura que necesites */
+  min-height: 700px;
+  align-items: stretch; /* hijos ocuparán toda la altura */
 }
+
 
 /* Columna izquierda */
 .noticias-left {
@@ -971,7 +975,6 @@ img {
   transition: transform 0.4s ease;
 }
 
-/* Tarjetas */
 .card {
   flex: 0 0 auto;
   width: calc(100% / 3 - 10px);
@@ -980,10 +983,11 @@ img {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  margin-top: 0; /* quitar margen negativo */
-  min-height: 400px; /* altura más alta para la tarjeta */
-  transition: transform 0.3s ease;
+
+  /* 🔹 Aumentar altura de la tarjeta */
+  height: 500px; /* o el tamaño que quieras */
 }
+
 
 .card:hover {
   transform: translateY(-25px);
