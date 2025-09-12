@@ -141,37 +141,45 @@
     <button class="noticias-boton">Ver más noticias</button>
   </div>
 
-  <div class="carousel">
-  <div class="card">
-    <img src="noticia1.webp" alt="Noticia 1">
-    <div class="card-content">
-      <h4>Loto entrega premios millonarios</h4>
-      <p>Más de 10 centros educativos de La Ceiba reciben apoyo con útiles escolares y becas para estudiantes.</p>
+  <!-- Carrusel a la derecha -->
+  <div class="noticias-right">
+    <div class="carousel">
+      <div class="card">
+        <img src="noticia1.webp" alt="Noticia 1">
+        <div class="card-content">
+          <h4>Loto entrega premios millonarios</h4>
+          <p>Más de 10 centros educativos de La Ceiba reciben apoyo con útiles escolares y becas para estudiantes.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="noticia2.webp" alt="Noticia 2">
+        <div class="card-content">
+          <h4>Nueva agencia en San Pedro Sula</h4>
+          <p>Juga Tres ahora más cerca de ti, con promociones exclusivas y horarios extendidos para mayor comodidad.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="noticia3.webp" alt="Noticia 3">
+        <div class="card-content">
+          <h4>Beneficios únicos para clientes</h4>
+          <p>Los jugadores frecuentes acceden a premios instantáneos, descuentos especiales y sorteos semanales.</p>
+        </div>
+      </div>
+      <!-- Nueva noticia -->
+      <div class="card">
+        <img src="rse.webp" alt="Noticia 4">
+        <div class="card-content">
+          <h4>Responsabilidad Social Empresarial</h4>
+          <p>Loto impulsa programas de salud y educación en comunidades vulnerables, beneficiando a miles de familias.</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="noticia2.webp" alt="Noticia 2">
-    <div class="card-content">
-      <h4>Nueva agencia en San Pedro Sula</h4>
-      <p>Juga Tres ahora más cerca de ti, con promociones exclusivas y horarios extendidos para mayor comodidad.</p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="noticia3.webp" alt="Noticia 3">
-    <div class="card-content">
-      <h4>Beneficios únicos para clientes</h4>
-      <p>Los jugadores frecuentes acceden a premios instantáneos, descuentos especiales y sorteos semanales.</p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="rse.webp" alt="Noticia 4">
-    <div class="card-content">
-      <h4>Responsabilidad Social Empresarial</h4>
-      <p>Loto impulsa programas de salud y educación en comunidades vulnerables, beneficiando a miles de familias.</p>
-    </div>
+
+    <!-- Flechas -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
   </div>
 </div>
-
 
 
   <!-- Espacio en blanco -->
