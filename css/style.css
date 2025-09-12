@@ -904,6 +904,7 @@ img {
 }
 
 /* --- Contenedor Noticias --- */
+/* --- Contenedor Noticias --- */
 .noticias-box {
   display: flex;
   justify-content: space-between;
@@ -917,7 +918,7 @@ img {
   max-width: 1400px;
   margin: 30px auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  flex-wrap: wrap; /* Permite que se acomoden las columnas en móviles */
+  flex-wrap: wrap;
 }
 
 /* Columna izquierda */
@@ -927,7 +928,7 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  margin-bottom: 20px; /* espacio inferior cuando se acomoda en vertical */
+  margin-bottom: 20px;
 }
 
 .noticias-left h3 {
@@ -953,14 +954,13 @@ img {
 }
 
 /* Carrusel */
-/* Ajuste del carrusel para evitar scroll lateral */
 .noticias-right {
   flex: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; /* tarjetas suben */
   position: relative;
-  overflow: hidden; /* importante: evita scroll lateral */
-  min-width: 0; /* para que flex-shrink funcione */
+  overflow: visible; /* permite que las tarjetas floten arriba */
+  min-width: 0;
 }
 
 /* Carrusel interno */
@@ -972,36 +972,15 @@ img {
 
 /* Tarjetas */
 .card {
-  flex: 0 0 auto; /* no crecen pero pueden encogerse si se necesita */
+  flex: 0 0 auto; /* no se encogen ni crecen automáticamente */
   width: 100%;
-  max-width: 320px; /* ancho máximo de la tarjeta */
+  max-width: 320px;
   background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  margin-top: -30px;
+  margin-top: -30px; /* efecto flotante sobre el contenedor */
   transition: transform 0.3s ease;
-}
-
-@media (max-width: 1024px) {
-  .card {
-    max-width: 280px;
-    margin-top: -20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    max-width: 240px;
-    margin-top: -15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    max-width: 200px;
-    margin-top: -10px;
-  }
 }
 
 .card:hover {
@@ -1067,12 +1046,8 @@ img {
     margin-bottom: 15px;
   }
 
-  .carousel {
-    gap: 10px;
-  }
-
   .card {
-    min-width: 280px;
+    max-width: 280px;
     margin-top: -20px;
   }
 
@@ -1092,7 +1067,7 @@ img {
   }
 
   .card {
-    min-width: 240px;
+    max-width: 240px;
     margin-top: -15px;
   }
 
@@ -1112,7 +1087,8 @@ img {
   }
 
   .card {
-    min-width: 200px;
+    max-width: 200px;
+    margin-top: -10px;
   }
 
   .card img {
@@ -1124,6 +1100,7 @@ img {
     padding: 8px 12px;
   }
 }
+
 
 
 
