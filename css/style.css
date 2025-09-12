@@ -904,7 +904,6 @@ img {
 }
 
 /* --- Contenedor Noticias --- */
-/* --- Contenedor Noticias --- */
 .noticias-box {
   display: flex;
   justify-content: space-between;
@@ -913,7 +912,7 @@ img {
   background: #fff;
   border: 2px solid #ddd;
   border-radius: 12px;
-  padding: 20px;
+  padding: 30px;
   width: 90%;
   max-width: 1400px;
   margin: 30px auto;
@@ -983,6 +982,7 @@ img {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   margin-top: -60px; /* MÁS ARRIBA */
   transition: transform 0.3s ease;
+  min-height: 380px; /* altura mínima de toda la tarjeta */
 }
 
 .card:hover {
@@ -995,7 +995,6 @@ img {
   height: 200px;
   object-fit: cover;
 }
-
 
 
 .card-content {
