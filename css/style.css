@@ -1006,14 +1006,14 @@ img {
   height: 100%;
 }
 
-/* Tarjetas impares → naranja */
+/* Tarjetas impares → naranja (#ff7e00) */
 .carousel .card:nth-child(odd) .card-content {
-  background: linear-gradient(135deg, #ff7e00, #ff5500);
+  background: #ff7e00;
 }
 
-/* Tarjetas pares → azul */
+/* Tarjetas pares → azul (#0047b2) */
 .carousel .card:nth-child(even) .card-content {
-  background: linear-gradient(135deg, #003399, #0055cc);
+  background: #0047b2;
 }
 
 
