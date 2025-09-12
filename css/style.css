@@ -954,12 +954,13 @@ img {
 }
 
 /* Carrusel */
+/* --- Carrusel corregido para móviles --- */
 .noticias-right {
   flex: 1;
   display: flex;
-  align-items: flex-start; /* tarjetas suben */
+  align-items: flex-start;
   position: relative;
-  overflow: visible; /* permite que las tarjetas floten arriba */
+  overflow: hidden; /* eliminamos scroll lateral */
   min-width: 0;
 }
 
@@ -970,16 +971,16 @@ img {
   transition: transform 0.4s ease;
 }
 
-/* Tarjetas */
+/* Tarjetas flexibles */
 .card {
   flex: 0 0 auto; /* no se encogen ni crecen automáticamente */
-  width: 100%;
+  width: calc(100% / 3 - 10px); /* hasta 3 tarjetas por fila en escritorio */
   max-width: 320px;
   background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  margin-top: -30px; /* efecto flotante sobre el contenedor */
+  margin-top: -30px;
   transition: transform 0.3s ease;
 }
 
@@ -1035,69 +1036,26 @@ img {
 .next:hover { background: #ff5500; }
 
 /* --- Responsive --- */
-@media (max-width: 1024px) {
-  .noticias-box {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .noticias-left {
-    flex: 1 1 auto;
-    margin-bottom: 15px;
-  }
-
-  .card {
-    max-width: 280px;
-    margin-top: -20px;
-  }
-
-  .card img {
-    height: 180px;
-  }
-}
-
 @media (max-width: 768px) {
-  .noticias-left h3 {
-    font-size: 20px;
-  }
-
-  .noticias-boton {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
   .card {
-    max-width: 240px;
+    width: calc(100% - 20px); /* 1 tarjeta por fila */
+    max-width: none;
     margin-top: -15px;
   }
 
   .card img {
     height: 160px;
   }
-
-  .prev, .next {
-    font-size: 24px;
-    padding: 10px 14px;
-  }
 }
 
 @media (max-width: 480px) {
-  .noticias-left, .noticias-right {
-    width: 100%;
-  }
-
   .card {
-    max-width: 200px;
+    width: calc(100% - 15px);
     margin-top: -10px;
   }
 
   .card img {
     height: 140px;
-  }
-
-  .prev, .next {
-    font-size: 20px;
-    padding: 8px 12px;
   }
 }
 
