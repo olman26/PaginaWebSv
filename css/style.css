@@ -988,23 +988,25 @@ img {
   height: 460px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  z-index: 0; /* base */
+  z-index: 0;
+  cursor: pointer; /* 🔹 hace toda la tarjeta clickeable/hover */
 }
 
 .card:hover {
   transform: translateY(-25px) scale(1.05);
-  z-index: 10; /* sobresale encima de las demás */
+  z-index: 10;
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
 }
 
-
-
-/* Imagen de la tarjeta */
+/* IMPORTANTE: aseguramos que la imagen no bloquee el hover */
 .card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  display: block; /* 🔹 evita que cree un "espacio raro" */
+  pointer-events: none; /* 🔹 deja pasar el hover al contenedor */
 }
+
 
 /* Contenido de la tarjeta */
 .card-content {
