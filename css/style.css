@@ -918,7 +918,7 @@ img {
   margin: 30px auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   flex-wrap: wrap;
-  min-height: 450px; /* altura mínima del contenedor */
+  min-height: 500px; /* más alto según necesites */
 }
 
 
@@ -982,10 +982,10 @@ img {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  margin-top: -60px; /* MÁS ARRIBA */
+  margin-top: 0; /* cambiar de -60px a 0 */
   transition: transform 0.3s ease;
-  min-height: 380px; /* altura mínima de toda la tarjeta */
 }
+
 
 .card:hover {
   transform: translateY(-25px);
