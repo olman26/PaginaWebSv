@@ -62,7 +62,7 @@
 <div class="res-card roja">
   <img src="LOGOS HN_super premio-26.png" alt="Super Premio">
   <div class="numeros">
-    <span class="bola-amarilla">12</span>
+    <span class="bola-amarilla">11</span>
     <span class="bola-amarilla">15</span>
     <span class="bola-amarilla">28</span>
     <span class="bola-amarilla">1</span>
@@ -120,7 +120,7 @@
     margin:80px 0 20px 0;  /* margen superior más grande para bajarlo */
 ">
 
-  <img src="banner-apostemos-ni.png" alt="Banner Apostemos" style="
+  <img src="/ImagesSV/banner-apostemos-ni.png" alt="Banner Apostemos" style="
       max-width:1550px;    /* aumentamos ancho máximo */
       width:90%;           /* ocupa más del contenedor */
       height:auto;         /* mantiene proporción */
