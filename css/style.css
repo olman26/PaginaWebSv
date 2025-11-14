@@ -1556,14 +1556,24 @@ img {
   display: block;
 }
 
-.banner-superpremio img,
-.banner-apostemos img {
-  width: 80%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
+.banner-apostemos {
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* Centra horizontal */
+    align-items: center;        /* Centra vertical si hay altura */
+    margin: 20px 0;
 }
+
+.banner-apostemos img {
+    width: 80%;                 /* Ajustá el tamaño como querás */
+    max-width: 600px;           /* Tamaño máximo opcional */
+    height: auto;
+    border-radius: 20px;        /* BORDES REDONDOS */
+    display: block;
+}
+
+
+
 
 
 .footer {

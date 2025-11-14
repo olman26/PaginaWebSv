@@ -113,10 +113,23 @@
     <img src="Banner-Superpremio.gif" alt="Banner Superpremio">
   </div>
   
-  <!-- Banner Apostemos -->
-<div class="banner-apostemos">
-  <img src="banner-apostemos-ni-hn.png" alt="Banner Apostemos">
-</div> 
+   <!-- Banner Apostemos centrado con bordes redondos -->
+<div style="
+    width:100%;
+    text-align:center;
+    margin:80px 0 20px 0;  /* margen superior más grande para bajarlo */
+">
+
+  <img src="banner-apostemos-ni.png" alt="Banner Apostemos" style="
+      max-width:1550px;    /* aumentamos ancho máximo */
+      width:90%;           /* ocupa más del contenedor */
+      height:auto;         /* mantiene proporción */
+      border-radius:16px;
+      display:inline-block;
+  ">
+</div>
+
+
 
 <!-- Espacio en blanco -->
   <div style="height: 50px;"></div>
