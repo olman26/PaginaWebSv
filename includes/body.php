@@ -41,12 +41,10 @@
     </div>
 
 
-  
     <!-- Carrusel -->
     <div class="resultados-carousel">
       <div class="res-cards">
 
-    
        <!-- Diaria -->
 <div class="res-card verde">
   <img src="Diaria.webp" alt="Diaria">
@@ -76,7 +74,6 @@
   </div>
 </div>
 
-
       </div>
     </div>
 
@@ -84,10 +81,7 @@
   <span style="color: 003399">PRÓXIMO SORTEO EN VIVO:</span> 0H : 51M : 53S
 </p>
 
-
   </div>
-
-
 
   <div class="youtube">
     <div class="youtube-content"> <!-- Columna izquierda con video -->
@@ -114,21 +108,16 @@
   <!-- Espacio en blanco -->
   <div style="height: 50px;"></div>
 
-
   <!-- Banner Superpremio -->
   <div class="banner-superpremio">
     <img src="Banner-Superpremio.gif" alt="Banner Superpremio">
   </div>
-  <!-- Banner Superpremio 
-  <div class="banner-apostemos">
-    <img src="Fondo seccion apostemos.png"
-      alt="Banner Apostemos"
-      style="width:80%; /* ancho deseado */ 
-            height:auto; 
-            display:block; 
-            margin:0 auto;">
+  
+  <!-- Banner Apostemos -->
+<div class="banner-apostemos">
+  <img src="banner-apostemos-ni-hn.png" alt="Banner Apostemos">
+</div> 
 
-  </div> -->
 <!-- Espacio en blanco -->
   <div style="height: 50px;"></div>
 
@@ -181,11 +170,8 @@
   </div>
 </div>
 
-
   <!-- Espacio en blanco -->
   <div style="height: 50px;"></div>
-
-
 
   <div class="rse">
     <div class="rse-content">
@@ -199,7 +185,6 @@
 
       </div>
 
-
       <!-- Imagen a la derecha -->
       <div class="rse-image">
         <img src="rse.webp" alt="Imagen RSE">
@@ -211,7 +196,6 @@
       <button class="rse-boton">Conocer más</button>
     </div>
   </div>
-
 
   <script>
     // Función animar número con + y coma como separador de miles
