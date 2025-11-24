@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diaria Loto</title>
+  <title>La Diaria</title>
 
   <!-- Fuente Helvetica Rounded -->
   <style>

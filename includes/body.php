@@ -15,18 +15,18 @@
     </div>
 
     <!-- Imagen de la modelo -->
-    <img src="modelo.png" alt="Conductora" style="display: block; max-width: 100%; height: auto;">
+    <img src="/ImagesSV/modelo.png" alt="Conductora" style="display: block; max-width: 100%; height: auto;">
 
     <!-- Esfera 3 -->
-    <img src="esfera 3.png" alt="Esfera 3" class="esfera"
+    <img src="/ImagesSV/esfera 3.png" alt="Esfera 3" class="esfera"
       style="position: absolute; width: 5vw; height: auto; top: 20%; left: 65%;">
 
     <!-- Esfera 9 -->
-    <img src="esfera 9.png" alt="Esfera 9" class="esfera"
+    <img src="/ImagesSV/esfera 9.png" alt="Esfera 9" class="esfera"
       style="position: absolute; width: 5vw; height: auto; top: 70%; left: 55%;">
 
     <!-- Esfera 11 -->
-    <img src="esfera 11.png" alt="Esfera 11" class="esfera"
+    <img src="/ImagesSV/esfera 11.png" alt="Esfera 11" class="esfera"
       style="position: absolute; width: 5vw; height: auto; top: 50%; left: 94%;">
   </div>
 
@@ -47,7 +47,7 @@
 
        <!-- Diaria -->
 <div class="res-card verde">
-  <img src="Diaria.webp" alt="Diaria">
+  <img src="/ImagesSV/Diaria.webp" alt="Diaria">
   <div class="numeros">
     <span class="bola-verde">5</span>
     <span class="bola-verde">8</span>
@@ -60,7 +60,7 @@
 
 <!-- Súper Premio (Rojo) -->
 <div class="res-card roja">
-  <img src="LOGOS HN_super premio-26.png" alt="Super Premio">
+  <img src="/ImagesSV/LOGOS HN_super premio-26.png" alt="Super Premio">
   <div class="numeros">
     <span class="bola-amarilla">11</span>
     <span class="bola-amarilla">15</span>
@@ -110,7 +110,7 @@
 
   <!-- Banner Superpremio -->
   <div class="banner-superpremio">
-    <img src="Banner-Superpremio.gif" alt="Banner Superpremio">
+    <img src="/ImagesSV/Banner-Superpremio.gif" alt="Banner Superpremio">
   </div>
   
    <!-- Banner Apostemos centrado con bordes redondos -->
@@ -121,7 +121,7 @@
 ">
 
   <img src="/ImagesSV/banner-apostemos-ni.png" alt="Banner Apostemos" style="
-      max-width:1550px;    /* aumentamos ancho máximo */
+      max-width:1500px;    /* aumentamos ancho máximo */
       width:90%;           /* ocupa más del contenedor */
       height:auto;         /* mantiene proporción */
       border-radius:16px;
@@ -147,21 +147,21 @@
   <div class="noticias-right">
     <div class="carousel">
       <div class="card">
-        <img src="noticia1.webp" alt="Noticia 1">
+        <img src="/ImagesSV/noticia1.webp" alt="Noticia 1">
         <div class="card-content">
           <h4>Loto entrega premios millonarios</h4>
           <p>Más de 10 centros educativos de La Ceiba reciben apoyo con útiles escolares y becas para estudiantes.</p>
         </div>
       </div>
       <div class="card">
-        <img src="noticia2.webp" alt="Noticia 2">
+        <img src="/ImagesSV/noticia2.webp" alt="Noticia 2">
         <div class="card-content">
           <h4>Nueva agencia en San Pedro Sula</h4>
           <p>Juga Tres ahora más cerca de ti, con promociones exclusivas y horarios extendidos para mayor comodidad.</p>
         </div>
       </div>
       <div class="card">
-        <img src="noticia3.webp" alt="Noticia 3">
+        <img src="/ImagesSV/noticia3.webp" alt="Noticia 3">
         <div class="card-content">
           <h4>Beneficios únicos para clientes</h4>
           <p>Los jugadores frecuentes acceden a premios instantáneos, descuentos especiales y sorteos semanales.</p>
@@ -169,7 +169,7 @@
       </div>
       <!-- Nueva noticia -->
       <div class="card">
-        <img src="rse.webp" alt="Noticia 4">
+        <img src="/ImagesSV/rse.webp" alt="Noticia 4">
         <div class="card-content">
           <h4>Responsabilidad Social Empresarial</h4>
           <p>Loto impulsa programas de salud y educación en comunidades vulnerables, beneficiando a miles de familias.</p>
@@ -200,7 +200,7 @@
 
       <!-- Imagen a la derecha -->
       <div class="rse-image">
-        <img src="rse.webp" alt="Imagen RSE">
+        <img src="/ImagesSV/rse.webp" alt="Imagen RSE">
       </div>
     </div>
 

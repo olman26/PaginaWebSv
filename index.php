@@ -19,6 +19,20 @@ switch ($pag) {
         include 'noticias.php';
     break;
 
+    case 'apostemos':
+        include 'apostemos.php';
+    break;
+
+    case 'aplica_con_nosotros':
+        include 'aplica_con_nosotros.php';
+    break;
+     case 'contactanos':
+        include 'contactanos.php';
+    break;
+    case 'sobre_nosotros':
+        include 'sobre_nosotros.php';
+    break;
+
     default:
         include 'includes/body.php';
     break;

@@ -4,36 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOTO - Sorteos</title>
+  <title>LOTO - HOME</title>
   <link rel="stylesheet" href="/css/style.css" />
   <header>
         <!-- Menú superior azul -->
         <div class="top-menu">
-      <a href="https://loto.sv/sobre-nosotros/">Sobre nosotros</a>
-      <a href="https://loto.sv/juego-responsable/">Juego responsable</a>
-      <a href="">RSE</a>
+      <a href="index.php?pag=sobre_nosotros">Sobre nosotros</a>
       <a href="index.php?pag=quiero_ser_agente">Quiero ser vendedor</a>
-      <a href="">Lotocentros</a>
-      <a href="https://loto.sv/contactanos/">Aplica con nosotros</a>
+      <a href="">Puntos de venta</a>
+      <a href="index.php?pag=aplica_con_nosotros">Aplica con nosotros</a>
         </div>
 
     
         <!-- Cuadro naranja con logo, navegación y botón -->
         <div class="main-header">
           <div class="logo">
-            <img src="Abrazo BI Color 1.svg" alt="Logo">
+           <a href="https://wslotosalvador-d2hbanggbucganbt.canadacentral-01.azurewebsites.net/">
+    <img src="/ImagesSV/Logo.svg" alt="Logo" style="cursor:pointer;">
+</a>
+
           </div>
           <nav class="nav-menu">
       <a href="index.php?pag=diaria">JUEGOS</a>
-      <a href="https://loto.sv/puntos-de-venta/">RESULTADOS</a>
+      <a href="">RESULTADOS</a>
       <a href="index.php?pag=noticias">NOTICIAS</a>
-      <a href="https://loto.sv/puntos-de-venta/">PUNTO DE VENTA</a>
+      <a href="index.php?pag=contactanos">CONTACTANOS</a>
       
           </nav>
 
         <div class="play-button">
      <a href="https://juega.loto.sv/websales/?pk_campaign=WS_SITE_BOTON_WEBSALES" target="_blank">
-     <img src="boton-jugar-en-linea.png" alt="Jugar en línea">
+     <img src="/ImagesSV/boton-jugar-en-linea.png" alt="Jugar en línea">
      </a>
         </div>
 
