@@ -57,4 +57,4 @@ jobs:
           app-name: 'wslotosalvador'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DAB82E1CC7D8483D81F55C5BA537FB9E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_17790E6D7CBE4AA2B2579F5E363AD845 }}
