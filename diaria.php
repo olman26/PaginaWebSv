@@ -599,18 +599,17 @@ body {
 
 }
 
-
 @media (max-width: 768px) {
 
-  /* ...tus estilos móviles actuales... */
+  /* Ya tenés tus estilos móviles existentes */
 
-  /* Bajar la imagen sin agrandar el header */
-  .top img {
-      position: relative;  /* Permite mover la imagen dentro del header */
-      top: 60px;           /* Ajusta según cuánto quieras bajarla */
+  /* Bajamos todo el contenido del header */
+  .top-content {
+      margin-top: 60px; /* Ajusta este valor según cuánto quieras bajarlo */
   }
 
 }
+
 
 
   </style>
