@@ -138,15 +138,19 @@ body { background:#fff; font-weight:600; }
     flex-wrap: wrap;
   }
 }
-@media (max-width: 150px) {
-  .top img {
+
+
+/* FIX LOGO SUPER PREMIO EN MÓVIL */
+@media (max-width: 768px) {
+  .logo-sp {
     display: block;
     width: 220px;
     max-width: 90%;
     height: auto;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 15px auto; /* CENTRADO */
   }
 }
+
 
 
 
@@ -157,7 +161,8 @@ body { background:#fff; font-weight:600; }
 <!-- HEADER -->
 <div class="top">
     <div class="top-content">
-        <img src="/ImagesSV/SP.svg">
+        <img src="/ImagesSV/SP.svg" class="logo-sp">
+
         <div class="ganador-box">
             <div class="ganador">ÚLTIMO NÚMERO GANADOR</div>
             <div class="nums" id="ultimoResultado">
