@@ -605,7 +605,7 @@ body {
 
   /* Bajamos todo el contenido del header */
   .top-content {
-      margin-top: 260px; /* Ajusta este valor según cuánto quieras bajarlo */
+      margin-top: 280px; /* Ajusta este valor según cuánto quieras bajarlo */
   }
 
 }
