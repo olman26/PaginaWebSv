@@ -370,6 +370,21 @@ echo $mensajeExito;
   }
 }
 
+/* =================================
+   BAJAR IMAGEN HERO EN MÓVIL
+   ================================= */
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 90px; /* empuja todo el hero hacia abajo */
+  }
+
+  .hero-img {
+    margin-top: 50px; /* baja SOLO la imagen */
+  }
+}
+
+
 
 </style>
 </head>
