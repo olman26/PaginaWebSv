@@ -746,6 +746,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
+@media (max-width: 768px) {
+    header img {
+        margin-top: 200px;   /* baja el banner */
+        display: block;
+    }
+}
 
 
 
