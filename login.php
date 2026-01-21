@@ -213,7 +213,7 @@
 
     <div class="countries">
 
-      <a href="https://wslotosalvador-d2hbanggbucganbt.canadacentral-01.azurewebsites.net/" target="_blank" style="text-decoration: none;">
+      <a href="paginawebsvcac.azurewebsites.net" target="_blank" style="text-decoration: none;">
   <div class="country-card">
     <div class="name">El Salvador</div>
     <div class="image-wrapper">
