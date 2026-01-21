@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - wslotosalvador
+name: Build and deploy PHP app to Azure Web App - PaginaWebSvCac
 
 on:
   push:
@@ -43,18 +43,28 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    
+    permissions:
+      id-token: write #This is required for requesting the JWT
+      contents: read #This is required for actions/checkout
+
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: php-app
       
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_16C7553189D94835807FB867B0BA0056 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C8063F80AC67404595A65EF1A92226FE }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D093D681845248FC923B3D8C36BAA9CA }}
+
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'wslotosalvador'
+          app-name: 'PaginaWebSvCac'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E5641BF616C04CA2BF39F7887CEBB1BD }}
+          
