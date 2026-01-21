@@ -307,6 +307,70 @@ echo $mensajeExito;
   .beneficio-text h4 { color: #0077CC; font-weight: 700; font-size: 16px; margin: 0 0 5px 0; }
   .beneficio-text p { font-size: 14px; opacity: 0.85; margin: 0; }
   @media (max-width: 700px) { .beneficios-container, .form-grid, .requisitos { grid-template-columns: 1fr; } }
+  /* ===============================
+   FIX HERO IMAGEN - MÓVIL
+   =============================== */
+@media (max-width: 768px) {
+
+  .hero-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-img {
+    max-width: 220px;
+    width: 90%;
+    margin: 0 auto 20px auto; /* centrada */
+    display: block;
+  }
+
+  .hero-text-container {
+    align-items: center;
+  }
+
+  .hero-text-img {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .hero-subtitle {
+    font-size: 22px;
+  }
+}
+/* ===============================
+   FIX FORMULARIO - MÓVIL
+   =============================== */
+@media (max-width: 768px) {
+
+  .form-container {
+    padding: 25px 18px;
+    border-radius: 16px;
+  }
+
+  .form-section-title {
+    font-size: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* una columna */
+    gap: 18px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 16px; /* mejor para teclado móvil */
+    padding: 14px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    font-size: 17px;
+    padding: 15px;
+  }
+}
+
+
 </style>
 </head>
 <body>
