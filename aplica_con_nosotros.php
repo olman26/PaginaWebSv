@@ -351,6 +351,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   }
 }
 
+/* ===== BAJAR CONTENIDO POR HEADER FIJO – SOLO MÓVIL ===== */
+@media (max-width: 768px) {
+
+  .container {
+    margin-top: 120px; /* ajustá este valor si tu header es más alto */
+  }
+
+}
+
 
 </style>
 </head>
