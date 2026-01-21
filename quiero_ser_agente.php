@@ -376,7 +376,7 @@ echo $mensajeExito;
 @media (max-width: 768px) {
 
   .hero {
-    padding-top: 130px; /* empuja todo el hero hacia abajo */
+    padding-top: 220px; /* empuja todo el hero hacia abajo */
   }
 
   .hero-img {
