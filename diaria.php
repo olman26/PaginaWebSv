@@ -600,6 +600,19 @@ body {
 }
 
 
+@media (max-width: 768px) {
+
+  /* ...tus estilos móviles actuales... */
+
+  /* Bajar la imagen sin agrandar el header */
+  .top img {
+      position: relative;  /* Permite mover la imagen dentro del header */
+      top: 60px;           /* Ajusta según cuánto quieras bajarla */
+  }
+
+}
+
+
   </style>
 </head>
 
@@ -636,7 +649,6 @@ body {
 </a>
 
 
-    <a href="#">RESULTADOS</a>
   </div>
 
   <!-- RESULTADOS -->
