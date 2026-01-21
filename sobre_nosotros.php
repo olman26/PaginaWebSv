@@ -701,6 +701,57 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
+
+@media (max-width: 768px) {
+    header img {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .orange-rect {
+        grid-template-columns: 1fr !important;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .metric {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .metric img {
+        width: 60px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .resp-item {
+        flex-direction: column;
+        height: auto !important;
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .resp-item img {
+        position: static !important;
+        width: 120px !important;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+
+
+
+
+
+
     </style>
 
     <script>
