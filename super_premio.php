@@ -152,6 +152,19 @@ body { background:#fff; font-weight:600; }
 }
 
 
+/* =========================
+   AJUSTE HEADER MÓVIL
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Empuja todo el contenido del header hacia abajo para que no se tape */
+  .top-content {
+      margin-top: 250px; /* Ajusta este valor según lo que necesites */
+  }
+
+}
+
+
 
 
 </style>
@@ -185,7 +198,7 @@ body { background:#fff; font-weight:600; }
 <!-- MENÚ -->
 <div class="menu">
     <a href="https://juega.loto.sv/websales/" target="_blank">JUGÁ AQUÍ</a>
-    <a href="#">RESULTADOS</a>
+    
 </div>
 
 <!-- RESULTADOS -->
