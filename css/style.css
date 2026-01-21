@@ -751,157 +751,48 @@ img {
 }
 
 .youtube {
-  background: #0047b2;
+  background: #0047b2;       /* color azul de fondo */
   color: white;
-  padding: 40px 5%;
-  min-height: 400px;
-  /* fuerza a mostrar el fondo */
-  border-radius: 0px;
-  /* opcional, si quieres bordes redondeados */
+  padding: 40px 0;           /* vertical: 40px, horizontal: 0 */
+  width: 100vw;               /* ocupa todo el ancho de la pantalla */
+  box-sizing: border-box;
+}
+
+.youtube-inner {
+  width: 100%;               /* ocupa todo el ancho */
+  max-width: none;           /* quita cualquier límite de ancho */
+  margin: 0;                 /* sin margen centrado */
+  padding: 0 2%;             /* un pequeño padding interno opcional */
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centra contenido horizontalmente */
+  gap: 30px;
 }
 
 .youtube-content {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
-  justify-content: center;
-  /* Centra horizontalmente */
-  align-items: flex-start;
+  justify-content: center;   /* centra los elementos en la fila */
+  gap: 20px;
+  width: 100%;               /* ocupa todo el ancho disponible */
 }
 
-/* Video */
 .youtube-video {
-  flex: 1;
-  max-width: 600px;
-  margin-left: -150px;
-  /* mueve a la izquierda */
-  margin-top: -80px;
-  /* sube hacia arriba */
-}
-
-.youtube-video iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  /* mantiene proporción */
-  border-radius: 20px;
-  /* redondea esquinas */
-  border: none;
-  /* quita borde */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  /* sombra sutil */
-}
-
-.video-subtext {
-  font-size: 14px;
-  color: white;
-  margin-top: 10px;
-  text-align: left;
-  opacity: 0.9;
-}
-
-/* Columna derecha */
-.youtube-right {
-  flex: 1 1 400px;
-  max-width: 400px;
+  flex: 1 1 500px;           /* ancho mínimo del video, se adapta */
+  max-width: 700px;          /* opcional: no se haga demasiado grande */
 }
 
 .youtube-text {
-  background: #ff7e00;
+  flex: 1 1 300px;           /* ancho mínimo del texto */
+  max-width: 500px;          /* opcional */
+  background: #ff8000;       /* fondo naranja */
+  padding: 20px;
+  border-radius: 8px;
   color: white;
-  padding: 25px;
-  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
 }
 
-.youtube-text h2 {
-  font-size: 26px;
-  /* más grande y más largo */
-  line-height: 1.2;
-  /* mantiene el salto de línea agradable */
-  text-align: center;
-  /* centra el texto horizontalmente */
-  color: white;
-  font-weight: bold;
-}
 
-.youtube-text p {
-  font-size: 18px;
-  margin: 0;
-}
-
-.youtube-info {
-  text-align: left;
-  /* todo el texto a la izquierda */
-  margin-top: 15px;
-  /* espacio arriba */
-  line-height: 1.5;
-  /* espacio entre líneas */
-  font-size: 16px;
-  /* tamaño de letra */
-}
-
-.youtube-info .canales {
-  display: block;
-  /* hace que cada lista de canales quede en su propia línea */
-  margin-left: 10px;
-  /* opcional: un pequeño margen para diferenciar */
-}
-
-/* Botón centrado debajo */
-.youtube-boton {
-  background: #ff7e00;
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
-  margin-top: 1px;
-  /* <- aquí lo bajas más, ajusta el valor */
-}
-
-.youtube-boton:hover {
-  background: #ff8000;
-  transform: scale(1.05);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .youtube-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .youtube-video iframe {
-    max-height: 200px;
-    border-radius: 30px;
-  }
-
-  /* Contenedor padre */
-  .contenedor-principal {
-    display: flex;
-    justify-content: space-between;
-    /* manda los hijos a extremos */
-  }
-
-  /* Columna derecha */
-  .youtube-right {
-    max-width: 400px;
-    /* opcional, para que no ocupe todo */
-    text-align: right;
-    /* texto alineado */
-  }
-
-  .video-subtext {
-    text-align: center;
-  }
-}
 
 /* --- Contenedor Noticias --- */
 /* --- Contenedor Noticias --- */
@@ -920,44 +811,59 @@ img {
   flex-wrap: wrap;
   height: auto; /* más flexible */
   align-items: stretch;
+  overflow: visible;
+  position: relative;
 }
 
 /* Columna izquierda */
+/* --- COLUMNA IZQUIERDA MEJORADA --- */
 .noticias-left {
-  flex: 0 0 220px;
+  flex: 0 0 260px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;  /* ⬅ alineado a la izquierda */
   text-align: left;
-  margin-bottom: 20px;
+  background: transparent; /* ✅ SIN fondo azul */
+  border-radius: 0;
+  padding: 10px 10px 10px 0;
+  box-shadow: none;
 }
+
 
 .noticias-left h3 {
-  font-size: 26px;
-  font-weight: 700;
-  color: #003399;
-  margin-bottom: 20px;
-  border-left: 5px solid #ff7e00;
-  padding-left: 10px;
+  font-size: 38px;        /* ✅ MÁS GRANDE */
+  font-weight: 900;      /* ✅ MÁS BOLD */
+  color: #0047b2;        /* ✅ AZUL */
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 6px solid #ff7e00;
+  padding-left: 14px;
 }
 
+
 .noticias-boton {
-  background: #ff7e00;
+  margin: 0 auto; /* ✅ CENTRADO PERFECTO */
+  background: linear-gradient(135deg, #ff7e00, #ff5500);
   color: white;
   border: none;
-  padding: 12px 18px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 25px;
+  padding: 14px 34px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 50px;
   cursor: pointer;
-  width: fit-content;
   transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  display: block;
 }
 
 .noticias-boton:hover {
-  background: #ff5500;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
+
+
 
 /* Carrusel */
 .noticias-right {
@@ -975,6 +881,7 @@ img {
   transition: transform 0.5s ease-in-out;
   position: relative;
   overflow: visible; /* 🔹 permite que las tarjetas sobresalgan dentro del carrusel */
+  padding-top: 25px;
 }
 
 .card {
@@ -993,19 +900,26 @@ img {
 }
 
 .card:hover {
-  transform: translateY(-25px) scale(1.05);
-  z-index: 10;
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+  transform: translateY(-40px) scale(1.04);  /* ✅ ~2cm hacia arriba */
+  z-index: 999;                               /* ✅ queda por encima de TODO */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
 }
+
+
+
+
 
 /* IMPORTANTE: aseguramos que la imagen no bloquee el hover */
 .card img {
   width: 100%;
-  height: 250px;
+  height: 260px;
   object-fit: cover;
-  display: block; /* 🔹 evita que cree un "espacio raro" */
-  pointer-events: none; /* 🔹 deja pasar el hover al contenedor */
+  image-rendering: auto;
+  filter: contrast(1.05) saturate(1.1);
+  display: block;
+  pointer-events: none;
 }
+
 
 
 /* Contenido de la tarjeta */
@@ -1044,23 +958,30 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 126, 0, 0.9);
+  background: rgba(255, 126, 0, 0.95);
   color: white;
   border: none;
   font-size: 26px;
-  padding: 12px 16px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  z-index: 10;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  z-index: 999;   /* ✅ AHORA NUNCA QUEDAN DETRÁS */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
 }
 
-.prev { left: -25px; }
-.next { right: -25px; }
+.prev { left: 10px; }   /* ✅ YA NO quedan afuera */
+.next { right: 10px; }
 
 .prev:hover,
-.next:hover { background: #ff5500; }
+.next:hover {
+  background: #ff5500;
+  transform: translateY(-50%) scale(1.12);
+}
 
 /* 🔹 Indicadores */
 .carousel-indicators {
@@ -1111,6 +1032,11 @@ img {
     height: 200px;
   }
 }
+
+
+
+
+
 
 
 

@@ -238,6 +238,29 @@ body {
   max-width: 250px;
 }
 
+/* ===== FIX HERO TAPADO SOLO EN MÓVIL ===== */
+@media (max-width: 767px) {
+  .hero-apostemos {
+    margin-top: 300px; /* ajusta si tu header es más alto */
+  }
+}
+
+
+.banner-apostemos {
+  display: block;
+  margin: 25px auto 0 auto; /* centrado horizontal */
+  max-width: 100%;
+}
+
+/* Ajuste SOLO en móvil */
+@media (max-width: 767px) {
+  .banner-apostemos {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+
 
 </style>
 
@@ -254,7 +277,7 @@ body {
   <h2>¡BIENVENIDO A APOSTEMOS!</h2>
 
   <p>
-    TU CASA DE APUESTAS EXPLORA NUESTRAS TRES EXPERIENCIAS<br>
+    TU CASA DE APUESTAS EXPLORA NUESTRAS EXPERIENCIAS<br>
     ÚNICAS Y ELIGE CÓMO VIVIR LA EMOCIÓN DEL JUEGO.
   </p>
 </section>
@@ -269,16 +292,18 @@ body {
   <h3 class="titulo-deporte">APUESTA EN TUS DEPORTES FAVORITOS</h3>
 
   <p class="texto-deporte">
-    PRONOSTICA RESULTADOS EN TIEMPO REAL Y SIENTE LA<br>
+    PRONOSTICÁ RESULTADOS EN TIEMPO REAL Y SENTÍ LA<br>
     ADRENALINA DE CADA JUGADA.
   </p>
 
   <a href="https://juega.loto.sv/fob" class="btn-como-jugar">
-    <img src="ImagesSV/como-jugar-apostemos.png" alt="Cómo Jugar" />
+    <img src="ImagesSV/jugá-aquí.png" alt="Cómo Jugar" />
   </a>
 
   <!-- Imagen apostemos debajo del botón -->
-  <img src="ImagesSV/apostemos.png" alt="Apostemos" class="banner-apostemos">
+  <img src="ImagesSV/deportes sv.png" alt="Apostemos" class="banner-apostemos">
+
+
 </section>
 
 
@@ -289,49 +314,49 @@ body {
   <img src="ImagesSV/Banner_gaming.png" alt="Banner Gaming" class="banner-gaming">
 
   <!-- Título -->
-  <h3 class="titulo-gaming">DIVERSION SIN LIMITES</h3>
+  <h3 class="titulo-gaming">DIVERSIÓN SIN LÍMITES</h3>
 
   <!-- Subtítulo con salto de línea -->
   <p class="texto-gaming">
-    DISFRUTA DE LOS MEJORES JUEGOS EN LÍNEA: SLOTS, JUEGOS DE<br>
+    DISFRUTÁ DE LOS MEJORES JUEGOS EN LÍNEA: SLOTS, JUEGOS DE<br>
     MESA, JUEGOS DE CONCURSO, TODO EN UN SOLO LUGAR PARA JUGAR.
   </p>
 
   <!-- Botón Cómo Jugar -->
   <a href="https://juega.loto.sv/gaming/" class="btn-como-jugar">
-    <img src="ImagesSV/como-jugar-gaming.png" alt="Cómo Jugar" />
+    <img src="ImagesSV/juga-aqui-nmorado 2.png" alt="Cómo Jugar" />
   </a>
 
   <!-- Imagen principal Gaming debajo del botón -->
-  <img src="ImagesSV/gaming.png" alt="Gaming" class="imagen-principal-gaming">
+  <img src="ImagesSV/gaming 1.png" alt="Gaming" class="imagen-principal-gaming">
 </section>
 
+<!--
 
 
-<!-- QUINIELA -->
 <section class="seccion quiniela">
-  <!-- Banner Quiniela -->
-  <img src="ImagesSV/Banner_quinela.png" alt="Banner Quiniela" class="banner-quiniela">
+  
+  <img src="ImagesSV/Banner_quinela.png" alt="Banner Quiniela" class="banner-quiniela"> 
 
-  <!-- Título -->
+  
   <h3 class="titulo-quiniela">PRONOSTICA Y GANA</h3>
 
-  <!-- Subtítulo con salto de línea -->
+ 
   <p class="texto-quiniela">
     ELIGE LOS RESULTADOS DE 10 PARTIDOS DE FÚTBOL.<br>
     ¡ENTRE MÁS ACIERTOS, MÁS OPORTUNIDAD DE GANAR EL POZO!
   </p>
 
-  <!-- Botón Cómo Jugar -->
+  
   <a href="https://juega.loto.sv/lottery/" class="btn-como-jugar">
     <img src="ImagesSV/como-jugar-quinela.png" alt="Cómo Jugar" />
   </a>
 
-  <!-- Imagen principal Quiniela debajo del botón -->
+  
   <img src="ImagesSV/quinela.png" alt="Quiniela" class="imagen-principal">
 </section>
 
-
+-->
 
 <!-- MÉTODOS DE RECARGA -->
 <section class="metodos">
@@ -341,6 +366,7 @@ body {
       <a href="https://juega.loto.sv/websales/?action=login">
     <img src="ImagesSV/tarjeta.svg" alt="Tarjeta" style="cursor:pointer;">
   </a>
+  <!--
   <a href="https://juega.loto.sv/websales/?action=login">
     <img src="ImagesSV/punto tengo.svg" alt="Punto Tengo" style="cursor:pointer;">
   </a>
@@ -348,10 +374,13 @@ body {
     <div class="fila">
       <a href="https://juega.loto.sv/websales/?action=login">
     <img src="ImagesSV/tigo money.svg" alt="Tigo Money" style="cursor:pointer;">
-  </a>
+  </a> -->
       <a href="https://juega.loto.sv/websales/?action=login">
-    <img src="ImagesSV/lotoaldo.svg" alt="Loto Saldo" style="cursor:pointer;">
-  </a>
+  <img src="ImagesSV/Logo LotoSaldo.png"
+       alt="Loto Saldo"
+       style="cursor:pointer; height:60px;">
+</a>
+
     </div>
   </div>
 

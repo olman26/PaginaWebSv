@@ -1,28 +1,112 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+$mensajeExito = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    try {
+        // Conexión a SQL Server
+        $conn = new PDO(
+            "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+            "LotoAdmin",
+            "LotAdmin1.",
+            [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+        );
+
+        // Insert en base de datos
+        $sql = "INSERT INTO aplica_con_nostros_sv 
+        (nombre, genero, edad, identidad, telefono, email, direccion, departamento, estudios, titulo, ingles, posicion, experiencia, transporte, juegos, salario, cv) 
+        VALUES 
+        (:nombre, :genero, :edad, :identidad, :telefono, :email, :direccion, :departamento, :estudios, :titulo, :ingles, :posicion, :experiencia, :transporte, :juegos, :salario, :cv)";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([
+            ':nombre' => $_POST['nombre'],
+            ':genero' => $_POST['genero'],
+            ':edad' => $_POST['edad'],
+            ':identidad' => $_POST['identidad'],
+            ':telefono' => $_POST['telefono'],
+            ':email' => $_POST['email'],
+            ':direccion' => $_POST['direccion'],
+            ':departamento' => $_POST['departamento'],
+            ':estudios' => $_POST['estudios'],
+            ':titulo' => $_POST['titulo'],
+            ':ingles' => $_POST['ingles'],
+            ':posicion' => $_POST['posicion'],
+            ':experiencia' => $_POST['experiencia'],
+            ':transporte' => $_POST['transporte'],
+            ':juegos' => $_POST['juegos'],
+            ':salario' => $_POST['salario'],
+            ':cv' => 'sin_cv'
+        ]);
+
+        // LLAMADA A LOGIC APP CORRECTA
+        $logicAppUrl = "https://prod-23.canadacentral.logic.azure.com:443/workflows/f6f527d5cddc437bb4c3314a76cb6feb/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=Umo2mZGViHzrmZZPNRcpezHcWJ1mKiG9Ml0pPwxDWS4";
+
+        $data = [
+            "nombre" => $_POST['nombre'],
+            "genero" => $_POST['genero'],
+            "edad" => $_POST['edad'],
+            "identidad" => $_POST['identidad'],
+            "telefono" => $_POST['telefono'],
+            "email" => $_POST['email'],
+            "direccion" => $_POST['direccion'],
+            "departamento" => $_POST['departamento'],
+            "estudios" => $_POST['estudios'],
+            "titulo" => $_POST['titulo'],
+            "ingles" => $_POST['ingles'],
+            "posicion" => $_POST['posicion'],
+            "experiencia" => $_POST['experiencia'],
+            "transporte" => $_POST['transporte'],
+            "juegos" => $_POST['juegos'],
+            "salario" => $_POST['salario']
+        ];
+
+        $ch = curl_init($logicAppUrl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_exec($ch);
+        curl_close($ch);
+
+        $mensajeExito = "Formulario enviado correctamente ✅";
+
+    } catch (PDOException $e) {
+        $mensajeExito = "Error: " . $e->getMessage();
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulario LOTO</title>
-
 <style>
   body {
     margin: 0;
-    background: #f6eedd; /* Fondo beige */
-    font-family: "Segoe UI", sans-serif;
-  }
+    background: #f6eedd;
+    font-family: 'HelveticaRounded', sans-serif;  /* Fuente personalizada */
+}
+
 
   .container {
     width: 860px;
     max-width: 95%;
     background: white;
-    margin: 100px auto;
+    margin: 50px auto;
     border-radius: 18px;
     padding: 40px 50px;
     box-sizing: border-box;
   }
 
-  /* TÍTULO PRINCIPAL */
   .title-main {
     font-size: 42px;
     font-weight: 800;
@@ -32,80 +116,49 @@
     text-align: center;
   }
 
-  /* BANNER AZUL */
- /* ENVOLTORIO GENERAL */
-/* BANNER DEL MISMO ANCHO QUE EL CONTAINER */
-
-/* CONTENEDOR DEL BANNER */
-/* Banner azul */
-.banner {
+  .banner {
     position: relative; 
     background: #0070d9;
     height: 150px; 
     display: flex;
     align-items: center;
-    padding-left: 250px; /* espacio para la imagen */
+    padding-left: 250px;
     border-radius: 1px;
     box-sizing: border-box;
     color: white;
-    width: calc(100% + 100px); /* ocupa más que el padding del container */
-    margin-left: -50px; /* compensar el ancho extra */
-}
+    width: calc(100% + 100px);
+    margin-left: -50px;
+  }
 
-/* Imagen flotante encima del banner */
-.banner-img {
+  .banner-img {
     position: absolute;
-    top: -100px; /* más arriba que antes */
+    top: -100px;
     left: 20px;
     width: 200px; 
     z-index: 2;
-}
+  }
 
+  .banner-content {
+    max-width: 500px;
+    margin-left: 50px;
+  }
 
-
-/* IMAGEN PERSONA */
-.banner-left {
-    position: relative;
-    z-index: 2; /* asegura que esté al frente */
-}
-
-
-/* TEXTO DE LA DERECHA */
-.banner-content {
-    max-width: 500px; /* ancho máximo del texto */
-    margin-left: 50px; /* mueve el texto hacia la derecha */
-}
-
-
-.banner-title {
-    font-size: 40px;
-    font-weight: 800;
-    color: #ff6a00;
-    margin: 0;
-    line-height: 1.1;
-    margin-left: 50px; /* mueve el título un poco a la derecha */
-}
-
-
-.banner-text {
-    color: white;   /* mantiene el texto blanco sobre el banner */
+  .banner-text {
+    color: white;
     font-size: 18px;
     line-height: 1.4;
-    font-weight: 600; /* semibold */
-}
+    font-weight: 600;
+  }
 
-/* DESCRIPCIÓN LARGA DEBAJO DEL BANNER */
-.banner-description {
-    margin-top: 40px; /* separa del banner */
+  .banner-description {
+    margin-top: 40px;
     font-size: 16px;
     line-height: 1.5;
-    color: #005bbb; /* azul */
-    font-weight: 600; /* semibold */
-}
+    color: #005bbb;
+    font-weight: 600;
+    text-align: center;
+  }
 
-
-
-  /* BENEFICIOS */
   h2.section-title {
     text-align: center;
     color: #ff6a00;
@@ -115,21 +168,21 @@
 
   .beneficios {
     display: flex;
-    flex-wrap: wrap; /* permite que se acomoden en varias líneas */
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
-}
+    margin-top: 20px;
+  }
 
   .beneficios-list li {
-    font-weight: 600; /* semibold */
+    font-weight: 600;
     color: #005bbb;
     margin-bottom: 12px;
     list-style: none;
     padding-left: 32px;
     position: relative;
     font-size: 17px;
-}
-
+  }
 
   .beneficios-list li::before {
     content: "✔";
@@ -150,9 +203,8 @@
   .beneficios img {
     width: 170px;
     margin: auto;
-}
+  }
 
-  /* SUBTÍTULO FORMULARIO */
   h3.form-title {
     text-align: center;
     color: #005bbb;
@@ -160,77 +212,93 @@
     margin-top: 35px;
   }
 
-  /* FORMULARIO */
-  label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-    color: #333;
+  form {
+    padding: 0; 
+    max-width: 700px;
+    margin: 30px auto;
+    box-sizing: border-box;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  input[type="date"],
-  select {
+  form label.required::after {
+    content: "*";
+    color: red;
+    margin-left: 3px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="number"],
+  form select {
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 12px 15px;
+    margin-top: 6px;
     border: 1px solid #bbb;
+    border-radius: 10px;
     font-size: 16px;
     box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+
+  form input:focus,
+  form select:focus {
+    border-color: #005bbb;
+    outline: none;
+  }
+
+  .radio-group {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 6px;
+    gap: 6px;
   }
 
   .radio-group label {
     font-weight: normal;
+    color: #333;
     display: flex;
     align-items: center;
     gap: 6px;
-    margin: 5px 0;
   }
 
-  /* BOTONES */
- /* Botón verde (CV) */
-.btn-cv {
-    display: inline-block;
-    padding: 10px 25px; /* compacto y estilizado */
-    background: #31c44c; /* verde */
+  .btn-submit {
+    background: #1a8cff;
     color: white;
+    display: block;
+    padding: 12px 28px;
     font-size: 16px;
-    font-weight: 600; /* semibold */
-    border: none;
-    border-radius: 25px; /* moderno, ovalado */
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.btn-cv:hover {
-    background: #28a537; /* verde más oscuro al pasar mouse */
-    transform: translateY(-2px); /* efecto sutil de "levantar" */
-}
-
-/* Botón azul (Enviar) */
-.btn-submit {
-    display: inline-block;
-    padding: 10px 25px;
-    background: #1a8cff; /* azul */
-    color: white;
-    font-size: 16px;
-    font-weight: 600; /* semibold */
-    border: none;
+    font-weight: 600;
     border-radius: 25px;
+    border: none;
     cursor: pointer;
-    margin-top: 10px;
     transition: background 0.3s, transform 0.2s;
-}
+    margin: 25px auto 0 auto;
+  }
 
-.btn-submit:hover {
-    background: #006fd6; /* azul más oscuro */
+  .btn-submit:hover {
+    background: #006fd6;
     transform: translateY(-2px);
+  }
+
+  .alert-success {
+  background-color: #d4edda;
+  border-left: 6px solid #28a745;
+  color: #155724;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 </style>
 </head>
@@ -238,140 +306,180 @@
 
 <div class="container">
 
-  <!-- TÍTULO PRINCIPAL -->
   <div class="title-main">
     Formá parte de<br>
     la familia LOTO
   </div>
 
-  <!-- BANNER AZUL -->
   <div class="banner">
     <img src="/ImagesSV/Foto Moni.png" class="banner-img">
-
     <div class="banner-content">
-        
-        <p class="banner-text">
-            En LOTO somos una empresa dónde valoramos el talento y nos caracterizamos por brindar 
-            oportunidades de crecimiento y desarrollo profesional a nuestros colaboradores además 
-            de muchos beneficios.
-        </p>
+      <p class="banner-text">
+        En LOTO somos una empresa dónde valoramos el talento y nos caracterizamos por brindar 
+        oportunidades de crecimiento y desarrollo profesional a nuestros colaboradores además 
+        de muchos beneficios.
+      </p>
     </div>
-</div>
+  </div>
 
+  <p class="banner-description">
+    INTERLOTO (Loterías Electrónicas Internacionales) se convierte en el único administrador de loterías electrónicas en El Salvador.
+    En la actualidad INTERLOTO cuenta con alrededor de 70 colaboradores distribuidos en una oficina principal ubicadas en San Salvador
+    y 1 LotoCentros, 2 Kioskos Loto. También cuenta con una red de más de 1,800 socios estratégicos (vendedores) ubicados en las distintas
+    ciudades del país.
+  </p>
 
-<p class="banner-description">
-    LOTELHSA (Loterías Electrónicas de Honduras) se convierte en el único administrador de loterías
-    electrónicas en Honduras. En la actualidad LOTELHSA cuenta con alrededor de 250 colaboradores
-    distribuidos en dos oficinas principales ubicadas en Tegucigalpa y San Pedro Sula y 13 LotoCentros 
-    a nivel nacional. También cuenta con una red de más de 3,500 socios estratégicos (vendedores) 
-    ubicados en las distintas ciudades del país.
-</p>
-
-
-
-  <!-- BENEFICIOS -->
   <h2 class="section-title">CONOCÉ ALGUNOS DE NUESTROS BENEFICIOS</h2>
-
   <div class="beneficios">
     <ul class="beneficios-list">
       <li>EMPRESA SOLIDA CON ESTABILIDAD LABORAL</li>
       <li>SEGURO MEDICO PRIVADO</li>
       <li>SEGURO DE VIDA</li>
       <li>EXCELENTE AMBIENTE LABORAL</li>
-      <li>GIMNACIO EN INSTALACIONES <br> DE TEGUCIGALPA</li>
     </ul>
-
     <img src="/ImagesSV/icono beneficios.png">
   </div>
 
-  <!-- FORMULARIO -->
   <h3 class="form-title">LLENÁ EL SIGUIENTE FORMULARIO</h3>
 
-  <form>
+  <?php if($mensajeExito): ?>
+  <div class="alert-success" id="alert-success">
+    <?= $mensajeExito ?>
+  </div>
+<?php endif; ?>
 
-    <label>Nombre completo:</label>
-    <input type="text">
 
-    <label>Género:</label>
+  <form method="POST">
+    <!-- Aquí va todo tu formulario tal como lo tenías, con los inputs y radios, sin CV -->
+    <label class="required">Nombre completo:</label>
+    <input type="text" name="nombre" required>
+    <br><br>
+
+    <label class="required main-label">Género:</label>
     <div class="radio-group">
-      <label><input type="radio" name="genero"> Masculino</label>
-      <label><input type="radio" name="genero"> Femenino</label>
+      <label><input type="radio" name="genero" value="Masculino" required> Masculino</label>
+      <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
     </div>
+    <br>
 
-    <label>Edad:</label>
-    <input type="number">
+    <label class="required">Edad:</label>
+    <input type="number" name="edad" required>
+    <br><br>
 
-    <label>Número de identidad:</label>
-    <input type="text">
+    <label class="required">Número de identidad (DUI):</label>
+    <input type="text" name="identidad" required>
+    <br><br>
 
-    <label>Telefono celular:</label>
-    <input type="email">
+    <label class="required">Teléfono celular:</label>
+    <input type="text" name="telefono" required>
+    <br><br>
 
-    <label>Correo electrónico:</label>
-    <input type="text">
+    <label class="required">Correo electrónico:</label>
+    <input type="email" name="email" required>
+    <br><br>
 
-    <label>Dirección:</label>
-    <input type="text">
+    <label class="required">Dirección:</label>
+    <input type="text" name="direccion" required>
+    <br><br>
 
-    <label>Departamento:</label>
-    <select>
-      <option>Seleccione…</option>
-      <option>Comayagua</option>
-      <option>Francisco Morazán</option>
-      <option>Cortés</option>
-      <option>Atlántida</option>
+    <label class="required">Departamento:</label>
+    <select name="departamento" required>
+      <option value="">Seleccione…</option>
+      <option value="Ahuachapán">Ahuachapán</option>
+      <option value="Santa Ana">Santa Ana</option>
+      <option value="Sonsonate">Sonsonate</option>
+      <option value="Chalatenango">Chalatenango</option>
+      <option value="La Libertad">La Libertad</option>
+      <option value="San Salvador">San Salvador</option>
+      <option value="Cuscatlán">Cuscatlán</option>
+      <option value="La Paz">La Paz</option>
+      <option value="Cabañas">Cabañas</option>
+      <option value="San Vicente">San Vicente</option>
+      <option value="Usulután">Usulután</option>
+      <option value="San Miguel">San Miguel</option>
+      <option value="Morazán">Morazán</option>
+      <option value="La Unión">La Unión</option>
     </select>
+    <br><br>
 
-
-    <label>Formación académica:</label>
+    <label class="required main-label">Formación académica:</label>
     <div class="radio-group">
-      <label><input type="radio" name="estudios"> Primaria</label>
-      <label><input type="radio" name="estudios"> Secundaria</label>
-      <label><input type="radio" name="estudios"> Universidad</label>
+      <label><input type="radio" name="estudios" value="Primaria" required> Primaria</label>
+      <label><input type="radio" name="estudios" value="Secundaria"> Secundaria</label>
+      <label><input type="radio" name="estudios" value="Pasante universitario"> Pasante universitario</label>
+      <label><input type="radio" name="estudios" value="Universidad completa"> Universidad completa</label>
+      <label><input type="radio" name="estudios" value="Pasante maestria"> Pasante maestría</label>
+      <label><input type="radio" name="estudios" value="Maestria completa"> Maestría completa</label>
     </div>
+    <br>
 
-    <label>Título obtenido:</label>
-    <input type="text">
+    <label class="required">Título obtenido:</label>
+    <input type="text" name="titulo" required>
+    <br><br>
 
-    <label>Manejo del idioma inglés:</label>
+    <label class="required main-label">Manejo del idioma inglés:</label>
     <div class="radio-group">
-      <label><input type="radio" name="ingles"> Basico</label>
-      <label><input type="radio" name="ingles"> Intermedio</label>
-      <label><input type="radio" name="ingles"> Avanzado</label>
+      <label><input type="radio" name="ingles" value="Basico" required> Básico</label>
+      <label><input type="radio" name="ingles" value="Intermedio"> Intermedio</label>
+      <label><input type="radio" name="ingles" value="Avanzado"> Avanzado</label>
     </div>
+    <br>
 
-    <label>Posición a la que aplica:</label>
-    <input type="text">
+    <label class="required">Posición a la que aplica:</label>
+    <input type="text" name="posicion" required>
+    <br><br>
 
-    <label>Años en puestos similares:</label>
-    <input type="number">
-
-    <label>¿Tiene transporte propio?</label>
+    <label class="required main-label">Años en puestos similares:</label>
     <div class="radio-group">
-      <label><input type="radio" name="transporte"> Sí</label>
-      <label><input type="radio" name="transporte"> No</label>
+      <label><input type="radio" name="experiencia" value="Sin experiencia" required> Sin experiencia</label>
+      <label><input type="radio" name="experiencia" value="0-6 meses"> 0 - 6 meses</label>
+      <label><input type="radio" name="experiencia" value="6 meses - 1 año"> 6 meses - 1 año</label>
+      <label><input type="radio" name="experiencia" value="1 - 3 años"> 1 - 3 años</label>
+      <label><input type="radio" name="experiencia" value="3 - 5 años"> 3 - 5 años</label>
+      <label><input type="radio" name="experiencia" value="Más de 5 años"> Más de 5 años</label>
     </div>
+    <br>
 
-    <label>¿Ha jugado nuestros juegos?</label>
+    <label class="required main-label">¿Tiene transporte propio?</label>
     <div class="radio-group">
-      <label><input type="radio" name="juegos"> Sí</label>
-      <label><input type="radio" name="juegos"> No</label>
+      <label><input type="radio" name="transporte" value="Sí" required> Sí</label>
+      <label><input type="radio" name="transporte" value="No"> No</label>
     </div>
+    <br>
 
-    <label>¿Cuál es tu experiencia salarial?</label>
-    <input type="text">
+    <label class="required main-label">¿Ha jugado nuestros juegos?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="juegos" value="Sí" required> Sí</label>
+      <label><input type="radio" name="juegos" value="No"> No</label>
+    </div>
+    <br>
 
-    <!-- BOTÓN SUBIR CV -->
-<label>Cargar CV:</label>
-<input type="file" class="btn-cv">
+    <label class="required">¿Cuál es tu experiencia salarial?</label>
+    <input type="text" name="salario" required>
+    <br><br>
 
-<!-- BOTÓN ENVIAR -->
-<button type="submit" class="btn-submit">Enviar información</button>
-
-
+    <button type="submit" class="btn-submit">Enviar información</button>
   </form>
 
 </div>
+
+
+<script>
+  const alertBox = document.getElementById('alert-success');
+
+  if (alertBox) {
+    setTimeout(() => {
+      alertBox.style.transition = 'opacity 0.5s ease';
+      alertBox.style.opacity = '0';
+      setTimeout(() => alertBox.remove(), 500);
+    }, 5000); // desaparece después de 5 segundos
+  }
+
+if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+  }
+ 
+</script>
 
 </body>
 </html>

@@ -4,370 +4,414 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Noticias</title>
+
 <style>
-/* Contenedor general */
-.container-general {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  font-family: Arial, sans-serif;
-}
-
-/* Rectángulo azul del título */
-
-/* RECTÁNGULO AZUL */
-/* RECTÁNGULO AZUL AJUSTADO */
-/* RECTÁNGULO AZUL — 2 CM MÁS LARGO A CADA LADO */
-.titulo-noticias {
-  background: #a6d1f8;
-  padding: 80px 40px 45px 40px; /* altura correcta */
-  border-radius: 0 0 14px 14px;
-  text-align: center;
-  margin-bottom: 60px;
-
-  margin-left: -2cm;   /* ← Se alarga hacia la izquierda */
-  margin-right: -2cm;  /* ← Se alarga hacia la derecha */
+@font-face {
+  font-family: 'HelveticaRounded';
+  src: url('fonts/HelveticaRoundedLTStd-Bd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
-/* TEXTO NOTICIAS RECIENTES */
-.titulo-noticias h1 {
-  color: #ffffff;
-  font-size: 45px;
-  font-weight: 900;
-  margin-top: 25px; /* BAJADO */
-  letter-spacing: 2px;
+*{
+  font-family:'HelveticaRounded',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'HelveticaRounded', sans-serif;
 }
 
 
-/* Contenedor horizontal noticia principal */
-.noticia-principal-container {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 50px;
+/* ================= CONTENEDOR ================= */
+.container-general{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
 }
 
-.noticia-principal-container img {
-  width: 50%;
-  object-fit: cover;
-  border-radius: 12px;
+/* ================= TITULO ================= */
+/* TITULO NOTICIAS */
+.titulo-noticias{
+  background:#a6d1f8;
+  padding:80px 40px 45px;   /* superior, lateral, inferior */
+  border-radius:0 0 14px 14px;
+  text-align:center;
+  margin:0 -2cm 70px;      /* margen negativo lateral */
 }
 
-/* CONTENEDOR PRINCIPAL */
+.titulo-noticias h1{
+  color:#fff;
+  font-size:45px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+  .titulo-noticias{
+    padding:60px 20px 35px;  /* menos padding para móviles */
+    margin:0 -10px 50px;     /* ajustar margen lateral negativo */
+  }
+
+  .titulo-noticias h1{
+    font-size:28px;          /* título más pequeño en móvil */
+  }
+}
+
+@media (max-width:480px){
+  .titulo-noticias{
+    padding:50px 15px 30px;  /* aún más compacto en pantallas muy pequeñas */
+    margin:0 -5px 40px;
+  }
+
+  .titulo-noticias h1{
+    font-size:24px;          /* tamaño legible en móviles pequeños */
+  }
+}
+
+
+/* ================= NOTICIA PRINCIPAL ================= */
+/* ================= NOTICIA PRINCIPAL ================= */
+.noticia-principal-container{
+  display: inline-block; /* permite que el contenido absoluto funcione */
+  gap: 30px; /* espacio entre imagen y texto */
+  align-items: flex-start;
+  margin-bottom:90px;
+  flex-wrap: wrap; /* para que en móvil se acomode vertical */
+  position: relative; /* Contenedor padre relativo */
+  
+}
+
+.noticia-principal-container img{
+  width: 55%; /* ahora más pequeña y menos ancha */
+  height: auto;
+  object-fit: cover; /* recorta pero mantiene proporción */
+  border-radius:16px;
+  display: block;
+}
+
 .noticia-principal-contenido {
-  width: 50%;
-  background: #ffffff;
-  padding:  30px 35px;   /* menos padding para compactar */
+  position: absolute; /* lo ponemos encima de la imagen */
+  bottom: 20px;       /* distancia desde abajo */
+  left: 500px;         /* distancia desde la izquierda */
+  background: rgba(255, 255, 255, 0.9); /* semitransparente para ver la foto detrás */
+  padding: 40px 28px; /* ↑↓ más alto */
   border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* contenido arriba */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  margin-top: 20px;   /* ← mueve el contenedor hacia abajo */
-  margin-left: -2cm;  
-  position: relative;
-  z-index: 3;
-
-  max-height: 335px;  /* altura máxima fija */
-  overflow: hidden;   /* recorta el exceso si es necesario */
+  max-width: 60%;     /* ajusta el tamaño del rectángulo */
+  z-index: 10;        /* se asegura que quede encima de la imagen */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  min-height: 400px;   /* ← esto lo hace más alto sí o sí */
 }
 
-
-/* FECHA ARRIBA – MÁS GRANDE */
-.noticia-principal-contenido .fecha {
-  font-size: 17px;
-  color: #444;
-  margin-bottom: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
+.noticia-principal-contenido .fecha{
+  font-size:17px;
+  font-weight:700;
+  color:#444;
 }
 
-
-/* TITULO PRINCIPAL MÁS GRANDE */
-.noticia-principal-contenido h2 {
-  color: #ff6600;
-  font-size: 32px;
-  margin: 12px 0;
-  font-weight: 900;
-  text-transform: uppercase; /* opcional si lo querés así */
-  line-height: 1.2;
+.noticia-principal-contenido h2{
+  color:#ff6600;
+  font-size:32px;
+  margin:12px 0;
+  font-weight:900;
 }
 
-/* DESCRIPCIÓN: MAYÚSCULAS + SEMIBOLD + MÁS INFORMACIÓN */
-.noticia-principal-contenido p {
-  color: #333;
-  font-size: 15px;
-  margin-top: 12px;
-  text-transform: uppercase;   /* MAYÚSCULAS */
-  font-weight: 600;            /* SEMIBOLD */
-  line-height: 1.6;
+.noticia-principal-contenido p{
+  font-size:15px;
+  line-height:1.6;
+  color:#444;
 }
 
+/* BOTÓN AZUL ORIGINAL */
+.btn-leer{
+  display:inline-block;
+  margin-top:10px;
+  padding:6px 14px;
+  font-size:13px;
+  font-weight:700;
 
-/* BOTÓN PEQUEÑO Y MODERNO */
-.noticia-principal-contenido .btn-leer {
-  display: inline-block;
-  background: #0077e6;
-  color: #fff;
-  padding: 5px 16px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 12px;   /* más pequeño */
-  margin-top: 18px;
-  font-weight: 700;
-  letter-spacing: .6px;
-  transition: 0.2s ease-in-out;
+  background:#1a73e8;
+  color:#fff;
+  border-radius:18px;
+  text-decoration:none;
+  transition:background .2s ease;
 }
 
-.noticia-principal-contenido .btn-leer:hover {
-  background: #005bb5;
-  transform: translateY(-2px);
+.btn-leer:hover{
+  background:#1558b0;
 }
 
-
-
-/* DESCRIPCIÓN PRINCIPAL */
-.noticia-principal-contenido p {
-  color: #333;
-  font-size: 15px;
-  margin-top: 10px;
-  text-transform: uppercase;       /* MAYÚSCULAS */
-  font-weight: 600;                /* SEMIBOLD */
-  line-height: 1.6;
+/* ================= GRID ================= */
+.grid-noticias-wrapper{
+  background:#fff;
+  padding:30px 20px;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* BOTÓN MODERNO PEQUEÑO */
-.noticia-principal-contenido .btn-leer {
-  display: inline-block;        /* que solo ocupe lo que necesita */
-  width: auto;                  /* asegura que no se estire al ancho del contenedor */
-  max-width: 120px;             /* opcional: limita su tamaño máximo */
-  text-align: center;           /* centra el texto dentro del botón */
-  background: #0077e6;
-  color: #fff;
-  padding: 6px 14px;            /* tamaño cómodo */
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+.grid-noticias{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  transform:translateY(-70px);
 }
 
-.noticia-principal-contenido .btn-leer:hover {
-  background: #005bb5;
-  transform: translateY(-2px);
+/* ================= CARD ================= */
+.card-noticia{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  display:flex;
+  flex-direction:column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card-noticia:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
 }
 
-
-
-/* Grid de noticias dentro de un container */
-.grid-noticias-wrapper {
-  background: #ffffff;                /* fondo blanco */
-  padding: 30px 20px;                 /* espacio interno */
-  border-radius: 16px;                /* bordes redondeados */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* sombra suave */
-  margin-bottom: 50px;                /* separación del botón final */
-}
-
-.grid-noticias-container {
-  padding: 20px;
-}
-
-.grid-noticias {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  transform: translateY(-75px); /* ← sube las cards 1 cm aproximadamente */
-}
-
-/* Card noticias */
-.card-noticia {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card-noticia:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.card-noticia img {
+.card-noticia img{
   width: 100%;
-  height: auto;        /* mantiene la proporción y evita pixelado */
-  object-fit: cover;   /* corta partes de la imagen pero llena el contenedor */
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 12px;
+
+  image-rendering: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 
-.card-noticia .fecha {
-  font-size: 12px;
-  color: #777;
-  padding: 8px 12px 0;
+
+.card-noticia .fecha{
+  font-size:12px;
+  color:#777;
+  padding:8px 12px 0;
 }
 
-.card-noticia h3 {
-  font-size: 14px;
-  color: #ff6600;
-  margin: 4px 12px;
-  font-weight: 700;
+.card-noticia h3{
+  font-size:15px;
+  color:#ff6600;
+  margin:4px 12px;
+  font-weight:700;
+  line-height:1.4;
 }
 
-.card-noticia p {
-  font-size: 13px;
-  color: #444;
-  margin: 0 12px 10px;
+/* TEXTO 2 LÍNEAS */
+.card-noticia .contenido{
+  font-size:13px;
+  color:#444;
+  margin:0 12px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;   /* SOLO 2 LÍNEAS */
+  overflow: hidden;
+
+  line-height: 1.5;
+  max-height: calc(1.5em * 2); /* respaldo */
+  transition: max-height .3s ease;
 }
 
-.card-noticia .btn-leer {
-  display: inline-block;
-  background: #0066cc;
-  color: #fff;
-  padding: 4px 12px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 12px;
-  margin: 0 12px 12px;
-  font-weight: bold;
+.card-noticia .contenido.expandido{
+  -webkit-line-clamp: unset;
+  max-height: 1000px; /* suficiente para todo el texto */
 }
 
-/* Botón final naranja */
-.btn-ver-mas {
-  text-align: center;
-  margin: -60px 0 30px 0; /* ← negativo arriba para subir el botón */
+
+
+.card-noticia .btn-leer{
+  align-self: flex-start;     /* evita que se estire */
+  margin: 16px 12px 14px;     /* separa del texto */
+  padding: 5px 12px;          /* botón más corto */
+  font-size: 12px;            /* más discreto */
+  border-radius: 14px;
+  transition: all .2s ease;
 }
 
-.btn-ver-mas a {
-  background: #ff8000;
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 20px;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
+.card-noticia .btn-leer:hover{
+  background:#1558b0;
+  transform: translateX(3px);
 }
 
-.btn-ver-mas a:hover {
-  background: #e67300;
-}
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .noticia-principal-container {
-    flex-direction: column;
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1024px){
+  .grid-noticias{
+    grid-template-columns:repeat(2,1fr);
   }
-  .noticia-principal-container img,
-  .noticia-principal-contenido {
+}
+
+@media(max-width:600px){
+  .grid-noticias{
+    grid-template-columns:1fr;
+  }
+
+  .noticia-principal-contenido{
+    margin:-40px 10px 0;
+  }
+}
+
+@media(max-width:768px){
+  .noticia-principal-container img{
     width: 100%;
-    margin-bottom: 15px;
+  }
+
+  .noticia-principal-contenido{
+    position: static;
+    margin-top: -50px;
+    max-width: 100%;
+    min-height: auto;
   }
 }
 
-@media (max-width: 600px) {
-  .grid-noticias {
-    grid-template-columns: 1fr;
+
+/* Solo para celulares: bajar el container azul */
+@media (max-width: 767px) {
+  .titulo-noticias {
+    margin-top: 270px; /* Ajusta este valor para que quede visualmente bien */
   }
 }
+
+
 </style>
 </head>
+
 <body>
 
 <div class="container-general">
 
-  <!-- Rectángulo azul con título -->
-  <section class="titulo-noticias">
-    <h1>NOTICIAS RECIENTES</h1>
-  </section>
+<section class="titulo-noticias">
+  <h1>NOTICIAS RECIENTES</h1>
+</section>
 
-  <!-- Noticia principal -->
-  <section class="noticia-principal-container">
-    <img src="/ImagesSV/primer_ganador.webp" alt="Primer ganador">
-    <div class="noticia-principal-contenido">
-      <p class="fecha">AGO 22, 2025</p>
-      <h2>Primer ganador con un premio espectacular</h2>
-      <p>Celebración inolvidable del primer ganador de la promoción. Una experiencia llena de emoción, premios y alegría,<br>
-      El ganador recibió un premio espectacular frente a todos los participantes, generando momentos de sorpresa y felicidad.</p>
-      
-      
-
-      <a href="#" class="btn-leer">Leer más</a>
-    </div>
-  </section>
-
-  <!-- Grid de 8 noticias -->
-  <!-- Contenedor blanco para el grid de noticias -->
-<section class="grid-noticias-wrapper">
-  <div class="grid-noticias-container">
-    <div class="grid-noticias">
-      <article class="card-noticia">
-        <img src="ImagesSV/crecer.webp">
-        <p class="fecha">AGO 14, 2025</p>
-        <h3>Creciendo con nuestra comunidad</h3>
-        <p>Seguimos llevando diversión y premios a todo el país.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </article>
-      <article class="card-noticia">
-        <img src="ImagesSV/noticia3.webp">
-        <p class="fecha">AGO 13, 2025</p>
-        <h3>Evento masivo con gran asistencia</h3>
-        <p>Una noche llena de música, juegos y premios.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </article>
-      <article class="card-noticia">
-        <img src="ImagesSV/fiesta1sv.webp">
-        <p class="fecha">DIC 20, 2024</p>
-        <h3>Fiesta navideña inolvidable</h3>
-        <p>Compartimos alegría con toda la comunidad.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </article>
-      <article class="card-noticia">
-        <img src="ImagesSV/fiesta1sv.webp">
-        <p class="fecha">DIC 18, 2024</p>
-        <h3>Gran celebración regional</h3>
-        <p>Tarde llena de actividades y diversión familiar.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </article>
-      <article class="card-noticia">
-        <img src="ImagesSV/juegossv.webp">
-        <p class="fecha">NOV 25, 2024</p>
-        <h3>Juegos, premios y emoción</h3>
-        <p>Conectando con nuestros jugadores como nunca.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </article>
-      <article class="card-noticia">
-        <img src="ImagesSV/noticia2.webp">
-        <p class="fecha">NOV 20, 2024</p>
-        <h3>Diversión total en SPS</h3>
-        <p>El público disfrutó al máximo el gran evento.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </article>
-      <article class="card-noticia">
-        <img src="ImagesSV/crecer.webp">
-        <p class="fecha">AGO 14, 2025</p>
-        <h3>Creciendo con nuestra comunidad</h3>
-        <p>Seguimos llevando diversión y premios a todo el país.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </article>
-      <article class="card-noticia">
-        <img src="ImagesSV/noticia3.webp">
-        <p class="fecha">AGO 13, 2025</p>
-        <h3>Evento masivo con gran asistencia</h3>
-        <p>Una noche llena de música, juegos y premios.</p>
-        <a href="#" class="btn-leer">Leer más</a>
-      </article>
-    </div>
+<section class="noticia-principal-container">
+  <img src="/ImagesSV/apostemossv.jpeg" alt="">
+  <div class="noticia-principal-contenido">
+    <p class="fecha">OCT 10, 2025</p>
+    <h2>Apostemos se prepara para un 2026 lleno de sorpresas</h2>
+    <p>EL 2026 SERÁ UN AÑO HISTÓRICO PARA LOS FANÁTICOS DEL DEPORTE, Y EN APOSTEMOS ESTAMOS LISTOS PARA VIVIRLO A LO GRANDE. CON LA LLEGADA DEL MUNDIAL, NUESTRA PLATAFORMA SE PREPARA 
+      PARA OFRECER NUEVAS EXPERIENCIAS, PROMOCIONES ESPECIALES Y DINÁMICAS EXCLUSIVAS PENSADAS PARA QUE CADA PARTIDO SE DISFRUTE AL MÁXIMO.</p>
   </div>
 </section>
 
+<section class="grid-noticias-wrapper">
+<div class="grid-noticias">
 
-  <!-- Botón final naranja -->
-  <div class="btn-ver-mas">
-    <a href="#">Ver noticias anteriores</a>
-  </div>
+<!-- 1 -->
+<article class="card-noticia">
+<img src="ImagesSV/tiendas-pronto.png">
+<p class="fecha">ENE 20, 2026</p>
+<h3>UNO Pronto y Loto El Salvador Fortalecen su Alianza</h3>
+<p class="contenido">La alianza estratégica entre UNO Pronto y Loto El Salvador continúa creciendo con la apertura de 12 nuevos Puntos de Venta, alcanzando un total de 25
+   establecimientos a nivel nacional. Esta expansión refuerza el compromiso de ambas marcas por acercar sus servicios a más salvadoreños y ofrecer una experiencia más completa 
+   y accesible.</p>
+<a href="#" class="btn-leer">Leer más</a>
+</article>
+
+<!-- 2 -->
+<article class="card-noticia">
+<img src="ImagesSV/TIFFANY FONDO-02.png">
+<p class="fecha">ENE 15, 2025</p>
+<h3>Crecemos Contigo Desde el Primer Día</h3>
+<p class="contenido">Desde el inicio de nuestras operaciones en El Salvador, en Loto hemos avanzado de la mano de nuestro equipo,
+   impulsando el talento interno y creando oportunidades reales de desarrollo profesional. Nuestro crecimiento ha sido posible gracias 
+   a las personas que forman parte de nuestra organización, y por eso apostamos constantemente por su bienestar y evolución.</p>
+<a href="#" class="btn-leer">Leer más</a>
+</article>
+
+<!-- 3 -->
+<article class="card-noticia">
+<img src="ImagesSV/shared image (6).jpg">
+<p class="fecha">DIC 15, 2025</p>
+<h3>Loto Consolida la Red de Venta</h3>
+<p class="contenido">Loto continúa fortaleciendo su presencia en El Salvador, consolidándose como la red de venta y pago de premios más amplia del territorio nacional. 
+  Actualmente, la marca está disponible en 1,800 Puntos de Venta distribuidos estratégicamente a través de tiendas tradicionales, kioskos, farmacias, tiendas de conveniencia
+   y vendedores ambulantes.</p>
+<a href="#" class="btn-leer">Leer más</a>
+</article>
+
+<!-- 4 -->
+<article class="card-noticia">
+<img src="ImagesSV/2 (2) (1).jpg">
+<p class="fecha">ENE 5, 2025</p>
+<h3>Apostemos iGaming</h3>
+<p class="contenido">Apostemos iGaming es nuestra plataforma de entretenimiento digital que reúne una amplia variedad de juegos y experiencias interactivas,
+   permitiendo a los usuarios disfrutar múltiples opciones desde un solo lugar. Diseñada para ofrecer diversión, accesibilidad y dinamismo, integra lo mejor
+    del entretenimiento online en un entorno seguro, intuitivo y siempre disponible.</p>
+<a href="#" class="btn-leer">Leer más</a>
+</article>
+
+<!-- 5 -->
+<article class="card-noticia">
+<img src="ImagesSV/WhatsApp Image 2026-01-15 at 10.17.37 AM.jpeg">
+<p class="fecha">DIC 5, 2025</p>
+<h3>Loto Expande su Presencia</h3>
+<p class="contenido">Loto continúa fortaleciendo su estrategia de cercanía y accesibilidad
+   con la apertura de tres nuevos puntos de venta propios, ampliando su presencia en zonas 
+   clave del país y facilitando el acceso de más jugadores a sus productos y servicios.</p>
+<a href="#" class="btn-leer">Leer más</a>
+</article>
+
+<!-- 6 -->
+<article class="card-noticia">
+<img src="ImagesSV/Lluvia de Aguinaldos - Ganadores.jpg">
+<p class="fecha">ENE 5, 2026</p>
+<h3>Lluvia de Aguinaldos</h3>
+<p class="contenido">¿En qué consistió la promoción?
+Para participar, solo había que jugar cualquiera de los juegos Diaria, Instacash, 
+SuperPremio con una inversión mínima de $3. Cada jugada era una oportunidad para 
+convertirse en uno de los ganadores diarios de $1,000.</p>
+<a href="#" class="btn-leer">Leer más</a>
+</article>
+
+<!-- 7 -->
+<article class="card-noticia">
+<img src="ImagesSV/noticia.png">
+<p class="fecha">DIC 1, 2025</p>
+<h3>1.8 millones entregados</h3>
+<p class="contenido">Desde el día uno, nuestra promesa y compromiso fue cambiar vidas en El Salvador y 
+esto se ha logrado a través de cada uno de los salvadoreños que confían en la variedad 
+de los juegos que les presentamos para poder ganar y aportar su granito de arena a las 
+comunidades más vulnerables de El Salvador</p>
+<a href="#" class="btn-leer">Leer más</a>
+</article>
+
+<!-- 8 -->
+<article class="card-noticia">
+<img src="ImagesSV/777ws.png">
+<p class="fecha">ENE 19, 2026</p>
+<h3>¡Llegó SIETES para ganar hasta $7,777 al instante!</h3>
+<p class="contenido">¿Sos de los que le encanta la adrenalina de ganar al instante? SIETES, el nuevo juego 
+de InstaCash se encuentra disponible en todos los puntos de venta para que vivas esa 
+emoción</p>
+<a href="#" class="btn-leer">Leer más</a>
+</article>
 
 </div>
+</section>
+<br>
+<br>
+</div>
+
+<script>
+document.querySelectorAll('.card-noticia .btn-leer').forEach(btn=>{
+  btn.addEventListener('click',e=>{
+    e.preventDefault();
+    const card=btn.closest('.card-noticia');
+    const texto=card.querySelector('.contenido');
+    texto.classList.toggle('expandido');
+    btn.textContent=texto.classList.contains('expandido')?'Leer menos':'Leer más';
+  });
+});
+</script>
 
 </body>
 </html>

@@ -32,6 +32,12 @@ switch ($pag) {
     case 'sobre_nosotros':
         include 'sobre_nosotros.php';
     break;
+    case 'instacash':
+        include 'instacash.php';
+    break;
+    case 'super_premio':
+        include 'super_premio.php';
+    break;
 
     default:
         include 'includes/body.php';

@@ -1,3 +1,120 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+$mensajeExito = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    // Recibir los datos del formulario
+    $Nombre = $_POST['Nombre'] ?? null;
+    $Apellidos = $_POST['Apellidos'] ?? null;
+    $Identidad = $_POST['Identidad'] ?? null;
+    $Telefono = $_POST['Telefono'] ?? null;
+    $Correo = $_POST['Correo'] ?? null;
+
+    $Negocio = $_POST['Negocio'] ?? null;
+    $Direccion = $_POST['Direccion'] ?? null;
+    $TipoNegocio = $_POST['TipoNegocio'] ?? null;
+    $Departamento = $_POST['Departamento'] ?? null;
+    $Ciudad = $_POST['Ciudad'] ?? null;
+    $Municipio = $_POST['Municipio'] ?? null;
+    $Barrio = $_POST['Barrio'] ?? null;
+
+    // Si tienes foto como URL o base64
+   $FotoNegocio = null;
+
+if (!empty($_FILES['FotoNegocio']['tmp_name'])) {
+
+    $extension = pathinfo($_FILES['FotoNegocio']['name'], PATHINFO_EXTENSION);
+    $nombreArchivo = uniqid("negocio_") . "." . $extension;
+
+    // Ruta física donde se guarda el archivo
+    $rutaDestino = "ImagesSV/uploads/agentes/" . $nombreArchivo;
+
+    move_uploaded_file($_FILES['FotoNegocio']['tmp_name'], $rutaDestino);
+
+    // Esto es lo que se guarda en la BD y se envía a la Logic App
+    $FotoNegocio = $rutaDestino;
+}
+
+    try {
+        //  Guardar en SQL Server
+        $conn = new PDO(
+            "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+            "LotoAdmin",
+            "LotAdmin1.",
+            [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+        );
+
+        $sql = "INSERT INTO quiero_ser_agente_sv 
+                (Nombre, Apellidos, Identidad, Telefono, Correo, Negocio, Direccion, TipoNegocio, Departamento, Ciudad, Municipio, Barrio, FotoNegocio)
+                VALUES 
+                (:Nombre, :Apellidos, :Identidad, :Telefono, :Correo, :Negocio, :Direccion, :TipoNegocio, :Departamento, :Ciudad, :Municipio, :Barrio, :FotoNegocio)";
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->execute([
+            ':Nombre' => $Nombre,
+            ':Apellidos' => $Apellidos,
+            ':Identidad' => $Identidad,
+            ':Telefono' => $Telefono,
+            ':Correo' => $Correo,
+            ':Negocio' => $Negocio,
+            ':Direccion' => $Direccion,
+            ':TipoNegocio' => $TipoNegocio,
+            ':Departamento' => $Departamento,
+            ':Ciudad' => $Ciudad,
+            ':Municipio' => $Municipio,
+            ':Barrio' => $Barrio,
+            ':FotoNegocio' => $FotoNegocio
+        ]);
+
+        //  Enviar los datos a Logic App
+        $logicAppUrl = "https://prod-21.canadacentral.logic.azure.com:443/workflows/35394d22c95147bd8fa955926a9b5ff2/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=d9Eo7PIHW2ELfGPfd-OHWzlQEy8KeKYY6uZOEJH5CGo";
+
+        $data = [
+            "Nombre" => $Nombre,
+            "Apellidos" => $Apellidos,
+            "Identidad" => $Identidad,
+            "Telefono" => $Telefono,
+            "Correo" => $Correo,
+            "Negocio" => $Negocio,
+            "Direccion" => $Direccion,
+            "TipoNegocio" => $TipoNegocio,
+            "Departamento" => $Departamento,
+            "Ciudad" => $Ciudad,
+            "Municipio" => $Municipio,
+            "Barrio" => $Barrio,
+            "FotoNegocio" => $FotoNegocio
+        ];
+
+        $ch = curl_init($logicAppUrl);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($httpCode >= 200 && $httpCode < 300) {
+            $mensajeExito = "✅ Formulario enviado correctamente y Logic App ejecutada.";
+        } else {
+            $mensajeExito = "⚠️ Formulario guardado, pero hubo un problema enviando la Logic App. HTTP code: $httpCode";
+        }
+
+    } catch (PDOException $e) {
+        $mensajeExito = "❌ Error al guardar en SQL: " . $e->getMessage();
+    }
+}
+
+echo $mensajeExito;
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,13 +123,14 @@
 <title>Formulario Vendedor</title>
 <style>
   body {
-    font-family: "Segoe UI", sans-serif;
-    margin: 0;
-    padding: 0;
-    background: white;
-    color: #333;
-    text-align: center;
-  }
+  font-family: 'HelveticaRounded', sans-serif; /* Aplicar la fuente personalizada */
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #333;
+  text-align: center;
+}
+
 
   /* ===== HERO ===== */
   .hero {
@@ -43,6 +161,9 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    position: relative;   /* habilita z-index */
+  z-index: 10;          /* lo trae al frente */
+  margin-top: -50px;   /* lo sube encima del hero */
   }
 
   /* ===== REQUISITOS ===== */
@@ -63,7 +184,7 @@
     left: 0;
     font-size: 12px;
   }
-  .requisitos img { max-width: 150px; border-radius: 12px; }
+  .requisitos img { max-width: 200px; border-radius: 12px; }
 
   /* ===== FORMULARIO ===== */
   .form-container {
@@ -195,7 +316,7 @@
   <div class="hero-content">
     <img src="ImagesSV/Abigail.png" alt="Modelo Abigail" class="hero-img">
     <div class="hero-text-container">
-      <img src="ImagesSV/equipoganador.png" alt="Equipo Ganador" class="hero-text-img">
+      <img src="ImagesSV/Quiero ser agente loto (1).png" alt="Equipo Ganador" class="hero-text-img">
       <p class="hero-subtitle">
         <span style="font-size:28px; font-weight:700;">JUNTOS MAXIMIZAMOS TUS VENTAS</span><br>
         <span style="font-size:28px; font-weight:700;">E INGRESOS PARA TU NEGOCIO</span>
@@ -212,11 +333,13 @@
     <h2 class="requisitos-title">REQUISITOS</h2>
     <div class="requisitos">
       <ul>
-        <li>POSEER UN NEGOCIO ACTIVO</li>
-        <li>CONTAR CON RTN NUMERICO E IDENTIDAD VIGENTE</li>
-        <li>RECIBO PUBLICO (ENERGIA ELECTRICA)</li>
-        <li>CUENTA BANCARIA VIGENTE A NOMBRE DEL PROPIETARIO</li>
-        <li>DEPOSITO EN GARANTIA</li>
+        <li>NEGOCIO O PERSONA NATURAL.</li>
+        <li>CONTAR CON NÚMERO DE DUI HOMOLOGADO.</li>
+        <li>UBICACIÓN EN ZONAS DE ALTO TRÁFICO.</li>
+        <li>GRAN AFLUENCIA DE CLIENTES EN EL NEGOCIO.</li>
+        <li>ESPACIO EN PRIMERA POSICIÓN PARA PONER LA TERMINAL DE VENTA.</li>
+        <li>DESIGNAR ESPACIO PARA PUBLICIDAD.</li>
+        <li>FIRMA DE CONTRATO.</li>
       </ul>
       <img src="ImagesSV/Imagen requisitos.png" alt="Ilustración Requisitos">
     </div>
@@ -224,52 +347,70 @@
 
   <!-- FORMULARIO -->
   <section class="form-container">
-    <h2 class="form-section-title">Ingresar información del propietario del negocio</h2>
-    <div class="form-grid">
-      <div class="form-group"><label>Nombre</label><input type="text" placeholder="Nombre"></div>
-      <div class="form-group"><label>Apellidos</label><input type="text" placeholder="Apellidos"></div>
-      <div class="form-group"><label>Número de Identidad</label><input type="text" placeholder="Número de Identidad"></div>
-      <div class="form-group"><label>Teléfono</label><input type="tel" placeholder="Teléfono"></div>
-      <div class="form-group"><label>Correo Electrónico</label><input type="email" placeholder="Correo Electrónico"></div>
-    </div>
+    <form method="POST" action="" enctype="multipart/form-data">
 
-    <h2 class="form-section-title">Ingresar información del negocio</h2>
-    <div class="form-grid">
-      <div class="form-group"><label>Nombre del negocio</label><input type="text" placeholder="Nombre del negocio"></div>
-      <div class="form-group"><label>Dirección actual del negocio</label><input type="text" placeholder="Dirección del negocio"></div>
-      <div class="form-group"><label>Tipo de negocio</label>
-        <select>
-          <option>Pulpería</option>
-          <option>Mercadito</option>
-          <option>Farmacia</option>
-        </select>
+      <h2 class="form-section-title">Ingresar información del propietario del negocio</h2>
+      <div class="form-grid">
+        <div class="form-group"><label>Nombre</label><input type="text" name="Nombre" placeholder="Nombre" required></div>
+        <div class="form-group"><label>Apellidos</label><input type="text" name="Apellidos" placeholder="Apellidos" required></div>
+        <div class="form-group"><label>Número de Identidad</label><input type="text" name="Identidad" placeholder="Número de Identidad" required></div>
+        <div class="form-group"><label>Teléfono</label><input type="tel" name="Telefono" placeholder="Teléfono" required></div>
+        <div class="form-group"><label>Correo Electrónico</label><input type="email" name="Correo" placeholder="Correo Electrónico" required></div>
       </div>
-      <div class="form-group file-upload"><label>Sube la foto de tu negocio</label><input type="file" accept="image/*"></div>
-      <div class="form-group"><label>Departamento</label>
-        <select id="departamento">
-          <option value="">Seleccione Departamento</option>
-          <option>Francisco Morazán</option>
-          <option>Cortés</option>
-          <option>Atlántida</option>
-          <option>...</option>
-        </select>
+
+      <h2 class="form-section-title">Ingresar información del negocio</h2>
+      <div class="form-grid">
+        <div class="form-group"><label>Nombre del negocio</label><input type="text" name="Negocio" placeholder="Nombre del negocio" required></div>
+        <div class="form-group"><label>Dirección actual del negocio</label><input type="text" name="Direccion" placeholder="Dirección del negocio" required></div>
+        <div class="form-group"><label>Tipo de negocio</label>
+          <select name="TipoNegocio" required>
+            <option value="">Seleccione</option>
+            <option value="Tienda">Tienda</option>
+            <option value="Mercadito">Mercadito</option>
+            <option value="Farmacia">Farmacia</option>
+          </select>
+        </div>
+        <input type="file" name="FotoNegocio" accept="image/*" required>
+        <div class="form-group"><label>Departamento</label>
+          <select name="Departamento" required>
+  <option value="">Seleccione Departamento</option>
+  <option value="Ahuachapán">Ahuachapán</option>
+  <option value="Cabañas">Cabañas</option>
+  <option value="Chalatenango">Chalatenango</option>
+  <option value="Cuscatlán">Cuscatlán</option>
+  <option value="La Libertad">La Libertad</option>
+  <option value="La Paz">La Paz</option>
+  <option value="La Unión">La Unión</option>
+  <option value="Morazán">Morazán</option>
+  <option value="San Miguel">San Miguel</option>
+  <option value="San Salvador">San Salvador</option>
+  <option value="San Vicente">San Vicente</option>
+  <option value="Santa Ana">Santa Ana</option>
+  <option value="Sonsonate">Sonsonate</option>
+  <option value="Usulután">Usulután</option>
+</select>
+
+        </div>
+        <div class="form-group"><label>Ciudad</label><input type="text" name="Ciudad" placeholder="Ciudad" required></div>
+        <div class="form-group"><label>Municipio</label><input type="text" name="Municipio" placeholder="Municipio" required></div>
+        <div class="form-group"><label>Barrio / Colonia</label><input type="text" name="Barrio" placeholder="Barrio / Colonia" required></div>
       </div>
-      <div class="form-group"><label>Ciudad</label><input type="text" placeholder="Ciudad"></div>
-      <div class="form-group"><label>Municipio</label><input type="text" placeholder="Municipio"></div>
-      <div class="form-group"><label>Barrio / Colonia</label><input type="text" placeholder="Barrio / Colonia"></div>
-    </div>
-    <button class="btn-submit">Enviar mensaje</button>
+
+      <button type="submit" class="btn-submit">Enviar mensaje</button>
+    </form>
   </section>
 
   <!-- BENEFICIOS -->
   <h2 class="beneficios-title">BENEFICIOS</h2>
   <section class="beneficios-container">
-    <div class="beneficio"><img src="ImagesSV/icono comision.svg"><div class="beneficio-text"><h4>COMISIÓN DIARIA INMEDIATA</h4><p>Recibí comisiones por venta y pago de premios.</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono asesoria.svg"><div class="beneficio-text"><h4>ASESORÍA PERSONALIZADA</h4><p>Asesoría de ventas, reportes contables y capacitación permanente.</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono incentivos.svg"><div class="beneficio-text"><h4>PLANES DE INCENTIVOS</h4><p>Accede a promociones especiales diseñadas para aumentar tus ingresos.</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono trafico.svg"><div class="beneficio-text"><h4>TRÁFICO EN EL NEGOCIO</h4><p>La Loteria Electronica atraera nuevos clientes a tu negocio.</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono publicidad.svg"><div class="beneficio-text"><h4>PUBLICIDAD</h4><p>Recibí material publicitario y apoyo impreso sin ningun costo.</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono ayuda.svg"><div class="beneficio-text"><h4>AYUDA 365 DÍAS</h4><p>Brindamos atención continua todo el año a través de nuestro call center.</p></div></div>
+    <div class="beneficio"><img src="ImagesSV/icono comision.svg"><div class="beneficio-text"><h4>CERO INVERSIÓN Y BAJOS COSTOS OPERATIVOS</h4><p>Olvídate del inventario y vencimiento del
+producto.
+</p></div></div>
+    <div class="beneficio"><img src="ImagesSV/icono asesoria.svg"><div class="beneficio-text"><h4>ASESORÍAS</h4><p>Orientación permanente para el desarrollo de tu negocio para incrementar tus ventas de lotería electrónica por medio de nuestro equipo de Asesores Comerciales</p></div></div>
+    <div class="beneficio"><img src="ImagesSV/icono incentivos.svg"><div class="beneficio-text"><h4>PROMOCIONES</h4><p>Podrás ser parte de nuestras actividades y dinámicas a lo largo del año.</p></div></div>
+    <div class="beneficio"><img src="ImagesSV/icono trafico.svg"><div class="beneficio-text"><h4>AFLUENCIA DE PERSONAS EN TU TIENDA O NEGOCIO</h4><p>Gracias a Loto y sus novedosos juegos, podrás atraer nuevos clientes a tu negocio.</p></div></div>
+    <div class="beneficio"><img src="ImagesSV/icono publicidad.svg"><div class="beneficio-text"><h4>PUBLICIDAD</h4><p>Contarás con publicidad en tu punto de venta para que los clientes te identifiquen como parte de la exclusiva red de vendedores Loto en el país.</p></div></div>
+    <div class="beneficio"><img src="ImagesSV/icono ayuda.svg"><div class="beneficio-text"><h4>ASISTENCIA Y MANTENIMIENTO</h4><p>La instalación y mantenimiento de la terminal es gratuita, así como el abastecimiento de papel para la impresión de boletos.</p></div></div>
   </section>
 
 </div>
