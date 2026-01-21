@@ -380,7 +380,7 @@ echo $mensajeExito;
   }
 
   .hero-img {
-    margin-top: 50px; /* baja SOLO la imagen */
+    margin-top: 150px; /* baja SOLO la imagen */
   }
 }
 
