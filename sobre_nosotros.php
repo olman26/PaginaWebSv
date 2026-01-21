@@ -749,7 +749,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 @media (max-width: 768px) {
     header img {
         position: relative; /* permite moverla dentro del header */
-        top: 200px;          /* ajusta este valor según lo que necesites */
+        top: 80px;          /* ajusta este valor según lo que necesites */
         display: block;
     }
 }
