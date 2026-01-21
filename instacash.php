@@ -87,7 +87,7 @@
 /* ===== FIX HEADER INSTACASH SOLO EN MÓVIL ===== */
 @media (max-width: 767px) {
   .header {
-    padding-top: 230px; /* ajusta si tu menú es más alto */
+    padding-top: 330px; /* ajusta si tu menú es más alto */
   }
 }
 

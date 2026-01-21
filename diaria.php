@@ -512,6 +512,94 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra sutil para el efecto de resaltar */
 }
 
+
+/* ================= FIX HEADER LA DIARIA – SOLO MÓVIL ================= */
+@media (max-width: 768px) {
+
+  /* Header contenedor */
+  .top {
+    padding: 20px 10px;
+  }
+
+  .top-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* LOGO */
+  .top img {
+    width: 220px;
+    max-width: 90%;
+    margin: 0 auto 15px auto;
+  }
+
+  /* Caja de resultados */
+  .ganador-box {
+    margin: 0;
+    text-align: center;
+  }
+
+  .ganador {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* NÚMEROS */
+  .num {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    margin: 0 3px;
+  }
+
+  /* CONTADOR */
+  .etiqueta-hola {
+    font-size: 15px;
+    padding: 6px 12px;
+    margin-top: 10px;
+  }
+
+  /* MENÚ */
+  .menu {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .menu a {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .menu a:first-child,
+  .menu a:last-child {
+    margin: 0;
+  }
+
+  /* RESULTADOS */
+  .resultados {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+
+  .izquierda {
+    align-items: center;
+    text-align: center;
+  }
+
+  .izquierda h2 {
+    font-size: 28px;
+  }
+
+  .label-fecha {
+    margin-left: 0;
+  }
+
+}
+
+
   </style>
 </head>
 

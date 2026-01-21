@@ -61,6 +61,95 @@ body { background:#fff; font-weight:600; }
 .reglamento { text-align:center; margin:40px 0; }
 .reglamento button { background:#b71c1c; color:white; padding:14px 30px; border-radius:30px; border:none; font-weight:bold; font-size:16px; cursor:pointer; transition:0.3s; }
 .reglamento button:hover { background:white; color:#b71c1c; border:2px solid #b71c1c; }
+/* =========================
+   FIX SUPER PREMIO - MÓVIL
+   ========================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .top {
+    padding: 20px 10px;
+  }
+
+  .top-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .top img {
+    width: 220px;       /* logo más pequeño */
+    margin: 0 0 15px 0; /* centrado */
+  }
+
+  .ganador-box {
+    margin: 0;
+  }
+
+  .ganador {
+    font-size: 20px;
+  }
+
+  .num {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+  }
+
+  .etiqueta-hola {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* MENÚ */
+  .menu {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .menu a {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  /* RESULTADOS */
+  .resultados {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .izquierda {
+    align-items: center;
+    text-align: center;
+  }
+
+  .izquierda h2 {
+    font-size: 28px;
+  }
+
+  .label-fecha {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  .derecha .nums {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 150px) {
+  .top img {
+    display: block;
+    width: 220px;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 15px auto;
+  }
+}
+
+
+
 </style>
 </head>
 <body>

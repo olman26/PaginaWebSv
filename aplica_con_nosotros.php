@@ -300,6 +300,58 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   to { opacity: 1; }
 }
 
+/* ===================== FIX BANNER – SOLO MÓVIL ===================== */
+@media (max-width: 768px) {
+
+  /* TÍTULO */
+  .title-main {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  /* BANNER */
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 80px 20px 30px 20px;
+    width: 100%;
+    margin: 0;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  /* IMAGEN */
+  .banner-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 160px;
+    margin-bottom: 15px;
+  }
+
+  /* TEXTO DEL BANNER */
+  .banner-content {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .banner-text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* DESCRIPCIÓN */
+  .banner-description {
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+}
+
+
 </style>
 </head>
 <body>
