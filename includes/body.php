@@ -644,10 +644,21 @@ cargarResultados();
 
 @media (max-width: 768px) {
   #jackpot-num-banner {
-    font-size: 32px !important; /* 👈 tamaño móvil */
+    font-size: 32px !important; /* tamaño móvil */
     left: 55% !important;       /* opcional: lo centra mejor */
   }
 }
+
+@media (max-width: 768px) {
+  #jackpot-num-banner {
+    font-size: 24px !important;   /* MUCHO más pequeño */
+    left: 50% !important;         /* lo centra horizontalmente */
+    transform: translate(-50%, -50%) !important; /* centra perfecto */
+    top: 50% !important;
+    white-space: nowrap;          /* evita que se parta */
+  }
+}
+
 
 
 
