@@ -503,7 +503,7 @@ cargarResultados();
 
   /* Aumentamos espacio entre header y carousel */
   .hero-carousel {
-    margin-top: 120px;
+    margin-top: 250px;
   }
 }
 
