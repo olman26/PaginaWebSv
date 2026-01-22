@@ -768,6 +768,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* altura real de tu header */
+    }
+}
+
+
 
 
 
