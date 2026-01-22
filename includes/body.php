@@ -784,6 +784,18 @@ cargarResultados();
   }
 }
 
+@media (max-width: 768px) {
+  img[src="/ImagesSV/IMG_3933_00013.png"] {
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
 
 
 
