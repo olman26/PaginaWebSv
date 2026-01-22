@@ -133,21 +133,6 @@
   }
 }
 
-@media (max-width: 768px) {
-    /* Ocultar el botón jugar en línea */
-    .play-button {
-        display: none;
-    }
-
-    /* Ajustar la imagen del logo (si querés que sea más grande o centrada) */
-    .logo img {
-        max-width: 250px; /* ajusta según necesites */
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto; /* centrar */
-    }
-}
 
 
 
