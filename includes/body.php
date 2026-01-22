@@ -787,6 +787,15 @@ cargarResultados();
 }
 
 
+@media (max-width: 768px) {
+
+  /* SOLO mover la imagen de la modelo un poco a la izquierda */
+  .hero img[src="/ImagesSV/modelo.png"] {
+    position: relative;
+    left: -25px;   /*  ajustá: -15px, -20px, -30px según necesites */
+  }
+
+}
 
 
 
