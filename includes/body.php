@@ -775,34 +775,17 @@ cargarResultados();
 }
 
 @media (max-width: 768px) {
-  img[alt="Imagen RSE"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 768px) {
   img[src="/ImagesSV/IMG_3933_00013.png"] {
     position: relative !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
+    margin: 0 !important;
     display: block;
     max-width: 100%;
     height: auto;
   }
 }
 
-@media (max-width: 768px) {
-  img[src="/ImagesSV/IMG_3933_00013.png"] {
-    position: static !important;
-    margin: 0 auto !important;
-    display: block;
-    max-width: 100%;
-  }
-}
 
 
 
