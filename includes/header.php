@@ -133,17 +133,29 @@
   }
 }
 
-/* ================= RESPONSIVE SOLO MÓVIL ================= */
+/* Para móviles */
 @media (max-width: 768px) {
+    .play-button {
+        width: 100%; /* que ocupe todo el ancho disponible */
+        display: block;
+        text-align: center; /* centrar contenido dentro */
+        margin: 20px 0; /* separarlo un poco del contenido arriba y abajo */
+    }
 
-  /* ...otras reglas que ya tienes... */
+    .play-button a {
+        display: inline-block;
+        width: 100%; /* que el enlace ocupe todo el ancho del contenedor */
+    }
 
-  /* Botón jugar más pequeño solo en móvil */
-  .play-button img {
-    max-width: 120px; /* Ajusta el tamaño que quieras */
-    height: auto;
-  }
+    .play-button img {
+        width: 100%; /* que la imagen se adapte al ancho del enlace */
+        height: auto; /* mantener proporciones */
+        max-width: 400px; /* opcional: no exceder cierto tamaño en móviles grandes */
+    }
 }
+
+
+
 
 
   </style>
