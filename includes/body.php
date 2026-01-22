@@ -493,7 +493,7 @@ cargarResultados();
 
 
 /* ===== RESPONSIVE MÓVIL SOLO RESULTADOS-BOX ===== */
-@media (max-width: 768px) {
+@media (max-width: 766px) {
 
   /* Ajuste del contenedor principal */
   .resultados-box {
@@ -571,6 +571,13 @@ cargarResultados();
     font-size: 14px !important;
   }
 }
+@media (max-width: 768px) {
+  /* Hacer tarjetas un poco más altas para que quepa el botón */
+  .res-card {
+    min-height: 320px !important; /* ajusta este valor según necesites */
+  }
+}
+
 
 
 
