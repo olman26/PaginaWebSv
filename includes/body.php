@@ -733,6 +733,48 @@ cargarResultados();
   }
 }
 
+@media (max-width: 768px) {
+
+  /* Contenedor principal */
+  .noticias-box {
+    flex-direction: column;
+  }
+
+  /* Columna izquierda */
+  .noticias-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Parte derecha */
+  .noticias-right {
+    width: 100%;
+    position: relative;
+  }
+
+  /* Carrusel se vuelve columna */
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: none !important;
+  }
+
+  /* Cada noticia ocupa todo el ancho */
+  .carousel .card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  /* OCULTAMOS FLECHAS EN MÓVIL */
+  .prev,
+  .next {
+    display: none !important;
+  }
+}
+
+
 
 
 
