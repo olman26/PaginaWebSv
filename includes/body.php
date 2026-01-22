@@ -16,29 +16,35 @@ fetch('/api/resultado-diaria.php')
 
 
 <script>
-async function cargarResultados() {
+document.addEventListener('DOMContentLoaded', () => {
+  //  Mostramos un valor temporal al cargar la página
+  const numerosIds = ['num1','num2','num3','num4','num5'];
+  numerosIds.forEach(id => document.getElementById(id).innerText = '...');
+
+  //  Función para cargar resultados reales
+  async function cargarResultados() {
     try {
-        // Cambia esta URL a la correcta que devuelve los últimos resultados
-        const response = await fetch('https://wslotosalvador-d2hbanggbucganbt.canadacentral-01.azurewebsites.net/api/ultimo_resultado.php');
-        if (!response.ok) throw new Error('Error en la respuesta de la API');
-        const data = await response.json();
+      const response = await fetch('https://wslotosalvador-d2hbanggbucganbt.canadacentral-01.azurewebsites.net/api/ultimo_resultado.php');
+      if (!response.ok) throw new Error('Error en la respuesta de la API');
+      const data = await response.json();
 
-        console.log(data); // para ver que llega {"par1":"9","par2":"3",...}
-
-        // Actualizamos los números en los spans correspondientes
-        document.getElementById('num1').innerText = data.par1 || '0';
-        document.getElementById('num2').innerText = data.par2 || '0';
-        document.getElementById('num3').innerText = data.par3 || '0';
-        document.getElementById('num4').innerText = data.par4 || '0';
-        document.getElementById('num5').innerText = data.par5 || '0';
+      //  Actualizamos los spans con los números reales
+      numerosIds.forEach((id, index) => {
+        const key = 'par' + (index + 1); // par1, par2, ...
+        document.getElementById(id).innerText = data[key] || '0';
+      });
     } catch (error) {
-        console.error('No se pudieron cargar los resultados:', error);
+      console.error('No se pudieron cargar los resultados:', error);
+      // Si falla la API, dejamos los números como '0'
+      numerosIds.forEach(id => document.getElementById(id).innerText = '0');
     }
-}
+  }
 
-// Llamamos a la función para cargar los resultados
-cargarResultados();
+  //  Llamamos inmediatamente
+  cargarResultados();
+});
 </script>
+
 
 <body> 
 
