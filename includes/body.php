@@ -798,13 +798,24 @@ cargarResultados();
 }
 
 @media (max-width: 768px) {
+  .rse-content {
+    display: block !important; /* apila texto e imagen verticalmente */
+    text-align: center;        /* centra el contenido horizontal */
+  }
+
+  .rse-image {
+    text-align: left !important;  /* mover la imagen hacia la izquierda */
+    margin-left: 10px;            /* ajustá según necesites */
+  }
+
   .rse-image img {
-    position: relative;   /* necesario para moverla */
-    left: -200px;          /* mover 20px a la izquierda, ajustá según lo necesites */
-    top: 0;               /* opcional, solo si querés mover verticalmente */
-    margin: 0 auto;       /* mantiene centrada de forma base */
+    max-width: 90%;  /* opcional: reduce tamaño en móvil */
+    height: auto;
+    display: inline-block;
+    margin: 0;       /* eliminamos auto que centraba */
   }
 }
+
 
 
 
