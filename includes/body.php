@@ -798,23 +798,14 @@ cargarResultados();
 }
 
 @media (max-width: 768px) {
-  .rse-image {
-    display: flex !important;
-    justify-content: center !important; /* centra horizontalmente */
-    width: 100% !important;
-  }
-
   .rse-image img {
-    max-width: 90% !important;  /* tamaño proporcional */
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-    position: relative !important;
-    left: 0 !important;          /* asegura que no quede a la derecha */
-    top: 0 !important;           /* no suba ni baje */
-    transform: none !important;
+    position: relative;   /* necesario para moverla */
+    left: -20px;          /* mover 20px a la izquierda, ajustá según lo necesites */
+    top: 0;               /* opcional, solo si querés mover verticalmente */
+    margin: 0 auto;       /* mantiene centrada de forma base */
   }
 }
+
 
 
 
@@ -892,7 +883,7 @@ if ($rss && isset($rss->entry[0])) {
   <div class="resultados-header">
     <h2>
       <span class="titulo-naranja">ÚLTIMOS RESULTADOS,</span>
-      <span class="titulo-azul" id="fecha-api" style="font-size: 43px; color: #fff; font-family: Nunito; font-weight:795;">
+      <span class="titulo-azul" id="fecha-api" style="font-size: 45px; color: #fff; font-family: Nunito; font-weight:795;">
   <?php echo $videoDate; ?>
 </span>
     </h2>
