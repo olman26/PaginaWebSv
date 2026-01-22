@@ -746,6 +746,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
+/* SOLO MÓVIL */
+@media (max-width: 768px) {
+    header img {
+        width: 90%;         /* Ajusta el tamaño al móvil */
+        max-width: 400px;   /* Evita que se haga gigante en móviles grandes */
+        margin: 0 auto;     /* Centra la imagen */
+        display: block;
+    }
+}
+
+
 
 
 
