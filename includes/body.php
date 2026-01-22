@@ -407,6 +407,49 @@ cargarResultados();
 
 
 
+/* ===== HERO CAROUSEL SOLO PARA MÓVIL ===== */
+@media (max-width: 768px) {
+
+  /* Bajamos todo el carousel para que el header no lo tape */
+  .hero-carousel {
+    margin-top: 100px; /* Ajusta este valor si quieres más o menos separación */
+  }
+
+  /* Hero original: texto centrado y responsive */
+  .texto-hero {
+    top: 15% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    text-align: center !important;
+  }
+
+  .texto-hero h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .texto-hero .horarios {
+    font-size: 1rem !important;
+  }
+
+  .texto-hero .boton {
+    font-size: 0.9rem !important;
+    padding: 8px 20px !important;
+  }
+
+  /* Reducimos tamaño de las esferas */
+  .esfera {
+    width: 30px !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  /* Banner / slides normales */
+  .hero-banner {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
 
 
 
