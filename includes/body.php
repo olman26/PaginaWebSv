@@ -1158,11 +1158,14 @@ function moveCarousel() {
 }
 
 next.addEventListener('click', () => {
-  if (index < carousel.children.length - 3) {
+  const visibleCards = window.innerWidth <= 768 ? 1 : 3;
+
+  if (index < carousel.children.length - visibleCards) {
     index++;
     moveCarousel();
   }
 });
+
 
 prev.addEventListener('click', () => {
   if (index > 0) {
