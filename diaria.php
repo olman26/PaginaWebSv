@@ -1001,7 +1001,7 @@ let x = setInterval(function () {
 
   // Función para actualizar los resultados
   function actualizarResultados(fecha) {
-    fetch(`https://wslotosalvador-d2hbanggbucganbt.canadacentral-01.azurewebsites.net/api/resultados_calendario_diaria.php?fecha=${fecha}`)
+    fetch(`https://paginawebsvcac.azurewebsites.net/api/resultados_calendario_diaria.php?fecha=${fecha}`)
       .then(res => res.json())
       .then(data => {
         document.getElementById('num11_1').innerText = data['11:00'] ? data['11:00'].charAt(0) : '0';
