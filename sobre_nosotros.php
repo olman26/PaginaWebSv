@@ -749,12 +749,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 /* SOLO MÓVIL */
 @media (max-width: 768px) {
     header img {
-        width: 90%;         /* Ajusta el tamaño al móvil */
-        max-width: 400px;   /* Evita que se haga gigante en móviles grandes */
-        margin: 0 auto;     /* Centra la imagen */
+        width: 90%;         
+        max-width: 400px;   
+        margin: 0 auto 20px auto; /* margin-bottom para separar del container */
         display: block;
     }
+
+    .container-quienes {
+        margin-top: 0;        /* quitamos margen grande que tenías */
+        padding-top: 20px;    /* espacio desde la imagen */
+    }
 }
+
 
 
 
