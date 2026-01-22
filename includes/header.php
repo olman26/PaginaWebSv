@@ -133,26 +133,23 @@
   }
 }
 
-/* Para móviles */
 @media (max-width: 768px) {
+    /* Ocultar el botón jugar en línea */
     .play-button {
-        width: 100%; /* que ocupe todo el ancho disponible */
+        display: none;
+    }
+
+    /* Ajustar la imagen del logo (si querés que sea más grande o centrada) */
+    .logo img {
+        max-width: 250px; /* ajusta según necesites */
+        width: 100%;
+        height: auto;
         display: block;
-        text-align: center; /* centrar contenido dentro */
-        margin: 20px 0; /* separarlo un poco del contenido arriba y abajo */
-    }
-
-    .play-button a {
-        display: inline-block;
-        width: 100%; /* que el enlace ocupe todo el ancho del contenedor */
-    }
-
-    .play-button img {
-        width: 100%; /* que la imagen se adapte al ancho del enlace */
-        height: auto; /* mantener proporciones */
-        max-width: 400px; /* opcional: no exceder cierto tamaño en móviles grandes */
+        margin: 0 auto; /* centrar */
     }
 }
+
+
 
 
 
