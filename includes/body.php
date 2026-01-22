@@ -412,7 +412,7 @@ cargarResultados();
 
   /* Baja todo el carousel para que el header no lo tape */
   .hero-carousel {
-    margin-top: 250px !important;
+    margin-top: 290px !important;
   }
 
   .hero {
@@ -472,6 +472,28 @@ cargarResultados();
   .esfera:nth-of-type(1) { top: 10% !important; left: 60% !important; }
   .esfera:nth-of-type(2) { top: 65% !important; left: 55% !important; }
   .esfera:nth-of-type(3) { top: 45% !important; left: 88% !important; }
+}
+
+
+@media (max-width: 768px) {
+
+  /* Evitar que la imagen se estire */
+  .hero img:not(.esfera) {
+    flex: 1 1 55%;
+    max-width: 100%;
+    height: auto !important; /* asegura proporciones correctas */
+    object-fit: contain; /* mantiene proporción */
+    display: block !important;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Bola roja al lado izquierdo de la modelo */
+  /* Ajusta según tu HTML: si la bola roja es la primera .esfera, se coloca aquí */
+  .esfera:nth-of-type(1) { top: 40% !important; left: 42% !important; } /* bola roja */
+  .esfera:nth-of-type(2) { top: 10% !important; left: 60% !important; }
+  .esfera:nth-of-type(3) { top: 65% !important; left: 55% !important; }
+  .esfera:nth-of-type(4) { top: 45% !important; left: 88% !important; }
 }
 
 
