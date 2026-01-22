@@ -746,6 +746,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
+/* Solo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container-quienes {
+        margin-top: 150px !important; /* ajusta el valor hasta que se vea bien */
+    }
+}
+
+
 
 
     </style>
