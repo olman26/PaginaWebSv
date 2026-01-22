@@ -16,35 +16,29 @@ fetch('/api/resultado-diaria.php')
 
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  //  Mostramos un valor temporal al cargar la página
-  const numerosIds = ['num1','num2','num3','num4','num5'];
-  numerosIds.forEach(id => document.getElementById(id).innerText = '...');
-
-  //  Función para cargar resultados reales
-  async function cargarResultados() {
+async function cargarResultados() {
     try {
-      const response = await fetch('https://wslotosalvador-d2hbanggbucganbt.canadacentral-01.azurewebsites.net/api/ultimo_resultado.php');
-      if (!response.ok) throw new Error('Error en la respuesta de la API');
-      const data = await response.json();
+        // Cambia esta URL a la correcta que devuelve los últimos resultados
+        const response = await fetch('https://paginawebsvcac.azurewebsites.net/api/ultimo_resultado.php');
+        if (!response.ok) throw new Error('Error en la respuesta de la API');
+        const data = await response.json();
 
-      //  Actualizamos los spans con los números reales
-      numerosIds.forEach((id, index) => {
-        const key = 'par' + (index + 1); // par1, par2, ...
-        document.getElementById(id).innerText = data[key] || '0';
-      });
+        console.log(data); // para ver que llega {"par1":"9","par2":"3",...}
+
+        // Actualizamos los números en los spans correspondientes
+        document.getElementById('num1').innerText = data.par1 || '0';
+        document.getElementById('num2').innerText = data.par2 || '0';
+        document.getElementById('num3').innerText = data.par3 || '0';
+        document.getElementById('num4').innerText = data.par4 || '0';
+        document.getElementById('num5').innerText = data.par5 || '0';
     } catch (error) {
-      console.error('No se pudieron cargar los resultados:', error);
-      // Si falla la API, dejamos los números como '0'
-      numerosIds.forEach(id => document.getElementById(id).innerText = '0');
+        console.error('No se pudieron cargar los resultados:', error);
     }
-  }
+}
 
-  //  Llamamos inmediatamente
-  cargarResultados();
-});
+// Llamamos a la función para cargar los resultados
+cargarResultados();
 </script>
-
 
 <body> 
 
@@ -865,7 +859,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <!-- SLIDE SIETES -->
   <div class="hero-slide">
-  <a href="https://wslotosalvador-d2hbanggbucganbt.canadacentral-01.azurewebsites.net/index.php?pag=instacash" target="_blank">
+  <a href="https://paginawebsvcac.azurewebsites.net/index.php?pag=instacash" target="_blank">
     <img src="/ImagesSV/Cambio 1 - BANNERS NUEVA WEB-04 (1).jpg" class="hero-banner" alt="Banner Instacash">
   </a>
 </div>
@@ -922,7 +916,7 @@ if ($rss && isset($rss->entry[0])) {
 <script>
 async function cargarResultados() {
     try {
-        const response = await fetch('https://tusitio.com/resultados-diaria.php');
+        const response = await fetch('https://paginawebsvcac.azurewebsites.net/api/resultados-diaria.php');
         if (!response.ok) throw new Error('Error en la respuesta de la API');
         const data = await response.json();
 
