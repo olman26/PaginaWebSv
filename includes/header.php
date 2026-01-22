@@ -131,6 +131,20 @@
     max-width: 200px;
     height: auto;
   }
+
+  /* Botón jugar en línea */
+.play-button a {
+  display: inline-block;
+  background: none; /* elimina cualquier fondo */
+  padding: 0;
+}
+
+.play-button img {
+  display: block; /* evita espacio extra */
+  max-width: 200px;
+  height: auto;
+}
+
 }
 
 
