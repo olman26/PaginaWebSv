@@ -623,6 +623,25 @@ cargarResultados();
   }
 }
 
+@media (max-width: 768px) {
+
+  /* BOTONES A LA PAR */
+  .res-card .btn-container {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* MISMO TAMAÑO */
+  .res-card .btn-jugar,
+  .res-card .btn-info {
+    width: 140px;
+    padding: 10px 0;
+  }
+}
+
+
 
 
 
