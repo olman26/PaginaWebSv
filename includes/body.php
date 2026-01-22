@@ -402,6 +402,115 @@ cargarResultados();
 
 
 
+/* ===== HERO CAROUSEL RESPONSIVE ===== */
+.hero-carousel {
+  margin-top: 80px; /* Baja el carousel para que el header no lo tape */
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  display: none;
+  width: 100%;
+}
+
+.hero-slide.active {
+  display: block;
+}
+
+/* Ajustes de hero original */
+.texto-hero {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+  width: 90%;
+}
+
+.texto-hero h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.texto-hero .horarios {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.texto-hero .boton {
+  font-size: 1rem;
+  padding: 10px 25px;
+}
+
+/* Esferas */
+.esfera {
+  max-width: 50px;
+}
+
+/* Hero banner de slides normales */
+.hero-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .texto-hero h1 {
+    font-size: 1.6rem;
+  }
+  .texto-hero .horarios {
+    font-size: 1.2rem;
+  }
+  .texto-hero .boton {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+  .esfera {
+    max-width: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+
+  .texto-hero {
+    top: 15%;
+    width: 95%;
+  }
+
+  .texto-hero h1 {
+    font-size: 1.3rem;
+  }
+  .texto-hero .horarios {
+    font-size: 1rem;
+  }
+  .texto-hero .boton {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+  }
+
+  .esfera {
+    max-width: 30px;
+  }
+
+  /* Aumentamos espacio entre header y carousel */
+  .hero-carousel {
+    margin-top: 120px;
+  }
+}
+
+
+
+
+
 
 
 
