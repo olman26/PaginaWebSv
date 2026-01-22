@@ -799,22 +799,24 @@ cargarResultados();
 
 @media (max-width: 768px) {
   .rse-content {
-    display: block !important; /* apila texto e imagen verticalmente */
-    text-align: center;        /* centra el contenido horizontal */
+    display: block;       /* apila los elementos */
+    text-align: center;   /* el texto sigue centrado */
   }
 
   .rse-image {
-    text-align: left !important;  /* mover la imagen hacia la izquierda */
-    margin-left: 10px;            /* ajustá según necesites */
+    text-align: left;     /* mueve la imagen hacia la izquierda */
+    margin-left: 0;       /* ajusta según necesites */
+    margin-top: 15px;     /* opcional: un poco de espacio arriba */
   }
 
   .rse-image img {
-    max-width: 90%;  /* opcional: reduce tamaño en móvil */
+    width: auto;          /* deja que la imagen tenga su tamaño real */
+    max-width: 90%;       /* opcional: que no se salga del móvil */
     height: auto;
-    display: inline-block;
-    margin: 0;       /* eliminamos auto que centraba */
+    display: block;
   }
 }
+
 
 
 
