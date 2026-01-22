@@ -747,10 +747,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 @media (max-width: 768px) {
+    header {
+        overflow: hidden;
+    }
+
     header img {
-        margin-top: 120px; /* ajustá el valor si querés más o menos abajo */
+        transform: translateY(150px); /* ajustá este valor */
     }
 }
+
+
 
 
 
