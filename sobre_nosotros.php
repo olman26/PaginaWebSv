@@ -746,36 +746,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-@media (max-width: 768px) {
-
-    /* NO tocamos el header */
-    header {
-        position: relative;
-        z-index: 1;
-    }
-
-    /* Bajamos visualmente la imagen SOBRE el container */
-    header img {
-        display: block;
-        margin-bottom: -300px; /* AJUSTÁ ESTE VALOR */
-        position: relative;
-        z-index: 2;
-    }
-
-    /* Quitamos el mega margen en móvil */
-    .container-quienes {
-        margin-top: 260px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        padding-top: 120px; /* altura real de tu header */
-    }
-}
-
-
-
 
 
 
