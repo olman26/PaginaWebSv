@@ -815,7 +815,7 @@ cargarResultados();
     order: 2;               
     align-self: flex-start; /* la alinea a la izquierda */
     margin-left: 0;         
-    transform: translateX(-2.5cm); /* Mueve la imagen 1cm a la izquierda */
+    transform: translateX(-2cm); /* Mueve la imagen 1cm a la izquierda */
   }
 
   .rse-image img {
