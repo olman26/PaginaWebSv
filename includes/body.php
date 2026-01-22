@@ -407,31 +407,36 @@ cargarResultados();
 
 
 
-/* ===== HERO ORIGINAL RESPONSIVE PARA MÓVIL MANTENIENDO DISEÑO LADO A LADO ===== */
+/* ===== HERO RESPONSIVE MOVIL COMO PC ===== */
 @media (max-width: 768px) {
+
+  /* Baja todo el carousel para que el header no lo tape */
   .hero-carousel {
-    margin-top: 200px; /* Baja más el carousel para que el header no lo tape */
+    margin-top: 250px !important;
   }
 
   .hero {
     display: flex !important;
-    flex-direction: column !important; /* por defecto apilamos, pero ajustable */
-    align-items: center !important;
+    flex-direction: row !important; /* texto izquierda, modelo derecha */
+    justify-content: space-between;
+    align-items: center;
     position: relative !important;
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap; /* permite que no se salga en pantallas muy chicas */
   }
 
-  /* Contenedor del texto a la izquierda */
+  /* Texto a la izquierda */
   .texto-hero {
-    order: 1; /* Mantener texto arriba en móvil */
-    width: 90% !important;
-    max-width: 350px;
+    flex: 1 1 40%;
     text-align: left !important;
-    margin-bottom: 20px;
+    margin-left: 10px;
   }
 
   .texto-hero h1 {
     font-size: 1.2rem !important;
-    line-height: 1.2 !important;
+    line-height: 1.3 !important;
   }
 
   .texto-hero .horarios {
@@ -444,27 +449,29 @@ cargarResultados();
     padding: 8px 18px !important;
   }
 
-  /* Contenedor de la modelo y esferas */
+  /* Modelo a la derecha */
   .hero img:not(.esfera) {
-    order: 2;
-    max-width: 100% !important;
-    height: auto !important;
+    flex: 1 1 55%;
+    max-width: 100%;
+    height: auto;
     display: block !important;
     margin: 0 auto;
+    position: relative;
   }
 
-  /* Esferas: tamaño y posiciones proporcionales en móvil */
+  /* Esferas: redimensionar y reposicionar proporcionalmente */
   .esfera {
-    width: 40px !important;
-    height: 40px !important;
-    line-height: 40px !important;
+    width: 35px !important;
+    height: 35px !important;
+    line-height: 35px !important;
     font-size: 14px !important;
     position: absolute !important;
   }
 
-  .esfera:nth-of-type(1) { top: 10% !important; left: 55% !important; }
-  .esfera:nth-of-type(2) { top: 65% !important; left: 50% !important; }
-  .esfera:nth-of-type(3) { top: 45% !important; left: 85% !important; }
+  /* Ajustar posiciones de cada esfera */
+  .esfera:nth-of-type(1) { top: 10% !important; left: 60% !important; }
+  .esfera:nth-of-type(2) { top: 65% !important; left: 55% !important; }
+  .esfera:nth-of-type(3) { top: 45% !important; left: 88% !important; }
 }
 
 
