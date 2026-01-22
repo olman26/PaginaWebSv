@@ -607,12 +607,12 @@ cargarResultados();
 
   /* HACER LAS TARJETAS MÁS ALTAS */
   .res-card {
-    min-height: 420px !important; /* 👈 AJUSTÁ ESTE NÚMERO SI QUERÉS MÁS ALTO */
+    min-height: 420px !important; /*  AJUSTÁ ESTE NÚMERO SI QUERÉS MÁS ALTO */
   }
 
   /* FORZAR BOTONES DENTRO DE LA TARJETA */
   .btn-container {
-    margin-top: auto; /* 👈 ESTO ES LA CLAVE */
+    margin-top: auto; /* ESTO ES LA CLAVE */
   }
 
   /* BOTONES MISMO TAMAÑO */
@@ -641,6 +641,13 @@ cargarResultados();
   }
 }
 
+
+@media (max-width: 768px) {
+  #jackpot-num-banner {
+    font-size: 32px !important; /* 👈 tamaño móvil */
+    left: 55% !important;       /* opcional: lo centra mejor */
+  }
+}
 
 
 
