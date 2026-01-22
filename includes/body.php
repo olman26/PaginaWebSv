@@ -806,20 +806,21 @@ cargarResultados();
   }
 
   .rse-text {
-    order: 1;               /* texto arriba */
-    text-align: center;     /* mantiene el texto centrado */
-    margin-bottom: 15px;    /* espacio entre texto e imagen */
+    order: 1;               
+    text-align: center;     
+    margin-bottom: 15px;    
   }
 
   .rse-image {
-    order: 2;               /* imagen abajo */
+    order: 2;               
     align-self: flex-start; /* la alinea a la izquierda */
-    margin-left: 0;         /* sin margen */
+    margin-left: 0;         
+    transform: translateX(-1cm); /* Mueve la imagen 1cm a la izquierda */
   }
 
   .rse-image img {
     width: auto;
-    max-width: 80%;         /* ajusta el tamaño al móvil */
+    max-width: 80%;         
     height: auto;
     display: block;
   }
