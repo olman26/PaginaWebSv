@@ -746,61 +746,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-/* HEADER */
-header {
-    text-align: center; /* centra todo dentro del header */
-    padding: 0;
-}
-
-header img {
-    width: 90%;         /* escala la imagen */
-    max-width: 400px;   /* tamaño máximo */
-    height: auto;       /* mantiene proporción */
-    display: inline-block;
-    margin: 0 auto;     /* centra */
-}
-
-/* CONTAINER QUIENES SOMOS PARA MÓVILES */
-@media (max-width: 768px) {
-    .container-quienes {
-        margin-top: 20px !important; /* antes era 550px */
-        padding: 20px;
-    }
-
-    .orange-rect {
-        grid-template-columns: 1fr !important; /* una columna para métricas */
-        padding: 20px;
-        text-align: center;
-    }
-
-    .metric {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .metric img {
-        width: 60px !important;
-        height: auto;
-    }
-
-    .resp-item {
-        flex-direction: column;
-        height: auto !important;
-        padding: 20px;
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .resp-item img {
-        position: static !important;
-        width: 120px !important;
-        margin-bottom: 10px;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-}
 
 
 
