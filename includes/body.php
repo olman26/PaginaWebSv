@@ -407,35 +407,31 @@ cargarResultados();
 
 
 
-/* ===== HERO ORIGINAL RESPONSIVE PARA MÓVIL ===== */
+/* ===== HERO ORIGINAL RESPONSIVE PARA MÓVIL MANTENIENDO DISEÑO LADO A LADO ===== */
 @media (max-width: 768px) {
-
-  /* Bajamos todo el carousel más para que el header no lo tape */
   .hero-carousel {
-    margin-top: 150px; /* Ajusta si quieres más o menos separación */
+    margin-top: 200px; /* Baja más el carousel para que el header no lo tape */
   }
 
-  /* Hero: contenedor relativo */
   .hero {
+    display: flex !important;
+    flex-direction: column !important; /* por defecto apilamos, pero ajustable */
+    align-items: center !important;
     position: relative !important;
-    height: auto !important;
-    overflow: hidden;
   }
 
-  /* Texto centrado y responsive */
+  /* Contenedor del texto a la izquierda */
   .texto-hero {
-    position: absolute !important;
-    top: 10% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    order: 1; /* Mantener texto arriba en móvil */
     width: 90% !important;
-    text-align: center !important;
-    padding: 0 10px;
+    max-width: 350px;
+    text-align: left !important;
+    margin-bottom: 20px;
   }
 
   .texto-hero h1 {
-    font-size: 1.4rem !important; /* Ajusta según necesidad */
-    line-height: 1.3 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.2 !important;
   }
 
   .texto-hero .horarios {
@@ -445,11 +441,12 @@ cargarResultados();
 
   .texto-hero .boton {
     font-size: 0.9rem !important;
-    padding: 8px 20px !important;
+    padding: 8px 18px !important;
   }
 
-  /* Imagen principal responsiva */
-  .hero img {
+  /* Contenedor de la modelo y esferas */
+  .hero img:not(.esfera) {
+    order: 2;
     max-width: 100% !important;
     height: auto !important;
     display: block !important;
@@ -462,13 +459,14 @@ cargarResultados();
     height: 40px !important;
     line-height: 40px !important;
     font-size: 14px !important;
+    position: absolute !important;
   }
 
-  .esfera:nth-of-type(1) { top: 15% !important; left: 55% !important; }
+  .esfera:nth-of-type(1) { top: 10% !important; left: 55% !important; }
   .esfera:nth-of-type(2) { top: 65% !important; left: 50% !important; }
   .esfera:nth-of-type(3) { top: 45% !important; left: 85% !important; }
-
 }
+
 
 
 
