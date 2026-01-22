@@ -404,7 +404,7 @@ cargarResultados();
 
   /* Baja todo el carousel para que el header no lo tape */
   .hero-carousel {
-    margin-top: 285px !important;
+    margin-top: 250px !important;
   }
 
   .hero {
