@@ -652,10 +652,84 @@ cargarResultados();
 @media (max-width: 768px) {
   #jackpot-num-banner {
     font-size: 24px !important;   /* MUCHO más pequeño */
-    left: 50% !important;         /* lo centra horizontalmente */
+    left: 75% !important;         /* lo centra horizontalmente */
     transform: translate(-50%, -50%) !important; /* centra perfecto */
     top: 50% !important;
     white-space: nowrap;          /* evita que se parta */
+  }
+}
+
+/* ===== NOTICIAS RESPONSIVE MOVIL ===== */
+@media (max-width: 768px) {
+
+  /* Contenedor general */
+  .noticias-box {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  /* Columna izquierda arriba */
+  .noticias-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .noticias-left h3 {
+    font-size: 22px;
+  }
+
+  .noticias-boton {
+    margin-top: 10px;
+  }
+
+  /* Carrusel ocupa todo el ancho */
+  .noticias-right {
+    width: 100%;
+    position: relative;
+  }
+
+  /* Carrusel horizontal con scroll */
+  .carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none; /* limpio en móvil */
+  }
+
+  /* Cards más grandes para dedo */
+  .card {
+    min-width: 85%;
+    flex: 0 0 auto;
+  }
+
+  /* Flechas visibles y usables */
+  .prev,
+  .next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
   }
 }
 
