@@ -493,7 +493,7 @@ cargarResultados();
 
 
 /* ===== RESPONSIVE MÓVIL SOLO RESULTADOS-BOX ===== */
-@media (max-width: 766px) {
+@media (max-width: 764px) {
 
   /* Ajuste del contenedor principal */
   .resultados-box {
@@ -577,6 +577,32 @@ cargarResultados();
     min-height: 320px !important; /* ajusta este valor según necesites */
   }
 }
+
+@media (max-width: 768px) {
+  /* Asegurar que las tarjetas se expandan según su contenido */
+  .res-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* fuerza que el contenido y los botones queden dentro */
+    min-height: auto; /* elimina la altura fija si existía */
+    padding-bottom: 20px; /* espacio extra para los botones */
+  }
+
+  /* Mantener los botones centrados y del mismo tamaño */
+  .res-card .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0; /* evitar que se compriman */
+  }
+
+  .res-card .btn-container button {
+    width: 120px; /* mismo ancho para ambos botones */
+    padding: 10px 0; /* altura uniforme */
+    font-size: 16px;
+  }
+}
+
 
 
 
