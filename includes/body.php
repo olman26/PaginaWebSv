@@ -407,29 +407,40 @@ cargarResultados();
 
 
 
-/* ===== HERO CAROUSEL SOLO PARA MÓVIL ===== */
+/* ===== HERO ORIGINAL RESPONSIVE PARA MÓVIL ===== */
 @media (max-width: 768px) {
 
-  /* Bajamos todo el carousel para que el header no lo tape */
+  /* Bajamos todo el carousel más para que el header no lo tape */
   .hero-carousel {
-    margin-top: 100px; /* Ajusta este valor si quieres más o menos separación */
+    margin-top: 150px; /* Ajusta si quieres más o menos separación */
   }
 
-  /* Hero original: texto centrado y responsive */
+  /* Hero: contenedor relativo */
+  .hero {
+    position: relative !important;
+    height: auto !important;
+    overflow: hidden;
+  }
+
+  /* Texto centrado y responsive */
   .texto-hero {
-    top: 15% !important;
+    position: absolute !important;
+    top: 10% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 90% !important;
     text-align: center !important;
+    padding: 0 10px;
   }
 
   .texto-hero h1 {
-    font-size: 1.4rem !important;
+    font-size: 1.4rem !important; /* Ajusta según necesidad */
+    line-height: 1.3 !important;
   }
 
   .texto-hero .horarios {
     font-size: 1rem !important;
+    margin: 5px 0 10px 0 !important;
   }
 
   .texto-hero .boton {
@@ -437,19 +448,28 @@ cargarResultados();
     padding: 8px 20px !important;
   }
 
-  /* Reducimos tamaño de las esferas */
-  .esfera {
-    width: 30px !important;
-    top: auto !important;
-    left: auto !important;
+  /* Imagen principal responsiva */
+  .hero img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto;
   }
 
-  /* Banner / slides normales */
-  .hero-banner {
-    width: 100% !important;
-    height: auto !important;
+  /* Esferas: tamaño y posiciones proporcionales en móvil */
+  .esfera {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    font-size: 14px !important;
   }
+
+  .esfera:nth-of-type(1) { top: 15% !important; left: 55% !important; }
+  .esfera:nth-of-type(2) { top: 65% !important; left: 50% !important; }
+  .esfera:nth-of-type(3) { top: 45% !important; left: 85% !important; }
+
 }
+
 
 
 
