@@ -892,7 +892,7 @@ if ($rss && isset($rss->entry[0])) {
   <div class="resultados-header">
     <h2>
       <span class="titulo-naranja">ÚLTIMOS RESULTADOS,</span>
-      <span class="titulo-azul" id="fecha-api" style="font-size: 40px; color: #fff; font-family: Nunito; font-weight:795;">
+      <span class="titulo-azul" id="fecha-api" style="font-size: 43px; color: #fff; font-family: Nunito; font-weight:795;">
   <?php echo $videoDate; ?>
 </span>
     </h2>
