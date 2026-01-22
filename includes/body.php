@@ -798,28 +798,24 @@ cargarResultados();
 }
 
 @media (max-width: 768px) {
+  .rse-image {
+    display: flex !important;
+    justify-content: center !important; /* centra horizontalmente */
+    width: 100% !important;
+  }
+
   .rse-image img {
-    position: relative !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    margin: 0 auto !important;
-    display: block !important;
-    max-width: 90% !important;
+    max-width: 90% !important;  /* tamaño proporcional */
     height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    left: 0 !important;          /* asegura que no quede a la derecha */
+    top: 0 !important;           /* no suba ni baje */
+    transform: none !important;
   }
 }
 
-@media (max-width: 768px) {
-  .rse-image img {
-    position: relative !important;
-    left: 0 !important;      /* mueve la imagen ligeramente a la izquierda */
-    transform: none !important;
-    margin: 0 auto !important;
-    display: block !important;
-    max-width: 90% !important;
-    height: auto !important;
-  }
-}
 
 
 
