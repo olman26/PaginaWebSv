@@ -797,6 +797,19 @@ cargarResultados();
 
 }
 
+@media (max-width: 768px) {
+  .rse-image img {
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 auto !important;
+    display: block !important;
+    max-width: 90% !important;
+    height: auto !important;
+  }
+}
+
+
 
 
 
