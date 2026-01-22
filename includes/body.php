@@ -797,25 +797,34 @@ cargarResultados();
 
 }
 
+/* SOLO MÓVIL */
 @media (max-width: 768px) {
   .rse-content {
-    display: block;       /* apila los elementos */
-    text-align: center;   /* el texto sigue centrado */
+    display: flex;
+    flex-direction: column; /* apila verticalmente */
+    align-items: center;    /* centra el texto horizontalmente */
+  }
+
+  .rse-text {
+    order: 1;               /* texto arriba */
+    text-align: center;     /* mantiene el texto centrado */
+    margin-bottom: 15px;    /* espacio entre texto e imagen */
   }
 
   .rse-image {
-    text-align: left;     /* mueve la imagen hacia la izquierda */
-    margin-left: 0;       /* ajusta según necesites */
-    margin-top: 15px;     /* opcional: un poco de espacio arriba */
+    order: 2;               /* imagen abajo */
+    align-self: flex-start; /* la alinea a la izquierda */
+    margin-left: 0;         /* sin margen */
   }
 
   .rse-image img {
-    width: auto;          /* deja que la imagen tenga su tamaño real */
-    max-width: 90%;       /* opcional: que no se salga del móvil */
+    width: auto;
+    max-width: 80%;         /* ajusta el tamaño al móvil */
     height: auto;
     display: block;
   }
 }
+
 
 
 
