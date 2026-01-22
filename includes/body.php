@@ -800,7 +800,7 @@ cargarResultados();
 @media (max-width: 768px) {
   .rse-image img {
     position: relative;   /* necesario para moverla */
-    left: -20px;          /* mover 20px a la izquierda, ajustá según lo necesites */
+    left: -200px;          /* mover 20px a la izquierda, ajustá según lo necesites */
     top: 0;               /* opcional, solo si querés mover verticalmente */
     margin: 0 auto;       /* mantiene centrada de forma base */
   }
