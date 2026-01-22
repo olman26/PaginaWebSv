@@ -774,6 +774,15 @@ cargarResultados();
   }
 }
 
+@media (max-width: 768px) {
+  img[alt="Imagen RSE"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 
 
