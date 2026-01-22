@@ -1152,20 +1152,27 @@ const prev = document.querySelector('.prev');
 
 let index = 0;
 
+function getVisibleCards() {
+  return window.innerWidth <= 768 ? 1 : 3;
+}
+
 function moveCarousel() {
-  const cardWidth = document.querySelector('.card').offsetWidth + 20;
+  const card = document.querySelector('.card');
+  const gap = 20;
+  const cardWidth = card.offsetWidth + gap;
+
   carousel.style.transform = `translateX(${-index * cardWidth}px)`;
 }
 
 next.addEventListener('click', () => {
-  const visibleCards = window.innerWidth <= 768 ? 1 : 3;
+  const visibleCards = getVisibleCards();
+  const maxIndex = carousel.children.length - visibleCards;
 
-  if (index < carousel.children.length - visibleCards) {
+  if (index < maxIndex) {
     index++;
     moveCarousel();
   }
 });
-
 
 prev.addEventListener('click', () => {
   if (index > 0) {
@@ -1173,7 +1180,14 @@ prev.addEventListener('click', () => {
     moveCarousel();
   }
 });
+
+/* REAJUSTAR SI CAMBIA EL TAMAÑO */
+window.addEventListener('resize', () => {
+  index = 0;
+  moveCarousel();
+});
 </script>
+
 
 
 
