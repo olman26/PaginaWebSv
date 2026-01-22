@@ -133,6 +133,19 @@
   }
 }
 
+/* ================= RESPONSIVE SOLO MÓVIL ================= */
+@media (max-width: 768px) {
+
+  /* ...otras reglas que ya tienes... */
+
+  /* Botón jugar más pequeño solo en móvil */
+  .play-button img {
+    max-width: 120px; /* Ajusta el tamaño que quieras */
+    height: auto;
+  }
+}
+
+
   </style>
 </head>
 <body>
