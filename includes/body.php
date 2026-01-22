@@ -493,7 +493,7 @@ cargarResultados();
 
 
 /* ===== RESPONSIVE MÓVIL SOLO RESULTADOS-BOX ===== */
-@media (max-width: 764px) {
+@media (max-width: 761px) {
 
   /* Ajuste del contenedor principal */
   .resultados-box {
