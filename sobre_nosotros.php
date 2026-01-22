@@ -757,14 +757,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     /* Bajamos visualmente la imagen SOBRE el container */
     header img {
         display: block;
-        margin-bottom: -120px; /* AJUSTÁ ESTE VALOR */
+        margin-bottom: -200px; /* AJUSTÁ ESTE VALOR */
         position: relative;
         z-index: 2;
     }
 
     /* Quitamos el mega margen en móvil */
     .container-quienes {
-        margin-top: 80px !important;
+        margin-top: 160px !important;
     }
 }
 
