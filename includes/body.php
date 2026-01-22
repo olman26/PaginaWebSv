@@ -399,20 +399,12 @@ cargarResultados();
   }
 }
 
-
-
-
-
-
-
-
-
 /* ===== HERO RESPONSIVE MOVIL COMO PC ===== */
 @media (max-width: 768px) {
 
   /* Baja todo el carousel para que el header no lo tape */
   .hero-carousel {
-    margin-top: 290px !important;
+    margin-top: 285px !important;
   }
 
   .hero {
@@ -500,6 +492,127 @@ cargarResultados();
 
 
 
+/* ===== ESTILOS GENERALES ===== */
+.resultados-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.resultados-header h2 {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.resultados-carousel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.res-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.res-card {
+  flex: 1 1 45%;
+  max-width: 500px;
+  background-color: #222;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.res-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.numeros {
+  margin: 15px 0;
+}
+
+.bola-verde, .bola-amarilla {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 5px;
+  color: white;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-jugar, .btn-info {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .resultados-header h2 {
+    font-size: 24px !important;
+  }
+
+  .res-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .res-card {
+    flex: 1 1 90%;
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .numeros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bola-verde, .bola-amarilla {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+
+  .btn-jugar, .btn-info {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #fecha-api {
+    font-size: 24px !important;
+  }
+
+  .proximo {
+    font-size: 20px !important;
+  }
+
+  #diaSorteo {
+    font-size: 14px !important;
+  }
+}
 
 
 

@@ -148,7 +148,7 @@
     <!-- Cuadro naranja con logo, navegación y botón -->
     <div class="main-header">
       <div class="logo">
-        <a href="https://wslotosalvador-d2hbanggbucganbt.canadacentral-01.azurewebsites.net/">
+        <a href="https://paginawebsvcac.azurewebsites.net/">
           <img src="/ImagesSV/Logo.svg" alt="Logo" style="cursor:pointer;">
         </a>
       </div>
