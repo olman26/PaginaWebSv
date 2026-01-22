@@ -603,6 +603,25 @@ cargarResultados();
   }
 }
 
+@media (max-width: 768px) {
+
+  /* HACER LAS TARJETAS MÁS ALTAS */
+  .res-card {
+    min-height: 420px !important; /* 👈 AJUSTÁ ESTE NÚMERO SI QUERÉS MÁS ALTO */
+  }
+
+  /* FORZAR BOTONES DENTRO DE LA TARJETA */
+  .btn-container {
+    margin-top: auto; /* 👈 ESTO ES LA CLAVE */
+  }
+
+  /* BOTONES MISMO TAMAÑO */
+  .btn-jugar,
+  .btn-info {
+    width: 100%;
+    max-width: 180px;
+  }
+}
 
 
 
