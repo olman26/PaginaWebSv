@@ -492,6 +492,85 @@ cargarResultados();
 
 
 
+/* ===== RESPONSIVE MÓVIL SOLO RESULTADOS-BOX ===== */
+@media (max-width: 768px) {
+
+  /* Ajuste del contenedor principal */
+  .resultados-box {
+    padding: 20px 10px;
+    max-width: 95%;
+  }
+
+  /* Título centrado y más pequeño */
+  .resultados-header h2 {
+    font-size: 24px !important;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  #fecha-api {
+    font-size: 20px !important;
+  }
+
+  /* Carrusel apilado verticalmente */
+  .resultados-carousel {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .res-cards {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  /* Tarjetas más anchas y centradas */
+  .res-card {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Imagen dentro de tarjeta */
+  .res-card img {
+    width: 70% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Números centrados y más pequeños */
+  .numeros {
+    justify-content: center !important;
+    gap: 5px !important;
+  }
+
+  .bola-verde, .bola-amarilla {
+    width: 35px !important;
+    height: 35px !important;
+    line-height: 35px !important;
+    font-size: 16px !important;
+  }
+
+  /* Botones apilados y centrados */
+  .btn-container {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .btn-jugar, .btn-info {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+  }
+
+  /* Próximo sorteo más pequeño */
+  .proximo {
+    font-size: 20px !important;
+  }
+
+  #diaSorteo {
+    font-size: 14px !important;
+  }
+}
 
 
 
