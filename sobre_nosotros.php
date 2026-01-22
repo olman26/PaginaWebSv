@@ -746,27 +746,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-/* Header normal */
-header {
-    width: 100%;
-    overflow: hidden;
-}
-
-/* Solo móvil */
-@media (max-width: 768px) {
-    header {
-        height: 260px; /* altura fija del header */
-        position: relative;
-    }
-
-    header img {
-        position: absolute;
-        top: 80px;   /* ESTO es lo que baja la imagen */
-        left: 0;
-        width: 100%;
-        height: auto;
-    }
-}
 
 
 
