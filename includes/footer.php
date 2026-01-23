@@ -68,7 +68,7 @@
 @media (max-width: 768px) {
 
   .footer-extra-logo {
-    max-width: 70px;     /* tamaño correcto en celular */
+    max-width: 70px;     
     width: 100%;
     height: auto;
   }
