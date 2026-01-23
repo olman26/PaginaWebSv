@@ -745,10 +745,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         overflow-x: hidden;
     }
 }
-
-
-
-
     </style>
 
     <script>
