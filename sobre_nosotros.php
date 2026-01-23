@@ -92,7 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     background: #ffffff;
 }
 
-
         /* =============== HEADER BANNER =============== */
         header img {
             width: 100%;
