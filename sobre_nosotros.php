@@ -753,8 +753,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 
-
-
     </style>
 
     <script>
@@ -808,7 +806,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 <body>
-    
+    <header>
+        <img src="/ImagesSV/Banner Loto.png">
+    </header>
 
     <!-- =============== QUIÉNES SOMOS =============== -->
     <div class="container-quienes">
