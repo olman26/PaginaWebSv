@@ -72,7 +72,7 @@
     width: 100%;
     height: auto;
   }
-
+  
   .footer-logos {
     display: flex;
     justify-content: center;
