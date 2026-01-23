@@ -97,8 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             width: 100%;
             display: block;
         }
-
-        /* =============== CONTENEDOR QUIÉNES SOMOS =============== */
+/* =============== CONTENEDOR QUIÉNES SOMOS =============== */
         .container-quienes {
     max-width: 1400px;
     margin: 550px auto 40px auto;
