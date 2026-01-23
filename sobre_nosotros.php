@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             ':TristezaPorJuego' => $TristezaPorJuego
         ]);
 
-        // 🔹 Aquí llamamos a la Logic App
+        //Aquí llamamos a la Logic App
         $logicAppUrl = "https://prod-29.canadacentral.logic.azure.com:443/workflows/08ef2beb8f3b40f4afd2820e4db42d68/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=dIwHyCaQqyiNPy1taKz3Jt3VHBlb3k12yz49asN1zmc";
 
         $data = [
