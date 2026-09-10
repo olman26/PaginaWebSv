@@ -2,6 +2,22 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+// Conexión a SQL Server
+try {
+    $conn = new PDO(
+        "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+        "LotoAdmin",
+        "LotAdmin1.",
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+} catch (PDOException $e) {
+    die("Error de conexión: " . $e->getMessage());
+}
+
+// Obtener contenido dinámico
+$stmt = $conn->query("SELECT * FROM paginaweb_sv_aplica_loto WHERE id = 1");
+$contenido = $stmt->fetch(PDO::FETCH_ASSOC);
+
 $mensajeExito = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -80,9 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -95,8 +108,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     background: #f6eedd;
     font-family: 'HelveticaRounded', sans-serif;  /* Fuente personalizada */
 }
-
-
   .container {
     width: 860px;
     max-width: 95%;
@@ -357,10 +368,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   .container {
     margin-top: 120px; /* ajustá este valor si tu header es más alto */
   }
+  /* Opcional: reduce tamaño del título y margen inferior */
+  .title-main {
+    margin-top: 50px; /* aumenta este valor para bajarlo más */
+    font-size: 28px;  /* mantiene tamaño compacto en móvil */
+    text-align: center;
+  }
 
 }
-
-
 </style>
 </head>
 <body>
@@ -373,33 +388,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   </div>
 
   <div class="banner">
-    <img src="/ImagesSV/Foto Moni.png" class="banner-img">
+    <img src="<?= htmlspecialchars($contenido['imagen1'] ?? '/ImagesSV/Foto Moni.png') ?>" class="banner-img">
     <div class="banner-content">
       <p class="banner-text">
-        En LOTO somos una empresa dónde valoramos el talento y nos caracterizamos por brindar 
-        oportunidades de crecimiento y desarrollo profesional a nuestros colaboradores además 
-        de muchos beneficios.
+        <?= nl2br(htmlspecialchars($contenido['titulo'] ?? 'En LOTO somos una empresa dónde valoramos el talento y nos caracterizamos por brindar oportunidades de crecimiento y desarrollo profesional a nuestros colaboradores además de muchos beneficios.')) ?>
       </p>
     </div>
-  </div>
+</div>
 
   <p class="banner-description">
-    INTERLOTO (Loterías Electrónicas Internacionales) se convierte en el único administrador de loterías electrónicas en El Salvador.
-    En la actualidad INTERLOTO cuenta con alrededor de 70 colaboradores distribuidos en una oficina principal ubicadas en San Salvador
-    y 1 LotoCentros, 2 Kioskos Loto. También cuenta con una red de más de 1,800 socios estratégicos (vendedores) ubicados en las distintas
-    ciudades del país.
-  </p>
+  <?= nl2br(htmlspecialchars($contenido['descripcion'] ?? 'INTERLOTO...')) ?>
+</p>
 
   <h2 class="section-title">CONOCÉ ALGUNOS DE NUESTROS BENEFICIOS</h2>
   <div class="beneficios">
     <ul class="beneficios-list">
-      <li>EMPRESA SOLIDA CON ESTABILIDAD LABORAL</li>
-      <li>SEGURO MEDICO PRIVADO</li>
-      <li>SEGURO DE VIDA</li>
-      <li>EXCELENTE AMBIENTE LABORAL</li>
+      <?php
+      $beneficios = explode("\n", $contenido['beneficios'] ?? "EMPRESA SOLIDA CON ESTABILIDAD LABORAL\nSEGURO MEDICO PRIVADO\nSEGURO DE VIDA\nEXCELENTE AMBIENTE LABORAL");
+      foreach($beneficios as $b):
+      ?>
+        <li><?= htmlspecialchars($b) ?></li>
+      <?php endforeach; ?>
     </ul>
-    <img src="/ImagesSV/icono beneficios.png">
-  </div>
+    <img src="<?= htmlspecialchars($contenido['imagen2'] ?? '/ImagesSV/icono beneficios.png') ?>">
+</div>
 
   <h3 class="form-title">LLENÁ EL SIGUIENTE FORMULARIO</h3>
 
@@ -408,7 +420,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?= $mensajeExito ?>
   </div>
 <?php endif; ?>
-
 
   <form method="POST">
     <!-- Aquí va todo tu formulario tal como lo tenías, con los inputs y radios, sin CV -->
@@ -515,7 +526,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
     <br>
 
-    <label class="required">¿Cuál es tu experiencia salarial?</label>
+    <label class="required">¿Cuál es tu pretensión salarial?</label>
     <input type="text" name="salario" required>
     <br><br>
 
@@ -523,7 +534,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   </form>
 
 </div>
-
 
 <script>
   const alertBox = document.getElementById('alert-success');
@@ -540,6 +550,39 @@ if (window.history.replaceState) {
       window.history.replaceState(null, null, window.location.href);
   }
  
+</script>
+
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "e25e83b5-ef96-41b9-b3d4-a949ffada641",
+      host: "https://loteradehonduras-help.freshchat.com",
+      widgetUuid: "7bb0713e-e6f3-41d8-945d-9c6d399b2166",
+      locale: "es"
+    });
+  }
+
+  function initialize(i, t) {
+    var e;
+    i.getElementById(t)
+      ? initFreshChat()
+      : (
+          (e = i.createElement("script")),
+          e.id = t,
+          e.async = true,
+          e.src = "https://loteradehonduras-help.freshchat.com/js/widget.js",
+          e.onload = initFreshChat,
+          i.head.appendChild(e)
+        );
+  }
+
+  function initiateCall() {
+    initialize(document, "Freshchat-js-sdk");
+  }
+
+  window.addEventListener
+    ? window.addEventListener("load", initiateCall, false)
+    : window.attachEvent("load", initiateCall, false);
 </script>
 
 </body>

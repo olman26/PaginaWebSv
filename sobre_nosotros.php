@@ -2,6 +2,22 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+try {
+    $conn = new PDO(
+        "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+        "LotoAdmin",
+        "LotAdmin1.",
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+
+    // Traer datos
+    $stmt = $conn->query("SELECT * FROM paginaweb_sobre_nosotros WHERE id=1");
+    $datos = $stmt->fetch(PDO::FETCH_ASSOC);
+
+} catch (PDOException $e) {
+    die("Error: " . $e->getMessage());
+}
+
 $mensajeExito = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -71,7 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -86,26 +101,33 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     font-family: "HelveticaRounded LT Std Bd", Arial, Helvetica, sans-serif;
 }
 
-
         body {
     font-family: 'HelveticaRounded', Arial, Helvetica, sans-serif;
     background: #ffffff;
 }
 
         /* =============== HEADER BANNER =============== */
-        header img {
-            width: 100%;
-            display: block;
-        }
+       header {
+    width: 100%;
+    overflow: hidden;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 /* =============== CONTENEDOR QUIÉNES SOMOS =============== */
-        .container-quienes {
-    max-width: 1400px;
-    margin: 550px auto 40px auto;
+    .container-quienes {
+    max-width: 1430px;
+    margin: 60px auto 40px auto; /* antes 120px / 650px */
     background: #ffffff;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
+
+
 
         .quienes-text {
             margin-bottom: 40px;
@@ -151,7 +173,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         .metric img {
-            width: 50px;
+            width: 70px;
         }
 
         .metric-text h3,
@@ -384,37 +406,50 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             justify-content: center;
         }
 
-        .resp-item {
-            width: 100%;
-            max-width: 1300px;
-            height: 120px;
-            border-radius: 18px;
-            padding: 20px;
-            font-size: 20px;
-            font-weight: 600;
-            color: white;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+   
 
-        .resp-item.izquierda img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 140px;
-            height: auto;
-        }
+.resp-item span {
+    text-align: center;
+}
 
-        .resp-item.derecha img {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 140px;
-            height: auto;
-        }
+.resp-item {
+    width: 100%;
+    max-width: 1300px;
+    border-radius: 18px;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* TEXTO */
+.resp-item span {
+    flex: 1;
+}
+
+/* IMAGEN */
+.resp-item img {
+    width: 140px;
+    height: auto;
+}
+
+/* IZQUIERDA (imagen izquierda) */
+.resp-item.izquierda {
+    flex-direction: row;
+    text-align: left;
+}
+
+/* DERECHA (imagen derecha) */
+.resp-item.derecha {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+        
 
         @media(max-width: 600px){
             .resp-item {
@@ -422,7 +457,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 font-size: 16px;
             }
             .resp-item img {
-                width: 160px;
+                width: 170px;
             }
         }
 
@@ -430,8 +465,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         .resp-item.izquierda span { order: 1; }
         .resp-item.derecha img { order: 1; }
         .resp-item.derecha span { order: 0; }
-        .resp-item img { width: 250px; height: auto; }
-
+        
         .naranja { background: #ff9900; }
         .azul { background: #3fa1e4; }
         .morado { background: #a950d4; }
@@ -662,6 +696,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     animation: showAlert 0.5s forwards, hideAlert 0.5s 7s forwards;
 }
 
+.metric-text p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.metric-text p strong {
+    font-size: 28px;
+    font-weight: 900;
+}
+
 @keyframes showAlert {
     to { opacity: 1; }
 }
@@ -669,9 +713,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 @keyframes hideAlert {
     to { opacity: 0; }
 }
-
-
-
 
         .btn-azul:hover {
             background-color: #003f7f;
@@ -692,12 +733,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             .acordeon-btn .circle { width: 25px; height: 25px; font-size: 14px; }
         }
 
-        @media (max-width: 1440px) {
-    .container-quienes {
-        margin-top: 390px;
-    }
-}
-
+       
 
 @media (max-width: 768px) {
     header img {
@@ -733,7 +769,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     .resp-item img {
         position: static !important;
-        width: 120px !important;
+        width: 150px !important;
         margin-bottom: 10px;
     }
 }
@@ -741,6 +777,103 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     body {
         overflow-x: hidden;
     }
+}
+@media (min-width: 769px) {
+    header {
+        padding-top: 0 !important;
+        height: auto !important;
+        min-height: unset !important;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto !important;
+        min-height: unset !important;
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 768px) {
+    header img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-quienes {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .container-quienes {
+        margin-top: 20px;
+    }
+}
+.titulo-naranja {
+    color: #ff9900;
+}
+
+.resp-item span {
+    flex: 1;
+}
+
+.responsabilidad-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* BLOQUE */
+.resp-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin: 20px 0;
+    padding: 25px 30px;
+
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+.resp-item:hover {
+    transform: translateY(-5px);
+}
+
+/* TEXTO */
+/* TEXTO SIEMPRE CENTRADO */
+.resp-item p {
+    flex: 1;
+    margin: 0;
+    text-align: center;   /* CLAVE */
+}
+
+/* ICONO */
+.icon {
+    width: 70px;
+    height: 70px;
+}
+
+/*  ALTERNAR AUTOMÁTICO */
+.resp-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/*  COLORES (los tuyos mejorados) */
+.naranja { background: linear-gradient(135deg, #ff8c00, #ff5e00); }
+.azul    { background: linear-gradient(135deg, #4facfe, #00c6ff); }
+.morado  { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+.verde  { background: linear-gradient(135deg, #0f9b0f, #a8e063); }
+.rosado {
+    background: linear-gradient(135deg, #d63384, #ff9ecf);
 }
     </style>
 
@@ -791,111 +924,91 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 });
-</script>
 
+if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+  }
+</script>
 
 <body>
     <header>
-        <img src="/ImagesSV/Banner Loto.png">
+        <img src="<?= $datos['bannerImagen'] ?>">
     </header>
 
     <!-- =============== QUIÉNES SOMOS =============== -->
     <div class="container-quienes">
         <div class="quienes-text">
             <h2>¿Quiénes somos?</h2>
-            <p>Loto es una empresa canadiense que pertenece a Canadian Bank Note Company (CBN), una compañía privada con operaciones en otros países de la región como Centroamérica y El Caribe, con más de 30 años de experiencia en temas de tecnología, seguridad y lotería; y, que a través de sus operaciones está comprometida con impactar en la economía nacional y en lo social, contribuyendo a mejorar la calidad de vida de las personas. 
+            
                 <br>
-                <br>
+<p><?= nl2br(htmlspecialchars($datos['quienesSomosTexto'])) ?></p>
 
-Loto opera en el país gracias a un convenio firmado entre el gobierno de El Salvador y Canadá, garantizando el compromiso de brindar un aporte de sus ventas a las buenas causas y de esta manera se beneficia a la población más vulnerable.  
-<br>
-<br>
-Loto es la primera lotería electrónica en el país y ha logrado llevar a cada hogar mucha alegría y diversión a través de sus juegos: SuperPremio, Diaria, Instacash, y Apostemos.</p>
         </div>
 
         <div class="orange-rect-wrapper">
             <div class="orange-rect">
                 <div class="metric">
-                    <img src="/ImagesSV/Empleos directos.svg" style="width:80px; height:auto;">
-                    <div class="metric-text">
-                        <h3>+70</h3>
-                        <p>Empleos directos</p>
-                    </div>
-                </div>
+    <img src="<?= $datos['metric1Imagen'] ?>">
+    <div class="metric-text">
+        <p><?= htmlspecialchars($datos['metric1Texto']) ?></p>
+    </div>
+</div>
 
-                <div class="metric">
-                    <img src="/ImagesSV/empleos indirectos.svg" style="width:70px; height:auto;">
-                    <div class="metric-text">
-                        <h3>+1,800</h3>
-                        <p>Empleos indirectos</p>
-                    </div>
-                </div>
-
-            
+<div class="metric">
+    <img src="<?= $datos['metric2Imagen'] ?>">
+    <div class="metric-text">
+        <p><?= htmlspecialchars($datos['metric2Texto']) ?></p>
+    </div>
+</div>
             </div>
-
-        
         </div> 
 
         <div class="cuadros-extra">
-            <div class="card-extra diversion">Diversión: En Loto creamos espacios donde la diversión y la alegría se reflejan en nuestro diario accionar.</div>
-            <div class="card-extra confianza">Confianza: La confianza en nuestros procesos pagos de premios es bastión fundamental en nuestra operación diaria.</div>
-            <div class="card-extra esperanza">Buscamos llevar esperanza a nuestros jugadores, agentes y colaboradores con nuestros juegos, promociones y nuestras acciones internas.</div>
-            <div class="card-extra solidaridad">Solidaridad: Buscamos un mundo más solidario a través de nuestro apoyo responsable y el compromiso social con El Salvador. </div>
+            <div class="card-extra diversion"><?= htmlspecialchars($datos['cardDiversion']) ?></div>
+<div class="card-extra confianza"><?= htmlspecialchars($datos['cardConfianza']) ?></div>
+<div class="card-extra esperanza"><?= htmlspecialchars($datos['cardEsperanza']) ?></div>
+<div class="card-extra solidaridad"><?= htmlspecialchars($datos['cardSolidaridad']) ?></div>
         </div>
     </div>
 </body>
 </html>
 
-
-<!-- =============== RESPONSABILIDAD =============== -->
-<section class="responsabilidad-section">
+    <!-- =============== RESPONSABILIDAD CON CONTAINER BLANCO =============== -->
+    <section class="responsabilidad-section">
     <h2 class="responsabilidad-title">¿CÓMO JUGAR CON RESPONSABILIDAD?</h2>
 
-    <!-- =============== RESPONSABILIDAD CON CONTAINER BLANCO =============== -->
     <div class="container-blanco">
         <div class="responsabilidad-container">
 
-            <div class="resp-item-wrapper">
-  <div class="resp-item naranja izquierda">
-    <img src="/ImagesSV/Iconos-01.png" style="width:200px;">
-    DISFRUTÁ DEL JUEGO EN TU TIEMPO LIBRE.
-  </div>
-</div>
+            <div class="resp-item naranja">
+                <img src="<?= $datos['resp1Imagen'] ?>" class="icon">
+                <p><?= htmlspecialchars($datos['resp1Texto']) ?></p>
+            </div>
 
-<div class="resp-item-wrapper">
-  <div class="resp-item azul derecha">
-    <img src="/ImagesSV/Iconos-02.png" style="width:220px; transform: translateX(20px);">
+            <div class="resp-item azul">
+                <img src="<?= $datos['resp2Imagen'] ?>" class="icon">
+                <p><?= htmlspecialchars($datos['resp2Texto']) ?></p>
+            </div>
 
-    ESTABLECÉ REGLAS PERSONALES: NO JUGUÉS A CRÉDITO Y NO PIDÁS DINERO PRESTADO
-    <br> PARA JUGAR.
-  </div>
-</div>
+            <div class="resp-item morado">
+                <img src="<?= $datos['resp3Imagen'] ?>" class="icon">
+                <p><?= htmlspecialchars($datos['resp3Texto']) ?></p>
+            </div>
 
-<div class="resp-item-wrapper">
-  <div class="resp-item morado izquierda">
-    <img src="/ImagesSV/Iconos-03.png" style="width:220px;">
-    BUSCÁ INFORMACIÓN DEL JUEGO. ENTRE MÁS CONOZCÁS, MEJORES DECISIONES
-    <br> PODÉS TOMAR.
-  </div>
-</div>
+            <div class="resp-item verde">
+                <img src="<?= $datos['resp4Imagen'] ?>" class="icon">
+                <p><?= htmlspecialchars($datos['resp4Texto']) ?></p>
+            </div>
 
-<div class="resp-item-wrapper">
-  <div class="resp-item verde derecha">
-    <img src="/ImagesSV/Iconos-04.png" style="width:220px;">
-    NO BUSQUÉS EN EL JUEGO UNA FORMA DE ESCAPAR A PROBLEMAS 
-    <br>EMOCIONALES O FÍSICOS.
-  </div>
-</div>
+            <div class="resp-item rosado">
+                <img src="/ImagesSV/Iconos-05.png" class="icon">
+                <p>NO DEJÉS QUE EL JUEGO AFECTE TU RELACIÓN CON TU FAMILIA Y AMIGOS.</p>
+            </div>
 
-<div class="resp-item-wrapper">
-  <div class="resp-item rosado izquierda">
-    <img src="/ImagesSV/Iconos-05.png" style="width:220px;">
-   NO DEJÉS QUE EL JUEGO AFECTE TU RELACIÓN CON TU FAMILIA Y AMIGOS.
-  </div>
-</div>
+        </div>
+    </div>
+</section>
 
-                
 
         </div>
     </div>
@@ -908,20 +1021,16 @@ Loto es la primera lotería electrónica en el país y ha logrado llevar a cada 
         <!-- NUESTRA MISIÓN -->
         <div class="mision-text-center">
             <h2>NUESTRA MISIÓN ES QUE JUGUÉS CON RESPONSABILIDAD</h2>
-            <p>
-                En Loto estamos convencidos de que conocer más sobre el juego te ayudará a practicar de forma divertida y segura.
-                <br>
-                Por eso te invitamos a conocer los diferentes términos relacionados con el juego y sus implicaciones.
-            </p>
+            <p><?= nl2br(htmlspecialchars($datos['misionTexto'])) ?></p>
         </div>
 
         <!-- CONTAINER BLANCO PARA QUÉ ES EL JUEGO DE AZAR -->
         <div class="container-azar-blanco" style="background: #ffffff; border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-            <h2 style="color: #ff9900; font-weight: bold; margin-bottom: 10px;">¿Qué es el juego de azar?</h2>
-            <p style="color: #333; font-size: 16px; line-height: 1.5;">
-                Son juegos en los cuales las posibilidades de ganar o perder no dependen de las habilidades o capacidades del jugador,
-                sino del azar o la suerte. Los jugadores no pueden predecir los resultados ya que son completamente aleatorios.
-            </p>
+            <h2 class="titulo-naranja">
+    <?= htmlspecialchars($datos['juegoAzarTitulo']) ?>
+</h2>
+            <br>
+            <p><?= nl2br(htmlspecialchars($datos['juegoAzarTexto'])) ?></p>
         </div>
 
         <!-- ACORDEONES -->
@@ -929,28 +1038,28 @@ Loto es la primera lotería electrónica en el país y ha logrado llevar a cada 
             <div class="acordeon">
 
                 <button class="acordeon-btn">
-                    ¿JUEGA EN SORTEOS CONSECUTIVOS? 
-                    <span class="circle">&#9660;</span>
-                </button>
-                <div class="acordeon-content">
-                    <p>El juego responsable implica disfrutar del juego como una actividad de entretenimiento, sin afectar tus finanzas, tiempo ni relaciones.</p>
-                </div>
+    <?= htmlspecialchars($datos['acordeon1Titulo']) ?>
+    <span class="circle">▼</span>
+</button>
+<div class="acordeon-content">
+    <p><?= htmlspecialchars($datos['acordeon1Texto']) ?></p>
+</div>
 
-                <button class="acordeon-btn">
-                    ¿QUE ES EL JUEGO RESPONSABLE? 
-                    <span class="circle">&#9660;</span>
-                </button>
-                <div class="acordeon-content">
-                    <p>El jugador responsable es aquel que establece límites, conoce las reglas y juega con moderación.</p>
-                </div>
+<button class="acordeon-btn">
+    <?= htmlspecialchars($datos['acordeon2Titulo']) ?>
+    <span class="circle">▼</span>
+</button>
+<div class="acordeon-content">
+    <p><?= htmlspecialchars($datos['acordeon2Texto']) ?></p>
+</div>                
 
-                <button class="acordeon-btn">
-                    ¿QUIEN ES EL JUGADOR RESPONSABLE? 
-                    <span class="circle">&#9660;</span>
-                </button>
-                <div class="acordeon-content">
-                    <p>Existen diversos términos como apuesta responsable, límite de gasto, pausas de juego y apoyo a jugadores en riesgo.</p>
-                </div>
+              <button class="acordeon-btn">
+    <?= htmlspecialchars($datos['acordeon3Titulo']) ?>
+    <span class="circle">▼</span>
+</button>
+<div class="acordeon-content">
+    <p><?= htmlspecialchars($datos['acordeon3Texto']) ?></p>
+</div>
 
             </div>
 
@@ -962,7 +1071,6 @@ Loto es la primera lotería electrónica en el país y ha logrado llevar a cada 
     </button>
 </div>
 
-
 <div class="modal-test" id="modalTest">
     <div class="modal-contenido">
         <span class="cerrar-modal" id="cerrarTest">&times;</span>
@@ -970,7 +1078,6 @@ Loto es la primera lotería electrónica en el país y ha logrado llevar a cada 
         <h2>Test para autoevaluación sobre juego responsable</h2>
 
         <form method="post" action="">
-
 
   <div class="pregunta">
       <p> ¿Has jugado alguna vez para pagar tus deudas o resolver dificultades financieras?</p>
@@ -1044,19 +1151,11 @@ Loto es la primera lotería electrónica en el país y ha logrado llevar a cada 
       const alert = document.getElementById('alertSuccess');
       if(alert) alert.style.display = 'none';
     }, 7000); // 7000 ms = 7 segundos
-    if (window.history.replaceState) {
-      window.history.replaceState(null, null, window.location.href);
-  }
   </script>
 <?php endif; ?>
 
-
-
     </div>
 </div>
-
-
-
         </div>
     </div>
 
@@ -1064,3 +1163,36 @@ Loto es la primera lotería electrónica en el país y ha logrado llevar a cada 
 <br>
 </section>
 
+
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "e25e83b5-ef96-41b9-b3d4-a949ffada641",
+      host: "https://loteradehonduras-help.freshchat.com",
+      widgetUuid: "7bb0713e-e6f3-41d8-945d-9c6d399b2166",
+      locale: "es"
+    });
+  }
+
+  function initialize(i, t) {
+    var e;
+    i.getElementById(t)
+      ? initFreshChat()
+      : (
+          (e = i.createElement("script")),
+          e.id = t,
+          e.async = true,
+          e.src = "https://loteradehonduras-help.freshchat.com/js/widget.js",
+          e.onload = initFreshChat,
+          i.head.appendChild(e)
+        );
+  }
+
+  function initiateCall() {
+    initialize(document, "Freshchat-js-sdk");
+  }
+
+  window.addEventListener
+    ? window.addEventListener("load", initiateCall, false)
+    : window.attachEvent("load", initiateCall, false);
+</script>

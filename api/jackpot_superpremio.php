@@ -1,27 +1,32 @@
 <?php
 header('Content-Type: application/json');
 
-$serverName = "srvdbcacdev.database.windows.net";
-$database = "dblotocacdev";
-$username = "LotoAdmin";
-$password = "LotAdmin1.";
-
 try {
-    // Conexión a SQL Server
-    $conn = new PDO("sqlsrv:Server=$serverName;Database=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO(
+        "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+        "LotoAdmin",
+        "LotAdmin1.",
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
 
-    // Obtener el jackpot del último sorteo
-    $stmt = $conn->query("SELECT TOP 1 jackpot FROM loto_jackpot_superpremio ORDER BY nsorteo DESC");
-    $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+    // ✅ TRAER EL ÚLTIMO JACKPOT REAL
+    $stmt = $conn->prepare("
+        SELECT TOP 1 next_jackpot
+        FROM numeros_ganadores_sorteos_prod
+        WHERE pais = 'El Salvador'
+          AND UPPER(game_name) = 'LOTO SUPER PREMIO'
+          AND jackpot IS NOT NULL
+        ORDER BY draw_date DESC
+    ");
 
-    // Devolver JSON
+    $stmt->execute();
+    $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
     echo json_encode([
-        "jackpot" => $resultado['jackpot'] ?? 0
+        "next_jackpot" => $data['next_jackpot'] ?? 0
     ]);
 
 } catch (PDOException $e) {
-    // Si hay error en la conexión o la consulta
     echo json_encode([
         "error" => $e->getMessage()
     ]);

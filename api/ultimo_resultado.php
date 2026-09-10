@@ -10,8 +10,15 @@ try {
     $conn = new PDO("sqlsrv:server=$host;Database=$db", $user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Tomamos solo el último sorteo del juego 2 (Super Premio)
-    $stmt = $conn->prepare("SELECT TOP 1 * FROM loto_sorteos_sv WHERE juego = 2 ORDER BY id DESC");
+    $stmt = $conn->prepare("
+       SELECT TOP 1 *
+FROM numeros_ganadores_sorteos_prod
+WHERE pais = 'El Salvador'
+  AND game_name = 'Loto Super Premio'
+  AND par1 IS NOT NULL
+ORDER BY draw_date DESC
+    ");
+
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -30,3 +37,4 @@ try {
 } catch(PDOException $e){
     echo json_encode(["error" => $e->getMessage()]);
 }
+?>

@@ -39,6 +39,7 @@ $stmt->execute([
 
 $resultados = [
     '11:00' => null,
+    '18:00' => null,
     '21:00' => null
 ];
 
@@ -46,9 +47,12 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $hora = $row['hora_sorteo'];
     if ($hora == 11) {
         $resultados['11:00'] = str_pad($row['par1'], 2, '0', STR_PAD_LEFT);
+    } elseif ($hora == 18) {
+        $resultados['18:00'] = str_pad($row['par1'], 2, '0', STR_PAD_LEFT);
     } elseif ($hora == 21) {
         $resultados['21:00'] = str_pad($row['par1'], 2, '0', STR_PAD_LEFT);
     }
 }
 
 echo json_encode($resultados);
+ 

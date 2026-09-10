@@ -53,7 +53,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
+<?php
+try {
+    $conn = new PDO(
+        "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+        "LotoAdmin",
+        "LotAdmin1.",
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
 
+    $sqlLoto = "SELECT texto FROM paginaweb_sv_contactanos_acordeon ORDER BY id DESC";
+    $stmtLoto = $conn->query($sqlLoto);
+    $lotocentros = $stmtLoto->fetchAll(PDO::FETCH_ASSOC);
+
+    // OBTENER MAPA DESDE CONFIG
+$sqlMapa = "SELECT mapa_url FROM paginaweb_sv_config WHERE id = 1 AND secciones = 'mapa_contactanos'" ;
+$stmtMapa = $conn->query($sqlMapa);
+$mapa = $stmtMapa->fetch(PDO::FETCH_ASSOC);
+
+} catch (PDOException $e) {
+    $lotocentros = []; // evita que producción se rompa
+}
+?>
 
 <!DOCTYPE html>  
 <html lang="es">
@@ -69,8 +90,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     font-weight: bold;
     font-style: normal;
 }
-
-
 
  body {
   margin: 0;
@@ -291,7 +310,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   to {opacity: 1;}
 }
 
-
 /* RESPONSIVE */
 @media (max-width: 767px) {
   .offices-contact {
@@ -304,8 +322,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     padding-top: 70px; /* Ajusta este valor */
   }
 }
-
-
 </style>
 </head>
 
@@ -316,17 +332,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <!-- MAPA -->
   <div class="map-section">
     <h2>LOTOCENTROS A NIVEL NACIONAL</h2>
-    <img src="ImagesSV/Mapa Loto.SV.svg" alt="Mapa">
+    <?php if(!empty($mapa['mapa_url'])): ?>
+
+<img src="<?= $mapa['mapa_url'] ?>?v=<?= time(); ?>" alt="Mapa">
+
+<?php else: ?>
+
+<img src="ImagesSV/Mapa Loto.SV.svg" alt="Mapa">
+
+<?php endif; ?>
 
     <button class="accordion">VER HORARIOS</button>
 
     <div class="panel">
-      <p><strong>LotoCentro en Metrocentro San Salvador:</strong> Lunes a domingo de 9:00 a.m. a 7:00 p.m.</p>
-      <p><strong>Kiosko Santa Ana en Metrocentro:</strong> Lunes a domingo de 9:00 a.m. a 7:00 p.m.</p>
-      <p><strong>Kiosko Aguilares en El Encuentro:</strong> Lunes a domingo de 9:00 a.m. a 7:00 p.m.</p>
-      <p><strong>Loto Xpress Lourdes: Maxi Despensa Lourdes Colón Campos Verde 1 :</strong> Lunes a domingo de 9:00 a.m. a 7:00 p.m.</p>
-      <p><strong>Loto Xpress Usulután: La Despensa de Don Juan CA-2:</strong> Lunes a domingo de 9:00 a.m. a 7:00 p.m.</p>
-    </div>
+    <?php foreach ($lotocentros as $loto): ?>
+        <p>
+            <?= htmlspecialchars($loto['texto'] ?? '') ?>
+        </p>
+    <?php endforeach; ?>
+</div>
   </div>
 
   <!-- OFICINAS Y CONTACTO -->
@@ -365,10 +389,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?= $mensajeExito ?>
   </div>
 <?php endif; ?>
-
-
-
-
       <form method="post">
         <input type="text" name="nombre" placeholder="Nombre completo *" required>
         <input type="email" name="correo" placeholder="Correo electrónico *" required>
@@ -413,7 +433,38 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   }
 </script>
 
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "e25e83b5-ef96-41b9-b3d4-a949ffada641",
+      host: "https://loteradehonduras-help.freshchat.com",
+      widgetUuid: "7bb0713e-e6f3-41d8-945d-9c6d399b2166",
+      locale: "es"
+    });
+  }
 
+  function initialize(i, t) {
+    var e;
+    i.getElementById(t)
+      ? initFreshChat()
+      : (
+          (e = i.createElement("script")),
+          e.id = t,
+          e.async = true,
+          e.src = "https://loteradehonduras-help.freshchat.com/js/widget.js",
+          e.onload = initFreshChat,
+          i.head.appendChild(e)
+        );
+  }
+
+  function initiateCall() {
+    initialize(document, "Freshchat-js-sdk");
+  }
+
+  window.addEventListener
+    ? window.addEventListener("load", initiateCall, false)
+    : window.attachEvent("load", initiateCall, false);
+</script>
 </body>
 </html>
 

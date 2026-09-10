@@ -2,6 +2,21 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+try {
+    $conn = new PDO(
+        "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+        "LotoAdmin",
+        "LotAdmin1.",
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+} catch (PDOException $e) {
+    die("Error de conexión: " . $e->getMessage());
+}
+
+// Traer configuración actual de la página
+$stmt = $conn->query("SELECT * FROM paginaweb_quiero_ser_agente WHERE id=1");
+$config = $stmt->fetch(PDO::FETCH_ASSOC);
+
 $mensajeExito = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -111,9 +126,25 @@ if (!empty($_FILES['FotoNegocio']['tmp_name'])) {
 }
 
 echo $mensajeExito;
+
+// Arreglo de municipios por departamento
+$municipiosSV = [
+    "Ahuachapán" => ["Ahuachapán", "Apaneca", "Atiquizaya", "Concepción de Ataco", "El Refugio", "Guaymango", "Jujutla", "San Francisco Menéndez", "San Lorenzo", "San Pedro Puxtla", "Tacuba", "Turín"],
+    "Cabañas" => ["Cinquera", "Dolores", "Guacotecti", "Jutiapa", "Sensuntepeque", "Tejutepeque", "Victoria"],
+    "Chalatenango" => ["Agua Caliente", "Arcatao", "Azacualpa", "Chalatenango", "Comalapa", "Concepción Quezaltepeque", "Dulce Nombre de María", "El Carrizal", "El Paraíso", "La Laguna", "La Palma", "La Reina", "Las Flores", "Las Vueltas", "Nombre de Jesús", "Nueva Concepción", "Nueva Trinidad", "San Antonio de la Cruz", "San Antonio Los Ranchos", "San Fernando", "San Francisco Lempa", "San Francisco Morazán", "San Ignacio", "San Isidro Labrador", "San Luis del Carmen", "San Miguel de Mercedes", "San Rafael", "Santa Rita", "Tejutla"],
+    "Cuscatlán" => ["Candelaria", "Cojutepeque", "El Carmen", "El Rosario", "Monte San Juan", "Oratorio de Concepción", "San Bartolomé Perulapía", "San Cristóbal", "San José Guayabal", "San Pedro Perulapán", "San Rafael Cedros", "San Ramón", "Santa Cruz Analquito", "Santa Cruz Michapa", "Suchitoto", "Tenancingo"],
+    "La Libertad" => ["Antiguo Cuscatlán", "Chiltiupán", "Ciudad Arce", "Colón", "Comasagua", "Huizúcar", "Jayaque", "Jicalapa", "La Libertad", "Santa Tecla", "Nuevo Cuscatlán", "Quezaltepeque", "Sacacoyo", "San José Villanueva", "San Juan Opico", "Talnique", "Tamanique", "Teotepeque", "Tepecoyo", "Zaragoza"],
+    "La Paz" => ["Cuyultitán", "El Rosario", "Jerusalén", "Mercedes La Ceiba", "Olocuilta", "Paraíso de Osorio", "San Antonio Masahuat", "San Emigdio", "San Francisco Chinameca", "San Juan Nonualco", "San Juan Talpa", "San Juan Tepezontes", "San Luis Talpa", "San Luis La Herradura", "San Miguel Tepezontes", "San Pedro Masahuat", "San Pedro Nonualco", "San Rafael Obrajuelo", "Santa María Ostuma", "Santiago Nonualco", "Tapalhuaca"],
+    "La Unión" => ["Anamorós", "Bolívar", "Concepción de Oriente", "Conchagua", "El Carmen", "El Sauce", "Intipucá", "La Unión", "Lislique", "Meanguera del Golfo", "Nueva Esparta", "Pasaquina", "Polorós", "San Alejo", "San José", "Santa Rosa de Lima", "Yayantique", "Yucuaiquín"],
+    "Morazán" => ["Arambala", "Cacaopera", "Chilanga", "Corinto", "Delicias de Concepción", "El Divisadero", "El Rosario", "Gualococti", "Guatajiagua", "Joateca", "Jocoaitique", "Jocoro", "Lolotique", "Meanguera", "Osicala", "Perquín", "San Carlos", "San Fernando", "San Francisco Gotera", "San Isidro", "San Simón", "Sensembra", "Sociedad", "Torola", "Yamabal", "Yoloaiquín"],
+    "San Miguel" => ["Chinameca", "Chirilagua", "Ciudad Barrios", "Comacarán", "El Tránsito", "Lolotique", "Moncagua", "Nuevo Edén de San Juan", "Quelepa", "San Antonio", "San Gerardo", "San Jorge", "San Luis de la Reina", "San Miguel", "Sesori", "Uluazapa"],
+    "San Salvador" => ["Aguilares", "Apopa", "Ayutuxtepeque", "Cuscatancingo", "Delgado", "El Paisnal", "Guazapa", "Ilopango", "Mejicanos", "Nejapa", "Panchimalco", "Rosario de Mora", "San Marcos", "San Martín", "San Salvador", "Santiago Texacuangos", "Santo Tomás", "Soyapango", "Tonacatepeque"],
+    "San Vicente" => ["Apastepeque", "Guadalupe", "San Cayetano Istepeque", "San Esteban Catarina", "San Ildefonso", "San Lorenzo", "San Sebastián", "San Vicente", "Santa Clara", "Santo Domingo", "Tecoluca", "Tepetitán", "Verapaz"],
+    "Santa Ana" => ["Candelaria de la Frontera", "Chalchuapa", "Coatepeque", "El Congo", "El Porvenir", "Masahuat", "Metapán", "San Antonio Pajonal", "San Sebastián Salitrillo", "Santa Ana", "Santa Rosa Guachipilín", "Santiago de la Frontera", "Texistepeque"],
+    "Sonsonate" => ["Acajutla", "Armenia", "Caluco", "Cuisnahuat", "Izalco", "Juayúa", "Nahuizalco", "Nahulingo", "Salcoatitán", "San Antonio del Monte", "San Julián", "Santa Catarina Masahuat", "Santa Isabel Ishuatán", "Santo Domingo de Guzmán", "Sonsonate", "Sonzacate"],
+    "Usulután" => ["Alegría", "Berlín", "California", "Concepción Batres", "El Triunfo", "Ereguayquín", "Estanzuelas", "Jiquilisco", "Jucuapa", "Jucuarán", "Mercedes Umaña", "Nueva Granada", "Ozatlán", "Puerto El Triunfo", "San Agustín", "San Buenaventura", "San Dionisio", "San Francisco Javier", "Santa Elena", "Santa María", "Santiago de María", "Tecapán", "Usulután"]
+];
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -130,8 +161,6 @@ echo $mensajeExito;
   color: #333;
   text-align: center;
 }
-
-
   /* ===== HERO ===== */
   .hero {
     background: #FF9800;
@@ -167,24 +196,66 @@ echo $mensajeExito;
   }
 
   /* ===== REQUISITOS ===== */
-  .requisitos { display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
-  .requisitos ul { list-style-type: none; padding: 0; margin: 0; flex: 1; }
-  .requisitos li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; position: relative; padding-left: 30px; color: #0077CC; font-weight: 600; font-size: 16px; }
-  .requisitos li::before {
-    content: "✔";
-    color: white;
-    background-color: #FF9800;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+  .requisitos-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* alineado arriba con la imagen */
+    flex-wrap: wrap; /* para móviles */
+}
+
+.requisitos-container .requisitos-texto {
+    flex: 1;
+}
+
+.requisitos-container img {
+    max-width: 300px; /* tamaño hero 2 */
+    border-radius: 15px;
+}
+
+.requisitos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requisitos-list li {
+    display: flex;              /* fila con círculo y texto */
+    align-items: center;        /* verticalmente centrados */
+    gap: 10px;                  /* espacio entre círculo y texto */
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0077CC;
+}
+
+.requisitos-list li::before {
+    content: '✔';               /* check blanco */
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ff9f43;  /* círculo naranja */
+    border-radius: 50%;
+    color: white;               /* check blanco */
+    flex-shrink: 0;             /* no se encoge */
     font-size: 12px;
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .requisitos-container {
+      flex-direction: column;
+      gap: 15px;
   }
-  .requisitos img { max-width: 200px; border-radius: 12px; }
+  .requisitos-list li {
+      font-size: 15px;
+  }
+  .requisitos-container img {
+      max-width: 90%;
+      margin: 0 auto;
+  }
+}
 
   /* ===== FORMULARIO ===== */
   .form-container {
@@ -210,7 +281,6 @@ echo $mensajeExito;
   padding-left: 12px;
 }
 
-
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -233,7 +303,6 @@ echo $mensajeExito;
   font-size: 15px;
   text-align: left;    /* <- asegura que siempre estén a la izquierda */
 }
-
 
 .form-group input,
 .form-group select,
@@ -295,9 +364,6 @@ echo $mensajeExito;
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
-
-
-
   /* ===== BENEFICIOS ===== */
   .beneficios-title { text-align: center; color: #0077CC; font-size: 32px; font-weight: 800; margin-bottom: 20px; }
   .beneficios-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 30px; }
@@ -369,23 +435,39 @@ echo $mensajeExito;
     padding: 15px;
   }
 }
-
 /* =================================
    BAJAR IMAGEN HERO EN MÓVIL
    ================================= */
 @media (max-width: 768px) {
 
   .hero {
-    padding-top: 250px; /* empuja todo el hero hacia abajo */
+    padding-top: 180px; /* empuja todo el hero hacia abajo */
   }
-
   .hero-img {
-    margin-top: 150px; /* baja SOLO la imagen */
+    margin-top: 100px; /* baja SOLO la imagen */
   }
 }
+/* =================================
+   REQUISITOS ALINEADOS A LA IZQUIERDA EN MÓVIL
+   ================================= */
+@media (max-width: 768px) {
 
+  .requisitos {
+    text-align: left;
+  }
 
+  .requisitos ul {
+    padding-left: 0;   /* quita sangría rara */
+  }
 
+  .requisitos li {
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+
+}
 
 
 </style>
@@ -395,12 +477,11 @@ echo $mensajeExito;
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <img src="ImagesSV/Abigail.png" alt="Modelo Abigail" class="hero-img">
-    <div class="hero-text-container">
-      <img src="ImagesSV/Quiero ser agente loto (1).png" alt="Equipo Ganador" class="hero-text-img">
-      <p class="hero-subtitle">
-        <span style="font-size:28px; font-weight:700;">JUNTOS MAXIMIZAMOS TUS VENTAS</span><br>
-        <span style="font-size:28px; font-weight:700;">E INGRESOS PARA TU NEGOCIO</span>
+    <img src="<?= htmlspecialchars($config['hero_imagen1']) ?>" class="hero-img">
+<img src="<?= htmlspecialchars($config['hero_imagen2']) ?>" class="hero-text-img">
+<p class="hero-subtitle">
+  <?= nl2br(htmlspecialchars($config['hero_titulo'])) ?>
+</p>
       </p>
     </div>
   </div>
@@ -410,21 +491,33 @@ echo $mensajeExito;
 <div class="info-container">
 
   <!-- REQUISITOS -->
-  <section class="requisitos-section">
-    <h2 class="requisitos-title">REQUISITOS</h2>
-    <div class="requisitos">
-      <ul>
-        <li>NEGOCIO O PERSONA NATURAL.</li>
-        <li>CONTAR CON NÚMERO DE DUI HOMOLOGADO.</li>
-        <li>UBICACIÓN EN ZONAS DE ALTO TRÁFICO.</li>
-        <li>GRAN AFLUENCIA DE CLIENTES EN EL NEGOCIO.</li>
-        <li>ESPACIO EN PRIMERA POSICIÓN PARA PONER LA TERMINAL DE VENTA.</li>
-        <li>DESIGNAR ESPACIO PARA PUBLICIDAD.</li>
-        <li>FIRMA DE CONTRATO.</li>
+  <!-- REQUISITOS -->
+<section class="requisitos-section">
+  <h2 class="requisitos-title">REQUISITOS</h2>
+
+  <div class="requisitos-container">
+    <div class="requisitos-texto">
+      
+      <ul class="requisitos-list">
+      <?php 
+      if(!empty($config['requisitos_texto'])) {
+          // Separar cada requisito por salto de línea
+          $puntos = preg_split("/\r\n|\n|\r/", $config['requisitos_texto']);
+          foreach($puntos as $punto) {
+              if(trim($punto) !== "") { // Ignorar líneas vacías
+                  echo "<li>" . htmlspecialchars($punto) . "</li>";
+              }
+          }
+      }
+      ?>
       </ul>
-      <img src="ImagesSV/Imagen requisitos.png" alt="Ilustración Requisitos">
     </div>
-  </section>
+
+    <?php if(!empty($config['requisitos_imagen'])): ?>
+      <img src="<?= htmlspecialchars($config['requisitos_imagen']) ?>" alt="Imagen Requisitos">
+    <?php endif; ?>
+  </div>
+</section>
 
   <!-- FORMULARIO -->
   <section class="form-container">
@@ -434,7 +527,7 @@ echo $mensajeExito;
       <div class="form-grid">
         <div class="form-group"><label>Nombre</label><input type="text" name="Nombre" placeholder="Nombre" required></div>
         <div class="form-group"><label>Apellidos</label><input type="text" name="Apellidos" placeholder="Apellidos" required></div>
-        <div class="form-group"><label>Número de Identidad</label><input type="text" name="Identidad" placeholder="Número de Identidad" required></div>
+        <div class="form-group"><label>Número de Identidad</label><input type="text" name="Identidad" placeholder="Número de Identidad" ></div>
         <div class="form-group"><label>Teléfono</label><input type="tel" name="Telefono" placeholder="Teléfono" required></div>
         <div class="form-group"><label>Correo Electrónico</label><input type="email" name="Correo" placeholder="Correo Electrónico" required></div>
       </div>
@@ -445,13 +538,27 @@ echo $mensajeExito;
         <div class="form-group"><label>Dirección actual del negocio</label><input type="text" name="Direccion" placeholder="Dirección del negocio" required></div>
         <div class="form-group"><label>Tipo de negocio</label>
           <select name="TipoNegocio" required>
-            <option value="">Seleccione</option>
-            <option value="Tienda">Tienda</option>
-            <option value="Mercadito">Mercadito</option>
-            <option value="Farmacia">Farmacia</option>
-          </select>
+  <option value="">Seleccione</option>
+  <option value="Abarrotería">Abarrotería</option>
+  <option value="Bares/Canchas">Bares / Canchas</option>
+  <option value="Cafetería/restaurante">Cafetería / Restaurante</option>
+  <option value="Carwash/Taller">Carwash / Taller</option>
+  <option value="Farmacia">Farmacia</option>
+  <option value="Ferretería">Ferretería</option>
+  <option value="Internet/Celulares">Internet / Celulares</option>
+  <option value="Kiosko/Supermercado">Kiosko / Supermercado</option>
+  <option value="Laboratorio">Laboratorio</option>
+  <option value="Librería">Librería</option>
+  <option value="LNB">LNB</option>
+  <option value="Loteria">Lotería</option>
+  <option value="Mini Súper">Mini Súper</option>
+  <option value="Salon de Belleza">Salón de Belleza</option>
+  <option value="Tienda de conveniencia">Tienda de conveniencia</option>
+  <option value="Tienda en general">Tienda en general</option>
+  <option value="Otros">Otros</option>
+</select>
+
         </div>
-        <input type="file" name="FotoNegocio" accept="image/*" required>
         <div class="form-group"><label>Departamento</label>
           <select name="Departamento" required>
   <option value="">Seleccione Departamento</option>
@@ -473,7 +580,12 @@ echo $mensajeExito;
 
         </div>
         <div class="form-group"><label>Ciudad</label><input type="text" name="Ciudad" placeholder="Ciudad" required></div>
-        <div class="form-group"><label>Municipio</label><input type="text" name="Municipio" placeholder="Municipio" required></div>
+        <div class="form-group">
+    <label>Municipio</label>
+    <select name="Municipio" id="municipio" required>
+        <option value="">Seleccione Municipio</option>
+    </select>
+</div>
         <div class="form-group"><label>Barrio / Colonia</label><input type="text" name="Barrio" placeholder="Barrio / Colonia" required></div>
       </div>
 
@@ -484,16 +596,74 @@ echo $mensajeExito;
   <!-- BENEFICIOS -->
   <h2 class="beneficios-title">BENEFICIOS</h2>
   <section class="beneficios-container">
-    <div class="beneficio"><img src="ImagesSV/icono comision.svg"><div class="beneficio-text"><h4>CERO INVERSIÓN Y BAJOS COSTOS OPERATIVOS</h4><p>Olvídate del inventario y vencimiento del
-producto.
-</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono asesoria.svg"><div class="beneficio-text"><h4>ASESORÍAS</h4><p>Orientación permanente para el desarrollo de tu negocio para incrementar tus ventas de lotería electrónica por medio de nuestro equipo de Asesores Comerciales</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono incentivos.svg"><div class="beneficio-text"><h4>PROMOCIONES</h4><p>Podrás ser parte de nuestras actividades y dinámicas a lo largo del año.</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono trafico.svg"><div class="beneficio-text"><h4>AFLUENCIA DE PERSONAS EN TU TIENDA O NEGOCIO</h4><p>Gracias a Loto y sus novedosos juegos, podrás atraer nuevos clientes a tu negocio.</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono publicidad.svg"><div class="beneficio-text"><h4>PUBLICIDAD</h4><p>Contarás con publicidad en tu punto de venta para que los clientes te identifiquen como parte de la exclusiva red de vendedores Loto en el país.</p></div></div>
-    <div class="beneficio"><img src="ImagesSV/icono ayuda.svg"><div class="beneficio-text"><h4>ASISTENCIA Y MANTENIMIENTO</h4><p>La instalación y mantenimiento de la terminal es gratuita, así como el abastecimiento de papel para la impresión de boletos.</p></div></div>
-  </section>
+  <?php for($i=1;$i<=6;$i++): ?>
+    <div class="beneficio">
+      <img src="<?= htmlspecialchars($config["beneficio{$i}_imagen"]) ?>" alt="Beneficio <?= $i ?>">
+      <div class="beneficio-text">
+        <h4><?= htmlspecialchars($config["beneficio{$i}_titulo"]) ?></h4>
+        <p><?= nl2br(htmlspecialchars($config["beneficio{$i}_texto"])) ?></p>
+      </div>
+    </div>
+  <?php endfor; ?>
+</section>
 
 </div>
 </body>
 </html>
+
+<script>
+const municipiosSV = <?php echo json_encode($municipiosSV); ?>;
+
+const departamentoSelect = document.querySelector('select[name="Departamento"]');
+const municipioSelect = document.getElementById('municipio');
+
+departamentoSelect.addEventListener('change', function() {
+    const depto = this.value;
+    municipioSelect.innerHTML = '<option value="">Seleccione Municipio</option>';
+    if (municipiosSV[depto]) {
+        municipiosSV[depto].forEach(mun => {
+            const option = document.createElement('option');
+            option.value = mun;
+            option.textContent = mun;
+            municipioSelect.appendChild(option);
+        });
+    }
+});
+if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+  }
+</script>
+
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "e25e83b5-ef96-41b9-b3d4-a949ffada641",
+      host: "https://loteradehonduras-help.freshchat.com",
+      widgetUuid: "7bb0713e-e6f3-41d8-945d-9c6d399b2166",
+      locale: "es"
+    });
+  }
+
+  function initialize(i, t) {
+    var e;
+    i.getElementById(t)
+      ? initFreshChat()
+      : (
+          (e = i.createElement("script")),
+          e.id = t,
+          e.async = true,
+          e.src = "https://loteradehonduras-help.freshchat.com/js/widget.js",
+          e.onload = initFreshChat,
+          i.head.appendChild(e)
+        );
+  }
+
+  function initiateCall() {
+    initialize(document, "Freshchat-js-sdk");
+  }
+
+  window.addEventListener
+    ? window.addEventListener("load", initiateCall, false)
+    : window.attachEvent("load", initiateCall, false);
+</script>
+

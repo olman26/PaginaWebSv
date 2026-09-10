@@ -1,3 +1,49 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+try {
+    $conn = new PDO(
+        "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+        "LotoAdmin",
+        "LotAdmin1.",
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+
+    $stmt = $conn->query("SELECT * FROM paginaweb_sv_superpremio WHERE id = 1");
+    $datos = $stmt->fetch(PDO::FETCH_ASSOC);
+
+} catch (PDOException $e) {
+    die("Error: " . $e->getMessage());
+}
+?>
+
+<?php
+// ================= ÚLTIMO RESULTADO SUPER PREMIO =================
+$stmtSP = $conn->prepare("
+    SELECT TOP 1
+        par1, par2, par3, par4, par5
+    FROM numeros_ganadores_sorteos_prod
+    WHERE pais = 'El Salvador'
+      AND game_name = 'Loto Super Premio'
+      AND par1 IS NOT NULL   --  ESTA ES LA CLAVE
+    ORDER BY draw_date DESC
+");
+
+$stmtSP->execute();
+$superPremio = $stmtSP->fetch(PDO::FETCH_ASSOC);
+
+// Valores por defecto
+$sp = ['00','00','00','00','00'];
+
+if ($superPremio) {
+    $sp[0] = str_pad($superPremio['par1'] ?? '0', 2, '0', STR_PAD_LEFT);
+    $sp[1] = str_pad($superPremio['par2'] ?? '0', 2, '0', STR_PAD_LEFT);
+    $sp[2] = str_pad($superPremio['par3'] ?? '0', 2, '0', STR_PAD_LEFT);
+    $sp[3] = str_pad($superPremio['par4'] ?? '0', 2, '0', STR_PAD_LEFT);
+    $sp[4] = str_pad($superPremio['par5'] ?? '0', 2, '0', STR_PAD_LEFT);
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -139,7 +185,6 @@ body { background:#fff; font-weight:600; }
   }
 }
 
-
 /* FIX LOGO SUPER PREMIO EN MÓVIL */
 @media (max-width: 768px) {
   .logo-sp {
@@ -150,7 +195,6 @@ body { background:#fff; font-weight:600; }
     margin: 0 auto 15px auto; /* CENTRADO */
   }
 }
-
 
 /* =========================
    AJUSTE HEADER MÓVIL
@@ -163,9 +207,17 @@ body { background:#fff; font-weight:600; }
   }
 
 }
-
-
-
+.mensaje-info {
+    font-size: 14px;
+    font-weight: 800;
+    color: #b71c1c;
+    background: #FFFF00; /* amarillo suave como tu imagen */
+    padding: 10px 14px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    display: inline-block;
+    text-align: center;
+}
 
 </style>
 </head>
@@ -174,17 +226,17 @@ body { background:#fff; font-weight:600; }
 <!-- HEADER -->
 <div class="top">
     <div class="top-content">
-        <img src="/ImagesSV/SP.svg" class="logo-sp">
+        <img src="<?= $datos['logo'] ?>" class="logo-sp">
 
         <div class="ganador-box">
             <div class="ganador">ÚLTIMO NÚMERO GANADOR</div>
             <div class="nums" id="ultimoResultado">
-                <span class="num">00</span>
-                <span class="num">00</span>
-                <span class="num">00</span>
-                <span class="num">00</span>
-                <span class="num">00</span>
-            </div>
+    <span class="num"><?= htmlspecialchars($sp[0]) ?></span>
+    <span class="num"><?= htmlspecialchars($sp[1]) ?></span>
+    <span class="num"><?= htmlspecialchars($sp[2]) ?></span>
+    <span class="num"><?= htmlspecialchars($sp[3]) ?></span>
+    <span class="num"><?= htmlspecialchars($sp[4]) ?></span>
+</div>
             <div class="etiqueta-hola">
                 PRÓXIMO SORTEO EN VIVO:
                 <span id="horaHeader">00</span>:
@@ -215,7 +267,6 @@ body { background:#fff; font-weight:600; }
                 <option value="8">Septiembre</option><option value="9">Octubre</option><option value="10">Noviembre</option><option value="11">Diciembre</option>
             </select>
             <select id="anioFiltro">
-                <option>2025</option>
                 <option>2026</option>
             </select>
         </div>
@@ -226,41 +277,58 @@ body { background:#fff; font-weight:600; }
             </table>
         </div>
     </div>
-    <div class="col derecha">
+    <div class="col derecha" id="resultadosCalendarioSuper">
         <div class="sorteo">
-            <h3>SORTEO 9:00 P.M.</h3>
-            <div class="nums" id="ultimoResultadoInferior">
-                <span class="num">00</span><span class="num">00</span><span class="num">00</span><span class="num">00</span><span class="num">00</span>
-            </div>
+    <p class="mensaje-info">
+        Elegí en el calendario miércoles o sábado para ver los números ganadores
+    </p>
+    <h3>SORTEO 9:00 P.M.</h3>
+    <div style="
+        background:#fde9b7;
+        color:#b71c1c;
+        padding:10px;
+        border-radius:10px;
+        font-weight:900;
+        text-align:center;
+    ">
+        Día sin sorteo de Loto SuperPremio
+    </div>
         </div>
     </div>
 </div>
 
 <!-- ACCORDION -->
 <div class="accordion">
-    <div class="accordion-header">CÓMO JUGAR Y GANAR <span class="arrow">▼</span></div>
-    <div class="accordion-content">
-        <div class="info-juego">
-            <p class="descripcion">
-                ¡Estás a 5 números de vivir tus sueños!<br>
-                Seleccioná tus 5 números favoritos del 01 al 46 y si los acertás todos, ganás el SuperPremio acumulado.
-            </p>
-            <p class="subtitulo-rojo">TABLA DE PREMIOS</p>
-            <div class="linea-juego">
-                <img src="/ImagesSV/SP.svg" class="img-super">
-                <p>
-                    • 5 NÚMEROS EN CUALQUIER ORDEN GANÁS EL SUPERPREMIO ACUMULADO. <br>
-                    • 4 NÚMEROS GANÁS $100 <br>
-                    • 3 NÚMEROS GANÁS $10 <br>
-                    • 2 NÚMEROS GANÁS JUGADAS GRATIS.
-                </p>
-            </div>
-        </div>
-        <div class="sub-accordion-header">CONOCÉ LOS RESULTADOS <span>▼</span></div>
-        <div class="sub-accordion-content">Sintonizando las noches de SuperPremio los miércoles y sábados a las 9:00 p.m., por Canal 4, Facebook y YouTube Live.</div>
-        <div class="sub-accordion-header">RECLAMÁ TU PREMIO <span>▼</span></div>
-        <div class="sub-accordion-content">Si resultaste ganador, acercate con tu boleto a los puntos de venta Loto.</div>
+    <div class="sub-accordion-header">
+    <?= htmlspecialchars($datos['titulo1']) ?>
+    <span>▼</span>
+</div>
+
+<div class="sub-accordion-content">
+    <div class="linea-juego">
+        <img src="/ImagesSV/SP.svg" class="img-super">
+
+        <p>
+            <?= nl2br(htmlspecialchars($datos['contenido1'])) ?>
+        </p>
     </div>
+</div>
+
+<div class="sub-accordion-header">
+    <?= htmlspecialchars($datos['titulo2']) ?>
+    <span>▼</span>
+</div>
+<div class="sub-accordion-content">
+    <?= nl2br(htmlspecialchars($datos['contenido2'])) ?>
+</div>
+
+<div class="sub-accordion-header">
+    <?= htmlspecialchars($datos['titulo3']) ?>
+    <span>▼</span>
+</div>
+<div class="sub-accordion-content">
+    <?= nl2br(htmlspecialchars($datos['contenido3'])) ?>
+</div>
 </div>
 
 <!-- BOTÓN REGLAMENTO -->
@@ -294,19 +362,103 @@ Number.prototype.padStart=function(n,str){return Array(n-String(this).length+1).
 setInterval(()=>{let now2=new Date().getTime(), dist=countDown-now2,h=Math.floor((dist%day)/hour).padStart(2,"0"), m=Math.floor((dist%hour)/minute).padStart(2,"0"), s=Math.floor((dist%minute)/second).padStart(2,"0"); document.getElementById("horaHeader").innerText=h; document.getElementById("minHeader").innerText=m; document.getElementById("segHeader").innerText=s; if(dist<=0){document.querySelector(".etiqueta-hola").innerText="¡SORTEO EN VIVO!";}}, second);
 
 // Función para traer resultados
+function renderSuperPremio(contenido){
+    document.getElementById('resultadosCalendarioSuper').innerHTML = `
+        <div class="sorteo">
+            <p class="mensaje-info">
+                Elegí en el calendario miércoles o sábado para ver los números ganadores
+            </p>
+            <h3>SORTEO 9:00 P.M.</h3>
+            ${contenido}
+        </div>
+    `;
+}
+
+function mensajeSuperPremio(texto){
+    return `
+        <div style="
+            background:#fde9b7;
+            color:#b71c1c;
+            padding:10px;
+            border-radius:10px;
+            font-weight:900;
+            text-align:center;
+        ">
+            ${texto}
+        </div>
+    `;
+}
+
 function traerResultado(fecha){
-    fetch(`/api/resultados_calendario.php?fecha=${fecha}`)
-    .then(res=>res.json())
-    .then(data=>{
-        if(!data.error){
-            document.getElementById('ultimoResultadoInferior').innerHTML=`
-                <span class="num">${data.par1}</span>
-                <span class="num">${data.par2}</span>
-                <span class="num">${data.par3}</span>
-                <span class="num">${data.par4}</span>
-                <span class="num">${data.par5}</span>`;
+
+    const fechaObj = new Date(fecha + "T00:00:00");
+    const diaSemana = fechaObj.getDay();
+
+    // Solo miércoles (3) y sábado (6)
+    if(diaSemana !== 3 && diaSemana !== 6){
+        renderSuperPremio(
+            mensajeSuperPremio('Día sin sorteo de Loto SuperPremio')
+        );
+        return;
+    }
+
+    fetch(`/api/resultados_calendario.php?fecha=${encodeURIComponent(fecha)}`)
+    .then(res => res.json())
+    .then(data => {
+
+        console.log("Respuesta API:", data);
+
+        if(data.error){
+            renderSuperPremio(
+                mensajeSuperPremio('Error al consultar resultados')
+            );
+            return;
         }
-    }).catch(err=>console.error(err));
+
+        const numeros = [
+            data.par1,
+            data.par2,
+            data.par3,
+            data.par4,
+            data.par5
+        ];
+
+        const tieneResultado = numeros.every(n =>
+            n !== null &&
+            n !== undefined &&
+            String(n).trim() !== ''
+        ) && numeros.some(n =>
+            String(n).padStart(2, '0') !== '00'
+        );
+
+        if(tieneResultado){
+
+            renderSuperPremio(`
+                <div class="nums">
+                    <span class="num">${String(data.par1).padStart(2,'0')}</span>
+                    <span class="num">${String(data.par2).padStart(2,'0')}</span>
+                    <span class="num">${String(data.par3).padStart(2,'0')}</span>
+                    <span class="num">${String(data.par4).padStart(2,'0')}</span>
+                    <span class="num">${String(data.par5).padStart(2,'0')}</span>
+                </div>
+            `);
+
+        } else {
+
+            renderSuperPremio(
+                mensajeSuperPremio('Sin resultados para esta fecha')
+            );
+
+        }
+
+    })
+    .catch(error => {
+        console.error("Error:", error);
+
+        renderSuperPremio(
+            mensajeSuperPremio('Error al cargar los resultados')
+        );
+    });
 }
 
 // Calendario
@@ -383,42 +535,56 @@ function cargarUltimoResultado() {
     .then(data => {
         if(!data.error){
             document.getElementById('ultimoResultado').innerHTML = `
-                <span class="num">${data.par1}</span>
-                <span class="num">${data.par2}</span>
-                <span class="num">${data.par3}</span>
-                <span class="num">${data.par4}</span>
-                <span class="num">${data.par5}</span>`;
+                class="num">${data.par1}</span>
+                class="num">${data.par2}</span>
+                class="num">${data.par3}</span>
+                class="num">${data.par4}</span>
+                class="num">${data.par5}</span>`;
         }
     })
     .catch(err => console.error(err));
 }
 
-// Traer resultado filtrado por calendario
-function traerResultado(fecha){
-    fetch(`/api/resultados_calendario.php?fecha=${fecha}`)
-    .then(res=>res.json())
-    .then(data=>{
-        if(!data.error){
-            document.getElementById('ultimoResultadoInferior').innerHTML=`
-                <span class="num">${data.par1}</span>
-                <span class="num">${data.par2}</span>
-                <span class="num">${data.par3}</span>
-                <span class="num">${data.par4}</span>
-                <span class="num">${data.par5}</span>`;
-        } else {
-            document.getElementById('ultimoResultadoInferior').innerHTML=`
-                <span class="num">00</span><span class="num">00</span><span class="num">00</span><span class="num">00</span><span class="num">00</span>`;
-        }
-    }).catch(err=>console.error(err));
-}
-
-// Al cargar la página
-cargarUltimoResultado();
 
 
 
 </script>
 
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "e25e83b5-ef96-41b9-b3d4-a949ffada641",
+      host: "https://loteradehonduras-help.freshchat.com",
+      widgetUuid: "7bb0713e-e6f3-41d8-945d-9c6d399b2166",
+      locale: "es"
+    });
+  }
+
+  function initialize(i, t) {
+    var e;
+    i.getElementById(t)
+      ? initFreshChat()
+      : (
+          (e = i.createElement("script")),
+          e.id = t,
+          e.async = true,
+          e.src = "https://loteradehonduras-help.freshchat.com/js/widget.js",
+          e.onload = initFreshChat,
+          i.head.appendChild(e)
+        );
+  }
+
+  function initiateCall() {
+    initialize(document, "Freshchat-js-sdk");
+  }
+
+  window.addEventListener
+    ? window.addEventListener("load", initiateCall, false)
+    : window.attachEvent("load", initiateCall, false);
+</script>
+
 </body>
+
 </html>
 
+ 

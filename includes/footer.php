@@ -20,7 +20,7 @@
 
   .footer-left img {
     transform: scale(2) !important; /* mantiene tamaño grande pero controlado */
-    margin: 0 !important;
+    margin-top: 25px !important;
   }
 
   /* COLUMNAS */
@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* 🔥 centra Juegos, Nosotros, Secciones */
+    text-align: center; /* centra Juegos, Nosotros, Secciones */
     gap: 20px;
   }
 
@@ -47,7 +47,6 @@
   .footer-column p {
     text-align: center;
   }
-
   /* LOGO +18 */
   .footer-logos {
     width: 100%;
@@ -64,7 +63,6 @@
     margin-top: 20px;
   }
 }
-
 @media (max-width: 768px) {
 
   .footer-extra-logo {
@@ -79,17 +77,12 @@
     align-items: center;
   }
 }
-
-
 </style>
 
 <div class="footer">
   <div class="footer-left">
-   <img src="/ImagesSV/juegosdeloteria.png" alt="Logo" class="footer-logo"
-     style="transform: scale(2.5) translateX(40px); margin-top: -12px;">
-
-
-
+   <img src="/ImagesSV/LOGO LOTO JDL WHITE.svg" alt="Logo" class="footer-logo"
+     style="transform: scale(2.5) translateX(40px); margin-top: 25px;">
   </div>
 
   <div class="footer-right">
@@ -97,43 +90,47 @@
       <div class="footer-column">
         <h3>Juegos</h3>
         <p>
-          <a href="index.php?pag=diaria" style="color: inherit; text-decoration: none;">
-        Diaria
+          <a href="?pag=diaria" style="color: inherit; text-decoration: none;">
+        La Diaria
       </a>
     </p>
         
         <p>
-      <a href="index.php?pag=super_premio" style="color: inherit; text-decoration: none;">
-        SuperPremio
+      <a href="?pag=super_premio" style="color: inherit; text-decoration: none;">
+        Loto SuperPremio
       </a>
     </p>
         <p>
-      <a href="index.php?pag=instacash" style="color: inherit; text-decoration: none;">
+      <a href="?pag=instacash" style="color: inherit; text-decoration: none;">
         InstaCash
       </a>
     </p>
          <p>
-      <a href="index.php?pag=apostemos" style="color: inherit; text-decoration: none;">
+      <a href="?pag=apostemos" style="color: inherit; text-decoration: none;">
         Apostemos
       </a>
     </p>
+
+    
+    
         
       </div>
 
       <div class="footer-column">
         <h3>Nosotros</h3>
         <p>
-        <a href="index.php?pag=aplica_con_nosotros" style="color: inherit; text-decoration: none;">
+        <a href="?pag=aplica_con_nosotros" style="color: inherit; text-decoration: none;">
         Aplicá con nosotros
       </a>
       </p>
         <p>
-        <a href="index.php?pag=quiero_ser_agente" style="color: inherit; text-decoration: none;">
+        <a href="?pag=quiero_ser_agente" style="color: inherit; text-decoration: none;">
         Quiero ser vendedor
       </a>
         </p>
        <p>
-  <a href="https://www.google.com/maps/d/viewer?mid=1gerRqZPZbxOs3JlQuXiYnUMIGiLWpvA&ll=0%2C0&z=9" target="_blank" style="color: inherit; text-decoration: none;">
+  <a href="https://www.google.com/maps/d/u/1/edit?mid=1gerRqZPZbxOs3JlQuXiYnUMIGiLWpvA&usp=sharing" target="_blank" style="color: inherit; text-decoration: none;">
+  
     Puntos de venta
   </a>
 </p>
@@ -141,18 +138,45 @@
       </div>
 
       <div class="footer-column">
-        <h3>Secciones</h3>
-        <p>
-        <a href="index.php?pag=noticias" style="color: inherit; text-decoration: none;">
-        Noticias
-      </a>
-      </p>
-        <p>
-      <a href="index.php?pag=contactanos" style="color: inherit; text-decoration: none;">
-        Contáctanos
-      </a>
+    <h3>Secciones</h3>
+    <p>
+        <a href="?pag=noticias" style="color: inherit; text-decoration: none;">
+            Noticias
+        </a>
     </p>
-      </div>
+    <p>
+        <a href="?pag=contactanos" style="color: inherit; text-decoration: none;">
+            Contáctanos
+        </a>
+    </p>
+    <!-- Enlace a Términos y Condiciones -->
+    <p>
+        <a href="/ImagesSV/documentos/020626 LOTO - Bases de la Promoción Extra Chance La Diaria vFinal.pdf" 
+           style="color: inherit; text-decoration: none;" 
+           download>
+          Reglamento promoción
+        </a>
+    </p>
+
+    <p>
+        <a href="/ImagesSV/documentos/Terminos y Condiciones SV-Apostemos 2026.pdf" 
+           style="color: inherit; text-decoration: none;" 
+           download>
+          Reglamento Apostemos
+        </a>
+    </p>
+
+<p>
+        <a href="/ImagesSV/documentos/270726 LOTO - Bases de Trivia InstaCash Cientifica Multiplica vFinal.pdf" 
+           style="color: inherit; text-decoration: none;" 
+           download>
+          Dra. Multiplica
+        </a>
+    </p>
+
+</div>
+
+
     </div>
   </div>
 

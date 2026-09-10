@@ -1,3 +1,37 @@
+<?php
+// ================= CONEXIÓN =================
+try {
+    $conn = new PDO(
+        "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+        "LotoAdmin",
+        "LotAdmin1.",
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+} catch(PDOException $e){
+    die("Error de conexión: " . $e->getMessage());
+}
+// ================= OBTENER DATOS =================
+$stmt = $conn->query("SELECT * FROM paginaweb_sv_instacash WHERE id = 1");
+$config = $stmt->fetch(PDO::FETCH_ASSOC);
+
+// Preparar datos del carrusel
+$gameData = [];
+for($i=1;$i<=11;$i++){
+    if(!empty($config["juego{$i}_nombre"]) || !empty($config["juego{$i}_img"])){
+        $gameData[] = [
+            'title' => $config["juego{$i}_nombre"] ?? "",
+            'desc'  => $config["juego{$i}_desc"] ?? "",
+            'prize' => $config["juego{$i}_premio"] ?? "",
+            'boleto'=> $config["juego{$i}_boleto"] ?? "",
+            'img'   => $config["juego{$i}_img"] ?? ""
+        ];
+    }
+}
+
+// ================= ÚLTIMO VIDEO DE PLAYLIST =================
+$playlist_id = 'PL2wTM_APd302EeiSBvbVOXsVdXGgGvpHy';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,12 +50,11 @@
 
     /* Aplicar la fuente globalmente */
     * {
-      font-family: 'HelveticaRounded', sans-serif; /* Cambiar a HelveticaRounded */
+      font-family: 'HelveticaRounded', sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
 
 /* RESET */
 * {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}
@@ -78,16 +111,76 @@
 #popup img {max-width:90%; max-height:90%; border-radius:12px; box-shadow:0 8px 25px rgba(0,0,0,0.3);}
 #closePopup {position:absolute; top:20px; right:30px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer;}
 
+/* ================= RSE VIDEO SECTION ================= */
+.rse-video-wrap {
+  background: #fff;
+  padding: 60px clamp(22px,5vw,90px) 60px;
+  font-family: 'HelveticaRounded', Arial, sans-serif;
+}
+.rse-video-section {
+  position: relative; overflow: hidden;
+  width: min(920px, 100%); margin: 0 auto;
+  background: radial-gradient(circle at 88% 12%, rgba(255,255,255,0.9) 0 58px, transparent 60px),
+              linear-gradient(145deg, #fff8f0 0%, #fff 52%, #eef6ff 100%);
+  border: 1px solid rgba(255,126,0,0.12); border-radius: 16px;
+  padding: 34px clamp(18px,3vw,42px) 40px;
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+.rse-video-section::before {
+  content: ""; position: absolute; inset: 18px 18px auto auto;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(255,126,0,0.18); pointer-events: none;
+}
+.rse-video-section::after {
+  content: ""; position: absolute; right: -42px; bottom: -42px;
+  width: 150px; height: 150px; border-radius: 50%;
+  background: rgba(0,74,173,0.18); pointer-events: none;
+}
+.rse-video-section > * { position: relative; z-index: 1; }
+.rse-video-header {
+  display: flex; align-items: flex-end;
+  justify-content: space-between; gap: 24px; margin-bottom: 28px;
+}
+.rse-video-header h2 {
+  margin: 0; color: #004aad;
+  font-size: clamp(26px, 3.2vw, 40px); font-weight: 850; line-height: 1.06;
+}
+.rse-video-header span {
+  color: #ff7e00; font-size: 16px; font-weight: 900;
+  text-transform: uppercase; white-space: nowrap;
+}
+.rse-video-frame {
+  position: relative; overflow: hidden; border-radius: 14px; background: #fff;
+  aspect-ratio: 16/9; border: 1px solid rgba(0,74,173,0.1);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.14);
+}
+.rse-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.rse-youtube-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-top: 22px; color: #fff; background: #ff0000; border-radius: 999px;
+  padding: 12px 22px; font-size: 15px; font-weight: 900; text-decoration: none;
+  box-shadow: 0 10px 22px rgba(255,0,0,0.22);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.rse-youtube-link:hover {
+  background: #d90000; color: #fff;
+  transform: translateY(-2px); box-shadow: 0 14px 28px rgba(255,0,0,0.28);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
     .juego-container-white {flex-direction: column; text-align: center;}
     .carousel-container, .game-info {width: 100%;}
+    .rse-video-wrap { padding: 38px 18px 40px; }
+    .rse-video-header { display: block; margin-bottom: 20px; }
+    .rse-video-header span { display: block; margin-top: 10px; }
+    .rse-youtube-link { width: 100%; }
 }
 
 /* ===== FIX HEADER INSTACASH SOLO EN MÓVIL ===== */
 @media (max-width: 767px) {
   .header {
-    padding-top: 330px; /* ajusta si tu menú es más alto */
+    padding-top: 330px;
   }
 }
 
@@ -97,24 +190,18 @@
 <body>
 
 <!-- ================= HEADER ================= -->
-<div class="header">
-    <img src="ImagesSV/instacash_logo.webp" alt="InstaCash">
+<div class="header" style="background: url('<?= $config['header_fondo'] ?? 'ImagesSV/fondo instacash.png' ?>'); background-size: cover; background-position: center;">
+    <img src="<?= $config['header_logo'] ?? 'ImagesSV/instacash_logo.webp' ?>" alt="InstaCash">
 </div>
 
 <!-- ================= TARJETAS ================= -->
 <div class="info-boxes">
+<?php for($i=1;$i<=3;$i++): ?>
     <div class="info-item card-white">
-        <h3>¿Qué es Instacash?</h3>
-        <p>Es la marca de lotería instantánea de LOTO, con la que podrás divertirte con diferentes juegos, que te harán ganar dinero al instante; sin esperar sorteos.</p>
+        <h3><?= htmlspecialchars($config["tarjeta{$i}_titulo"] ?? "Título tarjeta $i") ?></h3>
+        <p><?= nl2br(htmlspecialchars($config["tarjeta{$i}_descripcion"] ?? "Descripción tarjeta $i")) ?></p>
     </div>
-    <div class="info-item card-white">
-        <h3>¿Cómo se juega?</h3>
-        <p>Cada juego tiene su propia mecánica. Podés ganar combinando números, símbolos o palabras según el juego.</p>
-    </div>
-    <div class="info-item card-white">
-        <h3>¿Dónde lo puedo jugar?</h3>
-        <p>Lo encontrás en más de 1,800 puntos de venta a nivel nacional.</p>
-    </div>
+<?php endfor; ?>
 </div>
 
 <!-- ================= SECCIÓN JUEGOS ================= -->
@@ -122,26 +209,19 @@
     <img src="ImagesSV/Conocé los juegos.png" alt="Conocé los juegos">
 </div>
 
-<!-- ========== COMBO CARRUSEL + INFO ========== -->
 <div class="juego-container-white">
-
-    <!-- ===== CARRUSEL ===== -->
     <div class="carousel-container">
         <button class="carousel-btn" id="prevBtn">&#10094;</button>
         <button class="carousel-btn" id="nextBtn">&#10095;</button>
-
         <div class="carousel-track">
-            <div class="carousel-slide"><img src="ImagesSV/LogosInstacash/Artes para sección de web-01.png"></div>
-            <div class="carousel-slide"><img src="ImagesSV/LogosInstacash/Artes para sección de web-02.png"></div>
-            <div class="carousel-slide"><img src="ImagesSV/LogosInstacash/Artes para sección de web-03.png"></div>
-            <div class="carousel-slide"><img src="ImagesSV/LogosInstacash/Artes para sección de web-04.png"></div>
-            <div class="carousel-slide"><img src="ImagesSV/LogosInstacash/Artes para sección de web-05.png"></div>
-            <div class="carousel-slide"><img src="ImagesSV/LogosInstacash/Artes para sección de web-06.png"></div>
-            <div class="carousel-slide"><img src="ImagesSV/LogosInstacash/Artes para sección de web-07.png"></div>
+            <?php foreach($gameData as $game): ?>
+                <div class="carousel-slide">
+                    <img src="<?= $game['img'] ?? 'ImagesSV/placeholder.png' ?>">
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 
-    <!-- ===== INFO DEL JUEGO ===== -->
     <div class="game-info">
         <div class="title-game"></div>
         <p class="desc-text"></p>
@@ -155,8 +235,34 @@
     </div>
 </div>
 
+<!-- ================= SECCIÓN RSE / ÚLTIMO VIDEO ================= -->
+<div class="rse-video-wrap">
+  <section class="rse-video-section" aria-label="Ultimo video RSE InstaCash">
+    <div class="rse-video-header">
+      <h2>Descubrí cómo jugar y ganar al instante </h2>
+      <span>InstaCash</span>
+    </div>
+    <div class="rse-video-frame">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=<?= $playlist_id ?>&rel=0"
+        title="Último video de InstaCash"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <a class="rse-youtube-link"
+       href="https://www.youtube.com/playlist?list=<?= $playlist_id ?>"
+       target="_blank" rel="noopener noreferrer">
+      Ver más
+    </a>
+  </section>
+</div>
+
+<!-- ================= BOTÓN REGLAMENTO ================= -->
 <div style="text-align:center; margin: 40px 0;">
-    <a class="btn-reglamento" href="/ImagesSV/documentos/Reglamento_instacash.pdf" download>DESCARGAR REGLAMENTO</a>
+    <?php if(!empty($config['reglamento_pdf'])): ?>
+        <a class="btn-reglamento" href="<?= $config['reglamento_pdf'] ?>" download>DESCARGAR REGLAMENTO</a>
+    <?php endif; ?>
 </div>
 
 <!-- POPUP -->
@@ -176,17 +282,9 @@ let index = 0;
 let slideWidth = slides[0] ? slides[0].getBoundingClientRect().width : 0;
 
 /* Datos de cada juego */
-const gameData = [
-  {title:"Números en Fuego", desc:"Con opción de compra desde $1 hasta $3, es un juego de coincidir números, cada línea se juega por separado.", prize:"$8,000", boleto:"ImagesSV/BolotosInstacash/BOL FUEGO.svg"},
-  {title:"Mina de Oro", desc:"Es un juego de sumar números, si la suma total coincide con el número que está dentro de las barras de oro, se gana el premio indicado.", prize:"$3,000", boleto:"ImagesSV/BolotosInstacash/BOL_MINA DE ORO.svg"},
-  {title:"Cerdito Bigotón", desc:"Para ganar con Cerdito se debe coincidir algún número con cualquier de la serie ganadora. Además hay un bono extra al coincidir los dos números del bigote.", prize:"$1,000", boleto:"ImagesSV/BolotosInstacash/BOL_CERDITO.svg"},
-  {title:"Chocá los 5", desc:"Es un juego en el que se debe coincidir la serie completa con los números ganadores, todas las líneas se juegan por separado.", prize:"$1,500", boleto:"ImagesSV/BolotosInstacash/BOL_CHOCA LOS 5_CHOCA LOS 5 (1).svg"},
-  {title:"Boliche", desc:"Es un juego en el que coincidís números y ganás premios si acertas al menos 4. Cuantos más números se acierten, más grande será el premio, según la tabla indicada del boleto.", prize:"$2,500", boleto:"ImagesSV/BolotosInstacash/BOL_BOLICHE.svg"},
-  {title:"Árbol Billetón", desc:"Es un juego de encontrar símbolos de billete, se deben encontrar al menos 2 símbolos para comenzar a ganar. Los premios varían según la tabla.", prize:"$1,500", boleto:"ImagesSV/BolotosInstacash/BOL_ARBOL.svg"},
-  {title:"Tic Tac Cash", desc:"Es un juego donde podés ganar si lográs formar una línea, ya sea vertical, horizontal o diagonal, combinando los símbolos correctos. El premio depende de la línea que logres armar.", prize:"$2,000", boleto:"ImagesSV/BolotosInstacash/BOL_TIC TAC CASH.svg"}
-];
+const gameData = <?= json_encode($gameData, JSON_HEX_TAG) ?>;
 
-/* recalcula el ancho si cambias tamaño de ventana */
+/* Recalcula el ancho si cambias tamaño de ventana */
 function recalc() {
     slideWidth = slides[0] ? slides[0].getBoundingClientRect().width : 0;
     updateCarousel();
@@ -194,7 +292,7 @@ function recalc() {
 window.addEventListener('resize', recalc);
 
 function updateCarousel() {
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
+    track.style.transform = `translateX(-${index * 100}%)`;
 }
 
 /* Actualiza info según slide */
@@ -219,7 +317,7 @@ prevBtn.addEventListener('click', () => {
 /* Inicializa al cargar la página */
 window.addEventListener('load', () => {
     recalc();
-    updateGameInfo(0); // primera imagen
+    updateGameInfo(0);
 });
 
 /* ================= POPUP ================= */
@@ -236,6 +334,37 @@ boletoBtn.addEventListener('click', () => {
 closePopup.addEventListener('click', () => popup.style.display = "none");
 popup.addEventListener('click', e => { if(e.target === popup) popup.style.display = "none"; });
 </script>
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "e25e83b5-ef96-41b9-b3d4-a949ffada641",
+      host: "https://loteradehonduras-help.freshchat.com",
+      widgetUuid: "7bb0713e-e6f3-41d8-945d-9c6d399b2166",
+      locale: "es"
+    });
+  }
 
+  function initialize(i, t) {
+    var e;
+    i.getElementById(t)
+      ? initFreshChat()
+      : (
+          (e = i.createElement("script")),
+          e.id = t,
+          e.async = true,
+          e.src = "https://loteradehonduras-help.freshchat.com/js/widget.js",
+          e.onload = initFreshChat,
+          i.head.appendChild(e)
+        );
+  }
+
+  function initiateCall() {
+    initialize(document, "Freshchat-js-sdk");
+  }
+
+  window.addEventListener
+    ? window.addEventListener("load", initiateCall, false)
+    : window.attachEvent("load", initiateCall, false);
+</script>
 </body>
 </html>

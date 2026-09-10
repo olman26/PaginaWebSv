@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 $host = "srvdbcacdev.database.windows.net";
-$db   = "dblotocacdev";  // tu base de datos
+$db   = "dblotocacdev";
 $user = "LotoAdmin";
 $pass = "LotAdmin1.";
 
@@ -14,24 +14,23 @@ try {
     exit;
 }
 
-// Recibir fecha desde GET
 if (!isset($_GET['fecha'])) {
     echo json_encode(['error' => 'No se proporcionó fecha']);
     exit;
 }
 
-$fecha = $_GET['fecha']; // Formato esperado: YYYY-MM-DD
+$fecha = $_GET['fecha'];
 
-// Solo para juego 2
-$juego = 2;
-
-// Consulta: obtener resultado del día seleccionado
-$sql = "SELECT par1, par2, par3, par4, par5 
-        FROM loto_sorteos_sv 
-        WHERE juego = :juego AND CONVERT(date, fecha) = :fecha";
+$sql = "SELECT TOP 1 par1, par2, par3, par4, par5 
+        FROM numeros_ganadores_sorteos_prod 
+        WHERE pais = 'El Salvador'
+        AND UPPER(LTRIM(RTRIM(game_name))) IN ('LOTO SUPER PREMIO', 'SUPER PREMIO')
+        AND CAST(draw_date AS DATE) = :fecha
+        AND par1 IS NOT NULL
+        ORDER BY draw_date DESC";
 
 $stmt = $conn->prepare($sql);
-$stmt->execute(['juego' => $juego, 'fecha' => $fecha]);
+$stmt->execute(['fecha' => $fecha]);
 $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($resultado) {
@@ -44,4 +43,4 @@ if ($resultado) {
         'par4' => '00',
         'par5' => '00'
     ]);
-}
+} 

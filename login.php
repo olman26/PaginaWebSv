@@ -1,254 +1,393 @@
+<?php
+// Conectar a la base de datos
+try {
+    $conn = new PDO(
+        "sqlsrv:Server=srvdbcacdev.database.windows.net;Database=dblotocacdev",
+        "LotoAdmin",
+        "LotAdmin1.",
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ]
+    );
+} catch (PDOException $e) {
+    die("Error de conexión: " . $e->getMessage());
+}
+
+// Obtener los datos de la base de datos
+$stmt = $conn->query("SELECT * FROM paginaweb_sv_seleccion_pais WHERE id = 1");
+$contenido = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loto - Selección de País</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loto - Selección de País</title>
+    <link rel="icon" type="image/png" href="/imagesSV/icono.png">
+    <style>
+        /* Tu estilo CSS sigue aquí, sin cambios */
+        @font-face {
+            font-family: 'HelveticaRounded';
+            src: url('fonts/HelveticaRoundedLTStd-Bd.ttf') format('truetype');
+            font-weight: bold;
+        }
 
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
 
+        body {
+    background-color: #fff7eb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
 
-  <style>
-/* Llamada a la fuente desde tu servidor */
-@font-face { font-family: 'HelveticaRounded'; src: url('fonts/HelveticaRoundedLTStd-Bd.ttf') format('truetype'); /* Ruta relativa al archivo de la fuente */ font-weight: bold; font-style: normal; }
+        /* Main content ocupa todo el espacio disponible */
+        .main-content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 70px;
+    overflow: hidden;
+}
 
+        /* HEADER */
+      header {
+    width: 100%;
+    height: 100px;
+    background-color: #ff7a00;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
+header img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    top: 38px;
+    z-index: 5;
+}
 
-    body {
-      background-color: #fff7eb;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 0 10px;
-    }
+        /* CONTENIDO */
+        .main-content {
+            min-height: calc(100vh - 100px - 35px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 60px;
+        }
 
-    /* HEADER */
-    header {
-      width: 100%;
-      background-color: #ff7a00;
-      display: flex;
-      justify-content: center;
-      padding: 5px 0;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
+        /* TEXTO */
+        .welcome-text {
+    text-align: center;
+    margin: 10px 0 15px 0;
+}
 
-    header img {
-      width: 130px;
-      height: auto;
-      position: relative;
-      top: 1.5cm;
-      z-index: 1;
-    }
+        .welcome-text h1 {
+            font-size: 14px;
+            color: #0052a5;
+            font-weight: bold;
+        }
 
-    /* CONTENIDO */
+        .welcome-text h2 {
+            font-size: 32px;
+            color: #ff7a00;
+            font-weight: 900;
+        }
+
+        /* CONTENEDOR */
+       .countries {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px 15px;
+    width: 100%;
+}
+
+        /* TARJETA */
+        .country-card {
+            background-color: #fff;
+            border-radius: 20px;
+            width: 200px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .country-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        /* NOMBRE */
+        .country-card .name {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0052a5;
+        }
+
+        /* IMAGEN */
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 170px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .image-wrapper img.main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        /* BANDERA */
+        .image-wrapper img.flag {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background: #fff;
+            z-index: 10;
+        }
+
+        /* BOTONES */
+        .button-wrapper {
+    margin-top: 10px;
+    text-align: center;
+}
+        .country-button-img {
+    width: 160px;
+    height: 38px;
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    object-fit: fill;
+    display: block;
+}
+
+        .country-button-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .button-wrapper {
+                margin-top: 25px;
+            }
+
+            .country-button-img {
+                width: 140px;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            width: 100%;
+            height: 35px;
+            background-color: #0052a5;
+            margin-top: auto;
+        }
+
+        .button-wrapper-top {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.loto-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 38px;
+    background: #ff7a00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'HelveticaRounded', sans-serif;
+    transition: .2s;
+}
+
+.loto-button:hover{
+    background:#e56d00;
+    transform:scale(1.03);
+}
+
+.countries > div {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-wrapper-top,
+.button-wrapper {
+    width: 160px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
     .main-content {
-      margin-top: 2cm;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* TEXTO BIENVENIDA */
-    .welcome-text {
-      text-align: center;
-      margin: 30px 0 20px;
-    }
-
-    .welcome-text h1 {
-      font-size: 16px;
-      color: #0052a5;
-      font-weight: bold;
-      letter-spacing: 1px;
+        padding-top: 55px;
+        overflow: visible;
     }
 
     .welcome-text h2 {
-      font-size: 34px;
-      color: #ff7a00;
-      font-weight: 900;
+        font-size: 26px;
     }
 
-    /* CONTENEDOR PAISES */
     .countries {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .countries > div {
+        width: 90%;
+        max-width: 280px;
     }
 
     .country-card {
-      background-color: #fff;
-      border-radius: 20px;
-      width: 200px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      cursor: pointer;
-      overflow: visible; 
-      position: relative;
-      transition: 
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background-color 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Efecto hover tarjeta */
-    .country-card:hover {
-      background-color: #0052a5;
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .country-card:active {
-      transform: translateY(2px) scale(0.98);
-    }
-
-    /* Nombre del país */
-    .country-card .name {
-      text-align: center;
-      padding: 10px 0;
-      font-size: 18px;
-      font-weight: bold;
-      color: #0052a5;
-      position: relative;
-      z-index: 2;
-      transition: color 0.3s ease;
-    }
-
-    .country-card:hover .name {
-      color: #fff;
-    }
-
-    /* Contenedor imagen */
-    .image-wrapper {
-      position: relative;
-      width: 100%;
-      height: 180px;
-      margin-top: 0px;
-    }
-
-    .image-wrapper img.main-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      border-radius: inherit;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-
-    /* Bandera flotante */
-    .image-wrapper img.flag {
-      position: absolute;
-      top: 140px; /* ajustar para sobresalir */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.35);
-      border: 2px solid #fff;
-      z-index: 5;
-      transition: top 0.3s ease;
-    }
-
-    /* Mover bandera al pasar cursor */
-    .country-card:hover img.flag {
-      top: 130px;
-    }
-
-    /* FOOTER */
-    footer {
-      width: 100%;
-      height: 40px;
-      background-color: #0052a5;
-      margin-top: auto;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .country-card {
-        width: 45%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .country-card {
         width: 100%;
-      }
-      .welcome-text h2 {
-        font-size: 26px;
-      }
-      .image-wrapper img.flag {
-        width: 50px;
-        height: 50px;
-        top: 120px;
-      }
     }
-  </style>
+
+    .image-wrapper {
+        height: 180px;
+    }
+
+    .loto-button,
+    .country-button-img,
+    .button-wrapper-top,
+    .button-wrapper {
+        width: 180px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}
+
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <img src="/ImagesSV/Logo.svg" alt="Loto Logo">
-  </header>
+<header>
+     <!-- Cargar el logo dinámicamente -->
+    <img src="<?= $contenido['logo'] ?>" alt="Loto Logo">
+</header>
 
-  <div class="main-content">
+<div class="main-content">
 
     <div class="welcome-text">
-      <h1>TE DAMOS LA BIENVENIDA</h1>
-      <h2>SELECCIONÁ TU PAÍS</h2>
+        <h1><?= htmlspecialchars($contenido['bienvenida_h1']) ?></h1>
+        <h2><?= htmlspecialchars($contenido['bienvenida_h2']) ?></h2>
     </div>
 
     <div class="countries">
-
-      <a href="https://paginawebsvcac.azurewebsites.net/" target="_blank" style="text-decoration: none;">
-  <div class="country-card">
-    <div class="name">El Salvador</div>
-    <div class="image-wrapper">
-      <img class="main-image" src="/ImagesSV/Selección SV.png" alt="El Salvador">
-      <img class="flag" src="/ImagesSV/El Salvador.svg" alt="Bandera El Salvador">
+<!-- EL SALVADOR -->
+<div>
+    <div class="country-card" 
+         onclick="window.location.href='https://loto.sv/?pag=body'" 
+         style="cursor:pointer;">
+        <div class="name">El Salvador</div>
+        <div class="image-wrapper">
+            <img class="main-image" src="<?= $contenido['imagen_sv'] ?>" alt="El Salvador">
+            <img class="flag" src="<?= $contenido['bandera_sv'] ?>" alt="Bandera El Salvador">
+        </div>
     </div>
-  </div>
-</a>
 
+    <!-- NUEVO BOTON -->
+<div class="button-wrapper-top">
+    <a href="https://loto.sv/?pag=body" class="loto-button">
+        LOTO.SV
+    </a>
+</div>
 
-      <a href="https://loto.hn/" target="_blank" style="text-decoration: none;">
-  <div class="country-card">
-    <div class="name">Honduras</div>
-    <div class="image-wrapper">
-      <img class="main-image" src="/ImagesSV/Selección HN.png" alt="Honduras">
-      <img class="flag" src="/ImagesSV/Honduras.svg" alt="Bandera Honduras">
+    <div class="button-wrapper">
+        <img src="<?= $contenido['boton_sv'] ?>" 
+             alt="Ingresar El Salvador" 
+             class="country-button-img"
+             style="cursor:pointer;"
+             onclick="window.location.href='https://juega.loto.sv/fob/?utm_source=SV_Apostemos_website_botonpais_Trafico_2026&utm_medium=SV_Apostemos_website_botonpais_Trafico_2026&utm_campaign=SV_Apostemos_website_botonpais_Trafico_2026&utm_id=SV_Apostemos_website_botonpais_Trafico_2026'">
     </div>
-  </div>
-</a>
+</div>
 
-<a href="https://loto.com.ni/" target="_blank" style="text-decoration: none;">
-  <div class="country-card">
-    <div class="name">Nicaragua</div>
-    <div class="image-wrapper">
-      <img class="main-image" src="/ImagesSV/Selección NIC.png" alt="Nicaragua">
-      <img class="flag" src="/ImagesSV/Nicaragua.svg" alt="Bandera Nicaragua">
+<!-- HONDURAS -->
+<div>
+    <div class="country-card"
+     onclick="window.location.href='https://loto.hn/?pag=body'"
+     style="cursor:pointer;">
+        <div class="name">Honduras</div>
+        <div class="image-wrapper">
+            <img class="main-image" src="<?= $contenido['imagen_hn'] ?>" alt="Honduras">
+            <img class="flag" src="<?= $contenido['bandera_hn'] ?>" alt="Bandera Honduras">
+        </div>
     </div>
-  </div>
-</a>
 
+    <div class="button-wrapper-top">
+    <a href="https://loto.hn/?pag=body" class="loto-button">
+        LOTO.HN
+    </a>
+</div>
 
+    <div class="button-wrapper">
+        <img src="<?= $contenido['boton_hn'] ?>" 
+             alt="Ingresar Honduras" 
+             class="country-button-img"
+             style="cursor:pointer;"
+             onclick="window.location.href='https://juega.loto.hn/fob/?utm_source=HN_Apostemos_website_botonpais_Trafico_2026&utm_medium=HN_Apostemos_website_botonpais_Trafico_2026&utm_campaign=HN_Apostemos_website_botonpais_Trafico_2026&utm_id=HN_Apostemos_website_botonpais_Trafico_2026'">
     </div>
-  </div>
+</div>
 
-  <footer></footer>
+
+<!-- NICARAGUA -->
+<div>
+    <div class="country-card" 
+         onclick="window.location.href='https://loto.com.ni/?pag=body'" 
+         style="cursor:pointer;">
+        <div class="name">Nicaragua</div>
+        <div class="image-wrapper">
+            <img class="main-image" src="<?= $contenido['imagen_ni'] ?>" alt="Nicaragua">
+            <img class="flag" src="<?= $contenido['bandera_ni'] ?>" alt="Bandera Nicaragua">
+        </div>
+    </div>
+    <div class="button-wrapper-top">
+    <a href="https://loto.com.ni/?pag=body" class="loto-button">
+        LOTO.NI
+    </a>
+</div>
+</div>
+</div>
+        
+<footer></footer>
 
 </body>
 </html>
